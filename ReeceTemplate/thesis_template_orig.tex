@@ -1,0 +1,96 @@
+\documentclass{pennThesis}
+
+%%--------------------------------------------------------------------
+%% preamble
+%%--------------------------------------------------------------------
+\include{tex/docdefs}
+
+%% feynmf for feynman diagrams
+\usepackage{feynmf}
+\setlength{\unitlength}{1mm}
+
+%% other std packages
+\usepackage{multirow}
+%\usepackage{multicol}
+%\usepackage{rotating}
+%\usepackage{morefloats}
+
+%% personal style files
+%\usepackage{atlas_tau_vars}
+%\usepackage{ryans_latex_commands}
+
+%% to temporarily include only a single chapter
+%\includeonly{tex/tau}
+
+%%--------------------------------------------------------------------
+%% begin the document
+%%--------------------------------------------------------------------
+\begin{document}
+\begin{fmffile}{thesis-feyn}
+
+%%--------------------------------------------------------------------
+%% title page
+%% copyright
+%% acknowledgements
+%% abstract
+%%--------------------------------------------------------------------
+\frontmatter
+\maketitle
+
+%%--------------------------------------------------------------------
+%% table of contents
+%% list of tables
+%% list of figures
+%%--------------------------------------------------------------------
+% TODO: uncomment these when you are ready
+\begin{Spacing}{\mylinespacing}
+\tableofcontents
+\end{Spacing}
+\clearpage
+
+%% let the list of tables and figures use the default single-spacing
+% TODO: uncomment these when you are ready
+% \listoftables
+% \clearpage
+% \listoffigures
+% \clearpage
+
+%%--------------------------------------------------------------------
+%% preface
+%%--------------------------------------------------------------------
+\begin{Spacing}{\mylinespacing}
+\include{tex/preface}
+
+%%--------------------------------------------------------------------
+%% main sections
+%%--------------------------------------------------------------------
+\mainmatter
+\include{tex/introduction}
+%\include{tex/theory}
+%\include{tex/detector}
+%\include{tex/trt}
+%\include{tex/tau}
+%\include{tex/Ztautau}
+%\include{tex/Zprime}
+%\include{tex/conclusion}
+
+%%--------------------------------------------------------------------
+%% appendix
+%%--------------------------------------------------------------------
+%\appendix
+%\include{tex/apx-analysis-model}
+%\include{tex/apx-tau-vars}
+\end{Spacing}
+
+%%--------------------------------------------------------------------
+%% bibliography
+%%--------------------------------------------------------------------
+\backmatter
+\bibliographystyle{style/atlasnote}
+\bibliography{bibs/atlas}
+%% Add bib files like this:
+%% \bibliography{bibs/theory,bibs/atlas}
+
+%%--------------------------------------------------------------------
+\end{fmffile}
+\end{document}
