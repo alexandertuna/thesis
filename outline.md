@@ -30,9 +30,8 @@
   2. HL-LHC
 9. [Conclusions]()
 
+
 | stable | :white_check_mark: |
-|-------|-------------------|
 | in progress | :warning:    |
-|------------|--------------|
 | not started | :no_entry:   |
 
