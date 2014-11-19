@@ -2,7 +2,7 @@
 
 ## Evidence for Higgs boson decays to taus with ATLAS at the LHC
 
-1. :red_circle: [Introduction]()
+1. :no_entry: [Introduction]()
 2. :warning: [The LHC]()
 3. :white_check_mark: [The ATLAS experiment]()
   1. Tracking
