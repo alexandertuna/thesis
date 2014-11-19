@@ -5,33 +5,33 @@
 0. [Introduction](tex/introduction.tex) :black_small_square::white_small_square::white_small_square:
 0. [The LHC](tex/)                      :black_small_square::white_small_square::white_small_square:
 0. [The ATLAS experiment](tex/)         :black_small_square::white_small_square::white_small_square:
-  1. Tracking
-  1. Calorimetry
-  1. Muon spectrometry
-1. [Tau leptons](tex/)              :black_small_square::white_small_square::white_small_square:
-  1. Properties
-  1. Experimental signatures
-1. [Hadronic tau decays](tex/)      :black_small_square::white_small_square::white_small_square:
-  1. Reconstruction
-  1. Jet discrimination
-  1. Electron discrimination
-  1. Muon discrimination
-1. [Htautau strategy](tex/)         :black_small_square::white_small_square::white_small_square:
-  1. Objects
-  1. Event topology
-  1. di-tau mass reconstruction
-  1. MVA discrimination
-1. [Background modeling](tex/)      :black_small_square::white_small_square::white_small_square:
-  1. Ztautau
-  1. Zll
-  1. jet mis-id
-1. [Results](tex/)                  :black_small_square::white_small_square::white_small_square:
-  1. Measurements
-  1. Uncertainties
-1. [Future prospects](tex/)         :black_small_square::white_small_square::white_small_square:
-  1. Run-II
-  1. HL-LHC
-1. [Conclusions](tex/)              :black_small_square::white_small_square::white_small_square:
+  0. Tracking
+  0. Calorimetry
+  0. Muon spectrometry
+0. [Tau leptons](tex/)              :black_small_square::white_small_square::white_small_square:
+  0. Properties
+  0. Experimental signatures
+0. [Hadronic tau decays](tex/)      :black_small_square::white_small_square::white_small_square:
+  0. Reconstruction
+  0. Jet discrimination
+  0. Electron discrimination
+  0. Muon discrimination
+0. [Htautau strategy](tex/)         :black_small_square::white_small_square::white_small_square:
+  0. Objects
+  0. Event topology
+  0. di-tau mass reconstruction
+  0. MVA discrimination
+0. [Background modeling](tex/)      :black_small_square::white_small_square::white_small_square:
+  0. Ztautau
+  0. Zll
+  0. jet mis-id
+0. [Results](tex/)                  :black_small_square::white_small_square::white_small_square:
+  0. Measurements
+  0. Uncertainties
+0. [Future prospects](tex/)         :black_small_square::white_small_square::white_small_square:
+  0. Run-II
+  0. HL-LHC
+0. [Conclusions](tex/)              :black_small_square::white_small_square::white_small_square:
 
 ### Legend
 
