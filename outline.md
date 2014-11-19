@@ -30,11 +30,9 @@
   2. HL-LHC
 9. [Conclusions]()
 
-### Legend
-
-|stable | :white_check_mark:|
+| stable | :white_check_mark: |
 |-------|-------------------|
-|in progress | :warning:    |
+| in progress | :warning:    |
 |------------|--------------|
-|not started | :no_entry:   |
+| not started | :no_entry:   |
 
