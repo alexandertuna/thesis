@@ -5,9 +5,9 @@
 1. Introduction
 2. The LHC
 3. The ATLAS experiment
-  + Tracking
-  + Calorimetry
-  + Muon spectrometry
+  1. Tracking
+  2. Calorimetry
+  3. Muon spectrometry
 4. Tau leptons
   + Reconstruction
   + Jet discrimination
