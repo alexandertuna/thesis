@@ -32,9 +32,9 @@
 
 ### Legend
 
-stable | :white_check_mark:
--------|-------------------
-in progress | :warning:
-------------|--------------
-not started | :no_entry:
+|stable | :white_check_mark:|
+|-------|-------------------|
+|in progress | :warning:    |
+|------------|--------------|
+|not started | :no_entry:   |
 
