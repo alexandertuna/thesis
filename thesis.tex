@@ -1,19 +1,30 @@
 \documentclass{pennThesis}
 
-\include{docdefs}
-\usepackage{atlasphysics}
-\usepackage{thesisstyle}
+%%--------------------------------------------------------------------
+%% preamble
+%%--------------------------------------------------------------------
+\include{tex/docdefs}
 
 %% feynmf for feynman diagrams
-\usepackage{xspace}
 \usepackage{feynmf}
-\usepackage{threeparttable}
 \setlength{\unitlength}{1mm}
 
 %% other std packages
 \usepackage{multirow}
-%\usepackage{subfig}
+%\usepackage{multicol}
+%\usepackage{rotating}
+%\usepackage{morefloats}
 
+%% personal style files
+%\usepackage{atlas_tau_vars}
+%\usepackage{ryans_latex_commands}
+
+%% to temporarily include only a single chapter
+%\includeonly{tex/tau}
+
+%%--------------------------------------------------------------------
+%% begin the document
+%%--------------------------------------------------------------------
 \begin{document}
 \begin{fmffile}{thesis-feyn}
 
@@ -31,67 +42,54 @@
 %% list of tables
 %% list of figures
 %%--------------------------------------------------------------------
+% TODO: uncomment these when you are ready
 \begin{Spacing}{\mylinespacing}
 \tableofcontents
 \end{Spacing}
 \clearpage
 
 %% let the list of tables and figures use the default single-spacing
- \makeatletter
-    \renewcommand*\l@figure{\@dottedtocline{1}{1em}{3.2em}}
- \makeatother
- \listoftables
- \clearpage
- \listoffigures
- \clearpage
+% TODO: uncomment these when you are ready
+% \listoftables
+% \clearpage
+% \listoffigures
+% \clearpage
 
 %%--------------------------------------------------------------------
 %% preface
 %%--------------------------------------------------------------------
 \begin{Spacing}{\mylinespacing}
-%\include{preface}
+\include{tex/preface}
 
 %%--------------------------------------------------------------------
 %% main sections
 %%--------------------------------------------------------------------
 \mainmatter
-
-\chapter[Introduction][Introduction]{Introduction}
-\input{introduction}
-
-\chapter[The Standard Model of particle physics][The Standard Model of particle physics]{The Standard Model of particle physics}
-\include{theory}
-
-\chapter[The LHC][The LHC]{The LHC}
-\include{lhc}
-
-\chapter[The ATLAS experiment][The ATLAS experiment]{The ATLAS experiment}
-\include{atlas}
-
-\chapter[Tau leptons at ATLAS][Tau leptons at ATLAS]{Tau leptons at ATLAS}
-\include{taus}
-
-\chapter[Evidence for decays of the Higgs boson to tau leptons][Evidence for decays of the Higgs boson to tau leptons]{Evidence for decays of the Higgs boson to tau leptons}
-\include{tautau}
-
-\chapter[Estimates for jets mis-identified as $\tau_\text{h}$][Estimates for jets mis-identified as $\tau_\text{h}$]{Estimates for jets mis-identified as $\tau_\text{h}$}
-\include{fakes}
-
-\chapter[Conclusions][Conclusions]{Conclusions}
-\include{conclusion}
+\include{tex/introduction}
+%\include{tex/theory}
+%\include{tex/detector}
+%\include{tex/trt}
+%\include{tex/tau}
+%\include{tex/Ztautau}
+%\include{tex/Zprime}
+%\include{tex/conclusion}
 
 %%--------------------------------------------------------------------
 %% appendix
 %%--------------------------------------------------------------------
-\appendix
+%\appendix
+%\include{tex/apx-analysis-model}
+%\include{tex/apx-tau-vars}
 \end{Spacing}
 
 %%--------------------------------------------------------------------
 %% bibliography
 %%--------------------------------------------------------------------
 \backmatter
-\bibliographystyle{../style/atlasnote}
-\bibliography{cross_sections,dark_matter,higgs,mc,measurements,performance,methods,detector,theory,lhc}
+\bibliographystyle{style/atlasnote}
+\bibliography{bibs/atlas}
+%% Add bib files like this:
+%% \bibliography{bibs/theory,bibs/atlas}
 
 %%--------------------------------------------------------------------
 \end{fmffile}

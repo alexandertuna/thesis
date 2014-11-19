@@ -13,8 +13,6 @@
 
 %% -----------------------------------------------------------------------------
 
-\RequirePackage[paperwidth=8.5in, paperheight=11in, top=1in, bottom=1in, left=1.5in, right=1in, includehead]{geometry}
-
 % Some standard stuff
 \RequirePackage{graphicx}
 \RequirePackage{verbatim}
@@ -26,7 +24,7 @@
 \RequirePackage{calc}
 
 % Note: not subfigure
-\RequirePackage{subfig}
+% \RequirePackage{subfig}
 
 % some tikz stuff
 % \RequirePackage{tikz}
@@ -128,47 +126,36 @@
 \pagestyle{pennHeadings}
 
 
-%%%% Here's a better layout for a final draft
-%\setstocksize{11in}{8.5in}
-%\settrimmedsize{11in}{8.5in}{*}
-%\settrims{0in}{0in}
-%\ifthenelse{\boolean{boolVersionForPenn}}{
-%
-%  \settypeblocksize{8.6in}{6in}{*}
-%  \setlrmargins{1.5in}{*}{*}
-%  \setulmargins{1.0in}{*}{*}
-%}{
-%  \settypeblocksize{8.2in}{6.1in}{*}
-%  \setlrmargins{1.2in}{*}{*}
-%  \setulmargins{1.4in}{*}{*}
-%}
-%\setheadfoot{0.2in}{0.4in}
-%\setheaderspaces{*}{0.2in}{*}
-%\checkandfixthelayout
+%% Here's a better layout for a final draft
+\setstocksize{11in}{8.5in}
+\settrimmedsize{11in}{8.5in}{*}
+\settrims{0in}{0in}
+\ifthenelse{\boolean{boolVersionForPenn}}{
+  \settypeblocksize{8in}{5.625in}{*}
+  \setlrmargins{1.625in}{*}{*}
+  \setulmargins{1.5in}{*}{*}
+}{
+  \settypeblocksize{8.2in}{6.1in}{*}
+  \setlrmargins{1.2in}{*}{*}
+  \setulmargins{1.4in}{*}{*}
+}
+\setheadfoot{13pt}{26pt}
+\setheaderspaces{*}{13pt}{*}
+\checkandfixthelayout
 
 %% Line spacing should be 2 for Penn document.  I've made it 1.5 for ``my'' version.
 \ifthenelse{\boolean{boolVersionForPenn}}{
-  \newcommand{\mylinespacing}{1.5}
+  \newcommand{\mylinespacing}{2}
 }{
   \newcommand{\mylinespacing}{1.5}
 }
-
-\newcommand{\checkfordraft}{
-  \ifx\@draftversion\@empty%
-  \else 
-    Version \@draftversion
-  \fi
-}
-
 
 %% Yeah, I should make this a little more general, with macros and such,
 %% rather than the actual title/names/etc.
 %% Maybe for the next dissertation.
 \newcommand{\maketitlepage}{
   \thispagestyle{empty}
-
-  \hfill \checkfordraft
-
+  
   \begin{center}
     \begin{Spacing}{\mylinespacing}
       {\huge\textsc{\@title}}
@@ -254,10 +241,7 @@
 
     \vspace*{.2cm}
 
-    {\Large \committeeFive}
-
-    \vspace*{.2cm}
-
+    {\Large \adviser}
   \end{center}
 
   \newpage
@@ -375,6 +359,7 @@
 
     \vspace*{2cm}
     
+    All rights reserved.
   \end{center}
 }
 
