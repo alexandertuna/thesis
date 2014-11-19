@@ -4,7 +4,7 @@ Thesis outline
 Evidence for Higgs boson decays to taus with ATLAS at the LHC
 -------------------------------------------------------------
 
-1. Introduction
+1. [ ] Introduction
 2. The LHC
 3. The ATLAS experiment
    + Tracking
