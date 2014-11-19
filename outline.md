@@ -6,8 +6,8 @@
 2. [The LHC](tex/)                  [~]
 3. [The ATLAS experiment](tex/)     :no_entry:
   1. Tracking
-  2. Calorimetry
-  3. Muon spectrometry
+  1. Calorimetry
+  1. Muon spectrometry
 4. [Tau leptons](tex/)              :no_entry:
   1. Properties
   2. Experimental signatures
