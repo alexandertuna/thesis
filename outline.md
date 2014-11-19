@@ -3,7 +3,7 @@
 ## Evidence for Higgs boson decays to taus with ATLAS at the LHC
 
 1. [Introduction](tex/introduction.tex) [x]
-2. [The LHC](tex/)                  :no_entry:
+2. [The LHC](tex/)                  [~]
 3. [The ATLAS experiment](tex/)     :no_entry:
   1. Tracking
   2. Calorimetry
