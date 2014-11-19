@@ -37,7 +37,7 @@
 
 | status      | marker             |
 |:-----------:|:------------------:|
-| stable      | :black_small_square::black_small_square::black_small_square: |
-| in progress | :black_small_square::black_small_square::white_small_square: |
 | not started | :black_small_square::white_small_square::white_small_square: |
+| in progress | :black_small_square::black_small_square::white_small_square: |
+| stable      | :black_small_square::black_small_square::black_small_square: |
 
