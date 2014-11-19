@@ -2,15 +2,15 @@
 
 ## Evidence for Higgs boson decays to taus with ATLAS at the LHC
 
-1. [Introduction](tex/introduction.tex) :black_small_square::white_small_square::white_small_square:
-1. [The LHC](tex/)                      :black_small_square::white_small_square::white_small_square:
-1. [The ATLAS experiment](tex/)         :black_small_square::white_small_square::white_small_square:
+0. [Introduction](tex/introduction.tex) :black_small_square::white_small_square::white_small_square:
+0. [The LHC](tex/)                      :black_small_square::white_small_square::white_small_square:
+0. [The ATLAS experiment](tex/)         :black_small_square::white_small_square::white_small_square:
   1. Tracking
   1. Calorimetry
   1. Muon spectrometry
-1. [Tau leptons](tex/)              :black_small_square::white_small_square::white_medium_small_square:
+1. [Tau leptons](tex/)              :black_small_square::white_small_square::white_small_square:
   1. Properties
-  2. Experimental signatures
+  1. Experimental signatures
 1. [Hadronic tau decays](tex/)      :black_small_square::white_small_square::white_small_square:
   1. Reconstruction
   1. Jet discrimination
