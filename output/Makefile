@@ -1,42 +1,22 @@
 export TEXINPUTS := .//:../style//:../sections//:${TEXINPUTS}
 export BIBINPUTS := .//:../bibs//:${TEXINPUTS}
 
-feynmf :
-	@echo "feynmf thesis" 
-	@feynmf thesis >> /dev/null 
-	@echo "feynmf thesis" 
-	@feynmf thesis >> /dev/null 
-	@echo "bibtex thesis" 
-	@bibtex thesis >> /dev/null 
-	@echo "feynmf thesis" 
-	@feynmf thesis >> /dev/null 
-	@echo "feynmf thesis" 
-	@feynmf thesis >> /dev/null 
-	@echo "dvipdf thesis" 
-	@dvipdf thesis >> /dev/null 
+THESIS = thesis
 
-latex :
-	pdflatex thesis
-	pdflatex thesis
-	bibtex thesis
-	pdflatex thesis
-	pdflatex thesis
-	dvipdf thesis
+all:
+	pdflatex ${THESIS}
+	pdflatex ${THESIS}
+	bibtex   ${THESIS}
+	pdflatex ${THESIS}
+	pdflatex ${THESIS}
+	dvipdf   ${THESIS}
 
-simple : 
-	feynmf thesis
-	feynmf thesis
-	bibtex thesis
-	feynmf thesis
-	feynmf thesis
-	dvipdf thesis
+simple: 
+	bibtex ${THESIS}
+	dvipdf ${THESIS}
 
-debug : 
+debug:
 	@rm -f ../debug.log
-	feynmf thesis
-	feynmf thesis
-	bibtex thesis | tee -a ../debug.log
-	feynmf thesis
-	feynmf thesis | tee -a ../debug.log
-	dvipdf thesis
-	
+	bibtex ${THESIS} | tee -a ../debug.log
+	dvipdf ${THESIS}
+
