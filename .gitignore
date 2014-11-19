@@ -15,3 +15,5 @@
 *-blx.bib
 *.brf
 
+## Mac
+.DS_Store
