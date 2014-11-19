@@ -1,10 +1,14 @@
-THESIS = thesis
-OUTDIR = output
-TEXDIR = tex
+export TEXINPUTS := .//:./style//:sections//:${TEXINPUTS}
+export BIBINPUTS := .//:./bibs//:${TEXINPUTS}
 
-all: 
-	cp ${TEXDIR}/*.tex ${OUTDIR}/
-	make -C ${OUTDIR}
-	cp ${OUTDIR}/${THESIS}.pdf ./
-	ls -hl ${THESIS}.pdf
+THESIS = thesis
+
+all:
+	pdflatex ${THESIS}
+	pdflatex ${THESIS}
+	bibtex   ${THESIS}
+	pdflatex ${THESIS}
+	pdflatex ${THESIS}
+	clear
+	ls -ltrh
 
