@@ -31,7 +31,7 @@
 9. [Conclusions]()
 
 | status      | marker             |
-|-------------|--------------------|
+|:-----------:|:------------------:|
 | stable      | :white_check_mark: |
 | in progress | :warning:          |
 | not started | :no_entry:         |
