@@ -9,26 +9,29 @@
   2. Calorimetry
   3. Muon spectrometry
 4. [Tau leptons](tex/)              :no_entry:
+  1. Properties
+  2. Experimental signatures
+5. [Hadronic tau decays](tex/)      :no_entry:
   1. Reconstruction
   2. Jet discrimination
   3. Electron discrimination
   4. Muon discrimination
-5. [Htautau strategy](tex/)         :no_entry:
+6. [Htautau strategy](tex/)         :no_entry:
   1. Objects
   2. Event topology
   3. di-tau mass reconstruction
   4. MVA discrimination
-6. [Background modeling](tex/)      :no_entry:
+7. [Background modeling](tex/)      :no_entry:
   1. Ztautau
   2. Zll
   3. jet mis-id
-7. [Results](tex/)                  :no_entry:
+8. [Results](tex/)                  :no_entry:
   1. Measurements
   2. Uncertainties
-8. [Future prospects](tex/)         :no_entry:
+9. [Future prospects](tex/)         :no_entry:
   1. Run-II
   2. HL-LHC
-9. [Conclusions](tex/)              :no_entry:
+10. [Conclusions](tex/)              :no_entry:
 
 ### Legend
 
