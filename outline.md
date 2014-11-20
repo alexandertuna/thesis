@@ -2,9 +2,9 @@
 
 ## Evidence for Higgs boson decays to taus with ATLAS at the LHC
 
-0. [Introduction](tex/introduction.tex) :black_small_square::white_small_square::white_small_square:
-0. [The LHC and ATLAS](tex/)            :black_small_square::white_small_square::white_small_square:
-  0. Tracking                           :black_small_square::white_small_square::white_small_square:
+0. [Introduction](tex/introduction.tex) :small_red_triangle:
+0. [The LHC and ATLAS](tex/)            :small_orange_diamond:
+  0. Tracking                           :small_blue_diamond:
   0. Calorimetry                        :black_small_square::white_small_square::white_small_square:
   0. Muon spectrometry                  :black_small_square::white_small_square::white_small_square:
 0. [Tau leptons](tex/)                  :black_small_square::white_small_square::white_small_square:
@@ -39,4 +39,12 @@
 | not started | :black_small_square::white_small_square::white_small_square: |
 | in progress | :black_small_square::black_small_square::white_small_square: |
 | stable      | :black_small_square::black_small_square::black_small_square: |
+
+### Legend
+
+| status      | marker             |
+|:-----------:|:------------------:|
+| not started | :small_red_triangle:   |
+| in progress | :small_orange_diamond: |
+| stable      | :small_blue_diamond:   |
 
