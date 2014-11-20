@@ -25,7 +25,7 @@
   0. Zll                                :small_red_triangle:
   0. jet mis-id                         :small_red_triangle:
 0. [Results](tex/)                      :small_red_triangle:
-  0. Fit results
+  0. Fit results                        :small_red_triangle:
   0. Measurements                       :small_red_triangle:
   0. Uncertainties                      :small_red_triangle:
 0. [Future prospects](tex/)             :small_red_triangle:
