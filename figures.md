@@ -26,7 +26,7 @@
   0. Electron reconstruction/ID         :small_red_triangle:
   0. Jet reconstruction/ID              :small_red_triangle:
   0. bjet reconstruction/ID             :small_red_triangle:
-  0. MET reconstruction/ID              :small_red_triangle:
+  0. MET reconstruction                 :small_red_triangle:
   0. Cartoons: presel., boost, VBF      :small_red_triangle:
   0. Plots at preselection              :small_red_triangle:
   0. MMC cartoon                        :small_red_triangle:
@@ -37,6 +37,7 @@
   0. MMC vs. collinear vs. visible ROC  :small_red_triangle:
   0. Overlaid input variables: boost    :small_red_triangle:
   0. Overlaid input variables: VBF      :small_red_triangle:
+  0. Overlaid BDTs (boost, VBF)         :small_red_triangle:
 0. [Background modeling](tex/)          :small_red_triangle:
   0. mis-modeling in Zll MC             :small_red_triangle:
   0. Embedding validation               :small_red_triangle:
