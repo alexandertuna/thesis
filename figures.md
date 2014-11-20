@@ -68,16 +68,8 @@
   0. boost MC  SR                       :small_red_triangle:
   0. boost     SR                       :small_red_triangle:
   0. 2013 vs 2014 pre-fit uncertainty   :small_red_triangle:
-
 0. [Results](tex/)                      :small_red_triangle:
-  0. Fit procedure                      :small_red_triangle:
-  0. Fit results                        :small_red_triangle:
-  0. Measurements                       :small_red_triangle:
-  0. Uncertainties                      :small_red_triangle:
-  0. Higgs landscape                    :small_red_triangle:
 0. [Future prospects](tex/)             :small_red_triangle:
-  0. Run-II                             :small_red_triangle:
-  0. HL-LHC                             :small_red_triangle:
 0. [Conclusions](tex/)                  :small_red_triangle:
 
 ### Legend
