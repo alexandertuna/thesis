@@ -43,29 +43,29 @@
   0. VBF     with/without e-veto        :small_red_triangle:
   0. presel. with/without muon rej.     :small_red_triangle:
   0. VBF     with/without muon rej.     :small_red_triangle:
-  0. fake flavors vs tau ID BDT
-  0. ER/VR/SR cartoon
-  0. fakefactors VBF
-  0. fakefactors boost
-  0. composition pie charts VBF
-  0. composition pie charts boost
-  0. MC fakefactors VBF
-  0. MC fakefactors boost
-  0. VBF Wlv CR
-  0. VBF QCD CR
-  0. VBF Zll CR
-  0. VBF top CR
-  0. VBF SS  CR
-  0. VBF MC  SR
-  0. VBF     SR
-  0. boost Wlv CR
-  0. boost QCD CR
-  0. boost Zll CR
-  0. boost top CR
-  0. boost SS  CR
-  0. boost MC  SR
-  0. boost     SR
-  0. 2013 vs 2014 pre-fit uncertainty
+  0. fake flavors vs tau ID BDT         :small_red_triangle:
+  0. ER/VR/SR cartoon                   :small_red_triangle:
+  0. fakefactors VBF                    :small_red_triangle:
+  0. fakefactors boost                  :small_red_triangle:
+  0. composition pie charts VBF         :small_red_triangle:
+  0. composition pie charts boost       :small_red_triangle:
+  0. MC fakefactors VBF                 :small_red_triangle:
+  0. MC fakefactors boost               :small_red_triangle:
+  0. VBF Wlv CR                         :small_red_triangle:
+  0. VBF QCD CR                         :small_red_triangle:
+  0. VBF Zll CR                         :small_red_triangle:
+  0. VBF top CR                         :small_red_triangle:
+  0. VBF SS  CR                         :small_red_triangle:
+  0. VBF MC  SR                         :small_red_triangle:
+  0. VBF     SR                         :small_red_triangle:
+  0. boost Wlv CR                       :small_red_triangle:
+  0. boost QCD CR                       :small_red_triangle:
+  0. boost Zll CR                       :small_red_triangle:
+  0. boost top CR                       :small_red_triangle:
+  0. boost SS  CR                       :small_red_triangle:
+  0. boost MC  SR                       :small_red_triangle:
+  0. boost     SR                       :small_red_triangle:
+  0. 2013 vs 2014 pre-fit uncertainty   :small_red_triangle:
 0. [Results](tex/)                      :small_red_triangle:
   0. Measurements                       :small_red_triangle:
   0. Uncertainties                      :small_red_triangle:
