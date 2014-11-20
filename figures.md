@@ -22,10 +22,18 @@
   0. Zmumu (brem) fakes                 :small_red_triangle:
   0. Zmumu (FSR) fakes                  :small_red_triangle:
 0. [Htautau strategy](tex/)             :small_red_triangle:
-  0. Objects                            :small_red_triangle:
-  0. Event topology                     :small_red_triangle:
-  0. di-tau mass reconstruction         :small_red_triangle:
-  0. MVA discrimination                 :small_red_triangle:
+  0. Muon reconstruction/ID             :small_red_triangle:
+  0. Electron reconstruction/ID         :small_red_triangle:
+  0. Jet reconstruction/ID              :small_red_triangle:
+  0. bjet reconstruction/ID             :small_red_triangle:
+  0. MET reconstruction/ID              :small_red_triangle:
+  0. Cartoons: presel., boost, VBF      :small_red_triangle:
+  0. MMC cartoon                        :small_red_triangle:
+  0. MMC input assumptions              :small_red_triangle:
+  0. MMC performance                    :small_red_triangle:
+  0. MMC vs. collinear vs. vis.         :small_red_triangle:
+  0. Overlaid input variables: boost    :small_red_triangle:
+  0. Overlaid input variables: VBF      :small_red_triangle:
 0. [Background modeling](tex/)          :small_red_triangle:
   0. Ztautau                            :small_red_triangle:
   0. Zll                                :small_red_triangle:
