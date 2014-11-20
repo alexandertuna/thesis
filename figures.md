@@ -31,7 +31,7 @@
   0. MMC cartoon                        :small_red_triangle:
   0. MMC input assumptions              :small_red_triangle:
   0. MMC performance                    :small_red_triangle:
-  0. MMC vs. collinear vs. vis.         :small_red_triangle:
+  0. MMC vs. collinear vs. visible      :small_red_triangle:
   0. Overlaid input variables: boost    :small_red_triangle:
   0. Overlaid input variables: VBF      :small_red_triangle:
 0. [Background modeling](tex/)          :small_red_triangle:
