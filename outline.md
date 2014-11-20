@@ -1,4 +1,4 @@
-# Thesis outline
+# Outline
 
 ## Evidence for Higgs boson decays to taus with ATLAS at the LHC
 
