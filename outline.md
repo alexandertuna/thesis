@@ -29,6 +29,7 @@
   0. Fit results                        :small_red_triangle:
   0. Measurements                       :small_red_triangle:
   0. Uncertainties                      :small_red_triangle:
+  0. Higgs landscape                    :small_red_triangle:
 0. [Future prospects](tex/)             :small_red_triangle:
   0. Run-II                             :small_red_triangle:
   0. HL-LHC                             :small_red_triangle:
