@@ -77,6 +77,7 @@
   0. pt of lead jet (VBF)               :small_red_triangle:
   0. L1 turn-ons for 1x1, 2x2, 4x4      :small_red_triangle:
   0. L1 isolation efficiency            :small_red_triangle:
+  0. LTT input variables, BDT           :small_red_triangle:
   0. forward tracker layout             :small_red_triangle:
   0. pile-up impact on MMC, MET         :small_red_triangle:
   0. ROC curves with forward trackers   :small_red_triangle:
