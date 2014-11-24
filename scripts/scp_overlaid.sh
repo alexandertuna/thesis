@@ -1,7 +1,7 @@
 # a script to retrieve plots from at3i00. run from the top dir.
 # [thesis] > . scripts/scp_overlaid.sh
 
-input="atuna@at3i00.hep.upenn.edu:/web/Analysis/tuna/HiggsTauTau2012/scratch/higgs.plots.2014-11-24-07h25m33s/regions/*/*/*"
+input="atuna@at3i00.hep.upenn.edu:/web/Analysis/tuna/HiggsTauTau2012/scratch/higgs.plots.2014-11-24-14h07m19s/regions/*/*/*"
 output="figures/overlaid/vbf"
 
 mkdir -p ${output}
