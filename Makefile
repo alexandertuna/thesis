@@ -10,5 +10,6 @@ all:
 	pdflatex ${THESIS}
 	pdflatex ${THESIS}
 	clear
-	ls -ltrh
-
+	ls -ltr
+	git status
+	open -a preview ${THESIS}.pdf
