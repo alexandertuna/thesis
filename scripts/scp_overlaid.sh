@@ -2,7 +2,7 @@
 # [thesis] > . scripts/scp_overlaid.sh
 
 # vbf
-input="atuna@at3i00.hep.upenn.edu:/web/Analysis/tuna/HiggsTauTau2012/scratch/higgs.plots.2014-11-25-15h04m50s/regions/*/*/*"
+input="atuna@at3i00.hep.upenn.edu:/web/Analysis/tuna/HiggsTauTau2012/scratch/higgs.plots.2014-11-26-11h57m24s/regions/*/*/*"
 output="figures/overlaid/vbf"
 
 mkdir -p ${output}
@@ -14,7 +14,7 @@ for plot in "H-pt-hi" "lep-eta-centrality" "mMMC" "mT" "met-phi-centrality" "mvi
 done
 
 # boost
-input="atuna@at3i00.hep.upenn.edu:/web/Analysis/tuna/HiggsTauTau2012/scratch/higgs.plots.2014-11-25-14h31m56s/regions/*/*/*"
+input="atuna@at3i00.hep.upenn.edu:/web/Analysis/tuna/HiggsTauTau2012/scratch/higgs.plots.2014-11-26-11h58m16s/regions/*/*/*"
 output="figures/overlaid/boost"
 
 mkdir -p ${output}
