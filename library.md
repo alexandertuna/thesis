@@ -10,3 +10,4 @@
 
 ### TES CONF 2013: [ATLAS-CONF-2013-044](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-044/) ([glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=4945))
 
+### Htautau projection 2014: [ATL-PHYS-PUB-2014-018](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2014-018/)
