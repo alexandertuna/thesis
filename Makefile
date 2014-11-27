@@ -13,3 +13,5 @@ all:
 	ls -ltr
 	git status
 	open -a preview ${THESIS}.pdf
+	sh scripts/pages.sh
+
