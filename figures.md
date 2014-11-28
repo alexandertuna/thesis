@@ -9,7 +9,7 @@
   0. Cross-sections (Stirling plot)     :small_red_triangle:
   0. Cross-sections (ATLAS plot)        :small_red_triangle:
 0. [Tau leptons](tex/)                  :small_red_triangle:
-  0. Tau decay pie chart                :small_red_triangle:
+  0. Tau decay pie chart                :small_blue_diamond:
   0. Lepton pt (W, Z, tau)              :small_red_triangle:
   0. Lepton d0 (W, Z, tau)              :small_red_triangle:
   0. Tau event display                  :small_red_triangle:
@@ -27,6 +27,7 @@
   0. Jet reconstruction/ID              :small_red_triangle:
   0. bjet reconstruction/ID             :small_red_triangle:
   0. MET reconstruction                 :small_red_triangle:
+  0. tautau decay pie chart             :small_blue_diamond:
   0. Cartoons: presel., boost, VBF      :small_blue_diamond:
   0. Plots at preselection              :small_red_triangle:
   0. MMC cartoon                        :small_red_triangle:
