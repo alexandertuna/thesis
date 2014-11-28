@@ -11,7 +11,8 @@ all:
 	pdflatex ${THESIS}
 	clear
 	ls -ltr
-	git status
 	open -a preview ${THESIS}.pdf
 	sh scripts/pages.sh
+	python scripts/plot-pages.py
+	git status
 
