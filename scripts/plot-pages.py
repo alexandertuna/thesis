@@ -9,8 +9,8 @@ start = datetime.datetime.strptime(start, "%Y-%m-%d-%Hh%Mm%Ss")
 dayssince = []
 pages = []
 
-# the template already has 8 pages :-|
-dayssince.append(0.1)
+# the template already has 8 pages. thx reecer.
+dayssince.append(0)
 pages.append(8)
 
 with open("pages.md") as file:
@@ -52,12 +52,11 @@ plt.xlabel("Days since start (Nov. 18)")
 plt.ylabel("Pages")
 plt.title("")
 # plt.text(60, .025, r"$\mu=100,\ \sigma=15$")
-plt.axis([0, maxdayssince+1, 0, max(pages)+1])
+plt.axis([-0.1, maxdayssince+1, 0, max(pages)+1])
 plt.grid(False)
-# plt.plot(dayssince, pages, 'bs', linewidth=2)
 plt.plot(dayssince, pages, "-")
-plt.plot(dayssince, pages, "bs")
+plt.plot(dayssince, pages, "rd")
+plt.fill_between(dayssince, 0, pages, facecolor='blue', interpolate=True)
 plt.savefig("pages.png")
 plt.savefig("pages.pdf")
-# plt.show()
 
