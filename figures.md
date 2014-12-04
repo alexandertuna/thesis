@@ -81,11 +81,11 @@
   0. sensitivity vs threshold, lh       :small_red_triangle:
   0. sensitivity vs threshold, hh       :small_red_triangle:
   0. L1 schematic                       :small_red_triangle:
-  0. L1 turn-ons for 1x1, 2x2, 4x4      :small_red_triangle:
-  0. L1 iso efficiency, with TAU60      :small_red_triangle:
-  0. L1 iso efficiency, without TAU60   :small_red_triangle:
-  0. L1 iso rates, with TAU60           :small_red_triangle:
-  0. L1 iso rates, without TAU60        :small_red_triangle:
+  0. L1 turn-ons for 1x1, 2x2, 4x4      :small_blue_diamond:
+  0. L1 iso efficiency, with TAU60      :small_blue_diamond:
+  0. L1 iso efficiency, without TAU60   :small_orange_triangle:
+  0. L1 iso rates, with TAU60           :small_blue_diamond:
+  0. L1 iso rates, without TAU60        :small_blue_diamond:
   0. LTT input variables, BDT           :small_red_triangle:
   0. forward tracker layout             :small_red_triangle:
   0. pile-up impact on MMC, MET         :small_blue_diamond:
