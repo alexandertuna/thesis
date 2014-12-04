@@ -32,7 +32,6 @@
   0. Plots at preselection              :small_red_triangle:
   0. MMC cartoon                        :small_blue_diamond:
   0. MMC input assumptions              :small_blue_diamond:
-  0. MMC vs. collinear vs. visible res. :small_orange_diamond:
   0. MMC vs. collinear vs. visible ROC  :small_blue_diamond:
   0. Overlaid input variables: boost    :small_blue_diamond:
   0. Overlaid input variables: VBF      :small_blue_diamond:
@@ -67,13 +66,13 @@
   0. boost MC  SR                       :small_red_triangle:
   0. boost     SR                       :small_red_triangle:
   0. 2013 vs 2014 pre-fit uncertainty   :small_red_triangle:
-0. [Results](tex/)                      :small_red_triangle:
-  0. post-fit BDTs                      :small_red_triangle:
-  0. combined BDT                       :small_red_triangle:
-  0. S/B-weighted mass                  :small_red_triangle:
-  0. signal strength summary            :small_red_triangle:
-  0. p-value vs. mH                     :small_red_triangle:
-  0. muVBF vs. muggF                    :small_red_triangle:
+0. [Results](tex/)                      :small_blue_diamond:
+  0. post-fit BDTs                      :small_blue_diamond:
+  0. combined BDT                       :small_blue_diamond:
+  0. S/B-weighted mass                  :small_blue_diamond:
+  0. signal strength summary            :small_blue_diamond:
+  0. p-value vs. mH                     :small_blue_diamond:
+  0. muVBF vs. muggF                    :small_blue_diamond:
 0. [Future prospects](tex/)             :small_red_triangle:
   0. dR of minbias vs ggF (boost)       :small_red_triangle:
   0. dR of minbias vs VBF               :small_red_triangle:
