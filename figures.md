@@ -45,6 +45,7 @@
   0. VBF     with/without muon rej.     :small_red_triangle:
   0. fake flavors vs tau ID BDT         :small_red_triangle:
   0. ER/VR/SR cartoon                   :small_red_triangle:
+  0. loose70 definition                 :small_blue_diamond:
   0. fakefactors VBF                    :small_red_triangle:
   0. fakefactors boost                  :small_red_triangle:
   0. composition pie charts VBF         :small_red_triangle:
