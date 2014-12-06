@@ -10,7 +10,7 @@ all:
 	pdflatex ${THESIS}
 	pdflatex ${THESIS}
 	clear
-	ls -ltr
+	ls -ltrh
 	open -a preview ${THESIS}.pdf
 	sh scripts/pages.sh
 	git status
