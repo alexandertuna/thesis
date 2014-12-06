@@ -2,10 +2,10 @@
 
 0. [Introduction](tex/introduction.tex) :small_red_triangle:
   0. Summary of SM particles            
-0. [The LHC and ATLAS](tex/)            :small_red_triangle:
-  0. LHC ring                           :small_red_triangle:
+0. [The LHC and ATLAS](tex/)            :small_blue_diamond:
+  0. LHC ring                           :small_blue_diamond:
   0. LHC accelerator complex            :small_blue_diamond:
-  0. ATLAS detector                     :small_red_triangle:
+  0. ATLAS detector                     :small_blue_diamond:
   0. Cross-sections (Stirling plot)     :small_blue_diamond:
   0. Cross-sections (ATLAS plot)        :small_blue_diamond:
 0. [Tau leptons](tex/)                  :small_red_triangle:
