@@ -18,3 +18,4 @@
 
 #### Stirling XS: [WJS](http://www.hep.ph.ic.ac.uk/~wstirlin/plots/plots.html)
 
+#### Publicity plots: [USLHC](http://www.uslhc.us/Images) and [ATLAS](http://www.atlas.ch/photos/)
