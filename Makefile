@@ -10,6 +10,7 @@ all:
 	pdflatex ${THESIS}
 	pdflatex ${THESIS}
 	clear
+	du -hs
 	ls -ltrh
 	open -a preview ${THESIS}.pdf
 	sh scripts/pages.sh
