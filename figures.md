@@ -4,10 +4,10 @@
   0. Summary of SM particles            
 0. [The LHC and ATLAS](tex/)            :small_red_triangle:
   0. LHC ring                           :small_red_triangle:
-  0. LHC accelerator complex            :small_red_triangle:
+  0. LHC accelerator complex            :small_blue_diamond:
   0. ATLAS detector                     :small_red_triangle:
-  0. Cross-sections (Stirling plot)     :small_red_triangle:
-  0. Cross-sections (ATLAS plot)        :small_red_triangle:
+  0. Cross-sections (Stirling plot)     :small_blue_diamond:
+  0. Cross-sections (ATLAS plot)        :small_blue_diamond:
 0. [Tau leptons](tex/)                  :small_red_triangle:
   0. Tau decay pie chart                :small_blue_diamond:
   0. Lepton pt (W, Z, tau)              :small_red_triangle:
