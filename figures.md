@@ -46,8 +46,8 @@
   0. fake flavors vs tau ID BDT         :small_red_triangle:
   0. ER/VR/SR cartoon                   :small_red_triangle:
   0. loose70 definition                 :small_blue_diamond:
-  0. fakefactors VBF                    :small_red_triangle:
-  0. fakefactors boost                  :small_red_triangle:
+  0. fakefactors VBF                    :small_blue_diamond:
+  0. fakefactors boost                  :small_blue_diamond:
   0. composition pie charts VBF         :small_red_triangle:
   0. composition pie charts boost       :small_red_triangle:
   0. MC fakefactors VBF                 :small_red_triangle:
@@ -59,13 +59,6 @@
   0. VBF SS  CR                         :small_red_triangle:
   0. VBF MC  SR                         :small_red_triangle:
   0. VBF     SR                         :small_red_triangle:
-  0. boost Wlv CR                       :small_red_triangle:
-  0. boost QCD CR                       :small_red_triangle:
-  0. boost Zll CR                       :small_red_triangle:
-  0. boost top CR                       :small_red_triangle:
-  0. boost SS  CR                       :small_red_triangle:
-  0. boost MC  SR                       :small_red_triangle:
-  0. boost     SR                       :small_red_triangle:
   0. 2013 vs 2014 pre-fit uncertainty   :small_red_triangle:
 0. [Results](tex/)                      :small_blue_diamond:
   0. post-fit BDTs                      :small_blue_diamond:
