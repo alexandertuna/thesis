@@ -48,8 +48,8 @@
   0. loose70 definition                 :small_blue_diamond:
   0. fakefactors VBF                    :small_blue_diamond:
   0. fakefactors boost                  :small_blue_diamond:
-  0. composition pie charts VBF         :small_red_triangle:
-  0. composition pie charts boost       :small_red_triangle:
+  0. composition pie charts VBF         :small_blue_diamond:
+  0. composition pie charts boost       :small_blue_diamond:
   0. MC fakefactors VBF                 :small_red_triangle:
   0. MC fakefactors boost               :small_red_triangle:
   0. VBF Wlv CR                         :small_red_triangle:
