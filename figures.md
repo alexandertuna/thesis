@@ -52,11 +52,11 @@
   0. composition pie charts boost       :small_blue_diamond:
   0. MC fakefactors VBF                 :small_red_triangle:
   0. MC fakefactors boost               :small_red_triangle:
-  0. VBF Wlv CR                         :small_red_triangle:
-  0. VBF QCD CR                         :small_red_triangle:
-  0. VBF Zll CR                         :small_red_triangle:
-  0. VBF top CR                         :small_red_triangle:
-  0. VBF SS  CR                         :small_red_triangle:
+  0. VBF Wlv CR                         :small_blue_diamond:
+  0. VBF QCD CR                         :small_blue_diamond:
+  0. VBF Zll CR                         :small_blue_diamond:
+  0. VBF top CR                         :small_blue_diamond:
+  0. VBF SS  CR                         :small_blue_diamond:
   0. VBF MC  SR                         :small_red_triangle:
   0. VBF     SR                         :small_red_triangle:
   0. 2013 vs 2014 pre-fit uncertainty   :small_red_triangle:
