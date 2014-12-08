@@ -5,6 +5,7 @@ spd = float(60*60*24)
 
 start = "2014-11-18-00h00m00s"
 start = datetime.datetime.strptime(start, "%Y-%m-%d-%Hh%Mm%Ss")
+last = ""
 
 dayssince = []
 pages = []
@@ -30,6 +31,7 @@ with open("pages.md") as file:
         delta = current - start
         dayssince.append(delta.days + delta.seconds/spd)
         pages.append(int(pagecount))
+        last = current
 
 import numpy as np
 dayssince = np.array(dayssince)
@@ -51,7 +53,8 @@ ax.yaxis.set_label_coords(-0.07, 0.9)
 plt.xlabel("Days since start (Nov. 18)")
 plt.ylabel("Pages")
 plt.title("")
-# plt.text(60, .025, r"$\mu=100,\ \sigma=15$")
+plt.text(1, 0.90*max(pages), r"Latest compile:")
+plt.text(1, 0.80*max(pages), r"%s" % (last))
 plt.axis([-0.1, maxdayssince+1, 0, max(pages)+1])
 plt.grid(False)
 plt.plot(dayssince, pages, "-")
