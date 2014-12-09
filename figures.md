@@ -80,7 +80,7 @@
   0. L1 iso efficiency, without TAU60   :small_blue_diamond:
   0. L1 iso rates, with TAU60           :small_blue_diamond:
   0. L1 iso rates, without TAU60        :small_blue_diamond:
-  0. LTT input variables, BDT           :small_red_triangle:
+  0. LTT input variables, BDT           :small_blue_diamond:
   0. forward tracker layout             :small_blue_diamond:
   0. pile-up impact on MMC, MET         :small_blue_diamond:
   0. ROC curves with forward trackers   :small_blue_diamond:
