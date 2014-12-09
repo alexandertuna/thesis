@@ -20,7 +20,7 @@ mkdir -p ${output_QCDCR}
 mkdir -p ${output_topCR}
 mkdir -p ${output_ZllCR}
 
-for plot in "H-pt-hi" "lep-eta-centrality" "mMMC" "mT" "met-phi-centrality" "mvis" "n-jets30" "taulep-dR" "dijet-m-veryhigh" "jet-1-eta" "jet-1-pt" "jet-2-eta" "jet-2-pt" "jets-deta" "jets-dphi" "jets-etaprod" "system-pt" "lep-eta" "lep-pt-hi" "met-pt-hi" "BDTEve-VBF" "tau-eta" "tau-numTrack" "tau-pt"; do
+for plot in "H-pt-hi" "lep-eta-centrality" "mMMC" "mT" "mT-hi" "met-phi-centrality" "mvis" "n-jets30" "taulep-dR" "dijet-m-veryhigh" "jet-1-eta" "jet-1-pt" "jet-2-eta" "jet-2-pt" "jets-deta" "jets-dphi" "jets-etaprod" "system-pt" "lep-eta" "lep-pt-hi" "met-pt-hi" "BDTEve-VBF" "tau-eta" "tau-numTrack" "tau-pt"; do
     for ext in "eps" "pdf"; do
         scp ${input_SSXCR}/h1-${plot}.${ext} ${output_SSXCR}/${plot}.${ext}
         scp ${input_WlvCR}/h1-${plot}.${ext} ${output_WlvCR}/${plot}.${ext}
