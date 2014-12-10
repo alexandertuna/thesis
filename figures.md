@@ -37,19 +37,21 @@
   0. Overlaid input variables: VBF      :small_blue_diamond:
   0. Overlaid BDTs (boost, VBF)         :small_blue_diamond:
 0. [Background modeling](tex/)          :small_red_triangle:
-  0. mis-modeling in Zll MC             :small_red_triangle:
+  0. mis-modeling in Zll MC             :small_blue_diamond:
   0. Embedding validation               :small_red_triangle:
   0. presel. with/without e-veto        :small_red_triangle:
   0. VBF     with/without e-veto        :small_red_triangle:
   0. presel. with/without muon rej.     :small_red_triangle:
   0. VBF     with/without muon rej.     :small_red_triangle:
   0. fake flavors vs tau ID BDT         :small_red_triangle:
-  0. ER/VR/SR cartoon                   :small_red_triangle:
+  0. ER/VR/SR cartoon                   :small_blue_diamond:
   0. loose70 definition                 :small_blue_diamond:
   0. fakefactors VBF                    :small_blue_diamond:
   0. fakefactors boost                  :small_blue_diamond:
+  0. VBF anti-ID ER                     :small_red_triangle:
   0. composition pie charts VBF         :small_blue_diamond:
   0. composition pie charts boost       :small_blue_diamond:
+  0. composition dependence plots       :small_red_triangle:
   0. MC fakefactors VBF                 :small_red_triangle:
   0. MC fakefactors boost               :small_red_triangle:
   0. VBF Wlv CR                         :small_blue_diamond:
