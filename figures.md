@@ -57,7 +57,7 @@
   0. VBF Zll CR                         :small_blue_diamond:
   0. VBF top CR                         :small_blue_diamond:
   0. VBF SS  CR                         :small_blue_diamond:
-  0. VBF MC  SR                         :small_red_triangle:
+  0. VBF MC  SR                         :small_blue_diamond:
   0. VBF     SR                         :small_red_triangle:
   0. 2013 vs 2014 pre-fit uncertainty   :small_red_triangle:
 0. [Results](tex/)                      :small_blue_diamond:
