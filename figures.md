@@ -29,7 +29,7 @@
   0. MET reconstruction                 :small_red_triangle:
   0. tautau decay pie chart             :small_blue_diamond:
   0. Cartoons: presel., boost, VBF      :small_blue_diamond:
-  0. Plots at preselection              :small_red_triangle:
+  0. Plots at preselection              :small_blue_diamond:
   0. MMC cartoon                        :small_blue_diamond:
   0. MMC input assumptions              :small_blue_diamond:
   0. MMC vs. collinear vs. visible ROC  :small_blue_diamond:
@@ -39,6 +39,7 @@
 0. [Background modeling](tex/)          :small_red_triangle:
   0. mis-modeling in Zll MC             :small_blue_diamond:
   0. Embedding validation               :small_red_triangle:
+  0. Ztautau uncertainties              :small_red_triangle:
   0. presel. with/without e-veto        :small_red_triangle:
   0. VBF     with/without e-veto        :small_red_triangle:
   0. presel. with/without muon rej.     :small_red_triangle:
@@ -62,6 +63,7 @@
   0. VBF MC  SR                         :small_blue_diamond:
   0. VBF     SR                         :small_red_triangle:
   0. 2013 vs 2014 pre-fit uncertainty   :small_red_triangle:
+  0. fakes uncertainties                :small_red_triangle:
 0. [Results](tex/)                      :small_blue_diamond:
   0. post-fit BDTs                      :small_blue_diamond:
   0. combined BDT                       :small_blue_diamond:
