@@ -49,7 +49,7 @@
   0. loose70 definition                 :small_blue_diamond:
   0. fakefactors VBF                    :small_blue_diamond:
   0. fakefactors boost                  :small_blue_diamond:
-  0. VBF anti-ID ER                     :small_red_triangle:
+  0. VBF anti-ID ER                     :small_blue_diamond:
   0. composition pie charts VBF         :small_blue_diamond:
   0. composition pie charts boost       :small_blue_diamond:
   0. composition dependence plots       :small_red_triangle:
