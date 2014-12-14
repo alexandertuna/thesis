@@ -39,7 +39,7 @@
 0. [Background modeling](tex/)          :small_red_triangle:
   0. mis-modeling in Zll MC             :small_blue_diamond:
   0. Embedding validation               :small_red_triangle:
-  0. Ztautau uncertainties              :small_red_triangle:
+  0. Ztautau uncertainties              :small_blue_diamond:
   0. presel. with/without e-veto        :small_red_triangle:
   0. VBF     with/without e-veto        :small_red_triangle:
   0. presel. with/without muon rej.     :small_red_triangle:
@@ -62,8 +62,9 @@
   0. VBF SS  CR                         :small_blue_diamond:
   0. VBF MC  SR                         :small_blue_diamond:
   0. VBF     SR                         :small_red_triangle:
+  0. fakes closure options              :small_red_triangle:
   0. 2013 vs 2014 pre-fit uncertainty   :small_red_triangle:
-  0. fakes uncertainties                :small_red_triangle:
+  0. fakes uncertainties                :small_blue_diamond:
 0. [Results](tex/)                      :small_blue_diamond:
   0. post-fit BDTs                      :small_blue_diamond:
   0. combined BDT                       :small_blue_diamond:
