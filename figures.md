@@ -22,11 +22,12 @@
   0. Zmumu (brem) fakes                 :small_red_triangle:
   0. Zmumu (FSR) fakes                  :small_red_triangle:
 0. [Htautau strategy](tex/)             :small_red_triangle:
-  0. Muon reconstruction/ID             :small_red_triangle:
-  0. Electron reconstruction/ID         :small_red_triangle:
+  0. Muon reconstruction/ID             :small_blue_diamond:
+  0. Electron reconstruction/ID         :small_blue_diamond:
+  0. Electron energy scale              :small_red_triangle:
   0. Jet reconstruction/ID              :small_red_triangle:
-  0. bjet reconstruction/ID             :small_red_triangle:
-  0. MET reconstruction                 :small_red_triangle:
+  0. bjet reconstruction/ID             :small_orange_diamond:
+  0. MET reconstruction                 :small_blue_diamond:
   0. tautau decay pie chart             :small_blue_diamond:
   0. Cartoons: presel., boost, VBF      :small_blue_diamond:
   0. Plots at preselection              :small_blue_diamond:
