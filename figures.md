@@ -14,13 +14,13 @@
   0. Lepton d0 (W, Z, tau)              :small_red_triangle:
   0. Tau event display                  :small_red_triangle:
   0. Tau energy calibration             :small_red_triangle:
-  0. Tau ID input variables             :small_red_triangle:
-  0. Tau ID ROC                         :small_red_triangle:
-  0. Electron veto input variables      :small_red_triangle:
-  0. Electron veto ROC                  :small_red_triangle:
+  0. Tau ID input variables             :small_orange_diamond:
+  0. Tau ID ROC                         :small_orange_diamond:
+  0. Electron veto input variables      :small_orange_diamond:
+  0. Electron veto ROC                  :small_orange_diamond:
   0. Muon rejection efficiency          :small_red_triangle:
-  0. Zmumu (brem) fakes                 :small_red_triangle:
-  0. Zmumu (FSR) fakes                  :small_red_triangle:
+  0. Zmumu (brem) fakes                 :small_blue_diamond:
+  0. Zmumu (FSR) fakes                  :small_blue_diamond:
 0. [Htautau strategy](tex/)             :small_red_triangle:
   0. Muon reconstruction/ID             :small_blue_diamond:
   0. Electron reconstruction/ID         :small_blue_diamond:

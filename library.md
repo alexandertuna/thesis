@@ -12,6 +12,10 @@
 
 #### Htautau projection 2014: [ATL-PHYS-PUB-2014-018](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2014-018/)
 
+#### Tau trigger 2011: [ATLAS-CONF-2013-006](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-006/)
+
+#### Tau trigger 2010: [ATLAS-CONF-2010-090](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2010-090/)
+
 #### CERN FAQ: [CERN-Brochure-2009-003-Eng](https://cds.cern.ch/record/1165534/files/CERN-Brochure-2009-003-Eng.pdf)
 
 #### ATLAS SM: [CombinedSummaryPlots-SM](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CombinedSummaryPlots/SM/)
