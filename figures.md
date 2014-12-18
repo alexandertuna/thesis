@@ -74,10 +74,8 @@
   0. p-value vs. mH                     :small_blue_diamond:
   0. muVBF vs. muggF                    :small_blue_diamond:
 0. [Future prospects](tex/)             :small_red_triangle:
-  0. dR of minbias vs ggF (boost)       :small_red_triangle:
-  0. dR of minbias vs VBF               :small_red_triangle:
-  0. pt of lead jet (boost)             :small_red_triangle:
-  0. pt of lead jet (VBF)               :small_red_triangle:
+  0. minbias vs ggF vs VBF              :small_blue_diamond:
+  0. L1 resolutions (pt, eta, phi)      :small_red_triangle:
   0. sensitivity vs threshold, lh       :small_orange_diamond:
   0. sensitivity vs threshold, hh       :small_orange_diamond:
   0. L1 cartoon                         :small_blue_diamond:
