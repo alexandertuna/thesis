@@ -10,9 +10,9 @@
   0. Cross-sections (ATLAS plot)        :small_blue_diamond:
 0. [Tau leptons](tex/)                  :small_orange_diamond:
   0. Tau decay pie chart                :small_blue_diamond:
-  0. Lepton pt (W, Z, tau)              :small_red_triangle:
+  0. Lepton pt (W, Z, tau)              :small_blue_diamond:
   0. Lepton d0 (W, Z, tau)              :small_red_triangle:
-  0. Tau event display                  :small_red_triangle:
+  0. Tau event display                  :small_blue_diamond:
   0. Tau energy calibration             :small_red_triangle:
   0. Tau ID input variables             :small_orange_diamond:
   0. Tau ID ROC                         :small_orange_diamond:
