@@ -1,14 +1,14 @@
 # Figures
 
 0. [Introduction](tex/introduction.tex) :small_red_triangle:
-  0. Summary of SM particles            
+  0. Summary of SM particles            :small_red_triangle:
 0. [The LHC and ATLAS](tex/)            :small_blue_diamond:
   0. LHC ring                           :small_blue_diamond:
   0. LHC accelerator complex            :small_blue_diamond:
   0. ATLAS detector                     :small_blue_diamond:
   0. Cross-sections (Stirling plot)     :small_blue_diamond:
   0. Cross-sections (ATLAS plot)        :small_blue_diamond:
-0. [Tau leptons](tex/)                  :small_red_triangle:
+0. [Tau leptons](tex/)                  :small_orange_diamond:
   0. Tau decay pie chart                :small_blue_diamond:
   0. Lepton pt (W, Z, tau)              :small_red_triangle:
   0. Lepton d0 (W, Z, tau)              :small_red_triangle:
@@ -21,7 +21,7 @@
   0. Muon rejection efficiency          :small_red_triangle:
   0. Zmumu (brem) fakes                 :small_blue_diamond:
   0. Zmumu (FSR) fakes                  :small_blue_diamond:
-0. [Htautau strategy](tex/)             :small_red_triangle:
+0. [Htautau strategy](tex/)             :small_orange_diamond:
   0. Muon reconstruction/ID             :small_blue_diamond:
   0. Electron reconstruction/ID         :small_blue_diamond:
   0. Electron energy scale              :small_red_triangle:
@@ -37,7 +37,7 @@
   0. Overlaid input variables: boost    :small_blue_diamond:
   0. Overlaid input variables: VBF      :small_blue_diamond:
   0. Overlaid BDTs (boost, VBF)         :small_blue_diamond:
-0. [Background modeling](tex/)          :small_red_triangle:
+0. [Background modeling](tex/)          :small_orange_diamond:
   0. mis-modeling in Zll MC             :small_blue_diamond:
   0. Embedding validation               :small_red_triangle:
   0. Ztautau uncertainties              :small_blue_diamond:
@@ -73,11 +73,11 @@
   0. signal strength summary            :small_blue_diamond:
   0. p-value vs. mH                     :small_blue_diamond:
   0. muVBF vs. muggF                    :small_blue_diamond:
-0. [Future prospects](tex/)             :small_red_triangle:
+0. [Future prospects](tex/)             :small_orange_diamond:
   0. minbias vs ggF vs VBF              :small_blue_diamond:
-  0. L1 resolutions (pt, eta, phi)      :small_red_triangle:
+  0. L1 resolutions (pt, eta, phi)      :small_blue_diamond:
   0. sensitivity vs threshold, lh       :small_orange_diamond:
-  0. sensitivity vs threshold, hh       :small_orange_diamond:
+  0. sensitivity vs threshold, hh       :small_blue_diamond:
   0. L1 cartoon                         :small_blue_diamond:
   0. L1 turn-ons for 1x1, 2x2, 4x4      :small_blue_diamond:
   0. L1 iso efficiency, with TAU60      :small_blue_diamond:
