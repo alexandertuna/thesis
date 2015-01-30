@@ -73,10 +73,10 @@
   0. signal strength summary            :small_blue_diamond:
   0. p-value vs. mH                     :small_blue_diamond:
   0. muVBF vs. muggF                    :small_blue_diamond:
-0. [Future prospects](tex/)             :small_orange_diamond:
+0. [Future prospects](tex/)             :small_blue_diamond:
   0. minbias vs ggF vs VBF              :small_blue_diamond:
   0. L1 resolutions (pt, eta, phi)      :small_blue_diamond:
-  0. sensitivity vs threshold, lh       :small_orange_diamond:
+  0. sensitivity vs threshold, lh       :small_blue_diamond:
   0. sensitivity vs threshold, hh       :small_blue_diamond:
   0. L1 cartoon                         :small_blue_diamond:
   0. L1 turn-ons for 1x1, 2x2, 4x4      :small_blue_diamond:
