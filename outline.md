@@ -2,7 +2,8 @@
 
 ## Evidence for Higgs boson decays to taus with ATLAS at the LHC
 
-0. [Introduction](tex/introduction.tex) :small_red_triangle:
+0. [Introduction](tex/introduction.tex)        :small_red_triangle:
+0. [The Standard Model](tex/standardmodel.tex) :small_red_triangle:
 0. [The LHC and ATLAS](tex/)            :small_red_triangle:
   0. Tracking                           :small_red_triangle:
   0. Calorimetry                        :small_red_triangle:
