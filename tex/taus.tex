@@ -41,11 +41,50 @@ At ATLAS, light leptons from tau lepton decays ($\tauldecay$) are largely indist
 % ----------------------------------------------------------------------------------
 
 \section{Hadronic tau decays, $\tauh$}
-\label{sec:taus-jetfakes}
+\label{sec:taus-hadrons}
+
+This sections follows a recent ATLAS publication describing $\tauh$ performance in Run-I~\cite{PERF-2013-06}.
 
 \subsection{Reconstruction}
-\subsection{Calibration}
+
+\subsubsection{Calorimeter seeding}
+
+$\tauh$ candidates are seeded by the collection of jets formed by the anti-$k_t$ algorithm with distance parameter $R=0.4$, which groups the set of reconstructed three-dimensional calorimeter TopoClusters into jet objects. These TopoClusters are calibrated using a local hadronic calibration (LC). Jets are required to have $\pt > 10 \GeV$ and $|\eta| < 2.5$ to qualify as a seed for a $\tauh$ candidate. The initial $\tauh$ four-momentum is calculated by summing the TopoClusters within $\Delta R < 0.2$ of the barycenter of the jet seed, where the $\tauh$ mass is assume to be zero.
+
+\subsubsection{Track and vertex association}
+
+Tracking and vertexing for $\tauh$ occurs in three steps. First, all tracks are collected within $\Delta R < 0.2$ of the jet seed which pass quality criteria described later, but for which no impact parameter requirements are made. Second, the tau vertex (TV) is defined as the reconstructed vertex which maximizes the fraction of track momenta originating from that vertex versus total track momenta, referred to as the tau vertex fraction:
+%
+\begin{equation}
+  \text{TVF}(\text{vertex}) = \frac{\sum \pt^\text{tracks associated to vertex}}{\sum \pt^\text{tracks}}
+  \label{eqn:taus-tvf}
+\end{equation}
+%
+This vertex association is called the Tau Jet Vertex Association algorithm, and it helps ensure robustness against harsh pileup conditions, as shown in \cref{fig:taus-tjva}.
+
+Last, the set of tracks is reduced by making additional impact parameters requirements with respect to the TV. The full set of track selection criteria are:
+%
+\begin{itemize}
+    \item $\pt > 1~\mathrm{GeV}$,
+    \item at least two hits in the pixel subdetector,
+    \item at least seven hits in the pixel and SCT subdetectors combined,
+    \item $|d_{0,\text{TV}}| < 1.0~\mathrm{mm}$,
+    \item $|z_{0,\text{TV}} \, \sin{\theta}| < 1.5~\mathrm{mm}$
+\end{itemize}
+%
+This set of tracks is used when classifying the $\tauh$ candidate track multiplicity. For identification purposes, tracks in the \textit{isolation region} $0.2 < \Delta R < 0.4$ are also required to pass these criteria.
+
+\subsubsection{Calibration}
+
 \subsection{Identification}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2012-142/fig_01a}
+  \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2012-142/fig_01b}
+  \caption{Variables.}
+  \label{fig:taus-tjva}
+\end{figure}
 
 \begin{figure}[tp]
   \centering
@@ -81,21 +120,7 @@ At ATLAS, light leptons from tau lepton decays ($\tauldecay$) are largely indist
 \section{Leptons mis-identified as $\tauh$}
 \label{sec:taus-leptonfakes}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_mll}
-  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_eta}
-  \caption{Variables.}
-  \label{fig:taus-muonfakes1}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_mlly}
-  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_dR}
-  \caption{Variables.}
-  \label{fig:taus-muonfakes2}
-\end{figure}
+\subsection{Electrons}
 
 \begin{figure}[tp]
   \centering
@@ -111,6 +136,24 @@ At ATLAS, light leptons from tau lepton decays ($\tauldecay$) are largely indist
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/eveto_mvis_mediumID_loosePPOLR_looseeveto}
   \caption{Variables.}
   \label{fig:taus-electronfakes2}
+\end{figure}
+
+\subsection{Muons}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_mll}
+  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_eta}
+  \caption{Variables.}
+  \label{fig:taus-muonfakes1}
+\end{figure}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_mlly}
+  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_dR}
+  \caption{Variables.}
+  \label{fig:taus-muonfakes2}
 \end{figure}
 
 
