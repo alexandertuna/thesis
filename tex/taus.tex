@@ -56,11 +56,21 @@ $\tauh$ candidates are seeded by the collection of jets formed by the anti-$k_t$
 Tracking and vertexing for $\tauh$ occurs in three steps. First, all tracks are collected within $\Delta R < 0.2$ of the jet seed which pass quality criteria described later, but for which no impact parameter requirements are made. Second, the tau vertex (TV) is defined as the reconstructed vertex which maximizes the fraction of track momenta originating from that vertex versus total track momenta, referred to as the tau vertex fraction:
 %
 \begin{equation}
-  \text{TVF}(\text{vertex}) = \frac{\sum \pt^\text{tracks associated to vertex}}{\sum \pt^\text{tracks}}
+  \begin{split}
+    \text{TVF}(\text{vertex}) &= \frac{\sum \pt^\text{tracks associated to vertex}}{\sum \pt^\text{tracks}} \\
+  \end{split}
   \label{eqn:taus-tvf}
 \end{equation}
 %
 This vertex association is called the Tau Jet Vertex Association algorithm, and it helps ensure robustness against harsh pileup conditions, as shown in \cref{fig:taus-tjva}.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2012-142/fig_01a}
+  \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2012-142/fig_01b}
+  \caption{Variables.}
+  \label{fig:taus-tjva}
+\end{figure}
 
 Last, the set of tracks is reduced by making additional impact parameters requirements with respect to the TV. The full set of track selection criteria are:
 %
@@ -76,15 +86,48 @@ This set of tracks is used when classifying the $\tauh$ candidate track multipli
 
 \subsubsection{Calibration}
 
-\subsection{Identification}
+A correction to the $\tauh$ energy is applied to account for biases, such as effects from pileup, the underlying event, and clusters falling out of the $\Delta R = 0.2$ cone. This correction is derived in simulated $\Ztautau$, $\Wtaunu$, and $\Zptautau$ events where the true visible $\tauh$ energy $\Etruevis$ is known. It is derived as a function of the pre-calibrated $\tauh$ energy $\ErecoLC$ and $\eta$ and shown in \cref{fig:taus-calibration}. Small additional corrections are applied to account for biases from pileup and poorly instrumented regions of the detector. The resulting $\tauh$ energy resolution is shown in \cref{fig:taus-resolution}.
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2012-142/fig_01a}
-  \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2012-142/fig_01b}
+  \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_15a}
+  \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_15b}
   \caption{Variables.}
-  \label{fig:taus-tjva}
+  \label{fig:taus-calibration}
 \end{figure}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_16a}
+  \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_16b}
+  \caption{Variables.}
+  \label{fig:taus-resolution}
+\end{figure}
+
+Data-driven corrections for and uncertainties on the $\tauh$ energy calibration are derived in two ways: the \textit{deconvolution method} and the \textit{in-situ} method. The deconvolution method relies on the $\tauh$ having a known composition of charged and neutral hadrons such that the response can be decomposed into individual sources. For charged hadrons, the response is estimated from test beam measurements and simulation with varied hadronic shower models. For electromagnetic showers from neutral pion decays, the response is estimated from $\Zee$.
+
+The in-situ method relies on the sensitivity of the visible $\mtautau$ in $\Ztaultauh$ events to the $\tauh$ energy. Relative to $\tauh$, the lepton energy is precisely calibrated and validated in data with $\Zll$ events. These events are selected in data by requiring exactly one isolated muon, exactly one identified $\tauh$, and some additional kinematic cuts to suppress non-$\Ztaultauh$ events. The $\tauh$ energy is then allowed to float like $(1 + \alpha)E_\text{T}$, and the effect is propagated to the visible $\mtautau$ spectrum. The data is then adjusted by the parameter $\alpha$ to match the simulated prediction, which has already been corrected to $\Etruevis$. The measured $\alpha$, called the \textit{TES shift}, is:
+%
+\begin{equation}
+  \begin{split}
+    \alpha_\text{1-track} &= 0.8\% \pm 1.3\% \text{ (stat.) } \pm 0.6\% \text{ (syst.) } \\
+    \alpha_\text{3-track} &= 1.1\% \pm 1.4\% \text{ (stat.) } \pm 0.7\% \text{ (syst.) } \\
+  \end{split}
+  \label{eqn:taus-tesshift}
+\end{equation}
+%
+
+\section{Identification}
+
+As a high energy hadron collider, the overwhelming majority of particles observed by ATLAS are hadrons. Distinguishing these QCD jets from $\tauh$ is then of huge consequence. The properties with discriminating power can be broadly grouped into three categories:
+%
+\begin{itemize}
+    \item \textbf{Track multiplicity}. $\tauh$ tend to have 1 or 3 associated tracks, where no such specificity is expected for jets.
+    \item \textbf{Narrowness}. $\tauh$ tend to be more narrow in the tracker and calorimeter since tau leptons from electroweak decays are boosted.
+    \item \textbf{Displaced vertex}. Tracks from $\tauh$ tend to be more displaced from the primary vertex than tracks in jets due to the finite tau lepton lifetime.
+\end{itemize}
+%
+
 
 \begin{figure}[tp]
   \centering
