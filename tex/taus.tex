@@ -121,13 +121,16 @@ The in-situ method relies on the sensitivity of the visible $\mtautau$ in $\Ztau
 
 As a high energy hadron collider, the overwhelming majority of particles observed by ATLAS are hadrons. Distinguishing these QCD jets from $\tauh$ is then of huge consequence. The properties with discriminating power can be broadly grouped into three categories:
 %
-\begin{itemize}
-    \item \textbf{Track multiplicity}. $\tauh$ tend to have 1 or 3 associated tracks, where no such specificity is expected for jets.
-    \item \textbf{Narrowness}. $\tauh$ tend to be more narrow in the tracker and calorimeter since tau leptons from electroweak decays are boosted.
-    \item \textbf{Displaced vertex}. Tracks from $\tauh$ tend to be more displaced from the primary vertex than tracks in jets due to the finite tau lepton lifetime.
-\end{itemize}
+\begin{description}
+    \item[Track multiplicity:] \hfill \\
+      $\tauh$ tend to have 1 or 3 associated tracks, where no such specificity is expected for jets.
+    \item[Narrowness:]         \hfill \\
+      $\tauh$ tend to be more narrow in the tracker and calorimeter since tau leptons from electroweak decays are boosted.
+    \item[Displaced vertex:]   \hfill \\
+      Tracks from $\tauh$ tend to be more displaced from the primary vertex than tracks in jets due to the finite tau lepton lifetime.
+\end{description}
 %
-
+The track multiplicity and narrowness features are shown in \cref{fig:taus-eventdisplay}.
 
 \begin{figure}[tp]
   \centering
@@ -135,6 +138,78 @@ As a high energy hadron collider, the overwhelming majority of particles observe
   \caption{Variables.}
   \label{fig:taus-eventdisplay}
 \end{figure}
+
+For track multiplicity, reconstructed $\tauh$ are required to have exactly 1 or 3 associated tracks. This is effective at rejecting QCD jets which have a broader track multiplicity spectrum. This requirement has signficant efficiency loss (20-40\%) due to photon conversions from neutral pion decays and pileup, among other effects. The track multiplicity spectrum for $\tauh$ and jets is shown in \cref{fig:taus-trackmultiplicity} in a $\Ztaultauh$-rich selection of data.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/PERF-2013-06/fig_10a}
+  \caption{Variables.}
+  \label{fig:taus-trackmultiplicity}
+\end{figure}
+
+For narrowness and vertex displacement, discriminating variables are formed using tracking and calorimeter information and combined in a multi-variate identification algorithm. A complete description of the variables is given in \cref{tab:taus-idvars} and \cref{tab:taus-idvars}.
+
+A neutral pion identification algorithm is used.
+
+\begin{description}
+
+    \item[Central energy fraction (\coreEnergyFrac{}):] \hfill \\ 
+      Fraction of transverse energy deposited in the region $\Delta R < 0.1$ out of all energy deposited in the region $\Delta R < 0.2$ around the $\tauh$ candidate calculated by summing the energy deposited in all cells belonging to TopoClusters with a barycenter in this region, calibrated at the EM energy scale. Biases due to pile-up contributions are removed using a correction based on the number of reconstructed primary vertices in the event.
+
+    \item[Leading track momentum fraction (\leadTrackMomFrac{}):] \hfill \\ 
+      The transverse momentum of the highest-\pt{} charged particle in the core region of the $\tauh$ candidate, divided by the transverse energy sum, calibrated at the EM energy scale, deposited in all cells belonging to TopoClusters in the core region. A correction depending on the number of reconstructed primary vertices in the event is applied to this fraction, making the resulting variable pile-up independent.
+
+    \item[Track radius (\trackRadius{}):] \hfill \\ 
+      \pt-weighted distance of the associated tracks to the $\tauh$ direction, using all tracks in the core and isolation regions.
+
+    \item[Leading track IP significance (\ipSigLeadTrk{}): ] \hfill \\ 
+      Transverse impact parameter of the  highest-\pt{} track in the core region, divided by its estimated uncertainty.
+
+    \item[Number of tracks in the isolation region (\numIsoTrack{}):] \hfill \\ 
+      Number of tracks associated to the $\tauh$ in the region $0.2<\Delta R<0.4$.
+      
+    \item[Maximum $\Delta R$ (\dRmax{}): ] \hfill \\ 
+      The maximum $\Delta R$ between a track associated to the $\tauh$ candidate and the $\tauh$ direction. Only tracks in the core region are considered.
+      
+    \item[Transverse flight path significance (\transFlightSig{}):] \hfill \\ 
+      The decay length of the secondary vertex (vertex reconstructed with the tracks associated to the core region of the $\tauh$ candidate) in the transverse plane, divided by its estimated uncertainty. It is defined only for multi-track $\tauh$ candidates.
+      
+    \item[Track mass (\trackMass{}):] \hfill \\ 
+      Invariant mass of the four-vector sum of the charged particle momenta in the core and isolation regions.
+      
+    \item[Track-plus-$\pi^0$-system mass (\trackPizeroMass{}):] \hfill \\ 
+      Invariant mass of the system composed of the tracks and $\pi^0$ mesons in the core region.
+      
+    \item[Number of $\pi^0$ mesons reconstructed in the core region ($N_{\mathrm{\pi^0} } $).] \hfill \\
+      
+    \item[Ratio of track-plus-$\pi^0$-system \pt{} to total $\tauh$ \pt{} (\Etratio{}): ] \hfill \\ 
+      Ratio of estimated \pt{} using track + $\pi^0$ information to the calorimeter-only measurement.
+      
+\end{description}
+
+\begin{table}[htp] 
+  \centering
+  \begin{tabular}{|c|cc|cc|}
+    \hline
+    Variable & \multicolumn{2}{c|}{Offline}      & \multicolumn{2}{c|}{Trigger} \\
+                         &  1-track  & 3-track   & 1-track   & 3-track   \\ \hline
+    \coreEnergyFrac{}    & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+    \leadTrackMomFrac{}  & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+    \trkAvgDist{}        & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+    \ipSigLeadTrk{}      & $\bullet$ &           & $\bullet$ &           \\
+    \numIsoTrack{}       & $\bullet$ &           & $\bullet$ &           \\
+    \dRmax{}             &           & $\bullet$ &           & $\bullet$ \\
+    \trkFlightPathSig{}  &           & $\bullet$ &           & $\bullet$ \\
+    \massTrkSys{}        &           & $\bullet$ &           & $\bullet$ \\
+    \massTrkPizeroSys{}  & $\bullet$ & $\bullet$ &           &           \\
+    $N_{\mathrm{\pi^0}}$ & $\bullet$ & $\bullet$ &           &           \\
+    \Etratio{}           & $\bullet$ & $\bullet$ &           &           \\
+    \hline
+  \end{tabular}
+  \caption{Discriminating variables used in the $\tauh$ identification algorithms.}
+  \label{tab:taus-idvars}
+\end{table}
 
 \begin{figure}[tp]
   \centering
