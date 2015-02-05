@@ -12,19 +12,84 @@ In Run-II, the LHC is expected to collide protons with $\sqrt{s} = 13 TeV$, a pe
 
 \begin{table}[bp] 
   \centering
-  \caption{LHC data-taking conditions in 2011 and 2012 compared with the expected data-taking conditions in 2015.}
   \input{tables/prospects-datataking}
+  \caption{LHC data-taking conditions in 2011 and 2012 compared with the expected data-taking conditions in 2015.}
   \label{tab:prospects-datataking}
+\end{table}
+
+The ATLAS L1 trigger rate would increase by $\approx 5\times$ if the 2012 trigger menu was ported unchanged to 2015 data-taking conditions. However, the L1 bandwidth is expected to increase from 75 kHz to 100 kHz, much less than this rate increase. The L1 menu must then be adapted to accommodate this.
+
+This is especially true of triggers which rely on $\tauh$ since hadronic objects are challenging in the trigger, both in identification and calibration. An unsustainable increase of trigger rate as a function of instantaneous luminosity is shown in \cref{fig:prospects-tautriggerrates}. Multiple avenues were explored to ensure tenable trigger rates without significant loss of physics.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_01a}
+  \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_01b}
+  \caption{Variables.}
+  \label{fig:prospects-tautriggerrates}
+\end{figure}
+
+\subsection{Run-I triggers for $\Htautau$}
+
+In Run-I, only the $\Htautauhh$ analysis relied on $\tauh$ triggers for physics. The $\Htautaulh$ used single lepton triggers with an offline threshold of 26 GeV. $\ell+\tauh$ triggers were considered but ultimately dropped because they brought additional complication to the analysis without significant improvement in sensitivity. The $\Htautaull$ analysis relied on single and di-lepton triggers. The list of triggers used in 2012 data-taking, and their expected 2015 versions, is shown in \cref{tab:prospects-triggersL1} and \cref{tab:prospects-triggersHLT}.
+
+\begin{table}[bp] 
+  \centering
+  \input{tables/prospects-triggersL1}
+  \caption{L1 triggers used in the 2012 $\Htautau$ analysis, and their expected 2015 versions, grouped by $\tautau$ decay channel.}
+  \label{tab:prospects-triggersL1}
 \end{table}
 
 \begin{table}[bp] 
   \centering
-  \caption{L1 trigger items and rate predictions for 2015 data-taking.}
-  \input{tables/prospects-L1rate-evolution}
-  \label{tab:prospects-L1rate-evolution}
+  \input{tables/prospects-triggersHLT}
+  \caption{HLT triggers used in the 2012 $\Htautau$ analysis, and their expected 2015 versions, grouped by $\tautau$ decay channel.}
+  \label{tab:prospects-triggersHLT}
 \end{table}
 
-\begin{figure}[tp]
+\clearpage
+\subsection{Run-II triggers}
+
+Trigger options for Run-II are most critical for the $\Htautauhh$ since it relies entirely on $\tauh$ triggers. The $\Htautaull$ analysis will continue to use single and di-lepton triggers, which enjoy low thresholds and are among the most high profile triggers, and thus less likely to be cut in case of unexpectedly high rates. The $\Htautaulh$ analysis will continue to use the single lepton trigger, but the potential benefit of recovering events with leptons below the single lepton trigger thresholds could be helpful. Accordingly, only the $\Htautauhh$ and $\Htautaulh$ analyses were considered for trigger optimizations, with emphasis on $\Htautauhh$.
+
+\subsubsection{Object thresholds}
+
+The first option was to raise object thresholds in the trigger. Given the success of the Run-I analysis, which only included event topologies with additional jets, triggering on one or two additional jets in the event was considered. To assess the impact of this, the Run-I analysis was re-run but with progressively higher thresholds on the final state objects, and the resulting sensitivity was derived. This is shown in \cref{fig:prospects-trigger-evolution}.
+
+\begin{figure}[!htpb]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/trigger/evolution_hadhad}
+  \includegraphics[width=0.48\textwidth]{figures/trigger/evolution_lephad}
+  \caption{Variables.}
+  \label{fig:prospects-trigger-evolution}
+\end{figure}
+
+For both $\Htautauhh$ and $\Htautaulh$, triggering on the lead jet in the VBF category was promising, and triggering on the sub-lead jet was not. This configuration would also spare the boosted category from requiring a second jet, which would be inefficient. An offline threshold of $\approx\! 70$ GeV for the lead jet, which corresponds to a L1 threshold of $\approx\! 25$ GeV, did not cost significant sensitivity.
+
+For $\Htautauhh$, raising the threshold on the lead $\tauh$ was more promising then raising the threshold on the sub-lead $\tauh$. For $\Htautaulh$, raising the threshold on the $\tauh$ was more promising than raising the threshold on the lepton.
+
+\subsubsection{L1topo}
+
+A new feature of the L1 trigger in 2015 is the ability to make topological selections, whereas in Run-I, only object multiplicity selections could be made. This topological selection are implemented via the new \texttt{L1topo} processor.
+
+At L1, the dominant background for $\tauh$ triggers is QCD di-jet production. Topological selections can be used in various ways to suppress this process, especially in the $\Htautau$ analysis signal regions where the $\tau\tau$ system tends to be boosted.
+%
+\begin{description}
+    \item[$\Delta\phi(\tau\tau) < X$:] \hfill \\
+      QCD di-jets tend to be produced back-to-back in the transverse plane, and the $\tau\tau$ system is usually not due to transverse boost.
+    \item[$\Delta\eta(\tau\tau) < X$:] \hfill \\
+      QCD di-jets tend to be produced broadly in $\eta$, and the $\tautau$ system tends to have smaller $\Delta\eta$ due to longitudal boost of the $Z/H$.
+    \item[$\Delta R(\tau\tau) < X$:] \hfill \\
+      This combines discriminating power of $\Delta\phi(\tau\tau)$ and $\Delta\eta(\tau\tau)$.
+    \item[$\pt(\tau\tau) > X$:] \hfill \\
+      QCD di-jet systems tend to be produced at rest in the transverse plane, and the $\tau\tau$ system is usually not due to transverse boost.
+    \item[$\mtautau > X$:] \hfill \\
+      QCD di-jet systems tend to be non-resonant and low-$\pt$, and the $\tau\tau$ system is from $Z/H$ decays.
+\end{description}
+%
+The discriminating power of these variables is shown in \cref{fig:prospects-trigger-l1topo}.
+
+\begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.32\textwidth]{figures/l1topo/taulep-deta}
   \includegraphics[width=0.32\textwidth]{figures/l1topo/taulep-dphi}
@@ -32,23 +97,18 @@ In Run-II, the LHC is expected to collide protons with $\sqrt{s} = 13 TeV$, a pe
   \includegraphics[width=0.32\textwidth]{figures/l1topo/ditau-pt}
   \includegraphics[width=0.32\textwidth]{figures/l1topo/ditau-m}
   \caption{Variables.}
-  \label{fig:prospects-trigger-l1topo-angular}
+  \label{fig:prospects-trigger-l1topo}
 \end{figure}
 
+Of these options, angular discrimination is appealing because the angular resolution for $\tauh$ at L1 is better than momentum resolution, hence sharper turn-on curves can be expected at HLT and offline. $\Delta R(\tautau)$ was ultimately chosen for discrimination because it combines the discriminating power of $\Delta\phi(\tautau)$ and $\Delta\eta(\tautau)$.
+
+\clearpage
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-COM-DAQ-2012-001/c_L1_etares}
   \includegraphics[width=0.48\textwidth]{figures/ATL-COM-DAQ-2012-001/c_L1_phires}
   \caption{Variables.}
   \label{fig:prospects-trigger-2011-angular}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/trigger/evolution_hadhad}
-  \includegraphics[width=0.48\textwidth]{figures/trigger/evolution_lephad}
-  \caption{Variables.}
-  \label{fig:prospects-trigger-evolution}
 \end{figure}
 
 \begin{figure}[tp]
@@ -90,6 +150,14 @@ In Run-II, the LHC is expected to collide protons with $\sqrt{s} = 13 TeV$, a pe
   \label{fig:prospects-trigger-isolation-turnon}
 \end{figure}
 
+\begin{table}[tp] 
+  \centering
+  \input{tables/prospects-L1rate-evolution}
+  \caption{L1 trigger items and rate predictions for 2015 data-taking. A baseline L1 menu is used for calculating the unique rate.}
+  \label{tab:prospects-L1rate-evolution}
+\end{table}
+
+\clearpage
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.32\textwidth]{figures/vbf-LTT/tau-pt}
@@ -111,6 +179,7 @@ In Run-II, the LHC is expected to collide protons with $\sqrt{s} = 13 TeV$, a pe
   \label{fig:prospects-ltt-taus}
 \end{figure}
 
+\clearpage
 \begin{figure}[tp]
   \includegraphics[width=0.32\textwidth]{figures/vbf-LTT/jet-1-pt}
   \includegraphics[width=0.32\textwidth]{figures/vbf-LTT/jet-1-eta}
@@ -131,6 +200,7 @@ In Run-II, the LHC is expected to collide protons with $\sqrt{s} = 13 TeV$, a pe
   \label{fig:prospects-ltt-jets}
 \end{figure}
 
+\clearpage
 \section{HL-LHC}
 \label{sec:prospects-hllhc}
 
