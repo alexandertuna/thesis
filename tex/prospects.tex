@@ -8,7 +8,7 @@ Prospects for the $\Htautau$ analysis in Run-II and at the HL-LHC are described.
 \section{Run-II}
 \label{sec:prospects-run2}
 
-In Run-II, the LHC is expected to collide protons with $\sqrt{s} = 13 TeV$, a peak instantaneous luminosity of approximately $1.6\times 10^{34} \text{cm}^{-2} \text{s}^{-1}$, 25 nanosecond bunch spacing, and $\pileup\approx 40$. These data-taking conditions are much harsher than in 2012, as shown in \cref{tab:prospects-datataking}.
+In Run-II, the LHC is expected to collide protons with $\sqrt{s} = 13$ TeV, a peak instantaneous luminosity of approximately $1.6\times 10^{34} \text{cm}^{-2} \text{s}^{-1}$, 25 nanosecond bunch spacing, and $\pileup\approx 40$. These data-taking conditions are much harsher than in 2012, as shown in \cref{tab:prospects-datataking}.
 
 \begin{table}[bp] 
   \centering
@@ -100,10 +100,12 @@ The discriminating power of these variables is shown in \cref{fig:prospects-trig
   \label{fig:prospects-trigger-l1topo}
 \end{figure}
 
-Of these options, angular discrimination is appealing because the angular resolution for $\tauh$ at L1 is better than momentum resolution, hence sharper turn-on curves can be expected at HLT and offline. $\Delta R(\tautau)$ was ultimately chosen for discrimination because it combines the discriminating power of $\Delta\phi(\tautau)$ and $\Delta\eta(\tautau)$.
+Of these options, angular discrimination is appealing because the angular resolution for $\tauh$ at L1 is better than momentum resolution, as shown in \cref{fig:prospects-trigger-2011-angular} and \cref{fig:prospects-trigger-resolution}. Sharper efficiency turn-ons can then be expected at HLT and offline. $\Delta R(\tautau) < 2.8$ was ultimately chosen for discrimination because it combines the discriminating power of $\Delta\phi(\tautau)$ and $\Delta\eta(\tautau)$.
+
+The impact of requiring an additional jet and $\Delta R(\tautau) < 2.8$ on the predicted 2015 L1 trigger rate is shown in \cref{tab:prospects-L1rate-evolution}. A ten-fold reduction of the rate is achieved without signicant loss of sensitivity.
 
 \clearpage
-\begin{figure}[tp]
+\begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-COM-DAQ-2012-001/c_L1_etares}
   \includegraphics[width=0.48\textwidth]{figures/ATL-COM-DAQ-2012-001/c_L1_phires}
@@ -111,14 +113,7 @@ Of these options, angular discrimination is appealing because the angular resolu
   \label{fig:prospects-trigger-2011-angular}
 \end{figure}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.80\textwidth]{figures/trigger/cartoonL1}
-  \caption{Variables.}
-  \label{fig:prospects-trigger-cartoonL1}
-\end{figure}
-
-\begin{figure}[tp]
+\begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_18a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_18c}
@@ -126,36 +121,19 @@ Of these options, angular discrimination is appealing because the angular resolu
   \label{fig:prospects-trigger-resolution}
 \end{figure}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20_1p3p}
-  \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20I_1p3p}
-  \caption{Variables.}
-  \label{fig:prospects-trigger-towersize}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/trigger/iso_background_noTAU60}
-  \includegraphics[width=0.48\textwidth]{figures/trigger/iso_background_yesTAU60}
-  \caption{Variables.}
-  \label{fig:prospects-trigger-isolation-rate}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/trigger/iso_turnonL1_noTAU60}
-  \includegraphics[width=0.48\textwidth]{figures/trigger/iso_turnonL1_yesTAU60}
-  \caption{Variables.}
-  \label{fig:prospects-trigger-isolation-turnon}
-\end{figure}
-
-\begin{table}[tp] 
+\begin{table}[!htpb] 
   \centering
   \input{tables/prospects-L1rate-evolution}
   \caption{L1 trigger items and rate predictions for 2015 data-taking. A baseline L1 menu is used for calculating the unique rate.}
   \label{tab:prospects-L1rate-evolution}
 \end{table}
+\clearpage
+
+\subsubsection{Sensitivity gain in $\Htautaulh$ with $\ell+\tau_h$ triggers}
+
+To assess the potential gain in sensitivity of $\ell+\tau_h$ triggers in 2015, the $\Htautaulh$ analysis was re-run in the regime below the single lepton trigger threshold. Kinematic distributions are shown in \cref{fig:prospects-ltt-taus} and \cref{fig:prospects-ltt-jets}, including the final BDT discriminant.
+
+Using the $Z_A$ metric, a significant improvement in sensitivity was not observed.
 
 \clearpage
 \begin{figure}[tp]
@@ -199,6 +177,47 @@ Of these options, angular discrimination is appealing because the angular resolu
   \caption{Variables.}
   \label{fig:prospects-ltt-jets}
 \end{figure}
+\clearpage
+
+\subsection{Updates to the L1 $\tauh$ object}
+
+Updates to the L1 $\tauh$ object are also considered. 
+
+\subsubsection{Size}
+
+The size of the L1 $\tauh$ is made larger to check if a sharper efficiency turn-on curve can be gained without significant background contamination. This is especially important for 3-track $\tauh$, which are expected to be wider than 1-track $\tauh$ and are observed to have a slower efficiency turn-on curve. The default L1 $\tauh$ used in 2012 data-taking is $2 \times 1$ in the electromagnetic calorimeter and $2 \times 2$ in the hadronic calorimeter.
+
+Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{fig:prospects-trigger-towersize} for simulated $\tauh$ with and without isolation requirements. A sharper efficiency turn-on is achieved relative to the default definition, but since background rates increase non-trivially, the default definition will be retained in 2015 data-taking.
+
+\begin{figure}[!htpb]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20_1p3p}
+  \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20I_1p3p}
+  \caption{Variables.}
+  \label{fig:prospects-trigger-towersize}
+\end{figure}
+
+\subsubsection{Isolation}
+
+\begin{figure}[!htpb]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/trigger/iso_background_noTAU60}
+  \includegraphics[width=0.48\textwidth]{figures/trigger/iso_background_yesTAU60}
+  \caption{Variables.}
+  \label{fig:prospects-trigger-isolation-rate}
+\end{figure}
+
+\begin{figure}[!htpb]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/trigger/iso_turnonL1_noTAU60}
+  \includegraphics[width=0.48\textwidth]{figures/trigger/iso_turnonL1_yesTAU60}
+  \caption{Variables.}
+  \label{fig:prospects-trigger-isolation-turnon}
+\end{figure}
+
+\subsection{Conclusions and contingencies}
+
+
 
 \clearpage
 \section{HL-LHC}
