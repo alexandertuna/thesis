@@ -17,7 +17,7 @@ In Run-II, the LHC is expected to collide protons with $\sqrt{s} = 13$ TeV, a pe
   \label{tab:prospects-datataking}
 \end{table}
 
-The ATLAS L1 trigger rate would increase by $\approx 5\times$ if the 2012 trigger menu was ported unchanged to 2015 data-taking conditions. However, the L1 bandwidth is expected to increase from 75 kHz to 100 kHz, much less than this rate increase. The L1 menu must then be adapted to accommodate this.
+The ATLAS L1 trigger rate would increase approximately five-fold if the 2012 trigger menu was ported unchanged to 2015 data-taking conditions. However, the L1 bandwidth is expected to increase from 75 kHz to 100 kHz, much less than this rate increase. The L1 menu must then be adapted to accommodate this.
 
 This is especially true of triggers which rely on $\tauh$ since hadronic objects are challenging in the trigger, both in identification and calibration. An unsustainable increase of trigger rate as a function of instantaneous luminosity is shown in \cref{fig:prospects-tautriggerrates}. Multiple avenues were explored to ensure tenable trigger rates without significant loss of physics.
 
@@ -199,6 +199,10 @@ Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{
 
 \subsubsection{Isolation}
 
+The definition of L1 isolation is also reconsidered for 2015 data-taking. In 2012, a flat cut of $\pt^\text{L1,iso} < 5$ GeV is used. In 2015, the option of $\pt^\text{L1}$-dependent isolation is available. 
+
+Removing the isolation requirement is considered above $\pt^\text{L1}$. This is equivalent to a logical \texttt{OR} with the lowest unprescaled single $\tauh$ trigger, \texttt{TAU60}.
+
 \begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/iso_background_noTAU60}
@@ -217,7 +221,23 @@ Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{
 
 \subsection{Conclusions and contingencies}
 
+Despite significantly harsher data-taking conditions in 2015, triggers for the $\Htautauhh$ and $\Htautaulh$ analyses can be adapted to retain physics output with manageable rates and without major loss of generality. The most important adaptations for both channels are requiring an additional high-$\pt$ jet and requiring low $\Delta R(\tautau)$. The L1 $\tauh$ menu is shown in \cref{}.
 
+\begin{table}[!htpb]
+  \centering
+  \input{tables/prospects-taumenu}
+  \caption{The $\tauh$ L1 menu. A baseline L1 menu is used for calculating the unique rate.}
+  \label{tab:prospects-taumenu}
+\end{table}
+
+Contingency plans are considered due to the uncertainty of the rate prediction and the uncertainty of the LHC data-taking conditions.
+
+\begin{table}[!htpb]
+  \centering
+  \input{tables/prospects-contingencies}
+  \caption{Contingency options for the $\Htautau$ section of the $\tauh$ L1 menu. The change in unique rate is with respect to the baseline menu. A baseline L1 menu is used for calculating the unique rate.}
+  \label{tab:prospects-contingencies}
+\end{table}
 
 \clearpage
 \section{HL-LHC}
