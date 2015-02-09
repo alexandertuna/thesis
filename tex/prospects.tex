@@ -199,7 +199,7 @@ Updates to the L1 $\tauh$ object are also considered.
 
 The size of the L1 $\tauh$ is made larger to check if a sharper efficiency turn-on curve can be gained without significant background contamination. This is especially important for 3-track $\tauh$, which are expected to be wider than 1-track $\tauh$ and are observed to have a slower efficiency turn-on curve. The default L1 $\tauh$ used in 2012 data-taking is $2 \times 1$ in the electromagnetic calorimeter and $2 \times 2$ in the hadronic calorimeter.
 
-Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{fig:prospects-trigger-towersize} for simulated $\tauh$ with and without isolation requirements. A sharper efficiency turn-on is achieved relative to the default definition, but since background rates increase non-trivially, the default definition will be retained in 2015 data-taking.
+Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{fig:prospects-trigger-towersize} for simulated $\tauh$ with and without isolation requirements. A sharper efficiency turn-on is achieved relative to the default definition, as shown in \cref{tab:prospects-tauobject}. Since background rates increase non-trivially with larger L1 $\tauh$ objects, the default definition will be retained in 2015 data-taking.
 
 \begin{figure}[!htpb]
   \centering
@@ -208,6 +208,16 @@ Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{
   \caption{Efficiency for firing the 20 GeV L1 $\tauh$ trigger as a function of offline $\pt(\tauh)$ for no isolation requirement (left) and the 2012 isolation requirement (right) for various definitions of the L1 $\tauh$ item. The current definition ($2 \times 1$ EM, $2 \times 2$ had.) has the slowest efficiency turn-on. Fits are performed with a Fermi-Dirac distribution.}
   \label{fig:prospects-trigger-towersize}
 \end{figure}
+
+\begin{table}[!htpb]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Fits of the L1 $\tauh$ trigger efficiency with a Fermi-Dirac distribution for various definitions of the L1 $\tauh$ item. No isolation requirement is made.}
+  \input{tables/prospects-tausize}
+  \label{tab:prospects-tausize}
+\end{table}
+
+\clearpage
 
 \subsubsection{Isolation}
 
@@ -246,7 +256,7 @@ Despite significantly harsher data-taking conditions in 2015, triggers for the $
 
 \begin{table}[!htpb]
   \centering
-  \renewcommand{\arraystretch}{1.5}
+  \renewcommand{\arraystretch}{1.4}
   \caption{The $\tauh$ L1 menu. A baseline L1 menu is used for calculating the unique rate.}
   \input{tables/prospects-taumenu}
   \label{tab:prospects-taumenu}
