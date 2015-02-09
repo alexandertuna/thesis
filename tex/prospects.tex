@@ -145,7 +145,7 @@ To assess the potential gain in sensitivity of $\LTT$ triggers in 2015, the $\Ht
   \label{tab:prospects-LTT-2012}
 \end{table}
 
-A simple, analytic formula for the discovery significance ($Z_A$~\cite{2012.cowan.significance}) gives $0.7\sigma$ for the $\LTT$ triggered category. This is not a significant improvment over the single lepton triggered regime.
+A simple, analytic formula for the discovery significance $Z_A$~\cite{2012.cowan.significance} gives $0.7\sigma$ for the $\LTT$ triggered category. This is not a significant improvment over the single lepton triggered regime.
 
 \clearpage
 \begin{figure}[tp]
@@ -199,7 +199,7 @@ Updates to the L1 $\tauh$ object are also considered.
 
 The size of the L1 $\tauh$ is made larger to check if a sharper efficiency turn-on curve can be gained without significant background contamination. This is especially important for 3-track $\tauh$, which are expected to be wider than 1-track $\tauh$ and are observed to have a slower efficiency turn-on curve. The default L1 $\tauh$ used in 2012 data-taking is $2 \times 1$ in the electromagnetic calorimeter and $2 \times 2$ in the hadronic calorimeter.
 
-Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{fig:prospects-trigger-towersize} for simulated $\tauh$ with and without isolation requirements. A sharper efficiency turn-on is achieved relative to the default definition, as shown in \cref{tab:prospects-tauobject}. Since background rates increase non-trivially with larger L1 $\tauh$ objects, the default definition will be retained in 2015 data-taking.
+Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{fig:prospects-trigger-towersize} for simulated $\tauh$ with and without isolation requirements. A sharper efficiency turn-on is achieved relative to the default definition, as shown in \cref{tab:prospects-tausize}. Since background rates increase non-trivially with larger L1 $\tauh$ objects, the default definition will be retained in 2015 data-taking.
 
 \begin{figure}[!htpb]
   \centering
@@ -212,7 +212,7 @@ Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{
 \begin{table}[!htpb]
   \centering
   \renewcommand{\arraystretch}{1.4}
-  \caption{Fits of the L1 $\tauh$ trigger efficiency with a Fermi-Dirac distribution for various definitions of the L1 $\tauh$ item. No isolation requirement is made.}
+  \caption{Fits of the efficiency for firing the 20 GeV L1 $\tauh$ trigger with a Fermi-Dirac distribution for various definitions of the L1 $\tauh$ item. No isolation requirement is made.}
   \input{tables/prospects-tausize}
   \label{tab:prospects-tausize}
 \end{table}
@@ -273,17 +273,17 @@ Contingency plans are considered due to the uncertainty of the rate prediction a
 \end{table}
 
 \clearpage
+
 \section{HL-LHC}
 \label{sec:prospects-hllhc}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.90\textwidth]{figures/PLOT-UPGRADE-2014-001/fig_08}
-  \caption{Variables.}
-  \label{fig:prospects-hllhc-layout}
-\end{figure}
+This section documents projections of the Standard Model $\Htautau$ analysis for the ECFA High Luminosity LHC Experiments Workshop 2014~\cite{ATL-PHYS-PUB-2014-018}. The projection considers High Luminosity LHC (HL-LHC) running conditions with 14 TeV $pp$ collisions, 3000 $\ifb$ delivered integrated luminosity, and an average number of overlapping $pp$ collisions per bunch-crossing (pile-up) $\pileup = 140$. Only the VBF $\taul\tauh$ ($\ell = e,\mu$) analysis category is considered.
 
-\begin{figure}[tp]
+This projection is built from the existing Run-I analysis~\cite{HIGG-2013-32} by using the same data samples, Monte Carlo samples, data-driven background estimates, and multivariate analysis (MVA) techniques. It is projected to HL-LHC conditions by adding emulation of the harsher pile-up conditions and scaling the predictions by the ratios of cross-sections and integrated luminosity for HL-LHC versus 2012 conditions. The harsher pile-up conditions impacts jets and $\MET$ significantly.
+
+The analysis also considers possible extensions of the tracking volume to investigate the impact of tracking-based rejection of pile-up jets. 
+
+\begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_01a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_01b}
@@ -291,7 +291,7 @@ Contingency plans are considered due to the uncertainty of the rate prediction a
   \label{fig:prospects-hllhc-degradation}
 \end{figure}
 
-\begin{figure}[tp]
+\begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_02a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_02b}
@@ -299,7 +299,7 @@ Contingency plans are considered due to the uncertainty of the rate prediction a
   \label{fig:prospects-hllhc-rocs}
 \end{figure}
 
-\begin{figure}[tp]
+\begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_03a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_03b}
@@ -313,7 +313,7 @@ Contingency plans are considered due to the uncertainty of the rate prediction a
   \label{fig:prospects-hllhc-jets}
 \end{figure}
 
-\begin{figure}[tp]
+\begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_04a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_04b}
@@ -327,12 +327,19 @@ Contingency plans are considered due to the uncertainty of the rate prediction a
   \label{fig:prospects-hllhc-taus}
 \end{figure}
 
-\begin{figure}[tp]
+\begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_06a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_06b}
   \caption{Variables.}
   \label{fig:prospects-hllhc-bdts}
+\end{figure}
+
+\begin{figure}[!htpb]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figures/PLOT-UPGRADE-2014-001/fig_08}
+  \caption{Variables.}
+  \label{fig:prospects-hllhc-layout}
 \end{figure}
 
 
