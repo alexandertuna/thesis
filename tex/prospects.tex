@@ -12,8 +12,9 @@ In Run-II, the LHC is expected to collide protons with $\sqrt{s} = 13$ TeV, a pe
 
 \begin{table}[bp] 
   \centering
-  \input{tables/prospects-datataking}
+  \renewcommand{\arraystretch}{1.4}
   \caption{LHC data-taking conditions in 2011 and 2012 compared with the expected data-taking conditions in 2015.}
+  \input{tables/prospects-datataking}
   \label{tab:prospects-datataking}
 \end{table}
 
@@ -25,7 +26,7 @@ This is especially true of triggers which rely on $\tauh$ since hadronic objects
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_01a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_01b}
-  \caption{Variables.}
+  \caption{Tau trigger rates in 2012 data-taking as a function of instantaneous luminosity for L1 (left) and HLT (right).}
   \label{fig:prospects-tautriggerrates}
 \end{figure}
 
@@ -35,15 +36,17 @@ In Run-I, only the $\Htautauhh$ analysis rely on $\tauh$ triggers for physics. T
 
 \begin{table}[bp] 
   \centering
-  \input{tables/prospects-triggersL1}
+  \renewcommand{\arraystretch}{1.4}
   \caption{L1 triggers used in the 2012 $\Htautau$ analysis, and their expected 2015 versions, grouped by $\tautau$ decay channel.}
+  \input{tables/prospects-triggersL1}
   \label{tab:prospects-triggersL1}
 \end{table}
 
 \begin{table}[bp] 
   \centering
-  \input{tables/prospects-triggersHLT}
+  \renewcommand{\arraystretch}{1.4}
   \caption{HLT triggers used in the 2012 $\Htautau$ analysis, and their expected 2015 versions, grouped by $\tautau$ decay channel.}
+  \input{tables/prospects-triggersHLT}
   \label{tab:prospects-triggersHLT}
 \end{table}
 
@@ -54,13 +57,13 @@ Trigger options for Run-II are most critical for the $\Htautauhh$ since it relie
 
 \subsubsection{Object thresholds}
 
-The first and simplest option is to raise object thresholds in the trigger. Since the Run-I analysis signal regions only include event topologies with additional jets, triggering on one or two additional jets in the event is considered. To assess the impact of this, the Run-I analysis was re-run but with progressively higher thresholds on the final state objects, and the resulting sensitivity is derived. This is shown in \cref{fig:prospects-trigger-evolution}.
+The first and simplest option is to raise object thresholds in the trigger. Since the Run-I analysis signal regions only include event topologies with additional jets, triggering on one or two additional jets in the event is considered. To assess the impact of this, the Run-I analysis is re-run but with progressively higher thresholds on the final state objects, and the resulting sensitivity is derived. This is shown in \cref{fig:prospects-trigger-evolution}.
 
 \begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/evolution_hadhad}
   \includegraphics[width=0.48\textwidth]{figures/trigger/evolution_lephad}
-  \caption{Variables.}
+  \caption{Significance ($p_0$) of the $\Htautau$ VBF category in 2012 for the $\Htautauhh$ (left) and $\Htautaulh$ (right) analyses as a function of offline or L1 threshold for various objects.}
   \label{fig:prospects-trigger-evolution}
 \end{figure}
 
@@ -96,7 +99,7 @@ The discriminating power of these variables is shown in \cref{fig:prospects-trig
   \includegraphics[width=0.32\textwidth]{figures/l1topo/taulep-dR}
   \includegraphics[width=0.32\textwidth]{figures/l1topo/ditau-pt}
   \includegraphics[width=0.32\textwidth]{figures/l1topo/ditau-m}
-  \caption{Variables.}
+  \caption{Topological distributions at L1 for $\Htautaueh$ MC versus high-pileup ($\pileup=81$) minimum bias MC.}
   \label{fig:prospects-trigger-l1topo}
 \end{figure}
 
@@ -106,7 +109,7 @@ Of these options, angular discrimination is appealing because the angular resolu
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-COM-DAQ-2012-001/c_L1_etares}
   \includegraphics[width=0.48\textwidth]{figures/ATL-COM-DAQ-2012-001/c_L1_phires}
-  \caption{Variables.}
+  \caption{L1 angular resolution for $\tauh$ in simulation and data.}
   \label{fig:prospects-trigger-2011-angular}
 \end{figure}
 
@@ -114,7 +117,7 @@ Of these options, angular discrimination is appealing because the angular resolu
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_18a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_18c}
-  \caption{Variables.}
+  \caption{Momentum resolution for $\tauh$ in simulation and data at L1 (left) and HLT (right). The resolution is significantly improved at HLT.}
   \label{fig:prospects-trigger-resolution}
 \end{figure}
 
@@ -124,8 +127,9 @@ The impact of requiring an additional jet and $\Delta R(\tautau) < 2.8$ on the p
 
 \begin{table}[!htpb] 
   \centering
-  \input{tables/prospects-L1rate-evolution}
+  \renewcommand{\arraystretch}{1.4}
   \caption{L1 trigger items and rate predictions for 2015 data-taking. A baseline L1 menu is used for calculating the unique rate.}
+  \input{tables/prospects-L1rate-evolution}
   \label{tab:prospects-L1rate-evolution}
 \end{table}
 
@@ -135,8 +139,9 @@ To assess the potential gain in sensitivity of $\LTT$ triggers in 2015, the $\Ht
 
 \begin{table}[!htpb] 
   \centering
-  \input{tables/prospects-LTT-2012}
+  \renewcommand{\arraystretch}{1.4}
   \caption{L1 and HLT $\LTT$ trigger items operating in 2012.}
+  \input{tables/prospects-LTT-2012}
   \label{tab:prospects-LTT-2012}
 \end{table}
 
@@ -160,7 +165,7 @@ A simple, analytic formula for the discovery significance ($Z_A$~\cite{2012.cowa
   \includegraphics[width=0.32\textwidth]{figures/vbf-LTT/met-phi-centrality}
   \includegraphics[width=0.32\textwidth]{figures/vbf-LTT/H-pt-hi}
   \includegraphics[width=0.32\textwidth]{figures/vbf-LTT/mvis}
-  \caption{Variables.}
+  \caption{Kinematic distributions in the $\LTT$ category of the 8 TeV VBF $\Htautaulh$ analysis.}
   \label{fig:prospects-ltt-taus}
 \end{figure}
 
@@ -181,7 +186,7 @@ A simple, analytic formula for the discovery significance ($Z_A$~\cite{2012.cowa
   \includegraphics[width=0.32\textwidth]{figures/vbf-LTT/n-jets30}
   \includegraphics[width=0.32\textwidth]{figures/vbf-LTT/dijet-m-high}
   \includegraphics[width=0.32\textwidth]{figures/vbf-LTT/BDTEve-VBF}
-  \caption{Variables.}
+  \caption{Kinematic distributions in the $\LTT$ category of the 8 TeV VBF $\Htautaulh$ analysis.}
   \label{fig:prospects-ltt-jets}
 \end{figure}
 \clearpage
@@ -200,21 +205,30 @@ Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20_1p3p}
   \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20I_1p3p}
-  \caption{Variables.}
+  \caption{Efficiency for firing the 20 GeV L1 $\tauh$ trigger as a function of offline $\pt(\tauh)$ for no isolation requirement (left) and the 2012 isolation requirement (right) for various definitions of the L1 $\tauh$ item. The current definition ($2 \times 1$ EM, $2 \times 2$ had.) has the slowest efficiency turn-on. Fits are performed with a Fermi-Dirac distribution.}
   \label{fig:prospects-trigger-towersize}
 \end{figure}
 
 \subsubsection{Isolation}
 
-The definition of L1 isolation is also reconsidered for 2015 data-taking. In 2012, a flat cut of $\pt^\text{L1,iso} < 5$ GeV is used. In 2015, the option of $\pt^\text{L1}$-dependent isolation is available. 
+The definition of L1 isolation is also reconsidered for 2015 data-taking. In 2012, a flat cut of $\pt^\text{L1,iso} \leq 4$ GeV is used. In 2015, the option of $\pt^\text{L1}$-dependent isolation is available. A simple linear dependence is explored:
+%
+\begin{equation}
+  \begin{split}
+    \text{require} \ \pt^\text{L1,iso} &\leq m \times \pt^\text{L1,iso} + b \ \text{GeV} \\
+   \end{split}
+  \label{eqn:prospects-L1iso}
+\end{equation}
+%
+With the definition, the 2012 isolation requirement is $m=0$ and $b=4$.
 
-Removing the isolation requirement is considered above $\pt^\text{L1}$. This is equivalent to a logical \texttt{OR} with the lowest unprescaled single $\tauh$ trigger, \texttt{TAU60}.
+Removing the isolation requirement is considered above $\pt^\text{L1} = 60$ GeV. This is equivalent to a logical \texttt{OR} with the lowest unprescaled single $\tauh$ trigger, \texttt{TAU60}, and thus will not cost any additional unique rate to the total L1 trigger menu.
 
 \begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/iso_background_noTAU60}
   \includegraphics[width=0.48\textwidth]{figures/trigger/iso_background_yesTAU60}
-  \caption{Variables.}
+  \caption{L1 rate for the di-$\tauh$ trigger in 14 TeV minimum bias MC for various $\pt^\text{L1}$-dependent isolation definitions relative to the 2012 definition: $\pt^\text{L1,iso} \leq 4$ GeV. Many options give the same rate (white color). The rate is calculated irrespective of the lowest unprescaled single $\tauh$ trigger (left) and with a logical \texttt{OR} of it (right).}
   \label{fig:prospects-trigger-isolation-rate}
 \end{figure}
 
@@ -222,18 +236,19 @@ Removing the isolation requirement is considered above $\pt^\text{L1}$. This is 
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/iso_turnonL1_noTAU60}
   \includegraphics[width=0.48\textwidth]{figures/trigger/iso_turnonL1_yesTAU60}
-  \caption{Variables.}
+  \caption{Efficiency for firing the L1 $\tauh$ trigger for various $\pt^\text{L1}$-dependent isolation definitions which have similar rates, as derived from \cref{fig:prospects-trigger-isolation-rate}. The 2012 definition is the black line. The efficiency is calculated irrespective of the lowest unprescaled single $\tauh$ trigger (left) and with a logical \texttt{OR} of it (right).}
   \label{fig:prospects-trigger-isolation-turnon}
 \end{figure}
 
 \subsection{Conclusions and contingencies}
 
-Despite significantly harsher data-taking conditions in 2015, triggers for the $\Htautauhh$ and $\Htautaulh$ analyses can be adapted to retain physics output with manageable rates and without major loss of generality. The most important adaptations for both channels are requiring an additional high-$\pt$ jet and requiring low $\Delta R(\tautau)$. The L1 $\tauh$ menu is shown in \cref{}.
+Despite significantly harsher data-taking conditions in 2015, triggers for the $\Htautauhh$ and $\Htautaulh$ analyses can be adapted to retain physics output with manageable rates and without major loss of generality. The most important adaptations for both channels are requiring an additional high-$\pt$ jet and requiring low $\Delta R(\tautau)$. The L1 $\tauh$ menu is shown in \cref{tab:prospects-taumenu}.
 
 \begin{table}[!htpb]
   \centering
-  \input{tables/prospects-taumenu}
+  \renewcommand{\arraystretch}{1.5}
   \caption{The $\tauh$ L1 menu. A baseline L1 menu is used for calculating the unique rate.}
+  \input{tables/prospects-taumenu}
   \label{tab:prospects-taumenu}
 \end{table}
 
@@ -241,8 +256,9 @@ Contingency plans are considered due to the uncertainty of the rate prediction a
 
 \begin{table}[!htpb]
   \centering
-  \input{tables/prospects-contingencies}
+  \renewcommand{\arraystretch}{1.4}
   \caption{Contingency options for the $\Htautau$ section of the $\tauh$ L1 menu. The change in unique rate is with respect to the baseline menu. A baseline L1 menu is used for calculating the unique rate.}
+  \input{tables/prospects-contingencies}
   \label{tab:prospects-contingencies}
 \end{table}
 
