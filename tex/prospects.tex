@@ -283,6 +283,28 @@ This projection is built from the existing Run-I analysis~\cite{HIGG-2013-32} by
 
 The analysis also considers possible extensions of the tracking volume to investigate the impact of tracking-based rejection of pile-up jets. 
 
+\subsection{Selection}
+
+The selection of a VBF-like sample for the $\taul\tauh$ final state discussed in this note relies on the identification of one lepton (electron or muon), one hadronic tau and at least two jets. Muons are selected if they have transverse momentum higher than $26 \GeV$ and are in the region $|\eta|<2.4$. Quality criteria on the inner detector track associated to the muon are also applied. Electron candidates are formed from a cluster in the electromagnetic calorimeters (transition regions, $1.37<|\eta|<1.52$, are excluded) that is matched with a track reconstructed within the inner detector, $|\eta|<2.47$. Electrons with a transverse momentum higher than $26~\GeV$ are selected and a \texttt{tightPP} working point is used. For both muons and electrons, calorimeter and track-based isolation criteria with similar combined selection efficiency as the LHC Run-I analysis are assumed.
+
+Jets are reconstructed using the anti-$k_t$ algorithm~\cite{Antikt1} with a radius parameter $R=0.4$, taking topological clusters in the calorimeters as inputs. Only jets with $|\eta|<4.5$ are selected in this analysis. The general $\pt$ threshold for jets is 30 GeV, and specific selection of the VBF analysis is mentioned later. Track-based pile-up suppression with jet-vertex fraction (JVF)~\cite{ATLAS-CONF-2014-018} is applied in the range of the tracking volume (jet $|\eta| < 2.4$). In the range $\left|\eta\right|<2.5$, $b$-tagged jets are identified using the MV1 tagging algorithm based on the impact parameter information and on the reconstruction of the displaced vertices of the hadron decays inside the jets~\cite{ATLAS-CONF-2014-046}. 
+
+Tau candidates are seeded by anti-$k_t$~\cite{Antikt1}, $R=0.4$ jets with $\pt > 20$ GeV whose calorimeter cluster and leading track must satisfy $|\eta| < 2.47$. The Boosted Decision Tree (BDT) tau identification method~\cite{PERF-2013-06} is used, requiring that the tau candidate passes the \texttt{medium} tightness, corresponding to to approximately 55-60\% efficiency A dedicated selection to reject fake tau candidates from electrons and muons is applied.
+
+When different objects selected according to the above criteria overlap with each other geometrically (within $\Delta R < 0.2$), only one of them is considered for further analysis. The overlap is resolved by selecting muon, electron, $\tauh$ and jet candidates in this order of priority.
+
+The signal events are characterized by true $\MET$ due to the presence of the neutrinos from the tau decays. In this analysis, the $\MET$ reconstruction uses reconstructed high-$\pt$ physics objects (electrons, photons, $\tauh$, jets and muons) and a measurement of the soft term, which includes contributions from the underlying event, multi-parton interactions, and physics objects below analysis threshold.
+
+Unless otherwise noted, the topological selection criteria are identical to the Run-I analysis. One lepton and one hadronically decaying tau are required, and there must be at least two jets with a significant separation in $\eta$ as expected for VBF production. Some additional topological cuts are applied to suppress backgrounds while retaining most of the signal. The VBF category is intentionally defined loosely since the discrimination of signal from background is meant to be handled by the BDTs. The event selection is summarized in \cref{tab:prospects-HLLHC-selection}.
+
+\begin{table}[!htpb]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Event selection and categorization criteria. The $\mT$ requirement is relaxed to avoid signal loss due to the degradation of the $\MET$ resolution at high $\pileup$.}
+  \input{tables/prospects-HLLHC-selection}
+  \label{tab:prospects-HLLHC-selection}
+\end{table}
+
 \begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_01a}
