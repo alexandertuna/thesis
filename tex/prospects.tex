@@ -313,7 +313,25 @@ The method of pile-up emulation follows the same procedure used by the $\HWW$ pr
 
 The Run-I triggering thresholds and efficiency are assumed. The ATLAS trigger has many upgrades planned to mitigate the impact of higher instantaneous luminosity, including the New Small Wheel, hardware trackers, and finer L1 EM-calorimeter granularity. Improvements to the L1 granularity will especially improve triggers with electrons and taus, since shower shape variables can be built to discriminate against QCD jets better than existing isolation variables. It is then deemed unnecessary to consider scenarios of significant trigger efficiency loss in detail.
 
-It is also assumed that the lepton and tau reconstruction and identification efficiencies are equivalent to that observed in the 2012 data. This is chosen because the detector upgrades for the HL-LHC aim for achieving a performance similar to Run-I despite the harsher pile-up conditions. Hard-scatter jets from the 8 TeV samples are smeared to emulate the reconstructed jet resolution at HL-LHC conditions~\cite{ATL-PHYS-PUB-2013-004}. The jet smearing is propagated to the $\MET$ calculation. The soft-term resolution of the $\MET$ is smeared: 33 MeV per unit of $\pileup$, which is derived from high pile-up $Z/\gamma^\ast$ samples.
+It is also assumed that the lepton and tau reconstruction and identification efficiencies are equivalent to that observed in the 2012 data. This is chosen because the detector upgrades for the HL-LHC aim for achieving a performance similar to Run-I despite the harsher pile-up conditions. Hard-scatter jets from the 8 TeV samples are smeared to emulate the reconstructed jet resolution at HL-LHC conditions~\cite{ATL-PHYS-PUB-2013-004}. The jet smearing is propagated to the $\MET$ calculation. The soft-term resolution of the $\MET$ is smeared: 33 MeV per unit of $\pileup$, which is derived from high pile-up $Z/\gamma^\ast$ simulation.
+
+\subsubsection{Pileup emulation}
+
+Pileup jets are inserted into the event according to rates recommended by the ATLAS projections~\cite{ATL-PHYS-PUB-2013-004}. For $\pileup=140$ and jet $\pt \ge 30 \GeV$, the rate is 2.4 additional pile-up jets per event. The kinematics of the inserted pile-up jets are derived from high pile-up $Z/\gamma^\ast$ simulation. Templates are built for $\pt$ and $\eta$ and are then randomly sampled for each inserted pileup jet. 
+
+The hard-scattering jets are assumed to have a reconstruction efficiency of the track-confirmation algorithm recommended by the existing ATLAS projections. The pile-up jets are assumed to have the pile-up suppression efficiency of the 2012 JVF algorithm, which is 98\% within the tracking volume~\cite{ATLAS-CONF-2014-018}. No degradation of pile-up jet suppression is assumed because techniques already exist which out-perform the JVF tagger. The pile-up suppression is assumed to not depend on $\pt$ and $\eta$ other than at the boundary of the tracker. The insertion of pileup jets is then propagated to the $\MET$ calculation.
+
+A new tracker in the forward region $|\eta| > 2.5$ is being considered for Phase-II ATLAS upgrades. To emulate the impact of pile-up jet suppression with a forward tracker, the analysis is re-run with forward pile-up jet rejection imposed by hand. Since the scope of the forward tracker is uncertain, a range of coverage and performance is considered: coverage of $|\eta| < $ 3.0, 3.5, and 4.0 and pile-up jet suppression of 50\%, 75\%, and 90\% with negligible signal (hard-scattering jets) efficiency loss is evaluated. For comparison, a pile-up jet suppression of 90\% with negligible signal efficiency loss is comparable to the performance of the JVF tagger within the existing tracker~\cite{ATLAS-CONF-2014-018}.
+
+The method of randomly inserting pile-up jets into existing events does not consider correlations between pile-up jets. This could be problematic because the $\pt$ imbalance of the event could be overstated, which would propagate to unphysical biases of quantities which are sensitive to balance like $\MET$. The impact of this has been assessed by overlaying entire truth pile-up events onto the existing hard scatter events. The results are comparable.
+
+\subsubsection{Impact on observables}
+
+The VBF $\Htautau$ analysis relies on two jets with large $\Delta\eta$ to describe the VBF topology and on $\MET$ to describe di-$\tau$ decays. The presence of forward pile-up jets can then be expected to degrade the sensitivity of the analysis because they will cause migration of background events into the VBF category, and because they will bias the $\MET$ calculation.
+
+The contamination of pile-up jets in the VBF category for the total background is significant. Most events (72\%) have a sub-lead pile-up jet, and nearly half (42\%) have a lead pile-up jet. These pile-up jets are especially problematic because they are typically forward, thus any event with pile-up lead and sub-lead jets in opposite hemispheres will have $|\eta_{j1} - \eta_{j2}| > 4.8$.
+
+Degradation of the $\MET$ and MMC $m(\tau\tau)$ under the high-luminosity conditions is shown in \cref{fig:prospects-hllhc-degradation} for simulated VBF $\Htautau$. Both observables are degraded by jet and $\MET$ smearing and by the presence of forward pile-up jets biasing the $\MET$ calculation.
 
 \begin{figure}[!htpb]
   \centering
@@ -323,6 +341,22 @@ It is also assumed that the lepton and tau reconstruction and identification eff
   \label{fig:prospects-hllhc-degradation}
 \end{figure}
 
+\subsection{Analysis}
+
+\subsubsection{Boosted decision tree training}
+
+A multi-variate analysis approach is used by training BDTs to discriminate signal from background. It is trained using all backgrounds scaled to their respective cross-sections against the total (ggF + VBF) signal shapes. The same training parameters and input variables as the Run-I analysis are used, and the input variables are listed in \cref{tab:prospects-hllhc-inputs}.
+
+\begin{table}[!htpb]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Discriminating variables used for the BDT training.}
+  \input{tables/prospects-hllhc-inputs}
+  \label{tab:prospects-hllhc-inputs}
+\end{table}
+
+BDTs are trained for a variety of forward tracker coverages ($|\eta| < 3$, $|\eta| < 3.5$ and $|\eta| < 4$) and pile-up rejection values (50\%, 75\% and 90\%). \cref{fig:prospects-hllhc-rocs} shows the efficiency for rejecting the background versus the efficiency for selecting the signal for the scenario of 90\% forward pile-up rejection. For a given signal efficiency, the background rejection improves with larger coverage.
+
 \begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_02a}
@@ -330,6 +364,10 @@ It is also assumed that the lepton and tau reconstruction and identification eff
   \caption{Variables.}
   \label{fig:prospects-hllhc-rocs}
 \end{figure}
+
+\subsubsection{Kinematic distributions}
+
+Predicted signal and background BDT input distributions as well as basic object kinematics are shown in Figures \cref{fig:prospects-hllhc-jets}, \cref{fig:prospects-hllhc-taus} and \cref{fig:prospects-hllhc-other}. Signal and background are predicted with the same methods as the Run-I analysis~\cite{HIGG-2013-32}, including the data-driven prediction of the dominant $\Ztautau$ and fake backgrounds. The resulting BDT score is presented in Figure \cref{fig:prospects-hllhc-bdts}.
 
 \begin{figure}[!htpb]
   \centering
@@ -341,7 +379,7 @@ It is also assumed that the lepton and tau reconstruction and identification eff
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_03f}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_03g}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_03h}
-  \caption{Variables.}
+  \caption{Signal and background HL-LHC predictions of (a) leading jet $\pt$, (b) sub-leading jet $\pt$, (c) leading jet $\eta$, (d) sub-leading jet $\eta$, (e) $\Delta\eta_{jj}$, (f) $m_{jj}$, (g) $\eta_{lead jet}\times \eta_{sub-lead jet}$ and (h) $\MET$. The last bin contains the overflow events.}
   \label{fig:prospects-hllhc-jets}
 \end{figure}
 
@@ -355,23 +393,66 @@ It is also assumed that the lepton and tau reconstruction and identification eff
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_04f}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_04g}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_04h}
-  \caption{Variables.}
+  \caption{Signal and background HL-LHC predictions of (a) $\pt(\tauh)$, (b) $\pt(\text{lepton})$, (c) $\eta(\tauh)$, (d) $\eta(\text{lepton})$, (e) $\Delta R(\tauh, \text{lepton})$, (f) MMC (g) $\mvis$ and (h) $\mT$. The last bin contains the overflow events.}
   \label{fig:prospects-hllhc-taus}
+\end{figure}
+
+\begin{figure}[!htpb]
+  \centering
+  \includegraphics[width=0.32\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_05a}
+  \includegraphics[width=0.32\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_05b}
+  \includegraphics[width=0.32\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_05c}
+  \caption{Signal and background HL-LHC predictions of (a) $\MET \phi$-centrality, (b) $\text{lepton}$ $\eta$-centrality and (c) $\pt^\text{Total}$. The last bin contains the overflow events.}
+  \label{fig:prospects-hllhc-other}
 \end{figure}
 
 \begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_06a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_06b}
-  \caption{Variables.}
+  \caption{Signal and background HL-LHC predictions of the BDT spectrum in the (a) full range and (b) highest bins range. Signal and background are overlaid in (a) and stacked in (b).}
   \label{fig:prospects-hllhc-bdts}
 \end{figure}
 
-\begin{figure}[!htpb]
-  \centering
-  \includegraphics[width=0.90\textwidth]{figures/PLOT-UPGRADE-2014-001/fig_08}
-  \caption{Variables.}
-  \label{fig:prospects-hllhc-layout}
-\end{figure}
+\subsection{Results}
 
+Yields for signal and background in the high BDT score bins are shown in \cref{tab:yields}. As in the Run-I analyses, $\Ztautau$ and fakes are the dominant backgrounds in the most signal-like regime. The binning of the BDT is optimized to maximize the expected sensitivity.
+
+YIELDS TABLE
+
+\begin{table}[!htpb]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Yields for signal and background in the VBF category and in the most sensitive BDT bins, as shown in \cref{fig:prospects-hllhc-bdts}.}
+  \input{tables/prospects-hllhc-yields}
+  \label{tab:prospects-hllhc-yields}
+\end{table}
+
+\subsubsection{Uncertainties assumptions}
+
+When calculating the sensitivity of the analysis, three scenarios of background uncertainties and two scenarios of theory uncertainties are considered. The theory uncertainties are varied from no theory uncertainties to Run-I theory uncertainties, which are as large as 6\% (30\%) for the VBF (ggF) Higgs production modes~\cite{HIGG-2013-32}. The experimental signal uncertainty is fixed at 5\% accounting for experimental sources such as jet energy scale uncertainties. The experimental background uncertainties are varied to 10\% and 5\% of the prediction, and they are treated as uncorrelated between backgrounds and between bins of the BDT score.
+
+The projected sensitivity is shown in \cref{tab:prospects-hllhc-signif}. The two scenarios of background uncertainties and two scenarios of theory uncertainties are shown. The sensitivity of the projection is driven by the uncertainty on the background prediction. For $\s_{B}^{\text{syst.}} = 10\%$, the projected uncertainty on $\mu$ with no signal theory uncertainties is 0.24. For $\s_{B}^{\text{syst.}} = 5\%$, this projected uncertainty is 0.13.
+
+\begin{table}[!htpb]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Uncertainty on the signal strength ($\Delta\mu$) for different scenarios of background uncertainties and signal theory uncertainties.}
+  \input{tables/prospects-hllhc-signif}
+  \label{tab:prospects-hllhc-signif}
+\end{table}
+
+The impact of pile-up jet rejection in the forward region is also evaluated as an example of the impact of a forward tracker, and results are given in \cref{tab:prospects-hllhc-signif2}. Multiple scenarios of $|\eta|$ coverage and pile-up jet rejection are considered. For these scenarios, negligible loss of HS jets to forward pile-up jet rejection is assumed, a 10\% systematic uncertainty is assumed for backgrounds, a 5\% experimental systematic uncertainty is assumed for signals, and theoretical uncertainties on signals are ignored.
+
+\begin{table}[!htpb]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Uncertainty on the signal strength ($\Delta\mu$) for different scenarios of forward tracking.}
+  \input{tables/prospects-hllhc-signif2}
+  \label{tab:prospects-hllhc-signif2}
+\end{table}
+
+\subsection{Conclusions}
+
+The projection of the Standard Model $\Htautau$ analysis to the High Luminosity LHC (HL-LHC) running conditions with 14 TeV $pp$ collisions, 3000 $\ifb$ delivered integrated luminosity, and an average number of overlapping $pp$ collisions $\pileup = 140$ is performed. The VBF $\taul\tauh$ ($\ell = e,\mu$) analysis category is considered, and the uncertainty on the signal strength ($\mu$) is projected to be $24\%$ when theory uncertainties are ignored and $10\%$ ($5\%$) background (signal) uncertainties are assumed. The projected uncertainty could be reduced significantly if pile-up jets outside the current tracking volume could be rejected similar to pile-up jet rejection within the tracking volume in 2012. The uncertainty on $\mu$ is projected to be $8-18\%$ depending on the scenario of forward tracker coverage and pile-up jet rejection.
 
