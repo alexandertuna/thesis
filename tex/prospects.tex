@@ -305,6 +305,16 @@ Unless otherwise noted, the topological selection criteria are identical to the 
   \label{tab:prospects-HLLHC-selection}
 \end{table}
 
+\subsection{Emulation of High-Luminosity LHC conditions}
+
+The method of pile-up emulation follows the same procedure used by the $\HWW$ projection for ECFA 2013~\cite{ATL-PHYS-PUB-2013-014}. The approach is to port the existing Run-I analysis to HL-LHC conditions by overlaying pile-up jets on the 8 TeV samples, degrading the hard-scatter (HS) jet and $\MET$ resolution, and propagating the impact of this to the analysis.
+
+\subsubsection{Performance assumptions}
+
+The Run-I triggering thresholds and efficiency are assumed. The ATLAS trigger has many upgrades planned to mitigate the impact of higher instantaneous luminosity, including the New Small Wheel, hardware trackers, and finer L1 EM-calorimeter granularity. Improvements to the L1 granularity will especially improve triggers with electrons and taus, since shower shape variables can be built to discriminate against QCD jets better than existing isolation variables. It is then deemed unnecessary to consider scenarios of significant trigger efficiency loss in detail.
+
+It is also assumed that the lepton and tau reconstruction and identification efficiencies are equivalent to that observed in the 2012 data. This is chosen because the detector upgrades for the HL-LHC aim for achieving a performance similar to Run-I despite the harsher pile-up conditions. Hard-scatter jets from the 8 TeV samples are smeared to emulate the reconstructed jet resolution at HL-LHC conditions~\cite{ATL-PHYS-PUB-2013-004}. The jet smearing is propagated to the $\MET$ calculation. The soft-term resolution of the $\MET$ is smeared: 33 MeV per unit of $\pileup$, which is derived from high pile-up $Z/\gamma^\ast$ samples.
+
 \begin{figure}[!htpb]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_01a}
