@@ -48,7 +48,7 @@ maxdayssince = (now - start).days + (now - start).seconds/spd
 
 ax = plt.gca()
 ax.xaxis.set_label_coords(0.74, -0.07)
-ax.yaxis.set_label_coords(-0.07, 0.9)
+ax.yaxis.set_label_coords(-0.10, 0.9)
 
 plt.xlabel("Days since start (Nov. 18)")
 plt.ylabel("Pages")
