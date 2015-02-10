@@ -2,11 +2,13 @@
 \label{chap:backgrounds}
 
 \begin{quote}
-Background estimates in the $\Htautau$ analysis are described.
+The modeling of relevant physics processes in the $\Htautau$ analysis are described.
 \end{quote}
 
 \section{$\Ztautau$}
 \label{sec:backgrounds-ztautau}
+
+\subsection{Mis-modeling of $\Zjets$ in simulation}
 
 \begin{figure}[tp]
   \centering
@@ -32,15 +34,22 @@ Background estimates in the $\Htautau$ analysis are described.
   \label{fig:backgrounds-zpt}
 \end{figure}
 
+\subsection{Embedding}
+
+\subsection{Validation}
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_03b}
   \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_03a}
   \caption{Variables.}
-  \label{fig:backgrounds-embedding-valdation}
+  \label{fig:backgrounds-embedding-validation}
 \end{figure}
 
 \clearpage
+
+\subsection{Uncertainties}
+
 \begin{figure}[tp]
   \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_Ztautau_VBF}
   \caption{Variables.}
@@ -48,118 +57,12 @@ Background estimates in the $\Htautau$ analysis are described.
 \end{figure}
 
 \clearpage
-\section{$j \rightarrow \tauh$ mis-identification}
+\section{$\fakes$ mis-identification}
 \label{sec:backgrounds-misid}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/jetBDT-1p}
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/jetBDT-3p}
-  \caption{Variables.}
-  \label{fig:backgrounds-workingpoints}
-\end{figure}
+\subsection{Mis-modeling of $\fakes$ in simulation}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.90\textwidth]{figures/backgrounds/rx-boost}
-  \caption{Variables.}
-  \label{fig:backgrounds-rx-boost}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.90\textwidth]{figures/backgrounds/rx-vbf}
-  \caption{Variables.}
-  \label{fig:backgrounds-rx-vbf}
-\end{figure}
-
-\clearpage
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/tau-pt}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/tau-eta}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/tau-numTrack}
-  % --------------
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/lep-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/lep-eta}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/taulep-dR}
-  % --------------
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/met-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/mMMC}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/mT}
-  % --------------
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/met-phi-centrality}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/H-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/mvis}
-  \caption{Variables.}
-  \label{fig:backgrounds-rx-vbf-taus}
-\end{figure}
-
-\clearpage
-
-\begin{figure}[tp]
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jet-1-pt}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jet-1-eta}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jets-dphi}
-  % --------------
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jet-2-pt}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jet-2-eta}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jets-deta}
-  % --------------
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jets-etaprod}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/lep-eta-centrality}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/system-pt}
-  % --------------
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/n-jets30}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/dijet-m-veryhigh}
-  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/BDTEve-VBF}
-  \caption{Variables.}
-  \label{fig:backgrounds-rx-vbf-jets}
-\end{figure}
-
-\clearpage
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.90\textwidth]{figures/backgrounds/regions-cartoon}
-  \caption{Variables.}
-  \label{fig:backgrounds-regions}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_boosted_1p_CRs}
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_boosted_1p_mix}
-  \caption{Variables.}
-  \label{fig:backgrounds-fakefactorsboost1p}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_boosted_3p_CRs}
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_boosted_3p_mix}
-  \caption{Variables.}
-  \label{fig:backgrounds-fakefactorsboost3p}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_vbf_1p_CRs}
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_vbf_1p_mix}
-  \caption{Variables.}
-  \label{fig:backgrounds-fakefactorsVBF1p}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_vbf_3p_CRs}
-  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_vbf_3p_mix}
-  \caption{Variables.}
-  \label{fig:backgrounds-fakefactorsVBF3p}
-\end{figure}
-
-\clearpage
+\subsection{Fake factor method}
 
 \begin{figure}[tp]
   \centering
@@ -224,6 +127,97 @@ Background estimates in the $\Htautau$ analysis are described.
   \includegraphics[width=0.32\textwidth]{figures/tauidcorrelations/tauid_vs_bdt}
   \caption{Variables.}
   \label{fig:backgrounds-tauid-correlations}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/jetBDT-1p}
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/jetBDT-3p}
+  \caption{Variables.}
+  \label{fig:backgrounds-workingpoints}
+\end{figure}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_vbf_1p_CRs}
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_vbf_3p_CRs}
+  \caption{Variables.}
+  \label{fig:backgrounds-fakefactorsVBFCRs}
+\end{figure}
+
+\subsection{Composition of $\fakes$ in the SR}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figures/backgrounds/rx-vbf}
+  \caption{Variables.}
+  \label{fig:backgrounds-rx-vbf}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/tau-pt}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/tau-eta}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/tau-numTrack}
+  % --------------
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/lep-pt-hi}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/lep-eta}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/taulep-dR}
+  % --------------
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/met-pt-hi}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/mMMC}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/mT}
+  % --------------
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/met-phi-centrality}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/H-pt-hi}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/mvis}
+  \caption{Variables.}
+  \label{fig:backgrounds-rx-vbf-taus}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[tp]
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jet-1-pt}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jet-1-eta}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jets-dphi}
+  % --------------
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jet-2-pt}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jet-2-eta}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jets-deta}
+  % --------------
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/jets-etaprod}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/lep-eta-centrality}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/system-pt}
+  % --------------
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/n-jets30}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/dijet-m-veryhigh}
+  \includegraphics[width=0.32\textwidth]{figures/rx/vbf-mvaSR/BDTEve-VBF}
+  \caption{Variables.}
+  \label{fig:backgrounds-rx-vbf-jets}
+\end{figure}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_vbf_1p_mix}
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_vbf_3p_mix}
+  \caption{Variables.}
+  \label{fig:backgrounds-fakefactorsVBFmix}
+\end{figure}
+
+\clearpage
+
+\subsection{Validation}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figures/backgrounds/regions-cartoon}
+  \caption{Variables.}
+  \label{fig:backgrounds-regions}
 \end{figure}
 
 \clearpage
@@ -314,6 +308,9 @@ Background estimates in the $\Htautau$ analysis are described.
 \end{figure}
 
 \clearpage
+
+\subsection{Uncertainties}
+
 \begin{figure}[tp]
   \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_fakes_VBF}
   \caption{Variables.}
@@ -321,8 +318,16 @@ Background estimates in the $\Htautau$ analysis are described.
 \end{figure}
 
 \clearpage
-\section{$\Htautau$, VBF}
-\label{sec:backgrounds-vbfhtautau}
+
+\section{top, $\Zll$, diboson}
+\label{sec:backgrounds-others}
+
+\section{$\Htautau$}
+\label{sec:backgrounds-htautau}
+
+\subsection{Generators}
+
+\subsection{Uncertainties}
 
 \begin{figure}[tp]
   \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_VBFH125_JES_VBF}
@@ -335,7 +340,4 @@ Background estimates in the $\Htautau$ analysis are described.
   \caption{Variables.}
   \label{fig:backgrounds-uncertainties-vbfother}
 \end{figure}
-
-\section{$\Htautau$, ggF}
-\label{sec:backgrounds-ggfhtautau}
 
