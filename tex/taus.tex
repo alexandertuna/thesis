@@ -19,7 +19,7 @@ Tau leptons decay leptonically ($\tauldecay$) in 35\% of decays and hadronically
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/piecharts/taudecay}
-  \caption{Variables.}
+  \caption{Pie chart of tau lepton decay branching fractions, grouped by hadronic decays (65\%) and leptonic decays (35\%).}
   \label{fig:taus-decaypie}
 \end{figure}
 
@@ -62,13 +62,13 @@ Tracking and vertexing for $\tauh$ occurs in three steps. First, all tracks are 
   \label{eqn:taus-tvf}
 \end{equation}
 %
-This vertex association is called the Tau Jet Vertex Association algorithm, and it helps ensure robustness against harsh pileup conditions, as shown in \cref{fig:taus-tjva}.
+This vertex association is called the Tau Jet Vertex Association (TJVA) algorithm, and it helps ensure robustness against harsh pileup conditions, as shown in \cref{fig:taus-tjva}.
 
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2012-142/fig_01a}
   \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2012-142/fig_01b}
-  \caption{Variables.}
+  \caption{Track selection efficiency for $\tauh$ candidates with the default vertex selection (highest $\Sigma\pt^2$) versus the dedicated TJVA algorithm, for true 1-track (left) and 3-track (right) $\tauh$, as a function of $\pileup$.}
   \label{fig:taus-tjva}
 \end{figure}
 
@@ -92,7 +92,7 @@ A correction to the $\tauh$ energy is applied to account for biases, such as eff
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_15a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_15b}
-  \caption{Variables.}
+  \caption{$\tauh$ energy response curves measured in simulation, for 1-track (left) and 2,3-track (right) $\tauh$, as a function of the reconstructed energy.}
   \label{fig:taus-calibration}
 \end{figure}
 
@@ -100,7 +100,7 @@ A correction to the $\tauh$ energy is applied to account for biases, such as eff
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_16a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_16b}
-  \caption{Variables.}
+  \caption{$\tauh$ energy resolution measured, for 1-track (left) and 2,3-track (right) $\tauh$, as a function of the true visible energy.}
   \label{fig:taus-resolution}
 \end{figure}
 
@@ -135,7 +135,7 @@ The track multiplicity and narrowness features are shown in \cref{fig:taus-event
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.95\textwidth]{figures/tauperformance/vp1_3dcocktail_run182424_evt2582762_tttaumu}
-  \caption{Variables.}
+  \caption{Event display of a $tt \rightarrow (b\mu\nu_\mu)(b\tauh\nu_\tau)$ candidate during 2011 data-taking The $\tauh$ candidate has 3 tracks, the $b$-jet candidates each have more than 10 tracks, and the muon is in red. The estimated purity of the selection is greater than 75\%.}
   \label{fig:taus-eventdisplay}
 \end{figure}
 
@@ -144,7 +144,7 @@ For track multiplicity, reconstructed $\tauh$ are required to have exactly 1 or 
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.95\textwidth]{figures/PERF-2013-06/fig_10a}
-  \caption{Variables.}
+  \caption{Fit of the predicted $\tauh$ track multiplicity to data in a $\Ztautaumh$ event selection before applying tau identification algorithms. The $\tauh$ candidates have much lower track multiplicity relative to the large jet background.}
   \label{fig:taus-trackmultiplicity}
 \end{figure}
 
@@ -154,7 +154,7 @@ A neutral pion identification algorithm is used.
 
 \begin{description}
 
-    \item[Central energy fraction (\coreEnergyFrac{}):] \hfill \\ 
+    \item[Central energy fraction (\centEnergyFrac{}):] \hfill \\ 
       Fraction of transverse energy deposited in the region $\Delta R < 0.1$ out of all energy deposited in the region $\Delta R < 0.2$ around the $\tauh$ candidate calculated by summing the energy deposited in all cells belonging to TopoClusters with a barycenter in this region, calibrated at the EM energy scale. Biases due to pile-up contributions are removed using a correction based on the number of reconstructed primary vertices in the event.
 
     \item[Leading track momentum fraction (\leadTrackMomFrac{}):] \hfill \\ 
@@ -194,7 +194,7 @@ A neutral pion identification algorithm is used.
     \hline
     Variable & \multicolumn{2}{c|}{Offline}      & \multicolumn{2}{c|}{Trigger} \\
                          &  1-track  & 3-track   & 1-track   & 3-track   \\ \hline
-    \coreEnergyFrac{}    & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
+    \centEnergyFrac{}    & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
     \leadTrackMomFrac{}  & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
     \trkAvgDist{}        & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
     \ipSigLeadTrk{}      & $\bullet$ &           & $\bullet$ &           \\
@@ -215,7 +215,7 @@ A neutral pion identification algorithm is used.
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_02a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_02b}
-  \caption{Variables.}
+  \caption{Signal and background distributions for two of the discriminating variables in the 1-track $\tauh$ jet discrimination algorithm: \centEnergyFrac{} (left) and \numIsoTrack{} (right). The remaining distributions are shown in \cref{apx:tauid}.}
   \label{fig:taus-id1p}
 \end{figure}
 
@@ -223,7 +223,7 @@ A neutral pion identification algorithm is used.
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_03a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_03b}
-  \caption{Variables.}
+  \caption{Signal and background distributions for two of the discriminating variables in the 3-track $\tauh$ jet discrimination algorithm: \trkAvgDist{} (left) and \massTrkPizeroSys{} (right). The remaining distributions are shown in \cref{apx:tauid}.}
   \label{fig:taus-id3p}
 \end{figure}
 
@@ -231,7 +231,7 @@ A neutral pion identification algorithm is used.
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_05a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_05b}
-  \caption{Variables.}
+  \caption{Signal efficiency versus inverse background efficiency for 1-track and 3-track $\tauh$ jet discrimination algorithms in a lower-$\pt$ regime (left) and higher-$\pt$ regime (right). The loose, medium, and tight operating points are highlighted with red markers.}
   \label{fig:taus-idroc}
 \end{figure}
 
@@ -244,7 +244,7 @@ A neutral pion identification algorithm is used.
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_08a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_09}
-  \caption{Variables.}
+  \caption{Signal and background distribution for one of the discriminating variables in the $\tauh$ electron discrimination algorithm: the TRT high threshold fraction (left), and signal efficiency versus inverse background efficiency for the algorithm (right).}
   \label{fig:taus-electronfakes1}
 \end{figure}
 
@@ -252,7 +252,7 @@ A neutral pion identification algorithm is used.
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_14a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/eveto_mvis_mediumID_loosePPOLR_looseeveto}
-  \caption{Variables.}
+  \caption{The visible mass $m_{e\tauh}$ in a $\Zee$ selection in data after requiring the $\tauh$ candidate pass the medium jet discrimination algorithm and not overlap spatially with a tight identified electron (left) and after additionally requiring the $\tauh$ pass the loose $\tauh$ electron discrimination algorithm (right).}
   \label{fig:taus-electronfakes2}
 \end{figure}
 
