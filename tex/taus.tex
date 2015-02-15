@@ -190,24 +190,9 @@ A neutral pion identification algorithm is used.
 
 \begin{table}[htp] 
   \centering
-  \begin{tabular}{|c|cc|cc|}
-    \hline
-    Variable & \multicolumn{2}{c|}{Offline}      & \multicolumn{2}{c|}{Trigger} \\
-                         &  1-track  & 3-track   & 1-track   & 3-track   \\ \hline
-    \centEnergyFrac{}    & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
-    \leadTrackMomFrac{}  & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
-    \trkAvgDist{}        & $\bullet$ & $\bullet$ & $\bullet$ & $\bullet$ \\
-    \ipSigLeadTrk{}      & $\bullet$ &           & $\bullet$ &           \\
-    \numIsoTrack{}       & $\bullet$ &           & $\bullet$ &           \\
-    \dRmax{}             &           & $\bullet$ &           & $\bullet$ \\
-    \trkFlightPathSig{}  &           & $\bullet$ &           & $\bullet$ \\
-    \massTrkSys{}        &           & $\bullet$ &           & $\bullet$ \\
-    \massTrkPizeroSys{}  & $\bullet$ & $\bullet$ &           &           \\
-    $N_{\mathrm{\pi^0}}$ & $\bullet$ & $\bullet$ &           &           \\
-    \Etratio{}           & $\bullet$ & $\bullet$ &           &           \\
-    \hline
-  \end{tabular}
+  \renewcommand{\arraystretch}{1.4}
   \caption{Discriminating variables used in the $\tauh$ identification algorithms.}
+  \input{tables/taus-idvars}
   \label{tab:taus-idvars}
 \end{table}
 
@@ -240,7 +225,17 @@ A neutral pion identification algorithm is used.
 
 \subsection{Electrons}
 
+The characteristic 1-track signature of $\tauh$ can be mimicked by electrons, even those which fail dedicated electron identification algorithms. This is problematic for $\tautaueh$ analyses because $\Zee$ ($\efake$) peaks in $\mtautau$ near the $\Htautaueh$ mass peak and because high-mass $\ZDYee$ ($\efake$) can have long tails in $\mtautau$.
 
+Despite their similarities, many properties can be used to discriminate electrons from $\tauh$. Electrons tend to produce more transition radiation than $\tauh$, have narrower deposits in the calorimeter, and have shallower deposits in the calorimeter, with rarely any depositions in the hadronic calorimeter. These properties are combined in a multi-variate identification algorithm trained in five regions of $\eta(\tauh)$ to discriminate electrons from simulated $\ZDYee$ against $\tauh$ from simulated $\ZDYtautau$.
+
+\begin{table}[htp] 
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Discriminating variables used in the $\tauh$ electron veto algorithms.}
+  \input{tables/taus-evetovars}
+  \label{tab:taus-evetovars}
+\end{table}
 
 \begin{figure}[tp]
   \centering
@@ -256,6 +251,14 @@ A neutral pion identification algorithm is used.
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/eveto_mvis_mediumID_loosePPOLR_looseeveto}
   \caption{The visible mass $m_{e\tauh}$ in a $\Zee$ selection in data after requiring the $\tauh$ candidate pass the medium jet discrimination algorithm and not overlap spatially with a tight identified electron (left)~\cite{PERF-2013-06} and after additionally requiring the $\tauh$ pass the loose $\tauh$ electron discrimination algorithm (right).}
   \label{fig:taus-electronfakes2}
+\end{figure}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2013-064/fig_22b}
+  \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_14b}
+  \caption{The pseudorapidity $\eta(\tauh)$ in a $\Zee$ selection in data after requiring the $\tauh$ candidate pass the medium jet discrimination algorithm, not overlap spatially with a tight identified electron, and pass the loose $\tauh$ electron discrimination algorithm from 2012 (left)~\cite{ATLAS-CONF-2013-064} and 2013 (right)~\cite{PERF-2013-06}. The modeling is improved in the forward region.}
+  \label{fig:taus-electronfakes3}
 \end{figure}
 
 \subsection{Muons}
