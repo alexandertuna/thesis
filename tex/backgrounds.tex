@@ -96,7 +96,15 @@ The largest background in the VBF $\Htautaulh$ analysis is from events where a j
 
 \subsection{Mis-modeling of $\fakes$ processes in simulation}
 
-Like the $\Ztautau$ background, simulation is a simple but deficient means of predicting the $\fakes$ background. 
+Like the $\Ztautau$ background, simulation is a simple but deficient means of predicting the $\fakes$ background. ATLAS observes mis-modeling in descriptions of jet shapes like the track width and track multiplicity~\cite{PERF-2013-02}, as shown in \cref{fig:backgrounds-trackwidth}, which $\tauh$ jet discriminators rely heavily on. This is especially problematic for $\tauh$ because the identification algorithms emphasize tails of distributions like track width, not the bulk, hence detailed corrections to the simulation can be statistically limited.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{figures/PERF-2013-02/figaux_01c}
+  \includegraphics[width=0.45\textwidth]{figures/PERF-2013-02/figaux_02c}
+  \caption{Comparison of data and various predictions of jet track width in dijet (left) and $\gamma\!+\!\text{jet}$ (right) events~\cite{PERF-2013-02}. Mis-modeling is observed for all predictions.}
+  \label{fig:backgrounds-trackwidth}
+\end{figure}
 
 Additionally, the event kinematics of $\Wjets$ and $\Zjets$ events have known mis-modeling in simulation. The mis-modeling of $\Zjets$ events is discussed in \cref{sec:backgrounds-zjets}, and ATLAS observes comparable mis-modeling in dijet kinematics of $\Wjets$ events, as shown in \cref{fig:backgrounds-wjets}. The mis-modeling of variables like $\Delta y(jj)$ and $\mjj$ is of concern since the VBF discriminators depend heavily on these kinematics.
 
