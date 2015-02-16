@@ -191,7 +191,7 @@ A neutral pion identification algorithm is used.
 \begin{table}[htp] 
   \centering
   \renewcommand{\arraystretch}{1.4}
-  \caption{Discriminating variables used in the $\tauh$ identification algorithms.}
+  \caption{Discriminating variables used in the $\tauh$ identification algorithms~\cite{PERF-2013-06}.}
   \input{tables/taus-idvars}
   \label{tab:taus-idvars}
 \end{table}
@@ -228,11 +228,28 @@ A neutral pion identification algorithm is used.
 The characteristic 1-track signature of $\tauh$ can be mimicked by electrons, even those which fail dedicated electron identification algorithms. This is problematic for $\tautaueh$ analyses because $\Zee$ ($\efake$) peaks in $\mtautau$ near the $\Htautaueh$ mass peak and because high-mass $\ZDYee$ ($\efake$) can have long tails in $\mtautau$.
 
 Despite their similarities, many properties can be used to discriminate electrons from $\tauh$. Electrons tend to produce more transition radiation than $\tauh$, have narrower deposits in the calorimeter, and have shallower deposits in the calorimeter, with rarely any depositions in the hadronic calorimeter. These properties are combined in a multi-variate identification algorithm trained in five regions of $\eta(\tauh)$ to discriminate electrons from simulated $\ZDYee$ against $\tauh$ from simulated $\ZDYtautau$.
-
+%
+\begin{description}
+    \item[TRT high threshold fraction ($\trtHTFrac$):] \hfill \\
+      The ratio of high-threshold to low-threshold hits (including outlier hits) in the TRT for the leading track.
+    \item[Pre-sampler and strip fraction ($\pssfraction$):] \hfill \\
+      The fraction of cluster energy deposited in the pre-sampler and strips of the EM calorimeter.
+    \item[Track-cluster $|\Delta\eta|$:] \hfill \\
+      The $|\Delta\eta|$ between the cluster and the leading track.
+    \item[Track-cluster $|\Delta\phi|$:] \hfill \\
+      The $|\Delta\phi|$ between the cluster and the leading track.
+    \item[Hadronic leakage ($\hadLeakEt$):] \hfill \\
+      The ratio of energy deposited in the zeroth compartment of the hadronic calorimeter to the lead track momentum.
+    \item[EM fraction ($\emFrac$):] \hfill \\
+      The fraction of energy deposited in the EM calorimeter.
+    \item[Strip maxima ($\Estripmax$):] \hfill \\
+      The maximal energy deposited in a $101 \!\times\! 3$ ($\eta, \phi$) window of the strips.
+\end{description}
+%
 \begin{table}[htp] 
   \centering
   \renewcommand{\arraystretch}{1.4}
-  \caption{Discriminating variables used in the $\tauh$ electron veto algorithms.}
+  \caption{Discriminating variables used in the $\tauh$ electron veto algorithms~\cite{PERF-2013-06,ATLAS-CONF-2013-064,ATLAS-CONF-2012-142}. Some variables are also used in the jet discrimination algorithms.}
   \input{tables/taus-evetovars}
   \label{tab:taus-evetovars}
 \end{table}
@@ -241,9 +258,13 @@ Despite their similarities, many properties can be used to discriminate electron
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_08a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_09}
-  \caption{Signal and background distribution for one of the discriminating variables in the $\tauh$ electron discrimination algorithm: the TRT high threshold fraction (left), and signal efficiency versus inverse background efficiency for the algorithm (right)~\cite{PERF-2013-06}.}
+  \caption{Signal and background distribution for one of the variables in the $\tauh$ electron discrimination algorithm: the TRT high threshold fraction (left), and signal efficiency versus inverse background efficiency for the algorithm (right)~\cite{PERF-2013-06}.}
   \label{fig:taus-electronfakes1}
 \end{figure}
+
+The performance of the electron discriminators is evaluated in data and simulation using a $\Zee$ tag-and-probe technique, where one identified electron is tagged and a $\tauh$ candidate is probed where the mass of the electron-$\tauh$ pair is consistent with the $Z$ mass. This measurement can be challenging because few $\efake$ survive the electron discrimination algorithms. The characteristic peak in $\mvis$ is shown in \cref{fig:taus-electronfakes2} before and after application of the algorithms.
+
+In the 2012 version of the electron discriminator, a mis-modeling in simulation is found in the forward region regarding the energy deposited in the third layer of the EM calorimeter, which propagates to the discriminator via $\emFrac$. The mis-modeling is ameliorated in the 2013 version by redefining $\emFrac$ to depend less strongly on the third layer deposition, and the modeling is improved, as shown in \cref{fig:taus-electronfakes3}.
 
 \begin{figure}[tp]
   \centering
@@ -257,11 +278,25 @@ Despite their similarities, many properties can be used to discriminate electron
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2013-064/fig_22b}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_14b}
-  \caption{The pseudorapidity $\eta(\tauh)$ in a $\Zee$ selection in data after requiring the $\tauh$ candidate pass the medium jet discrimination algorithm, not overlap spatially with a tight identified electron, and pass the loose $\tauh$ electron discrimination algorithm from 2012 (left)~\cite{ATLAS-CONF-2013-064} and 2013 (right)~\cite{PERF-2013-06}. The modeling is improved in the forward region.}
+  \caption{The pseudorapidity $\eta(\tauh)$ in a $\Zee$ selection in data after requiring the $\tauh$ candidate pass the medium jet discrimination algorithm, not overlap spatially with a tight identified electron, and pass the loose $\tauh$ electron discrimination algorithm from 2012 (left)~\cite{ATLAS-CONF-2013-064} and 2013 (right)~\cite{PERF-2013-06}. Statistical uncertainty is not shown on the left. The modeling is improved in the forward region.}
   \label{fig:taus-electronfakes3}
 \end{figure}
 
 \subsection{Muons}
+
+The characteristic 1-track signature of $\tauh$ can also be mimicked by muons. This is more rare than $\efake$ mis-identification since muons are minimum ionizing particles and do not often deposit sufficient energy in the calorimeters to seed a $\tauh$ candidate. But $\Zmumu$ ($\mfake$) can nonetheless be a problem for $\tautaumh$ final states for the same reasons as $\Zee$ is problematic for $\tautaueh$ final states.
+
+Studies of $\Zmumu$ simulation indicate most (60\%) $\mfake$ have a cluster in the calorimeter from photon ISR. The remaining are assumed to undergo sufficient ionization in the hadronic calorimeter to create a cluster. Only 2\% of $\mfake$ are not reconstructed as a muon candidate. Most of these $\mfake$ occur in a region of $\eta$ which is poorly covered by the muon system, and some occur because they are too low $\pt$ for the muon reconstruction algorithms.
+%
+\begin{table}[htp] 
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{A breakdown of how $\mfake$ occur, both in the case of all $\mfake$ and only those which fail the muon reconstruction.}
+  \input{tables/taus-muonfakes}
+  \label{tab:taus-muonfakes}
+\end{table}
+%
+These properties are shown in \cref{fig:taus-muonfakes2} and \cref{fig:taus-muonfakes2}.
 
 \begin{figure}[tp]
   \centering
@@ -275,8 +310,19 @@ Despite their similarities, many properties can be used to discriminate electron
   \centering
   \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_mlly}
   \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_dR}
-  \caption{True $m_{\mu\mu\gamma}$ (left) and $\Delta R(\mu,\ \gamma)$ (right) in $\Zmm$ events where a muon is mis-identified as a $\tauh$ and a true ISR photon is associated to the muon. The muons are split into \texttt{combined} muons (black), muons which pass tracking requirements but fail \texttt{combined} requirements (green), are reconstructed but fail tracking requirements (blue), and are not reconstructed (red).}
+  \caption{True $m_{\mu\mu\gamma}$ (left) and $\Delta R(\mu,\ \gamma)$ (right) in $\Zmm$ events where a muon is mis-identified as a $\tauh$ and a true FSR photon is associated to the muon. The muons are split into \texttt{combined} muons (black), muons which pass tracking requirements but fail \texttt{combined} requirements (green), are reconstructed but fail tracking requirements (blue), and are not reconstructed (red).}
   \label{fig:taus-muonfakes2}
 \end{figure}
+
+In physics analysis, $\mfake$ are typically rejected by requiring a $\tauh$ candidate not overlap with an identified muon and that it pass an additional, dedicated muon veto. These rejection criteria are re-optimized in 2014 for better $\mfake$ suppression and simultaneously better true $\tauh$ efficiency. The updated rejection removes the dedicated muon veto, which cost $\approx\!5\%$ efficiency for true $\tauh$, and tightens the overlap criteria such that $\tauh$ candidates are rejected if they overlap with any reconstructed muon above 2 GeV. The improved rejection of this criteria is shown in \cref{fig:taus-muonfakes3}.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonrejection_2013}
+  \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonrejection_2014}
+  \caption{Data and prediction in a $\Ztautaumh$ selection, where $\Zmumu$ ($\mfake$) is shown in orange, for 2013 (left) and 2014 (right) versions of $\mfake$ rejection techniques. Overlapping muon candidates in the 2013 version are required to fulfill tracking goodness as a form of identification. The $\Zmumu$ ($\mfake$) is reduced significantly in the 2014 version.}
+  \label{fig:taus-muonfakes3}
+\end{figure}
+
 
 
