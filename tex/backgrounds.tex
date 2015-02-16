@@ -11,6 +11,7 @@
 The $\Ztautau$ process constitutes a major and irreducible background to all three final states of the $\Htautau$ analysis. Its modeling is therefore critical. It is also challenging to validate because the poor mass resolution of $\mtautau$ implies finding a region of data orthogonal to the $\Htautau$ signal regions but rich in $\Ztautau$ events is not possible.
 
 \subsection{Mis-modeling of $\Zjets$ in simulation}
+\label{sec:backgrounds-zjets}
 
 The simplest approach is to use simulation to model $\Ztautau$. Unfortunately, ATLAS has observed in the $\Zee$ and $\Zmumu$ processes that mis-modeling is present in various aspects of $\Zjets$ kinematics. These aspects include the underlying event, the $Z$ $\pt$, and dijet kinematics as shown in \cref{fig:backgrounds-zue}, \cref{fig:backgrounds-zpt}, and \cref{fig:backgrounds-zjj}, respectively.
 
@@ -34,7 +35,7 @@ The simplest approach is to use simulation to model $\Ztautau$. Unfortunately, A
   \centering
   \includegraphics[width=0.48\textwidth]{figures/STDM-2012-04/fig_11a}
   \includegraphics[width=0.48\textwidth]{figures/STDM-2012-04/fig_11b}
-  \caption{Comparison of data and various predictions in $\Zll$ events of $\Delta Y(jj)$ (left) and $\mjj$ (right) in 2011 data-taking~\cite{STDM-2012-04}. Mis-modeling is observed for all predictions.}
+  \caption{Comparison of data and various predictions in $\Zll$ events of $\Delta y(jj)$ (left) and $\mjj$ (right) in 2011 data-taking~\cite{STDM-2012-04}. Mis-modeling is observed for all predictions.}
   \label{fig:backgrounds-zjj}
 \end{figure}
 
@@ -44,9 +45,9 @@ Some versions of the ATLAS $\Htautau$ analysis use simulated $\Ztautau$ with cor
 
 \subsection{Embedding}
 
-A more data-driven approach to modeling $\Ztautau$ is used wherein $\Zmumu$ events are tagged in data and the muons are replaced with simulated tau lepton decays. This exploits lepton universality in $Z$ decays and has the great advantage of taking all $Z\!+\text{jets}$ features directly from data, such as $Z$ $\pt$, dijet kinematics, and soft hadronic activity. Only the tau lepton decays and the detector response of the decay products are taken from simulation. The former is measured with excellent precision at $B$-factories~\cite{2014.hfag}, and the latter is an ongoing area of study within ATLAS.
+A more data-driven approach to modeling $\Ztautau$ is used wherein $\Zmumu$ events are tagged in data and the muons are replaced with simulated tau lepton decays. This exploits lepton universality in $Z$ decays and has the great advantage of taking all $Z\!+\text{jets}$ features directly from data, such as $Z$ $\pt$, dijet kinematics, and soft hadronic activity. Only the tau lepton decays and the detector response of the decay products are taken from simulation. The former is measured with excellent precision at $B$-factories~\cite{2014.hfag}, and the latter is an ongoing area of study within ATLAS detector performance groups.
 
-$\Zmumu$ events are selected in data by requiring an event fire the lowest unprescaled dimuon trigger and have at least two reconstructed muons with $\pt > 15$ GeV and $|\eta| <$ 2.5. All possible pairs of muons are then considered which satisfy $\pt^\text{lead} > $ 20 GeV, have opposite charges, and have $m_{\mu\mu} > $ 40 GeV. The pair which has mass closest to the $Z$ mass is then chosen as the $Z$ decay products.
+$\Zmumu$ events are selected in data by requiring an event fire the lowest unprescaled dimuon trigger and have at least two reconstructed muons with $\pt > 15$ GeV and $|\eta| <$ 2.5. All possible pairs of muons are then considered which satisfy $\pt^\text{lead} > $ 20 GeV, muon isolation requirements, have opposite charges, and have $m_{\mu\mu} > $ 40 GeV. The pair which has mass closest to the $Z$ mass is then chosen as the $Z$ decay products.
 
 Tau lepton decays are then simulated with \texttt{TAUOLA} with the same four-momenta as the muons associated to the $Z$ decay and sent through the full ATLAS detector simulation, digitization, and reconstruction. The decays can be set to whatever final state desired (e.g., $\tautaueh$) within \texttt{TAUOLA}. 
 
@@ -61,6 +62,8 @@ The simulated $\tautau$ system is then merged with the data $\Zmumu$ event by re
 
 \subsection{Validation}
 
+Various steps of the embedding procedure are validated with creative choices of output and input datasets of the embedding algorithms. For example, to test the subtraction of data muons, the embedding procedure is run on data $\Zmumu$ events merged with simulated $\Zmumu$ decays, and the output is compared with the original data $\Zmumu$ events. For a global test of the fidelity of the method, the embedding procedure is run on simulated $\Zmumu$ events merged with simulated $\Ztautau$ decays, and the output is compared with simulated $\Ztautau$ events. The results are shown in \cref{fig:backgrounds-embedding-validation}, and no significant biases are observed.
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_03b}
@@ -73,9 +76,15 @@ The simulated $\tautau$ system is then merged with the data $\Zmumu$ event by re
 
 \subsection{Uncertainties}
 
+Since all $Z$ kinematics are taken directly from data, no uncertainties regarding to $Z$ or jet kinematics are considered. However, uncertainties regarding the response of simulating tau decay products and the embedding procedure itself are considered. The uncertainty on the detector response is implemented via the typical collection of uncertainties pertaining to the measured identification efficiency and energy calibration of simulated leptons and $\tauh$ at ATLAS.
+
+Two uncertainties regarding the embedding procedure are considered. First, the isolation criteria on the data muons are either relaxed or tightened to test the dependence of the prediction on the $\Zmumu$ selection criteria. Second, the amount of cell energy subtracted when removing the data muons is varied by 20\%, which is commensurate with the observed differences in the isolation energy between simulated $\Zmumu$ events merged with simulated $\Ztautau$ decays and simulated $\Ztautau$ events.
+
+The pre-fit impact of these uncertainties on the $\Ztautau$ prediction is shown in each bin of the VBF discriminator in \cref{fig:backgrounds-uncertainties-Ztautau}. The largest uncertainty at high VBF BDT score is the nearly 30\% statistical uncertainty on the prediction, which is an inevitable limitation of the embedding procedure since it relies on the finite number of $\Zmumu$ events in data. The largest systematic uncertainties are component of the $\tauh$ energy scale uncertainty, which are each 10-15\%. These propagate directly to shifts of the $\mMMC$.
+
 \begin{figure}[tp]
   \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_Ztautau_VBF}
-  \caption{The fractional uncertainty on the embedded $\Ztautaulh$ prediction in each bin of the VBF category for uncertainties pertaining to the embedding procedure and $\tauh$ performance.}
+  \caption{The pre-fit fractional uncertainty on the embedded $\Ztautaulh$ prediction in each bin of the VBF category for uncertainties pertaining to the embedding procedure and $\tauh$ performance.}
   \label{fig:backgrounds-uncertainties-Ztautau}
 \end{figure}
 
@@ -83,7 +92,25 @@ The simulated $\tautau$ system is then merged with the data $\Zmumu$ event by re
 \section{$\fakes$ mis-identification}
 \label{sec:backgrounds-misid}
 
-\subsection{Mis-modeling of $\fakes$ in simulation}
+The largest background in the VBF $\Htautaulh$ analysis is from events where a jet is mis-identified as a $\tauh$, $\fakes$. The use of data-driven approaches to the prediction is therefore crucial. Unlike the $\Ztautau$ background, many regions of data exist which are rich in $\fakes$, and these regions can be exploited. The largest sources of $\fakes$ are $\Wjets$, QCD, top, and $\Zjets$ events.
+
+\subsection{Mis-modeling of $\fakes$ processes in simulation}
+
+Like the $\Ztautau$ background, simulation is a simple but deficient means of predicting the $\fakes$ background. 
+
+Additionally, the event kinematics of $\Wjets$ and $\Zjets$ events have known mis-modeling in simulation. The mis-modeling of $\Zjets$ events is discussed in \cref{sec:backgrounds-zjets}, and ATLAS observes comparable mis-modeling in dijet kinematics of $\Wjets$ events, as shown in \cref{fig:backgrounds-wjets}. The mis-modeling of variables like $\Delta y(jj)$ and $\mjj$ is of concern since the VBF discriminators depend heavily on these kinematics.
+
+Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$, and top events with corrections derived from data, in conjunction to same-sign data events, to model $\fakes$~\cite{HIGG-2012-07,ATLAS-CONF-2012-160}. While helpful, these corrections are one-dimensional and cannot account for potential correlations in the mis-modeling, and the same-sign data sample has large statistical uncertainties. For these reasons, this approach is not used in the recent publication.
+
+\clearpage
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figures/STDM-2012-24/fig_26a}
+  \includegraphics[width=0.90\textwidth]{figures/STDM-2012-24/fig_28a}
+  \caption{Comparison of data and various predictions in $\Wjets$ events of $\Delta y(jj)$ (top) and $\mjj$ (bottom) in 2011 data-taking~\cite{STDM-2012-24}. Mis-modeling is observed for all predictions.}
+  \label{fig:backgrounds-wjets}
+\end{figure}
+\clearpage
 
 \subsection{Fake factor method}
 
@@ -338,7 +365,7 @@ The simulated $\tautau$ system is then merged with the data $\Zmumu$ event by re
 
 \begin{figure}[tp]
   \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_fakes_VBF}
-  \caption{The fractional uncertainty on the $\fakes$ prediction in each bin of the VBF category.}
+  \caption{The pre-fit fractional uncertainty on the $\fakes$ prediction in each bin of the VBF category.}
   \label{fig:backgrounds-uncertainties-fakes}
 \end{figure}
 
@@ -356,13 +383,13 @@ The simulated $\tautau$ system is then merged with the data $\Zmumu$ event by re
 
 \begin{figure}[tp]
   \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_VBFH125_JES_VBF}
-  \caption{The fractional uncertainty on the VBF $\Htautaulh$ prediction in each bin of the VBF category for uncertainties pertaining to the jet energy scale.}
+  \caption{The pre-fit fractional uncertainty on the VBF $\Htautaulh$ prediction in each bin of the VBF category for uncertainties pertaining to the jet energy scale.}
   \label{fig:backgrounds-uncertainties-vbfjes}
 \end{figure}
 
 \begin{figure}[tp]
   \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_VBFH125_other_VBF}
-  \caption{The fractional uncertainty on the VBF $\Htautaulh$ prediction in each bin of the VBF category for uncertainties pertaining to $\tauh$ performance, theory, and the luminosity.}
+  \caption{The pre-fit fractional uncertainty on the VBF $\Htautaulh$ prediction in each bin of the VBF category for uncertainties pertaining to $\tauh$ performance, theory, and the luminosity.}
   \label{fig:backgrounds-uncertainties-vbfother}
 \end{figure}
 
