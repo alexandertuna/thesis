@@ -2,13 +2,17 @@
 \label{chap:backgrounds}
 
 \begin{quote}
-  The modeling of relevant physics processes in the $\Htautau$ analysis are described.
+  The modeling of physics processes relevant to the $\Htautau$ analysis are described. This draws from internal documentation of the recent ATLAS $\Htautau$ publication~\cite{ATL-COM-PHYS-2014-170}.
 \end{quote}
 
 \section{$\Ztautau$}
 \label{sec:backgrounds-ztautau}
 
+The $\Ztautau$ process constitutes a major and irreducible background to all three final states of the $\Htautau$ analysis. Its modeling is therefore critical. It is also challenging to validate because the poor mass resolution of $\mtautau$ implies finding a region of data orthogonal to the $\Htautau$ signal regions but rich in $\Ztautau$ events is not possible.
+
 \subsection{Mis-modeling of $\Zjets$ in simulation}
+
+The simplest approach is to use simulation to model $\Ztautau$. Unfortunately, ATLAS has observed in the $\Zee$ and $\Zmumu$ processes that mis-modeling is present in various aspects of $\Zjets$ kinematics. These aspects include the underlying event, the $Z$ $\pt$, and dijet kinematics as shown in \cref{fig:backgrounds-zue}, \cref{fig:backgrounds-zpt}, and \cref{fig:backgrounds-zjj}, respectively.
 
 \begin{figure}[tp]
   \centering
@@ -20,21 +24,40 @@
 
 \begin{figure}[tp]
   \centering
+  \includegraphics[width=0.48\textwidth]{figures/STDM-2012-23/fig_01a}
+  \includegraphics[width=0.48\textwidth]{figures/STDM-2012-23/fig_01b}
+  \caption{Comparison of data and various predictions of $\pt^Z$ for $\Zee$ (left) and $\Zmm$ (right) in 2011 data-taking~\cite{STDM-2012-23}. Mis-modeling is observed.}
+  \label{fig:backgrounds-zpt}
+\end{figure}
+
+\begin{figure}[tp]
+  \centering
   \includegraphics[width=0.48\textwidth]{figures/STDM-2012-04/fig_11a}
   \includegraphics[width=0.48\textwidth]{figures/STDM-2012-04/fig_11b}
   \caption{Comparison of data and various predictions in $\Zll$ events of $\Delta Y(jj)$ (left) and $\mjj$ (right) in 2011 data-taking~\cite{STDM-2012-04}. Mis-modeling is observed for all predictions.}
   \label{fig:backgrounds-zjj}
 \end{figure}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/STDM-2012-23/fig_01a}
-  \includegraphics[width=0.48\textwidth]{figures/STDM-2012-23/fig_01b}
-  \caption{Comparison of data and various predictions of $\pt^Z$ for $\Zee$ (left) and $\Zmm$ (right) in 2011 data-taking~\cite{STDM-2012-23}. Mis-modeling is observed for all predictions.}
-  \label{fig:backgrounds-zpt}
-\end{figure}
+These mis-modelings are worrisome for $\Htautau$ analyses because accurate modeling of these kinematics is relied on in the analysis. For example, mis-modeling in $\pt^Z$ is problematic because this variable defines the boosted category of the $\Htautau$ analysis. It is also strongly correlated with discriminating variables like $\Delta R(\tautau)$. Mis-modeling in dijet kinematics like $\mjj$ is of even greater concern because they are among the most powerful and high-profile discriminating variables in the VBF category.
+
+Some versions of the ATLAS $\Htautau$ analysis use simulated $\Ztautau$ with corrections derived from $\Zll$ events in data~\cite{ATLAS-CONF-2012-160}. While helpful, these corrections are one-dimensional and cannot account for potential correlations in the mis-modeling. For these reasons, this approach is not used in the recent publication.
 
 \subsection{Embedding}
+
+A more data-driven approach to modeling $\Ztautau$ is used wherein $\Zmumu$ events are tagged in data and the muons are replaced with simulated tau lepton decays. This exploits lepton universality in $Z$ decays and has the great advantage of taking all $Z\!+\text{jets}$ features directly from data, such as $Z$ $\pt$, dijet kinematics, and soft hadronic activity. Only the tau lepton decays and the detector response of the decay products are taken from simulation. The former is measured with excellent precision at $B$-factories~\cite{2014.hfag}, and the latter is an ongoing area of study within ATLAS.
+
+$\Zmumu$ events are selected in data by requiring an event fire the lowest unprescaled dimuon trigger and have at least two reconstructed muons with $\pt > 15$ GeV and $|\eta| <$ 2.5. All possible pairs of muons are then considered which satisfy $\pt^\text{lead} > $ 20 GeV, have opposite charges, and have $m_{\mu\mu} > $ 40 GeV. The pair which has mass closest to the $Z$ mass is then chosen as the $Z$ decay products.
+
+Tau lepton decays are then simulated with \texttt{TAUOLA} with the same four-momenta as the muons associated to the $Z$ decay and sent through the full ATLAS detector simulation, digitization, and reconstruction. The decays can be set to whatever final state desired (e.g., $\tautaueh$) within \texttt{TAUOLA}. 
+
+The simulated $\tautau$ system is then merged with the data $\Zmumu$ event by removing tracks and calorimeter cells associated to the muons and inserting tracks and cells from the tau lepton decays. For subtracting the calorimeter cells, deposited cell energies are derived from a simulated $\Zmumu$ event with the same kinematics as the data $\Zmumu$ event. The hybrid event, with a simulated $\tautau$ system and a $Z\!+\text{jets}$ event from data, is then re-run through the ATLAS reconstruction, yielding the so-called \textit{embedded} $\Ztautau$ event. Event displays of this procedure is shown in \cref{fig:backgrounds-embedding-eventdisplay}.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/backgrounds/embedding_eventdisplay}
+  \caption{Event displays of the three types of events considered in the embedding procedure: a $\Zmumu$ event in data (left), a $\tautauhh$ event in simulation (center), and a hybrid embedding event (right)~\cite{ATL-COM-PHYS-2012-1201}.}
+  \label{fig:backgrounds-embedding-eventdisplay}
+\end{figure}
 
 \subsection{Validation}
 
