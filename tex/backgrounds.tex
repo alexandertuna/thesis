@@ -423,9 +423,13 @@ Data and prediction in the same-sign validation region are shown in \cref{fig:ba
 
 \subsection{Uncertainties}
 
+Multiple sources of uncertainties to the fake factor method are considered. First, the statistical uncertainty on the fake factors measured in control regions is propagated to the uncertainty on the signal region fakefactor. Second, the uncertainty on the relative contributions of the different $\fakes$ processes are varied and propagated to the signal region fakefactor calculation. Third, the fidelity of using control region fakefactors in the signal region is tested by comparing fakefactors measured in simulation in control regions versus the signal region. No significant difference is found, and the uncertainty is ignored. Fourth, the closure of the method is tested with predictions in the same sign validation region and in the signal region in simulation. No signs of systematic bias in the BDT score prediction are found, and the closure uncertainties are ignored.
+
+The pre-fit impact of these uncertainties on the $\fakes$ prediction is shown in each bin of the VBF discriminator in \cref{fig:backgrounds-uncertainties-fakes}. The largest uncertainty at high VBF BDT score is the 15\% statistical uncertainty on the prediction. This could be ameliorated by relaxing the $\veryloose$ requirement on anti-identified $\tauh$, though this would risk introducing systematic bias of increasing the extrapolation. The largest systematic uncertainty is on the relative contribution of $\fakes$ processes, and this only propagates to a 3\% uncertainty on the prediction.
+
 \begin{figure}[tp]
   \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_fakes_VBF}
-  \caption{The pre-fit fractional uncertainty on the $\fakes$ prediction in each bin of the VBF category.}
+  \caption{The pre-fit fractional uncertainty on the $\fakes$ prediction in each bin of the VBF category. $\text{R}_\text{X}$ refers to the uncertainty on the relative contribution of $\fakes$ processes.}
   \label{fig:backgrounds-uncertainties-fakes}
 \end{figure}
 
