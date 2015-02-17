@@ -438,6 +438,23 @@ The pre-fit impact of these uncertainties on the $\fakes$ prediction is shown in
 \section{top, $\Zll$, diboson}
 \label{sec:backgrounds-others}
 
+\subsection{top}
+
+Top events with a true $\tauh$ or $\lfake$ are estimated with simulation and object-level corrections prescribed by the $\tauh$ performance group. These include $t\overline{t}$ and single top processes. The normalization is constrained using a top-enriched control region, but detailed corrections to the simulation are not sought because the background is sub-dominant. These top processes only comprise 5\% of the background prediction in the VBF category and in the most sensitive bin of the VBF BDT discriminator.
+
+\subsection{$\Zll$ ($\lfake$), diboson}
+
+$\Zll$ events where a lepton is mis-identified as a $\tauh$ and diboson events ($WW$, $WZ$, $ZZ$) are estimated with simulation and object-level corrections prescribed by the $\tauh$ performance group. Control regions for these processes are not sought because the processes are too small to find meaningful regions for comparing data with simulation. Detailed corrections to the simulation are also not sought because each processes comprises less than 5\% of the background prediction in the VBF category and in the most sensitive bin of the VBF BDT discriminator.
+
+The $\tauh$ electron discriminator reduces the $\Zee$ background from problematic to negligible, as shown in \cref{fig:backgrounds-zll}. Without the electron discriminator, the VBF $\Zee$ background would be difficult to distinguish from VBF $\Htautau$ and potentially of comparable magnitude.
+
+\begin{figure}[tp]
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/mvis-with-eveto.pdf}
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/mvis-without-eveto.pdf}
+  \caption{Data and prediction for the nominal VBF category (left) and without the $\tauh$ electron discriminator (right).}
+  \label{fig:backgrounds-zll}
+\end{figure}
+
 \section{$\Htautau$}
 \label{sec:backgrounds-htautau}
 
@@ -446,14 +463,9 @@ The pre-fit impact of these uncertainties on the $\fakes$ prediction is shown in
 \subsection{Uncertainties}
 
 \begin{figure}[tp]
-  \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_VBFH125_JES_VBF}
-  \caption{The pre-fit fractional uncertainty on the VBF $\Htautaulh$ prediction in each bin of the VBF category for uncertainties pertaining to the jet energy scale.}
-  \label{fig:backgrounds-uncertainties-vbfjes}
-\end{figure}
-
-\begin{figure}[tp]
-  \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_VBFH125_other_VBF}
-  \caption{The pre-fit fractional uncertainty on the VBF $\Htautaulh$ prediction in each bin of the VBF category for uncertainties pertaining to $\tauh$ performance, theory, and the luminosity.}
-  \label{fig:backgrounds-uncertainties-vbfother}
+  \includegraphics[width=0.85\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_VBFH125_JES_VBF}
+  \includegraphics[width=0.85\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_VBFH125_other_VBF}
+  \caption{The pre-fit fractional uncertainty on the VBF $\Htautaulh$ prediction in each bin of the VBF category for uncertainties pertaining to the jet energy scale (top) and $\tauh$ performance, theory, and the luminosity (bottom).}
+  \label{fig:backgrounds-uncertainties-vbf}
 \end{figure}
 
