@@ -108,8 +108,6 @@ Like the $\Ztautau$ background, simulation is a simple but deficient means of pr
 
 Additionally, the event kinematics of $\Wjets$ and $\Zjets$ events have known mis-modeling in simulation. The mis-modeling of $\Zjets$ events is discussed in \cref{sec:backgrounds-zjets}, and ATLAS observes comparable mis-modeling in dijet kinematics of $\Wjets$ events, as shown in \cref{fig:backgrounds-wjets}. The mis-modeling of variables like $\Delta y(jj)$ and $\mjj$ is of concern since the VBF discriminators depend heavily on these kinematics.
 
-Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$, and top events with corrections derived from data, in conjunction to same-sign data events, to model $\fakes$~\cite{HIGG-2012-07,ATLAS-CONF-2012-160}. While helpful, these corrections are one-dimensional and cannot account for potential correlations in the mis-modeling, and the same-sign data sample has large statistical uncertainties. For these reasons, this approach is not used in the recent publication.
-
 \clearpage
 \begin{figure}[tp]
   \centering
@@ -120,7 +118,19 @@ Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$,
 \end{figure}
 \clearpage
 
-\subsection{Fake factor method}
+Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$, and top events with corrections derived from data, in conjunction to same-sign data events, to model $\fakes$~\cite{HIGG-2012-07,ATLAS-CONF-2012-160}. While helpful, these corrections are one-dimensional and cannot account for potential correlations in the mis-modeling, and the same-sign data sample has large statistical uncertainties. For these reasons, this approach is not used in the recent publication.
+
+\subsection{Fakefactor method}
+
+\subsubsection{Principle}
+
+An alternative data-driven approach is taken wherein events in data which pass all the signal region requirements, but fail the $\tauh$ identification algorithm, are used to model $\fakes$. The principle of this extrapolation is that the $\tauh$ identification variables are uncorrelated with event-level kinematics like $\mjj$, and thus events where the $\tauh$ fails identification requirements provide an unbiased prediction of the $\fakes$ shapes in events where the $\tauh$ passes identification requirements.
+
+The anti-identified region of data has a high purity of $\fakes$, as shown in \cref{fig:backgrounds-antitaus-taus,fig:backgrounds-antitaus-jets}. The residual contamination of $\Ztautaulh$ and other processes without $\fakes$ is nonetheless subtracted from the data to form the $\fakes$ estimate. The high purity is helpful because uncertainties on the predicted contamination (e.g., the tau energy scale uncertainty for $\Ztautaulh$) are evaluated to have a negligible impact on the $\fakes$ estimate and can be ignored.
+
+The correlation between the $\tauh$ identifier and event-level kinematics is checked in data in the VBF same-sign region, as shown in \cref{fig:backgrounds-tauid-correlations}. No strong correlations are observed for any event-level kinematic variable, including the final BDT discriminator.
+
+\clearpage
 
 \begin{figure}[tp]
   \centering
@@ -189,6 +199,37 @@ Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$,
 
 \clearpage
 
+\subsubsection{Implementation}
+
+The $\fakes$ prediction is written as:
+%
+\begin{equation}
+  \begin{split}
+    N_{\fakes} &= \left(N_\text{data}^\text{fail ID} - N_{\contam}^\text{fail ID}\right) \times \FF_\text{SR} \\
+  \end{split}
+  \label{eqn:fakes-prediction}
+\end{equation}
+%
+where the number of predicted $\fakes$ events $N_{\fakes}$ is derived in each bin of any kinematic variable, like $\mjj$. The transfer factor needed to weight data events which fail $\tauh$ identification is called the fakefactor (FF). It is parameterized in the number of tracks associated to the $\tauh$ and $\pt(\tauh)$, and it is derived in a variety of regions rich in different $\fakes$ processes:
+%
+\begin{equation}
+  \begin{split}
+    \FF_\text{region} &= \frac{\left(N_\text{data}^\text{pass ID} - N_{\contam}^\text{pass ID}\right)}{\left(N_\text{data}^\text{fail ID} - N_{\contam}^\text{fail ID}\right)} \Bigg\rvert_\text{region} \\
+  \end{split}
+  \label{eqn:fakes-fakefactor}
+\end{equation}
+%
+where the regions considered here are rich in $\fakes$ from $\Wjets$, QCD, $\Zjets$, or top events, or the same-sign region, which is a blend of $\fakes$ processes. These regions are shown pictorially in \cref{fig:backgrounds-regions} and \cref{tab:backgrounds-regions}.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figures/backgrounds/regions-cartoon}
+  \caption{Cartoon of the signal, control, and validation regions used which are used in the $\fakes$ estimate.}
+  \label{fig:backgrounds-regions}
+\end{figure}
+
+To mitigate potential extrapolation costs, $\tauh$ candidates failing identification criteria are required to pass a looser-than-\texttt{loose} requirement. This requirement is optimized to minimize the extrapolation without sacrificing the statistics of the estimate, and a requirement of $\veryloose$ is chosen. For example, if the \texttt{loose} identification criteria requires the $\tauh$ BDT score greater than 0.5, the $\veryloose$ identification criteria requires greater than 0.35. The $\pt(\tauh)$ dependence of this requirement is shown in \cref{fig:backgrounds-workingpoints}.
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/backgrounds/jetBDT-1p}
@@ -196,6 +237,18 @@ Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$,
   \caption{Requirements on the $\tauh$ jet discriminant, which are defined to have constant signal efficiency as a function of $\pt(\tauh)$, of various operating points for 1-track $\tauh$ (left) and 3-track $\tauh$ (right).}
   \label{fig:backgrounds-workingpoints}
 \end{figure}
+
+The impact of requiring $\veryloose$ can be seen by considering the response of various flavors of $\fakes$ to the tau identification BDT, as shown in $\Wjets$ simulation in \cref{fig:backgrounds-flavors}. This requirement reduces the pileup and gluon content of the anti-identified region and gives it a closer flavor resemblance to the identified region.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/antitau_partonflavor_1p0jSR}
+  \includegraphics[width=0.48\textwidth]{figures/backgrounds/antitau_partonflavor_3p0jSR}
+  \caption{Predicted flavor composition of $\fakes$ in $\Wjets$ simulation for 1-track $\tauh$ (left) and 3-track $\tauh$ (right).}
+  \label{fig:backgrounds-flavors}
+\end{figure}
+
+The fakefactors measured in data in the $\Wjets$, QCD, $\Zjets$, and top control regions are shown in \cref{fig:backgrounds-fakefactorsVBFCRs} for 1-track and 3-track $\tauh$ in the VBF category. The measured fakefactors do not show systematic differences between regions given the statistical uncertainty.
 
 \begin{figure}[tp]
   \centering
@@ -205,7 +258,11 @@ Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$,
   \label{fig:backgrounds-fakefactorsVBFCRs}
 \end{figure}
 
-\subsection{Composition of $\fakes$ in the SR}
+\subsubsection{Composition of $\fakes$ in the SR}
+
+A fakefactor for the signal region can be derived from fakefactors measured in the control regions by using simulation to predict the relative contributions of the $\Wjets$, top, and $\Zjets$ processes in the anti-identified region. The remaining difference between data and prediction is then assumed to be from QCD.
+
+The overall relative contributions are shown in \cref{fig:backgrounds-rx-vbf}, and the differential contributions are shown in \cref{fig:backgrounds-rx-vbf-taus,fig:backgrounds-rx-vbf-jets}. No strong dependence on the final VBF BDT discriminator is observed, though dependencies are observed on distributions like $\pt(\text{lepton})$ and $\MET$.
 
 \begin{figure}[tp]
   \centering
@@ -259,6 +316,10 @@ Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$,
   \label{fig:backgrounds-rx-vbf-jets}
 \end{figure}
 
+The signal region fakefactors are then derived as a linear combination of control region fakefactors weighted by the expected contributions. The systematic uncertainties on these contributions is shown in \cref{fig:backgrounds-rx-vbf}. A conservative approach is taken due to the mistrust of simulated $\fakes$, and the contribution from $\Wjets$ is allowed to double or halve as the two variations.
+
+The signal region fakefactors are shown in \cref{fig:backgrounds-fakefactorsVBFmix}. These are also referred to as mixed fakefactors. Since the control region fakefactors do not have significant differences between them, the dominant uncertainty on the signal region fakefactors is typically statistical.
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/backgrounds/fakefactor_8TeV_vbf_1p_mix}
@@ -271,12 +332,6 @@ Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$,
 
 \subsection{Validation}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.90\textwidth]{figures/backgrounds/regions-cartoon}
-  \caption{Cartoon of the signal, control, and validation regions used which are used in the $\fakes$ estimate.}
-  \label{fig:backgrounds-regions}
-\end{figure}
 
 \clearpage
 
