@@ -5,14 +5,93 @@
   Results of the $\Htautau$ analysis are described. This is described in additional detail in the recent ATLAS $\Htautau$ publication~\cite{HIGG-2013-32}. The description of the fit procedure draws heavily from the recent ATLAS $\HWW$ publication~\cite{HIGG-2013-13}.
 \end{quote}
 
+The yields of signal and background processes are extracted from a statistical analysis of the data and the predictions described in \cref{chap:strategy,chap:backgrounds}. A likelihood function is maximized which provides the ``best fit'' of the prediction to the data in each bin of the BDT discriminators within their prescribed uncertainties.
+
+The likelihood contains the data and prediction from six signal regions: three final states, two categories. Control regions are also used to constrain some background uncertainties. For example, a region of data rich in top events is used in the $\tautaulh$ analysis to constrain the normalization on the portion of the top background predicted with simulation.
+
 \section{Fit procedure}
 \label{sec:results-fit-procedure}
+
+The statistical analysis maximizes a likelihood function $\Lang$ which depends on the signal strength $\mu$, the set of uncertainties (or nuisance parameters) $\theta_i$, and the observed number of data events $N$. The signal strength is defined as the measured $\Htautau$ cross-section divided by the predicted $\Htautau$ cross-section. A measured $\mu=1$ would imply exactly the same number of $\Htautau$ events are observed as expected.
+
+\subsection{Likelihood function}
+
+The likelihood function is the product of four classes of probability functions.
+%
+\begin{description}
+    \item[Observed data in the signal region bins:] \hfill \\
+      Poisson function $f\left(N \ | \ \sig + \bkg\right)$ for the probability of observing $N$ events given a prediction $\sig + \bkg$ in each BDT bin
+
+    \item[Observed data in the control regions:] \hfill \\
+      Poisson function $f\left(N \ | \ \bkg\right)$ for the probability of observing $N$ events given a prediction $\bkg$ in each control region
+
+    \item[Gaussian uncertainties:] \hfill \\
+      Unit Gaussian function $g$ representing the systematic uncertainties. The mean and standard deviation are defined to be 0 and 1, respectively.
+
+    \item[Prediction sample statistics:] \hfill \\
+      Poisson function $f$ representing the statistical uncertainties given the finite sample size of the predictions
+
+\end{description}
+%
+
+\subsection{Features}
+
+The first term of the likelihood is maximized when the prediction $\sig + \bkg$ exactly matches the observed data events in a given bin, and the prediction is allowed to change within the maximization as the nuisance parameters are pulled. This allowed change is restricted by the Gaussian constraints imposed on these uncertainties, which are maximized when the nuisance parameters are unchanged from their pre-fit prediction. For example, the jet energy scale is allowed to be moved by $+1\sigma$, but this incurs a penalty in the likelihood of $\frac{g(1|0,1)}{g(0|0,1)}\approx 0.6$. The linear response function for modifying backgrounds within uncertainties is given by $\nu_b(\theta) = 1 + \theta\tim\frac{\Delta_b}{N_b}$. 
+
+The normalization of the embedded $\Ztautau$ is allowed to float freely within each final state, i.e., there is no constraint beyond the signal region statistics. In the $\tautaulh$ channel, a single normalization nuisance parameter is used for $\Ztautau$ which is shared in each BDT bin of each category. This is sensible because the defining features of the categories -- dijet kinematics and $\pt^Z$ -- are expected to be well predicted by the embedding method.
+
+The likelihood maximization extracts many fitted parameters, including the signal strength $\mu$, the pulls of the nuisance parameters $\theta_i$, and the uncertainties on the nuisance parameters in units of the pre-fit uncertainties (i.e., $\Delta_{\theta,\text{pre-fit}} = 1$).
+
+\subsection{Test statistic}
+
+The test statistic is defined as:
+%
+\begin{equation}
+  \begin{split}
+    q(\mu) &= -2\ \text{ln} \left(\frac{\Lang(\mu, \theta_i)}{\Lang_\text{max.}}\right) \Bigg\rvert_{\theta_i = \hat{\theta}_{i,\mu}} \\
+  \end{split}
+  \label{eqn:test-statistic}
+\end{equation}
+%
+and is evaluated as a function of $\mu$. The denominator $\Lang_\text{max.}$ is the unconditional maximum of the likelihood as a function of $\mu$ and the nuisance parameters $\theta_i$ and is therefore just a number. The numerator $\Lang(\mu, \theta_i)$ is the conditional maximum for a given $\mu$ as a function of the nuisance parameters, thereby asking which signal strength is most likely.
+
+The fitted uncertainty on a nuisance parameter is defined as the distance $\theta_\text{right} - \theta_\text{left}$ such that $q(\mu) = 1$ when scanning a given nuisance parameter to the right and left of the fitted $\theta$.
+
+\subsection{Impact of uncertainties on $\mu$}
+
+The post-fit \textit{impact} of a given nuisance parameter on the signal strength is defined as:
+%
+\begin{equation}
+  \begin{split}
+    \Delta_{\hat{\mu}, i} &= \hat{\mu}\left(\hat{\theta}_i \pm \Delta_{\hat{\theta}_i}\right) - \hat{\mu} \\
+  \end{split}
+  \label{eqn:impact}
+\end{equation}
+%
+where hats indicate post-fit values. $\hat{\mu}\left(\hat{\theta}_i \pm \Delta_{\hat{\theta}_i}\right)$ indicates the fitted $\mu$ of the full fit but with $\theta_i$ fixed to its post-fit value $\hat{\theta}$ varied by the post-fit uncertainty $\pm\Delta_{\hat{\theta}, i}$, where all other nuisance parameters are floating. If the fitted $\mu$ is robust against changes to a nuisance parameter, its impact will be small. If the fitted $\mu$ is strongly dependent on a nuisance parameter, however, 
 
 \section{Fit results}
 \label{sec:results-fit-results}
 
-\clearpage
+The data and fitted signal and background predictions are shown in \cref{fig:results-bdts}. The majority of bins in the BDTs are dominated by background, and good modeling is observed. In the signal-like regime of BDT output near 1, the predicted contribution from $\Htautau$ signal is visible in the VBF category of each final state, and the signal hypothesis is favored over the background-only hypothesis.
 
+The yields in the VBF $\Htautaulh$ category and in the most signal-like regime are shown in \cref{tab:results-yields} after the global fit. In the highest BDT bin, the signal hypothesis is favored over the background-only hypothesis.
+
+\begin{table}[bp] 
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Data and the predicted yields of signal and background in the VBF $\tautaulh$ category after the global fit.}
+  \input{tables/results-yields}
+  \label{tab:results-yields}
+\end{table}
+
+At the value of the Higgs boson mass obtained from the combination of the ATLAS $\Hyy$ and $\HZZ$ measurements, the signal strength obtained is $1.4 \pm 0.3 \text{syst.} \pm 0.3 \text{stat.} \pm 0.1 \text{theo.}$. The signal strength breakdown by category and channel is shown in \cref{fig:results-musummary}.
+
+The probability $p_0$ of obtaining a result at least as signal-like as observed in the data if no signal were present is calculated using the test statistic $q(0)$. For $m_H = 125.36$ GeV, the observed $p_0$ is $2.7 \times 10^{-6}$, which corresponds to a deviation from the background-only hypothesis of 4.5$\sigma$.  This can be compared to an expected significance of 3.4$\sigma$.
+
+To emphasize the most signal-like regime, two distributions are built from the six categories used in the global fit and shown in \cref{fig:results-money-plots}. First, the signal region bins of the BDT discriminator are re-ordered by $\log_{10}(S/B)$, where $S/B$ is the signal-to-background ratio calculated assuming $\mu=1.4$ in each bin. The expected signal yield for both $\mu=1$ and $\mu=1.4$ is shown, as well as the fitted background yield for the background-only hypothesis. The signal hypothesis is clearly favored. Second, the $\mMMC$ distribution is shown summed across all categories and weighted event-by-event by $\ln(1+S/B)$, which enhances the events compatible with the signal hypothesis. The excess of events in this mass distribution is consistent with the expectation for a Standard Model Higgs boson with $m_H = 125$ GeV.
+
+\clearpage
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_08b}
@@ -24,8 +103,14 @@
   \caption{Distributions of the 8 TeV BDT discriminants in all six analysis categories after the global fit~\cite{HIGG-2013-32}.}
   \label{fig:results-bdts}
 \end{figure}
-
 \clearpage
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figures/HIGG-2013-32/fig_09}
+  \caption{The fitted signal strength $\mu$ split by category, final state, and data-taking period~\cite{HIGG-2013-32}.}
+  \label{fig:results-musummary}
+\end{figure}
 
 \begin{figure}[tp]
   \centering
@@ -37,35 +122,16 @@
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_12}
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_14}
-  \caption{Two-dimensional contours of the fitted signal strength $\mu$ comparing VBF and ggF production mechanisms (left) and the local $p_0$ for the MVA and cuts-based analyses as a function of the Higgs mass hypothesis (right)~\cite{HIGG-2013-32}.}
-  \label{fig:results-mup0}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
   \includegraphics[width=0.90\textwidth]{figures/HIGG-2013-32/uncertainties}
   \caption{Comparison of the impact of the statistical and systematic uncertainties on the absolute uncertainty on $\mu$~\cite{HIGG-2013-32}.}
   \label{fig:results-uncertainties-1}
 \end{figure}
-
-\clearpage
 
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.90\textwidth]{figures/HIGG-2013-32/fig_07}
   \caption{Comparison of the impact and pull of the dominant individual systematic uncertainties on the absolute uncertainty on $\mu$~\cite{HIGG-2013-32}.}
   \label{fig:results-uncertainties-2}
-\end{figure}
-
-\clearpage
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.90\textwidth]{figures/HIGG-2013-32/fig_09}
-  \caption{The fitted signal strength $\mu$ split by category, final state, and data-taking period~\cite{HIGG-2013-32}.}
-  \label{fig:results-musummary}
 \end{figure}
 
 \section{High score events in data}
