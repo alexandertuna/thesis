@@ -15,7 +15,7 @@ The search for the Higgs boson has been the major focus of accelerator physics f
 
 The ATLAS Higgs program is focused on five decay modes expected to have sensitivity to Standard Model Higgs production in the first years of LHC data-taking: $\Hyy$, $\HZZ$, $\HWW$, $\Htautau$, and $\Hbb$. The $\Hyy$ and $\HZZ$ analyses are appealing for their distinctive signatures, and the $\HWW$, $\Htautau$, and $\Hbb$ analyses are appealing for their relatively high rates. The predicted Higgs branching fractions for selected decay modes are given in \cref{tab:strategy-higgs-BR}.
 
-\begin{table}[htp]
+\begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{Predicted branching fractions for the Higgs boson of mass 125 GeV~\cite{higgs-branchingfractions}.}
@@ -54,7 +54,7 @@ With the full Run-I dataset and evolving analysis techniques, the searches for f
 \subsection{$\Htautau$}
 \label{sec:strategy-htautau}
 
-The $\Htautau$ analysis is naturally broken into three final states (or ``channels'') given the combinatorics of tau lepton decays: $\tautaulh$, $\tautauhh$, and $\tautaull$. Their branching fractions are shown in \cref{fig:strategy-decaypie}. The experimental methods of each final state are conceptually similar but not identical. For brevity, the $\tautaulh$ final state is emphasized.
+The $\Htautau$ analysis is naturally broken into three final states (or ``channels'') given the combinatorics of tau lepton decays: $\tautaulh$, $\tautauhh$, and $\tautaull$. Their branching fractions are shown in \cref{fig:strategy-decaypie}. The experimental methods of each final state are conceptually similar though not identical. For brevity, the $\tautaulh$ final state is emphasized.
 
 \begin{figure}[tp]
   \centering
@@ -66,6 +66,19 @@ The $\Htautau$ analysis is naturally broken into three final states (or ``channe
 Unlike the $\Hbosons$ analyses, the $\Htautau$ suffers from a large background of $\Ztautau$. This background cannot be easily disentangled from $\Htautau$ because multiple neutrinos exist in the decays of the tau leptons and $\mtautau$ cannot be fully reconstructed. The cross-section for QCD production for $\Ztautau$ is also $10^6$ times larger than ggF $\Htautau$ production, which is the largest production mode.
 
 The cross-section for EW production of $\Ztautau$, however, is only $10^3$ times larger than VBF $\Htautau$ production, which is the second largest production mode and can be tagged via the associated VBF jets. This makes the $\Htautau$ analysis a natural candidate for categorization, much like the $V\!\Hbb$ analysis.
+
+\section{Triggers}
+\label{sec:strategy-triggers}
+
+The lowest unprescaled single lepton triggers are used for the $\Htautaulh$ data sample. These correspond to offline lepton $\pt$ thresholds of 26 GeV in the 8 TeV dataset. $\LTT$ triggers are considered to recover data events with leptons below the single lepton trigger thresholds, but they are ultimately not used due to lack of sensitivity and additional complications. The triggers used are shown in \cref{tab:strategy-triggers}.
+
+\begin{table}[bp]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Triggers used in the 8 TeV $\Htautaulh$ analysis.}
+  \input{tables/strategy-triggers}
+  \label{tab:strategy-triggers}
+\end{table}
 
 \section{Physics objects}
 \label{sec:strategy-objects}
