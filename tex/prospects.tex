@@ -59,7 +59,7 @@ Trigger options for Run-II are most critical for the $\Htautauhh$ since it relie
 
 The first and simplest option is to raise object thresholds in the trigger. Since the Run-I analysis signal regions only include event topologies with additional jets, triggering on one or two additional jets in the event is considered. To assess the impact of this, the Run-I analysis is re-run but with progressively higher thresholds on the final state objects, and the resulting sensitivity is derived. This is shown in \cref{fig:prospects-trigger-evolution}.
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/evolution_hadhad}
   \includegraphics[width=0.48\textwidth]{figures/trigger/evolution_lephad}
@@ -92,7 +92,7 @@ At L1, the dominant background for $\tauh$ triggers is QCD di-jet production. To
 %
 The discriminating power of these variables is shown in \cref{fig:prospects-trigger-l1topo} for $\Htautaueh$ MC versus high-pileup minimum bias MC. 
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.32\textwidth]{figures/l1topo/taulep-deta}
   \includegraphics[width=0.32\textwidth]{figures/l1topo/taulep-dphi}
@@ -105,7 +105,7 @@ The discriminating power of these variables is shown in \cref{fig:prospects-trig
 
 Of these options, angular discrimination is appealing because the angular resolution for $\tauh$ at L1 is better than momentum resolution, as shown in \cref{fig:prospects-trigger-2011-angular} and \cref{fig:prospects-trigger-resolution}. Sharper efficiency turn-ons can then be expected at HLT and offline. $\Delta R(\tautau) < 2.8$ is ultimately chosen for discrimination because it combines the discriminating power of $\Delta\phi(\tautau)$ and $\Delta\eta(\tautau)$.
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-COM-DAQ-2012-001/c_L1_etares}
   \includegraphics[width=0.48\textwidth]{figures/ATL-COM-DAQ-2012-001/c_L1_phires}
@@ -113,7 +113,7 @@ Of these options, angular discrimination is appealing because the angular resolu
   \label{fig:prospects-trigger-2011-angular}
 \end{figure}
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_18a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_18c}
@@ -125,7 +125,7 @@ Of these options, angular discrimination is appealing because the angular resolu
 
 The impact of requiring an additional jet and $\Delta R(\tautau) < 2.8$ on the predicted 2015 L1 trigger rate is shown in \cref{tab:prospects-L1rate-evolution}. A ten-fold reduction of the rate is achieved without signicant loss of sensitivity.
 
-\begin{table}[!htpb] 
+\begin{table}[bp] 
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{L1 trigger items and rate predictions for 2015 data-taking. A baseline L1 menu is used for calculating the unique rate.}
@@ -137,7 +137,7 @@ The impact of requiring an additional jet and $\Delta R(\tautau) < 2.8$ on the p
 
 To assess the potential gain in sensitivity of $\LTT$ triggers in 2015, the $\Htautaulh$ analysis is re-run in the regime below the single lepton trigger threshold with the $\LTT$ triggers running in 2012, shown in \cref{tab:prospects-LTT-2012}. Kinematic distributions are shown in \cref{fig:prospects-ltt-taus} and \cref{fig:prospects-ltt-jets}, including the final BDT discriminant.
 
-\begin{table}[!htpb] 
+\begin{table}[bp] 
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{L1 and HLT $\LTT$ trigger items operating in 2012.}
@@ -202,7 +202,7 @@ The size of the L1 $\tauh$ is made larger to check if a sharper efficiency turn-
 
 Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{fig:prospects-trigger-towersize} for simulated $\tauh$ with and without isolation requirements. A sharper efficiency turn-on is achieved relative to the default definition, as shown in \cref{tab:prospects-tausize}. Since background rates increase non-trivially with larger L1 $\tauh$ objects, the default definition will be retained in 2015 data-taking.
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20_1p3p}
   \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20I_1p3p}
@@ -210,7 +210,7 @@ Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{
   \label{fig:prospects-trigger-towersize}
 \end{figure}
 
-\begin{table}[!htpb]
+\begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{Fits of the efficiency for firing the 20 GeV L1 $\tauh$ trigger with a Fermi-Dirac distribution for various definitions of the L1 $\tauh$ item. No isolation requirement is made.}
@@ -235,7 +235,7 @@ With the definition, the 2012 isolation requirement is $m=0$ and $b=4$.
 
 Removing the isolation requirement is considered above $\pt^\text{L1} = 60$ GeV. This is equivalent to a logical \texttt{OR} with the lowest unprescaled single $\tauh$ trigger, \texttt{TAU60}, and thus will not cost any additional unique rate to the total L1 trigger menu.
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/iso_background_noTAU60}
   \includegraphics[width=0.48\textwidth]{figures/trigger/iso_background_yesTAU60}
@@ -243,7 +243,7 @@ Removing the isolation requirement is considered above $\pt^\text{L1} = 60$ GeV.
   \label{fig:prospects-trigger-isolation-rate}
 \end{figure}
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/iso_turnonL1_noTAU60}
   \includegraphics[width=0.48\textwidth]{figures/trigger/iso_turnonL1_yesTAU60}
@@ -255,7 +255,7 @@ Removing the isolation requirement is considered above $\pt^\text{L1} = 60$ GeV.
 
 Despite significantly harsher data-taking conditions in 2015, triggers for the $\Htautauhh$ and $\Htautaulh$ analyses can be adapted to retain physics output with manageable rates and without major loss of generality. The most important adaptations for both channels are requiring an additional high-$\pt$ jet and requiring low $\Delta R(\tautau)$. The L1 $\tauh$ menu is shown in \cref{tab:prospects-taumenu}.
 
-\begin{table}[!htpb]
+\begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{The $\tauh$ L1 menu. A baseline L1 menu is used for calculating the unique rate.}
@@ -265,7 +265,7 @@ Despite significantly harsher data-taking conditions in 2015, triggers for the $
 
 Contingency plans are considered due to the uncertainty of the rate prediction and the uncertainty of the LHC data-taking conditions.
 
-\begin{table}[!htpb]
+\begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{Contingency options for the $\Htautau$ section of the $\tauh$ L1 menu. The change in unique rate is with respect to the baseline menu. A baseline L1 menu is used for calculating the unique rate.}
@@ -298,7 +298,7 @@ The signal events are characterized by true $\MET$ due to the presence of the ne
 
 Unless otherwise noted, the topological selection criteria are identical to the Run-I analysis. One lepton and one hadronically decaying tau are required, and there must be at least two jets with a significant separation in $\eta$ as expected for VBF production. Some additional topological cuts are applied to suppress backgrounds while retaining most of the signal. The VBF category is intentionally defined loosely since the discrimination of signal from background is meant to be handled by the BDTs. The event selection is summarized in \cref{tab:prospects-HLLHC-selection}.
 
-\begin{table}[!htpb]
+\begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{Event selection and categorization criteria. The $\mT$ requirement is relaxed to avoid signal loss due to the degradation of the $\MET$ resolution at high $\pileup$.}
@@ -334,7 +334,7 @@ The contamination of pile-up jets in the VBF category for the total background i
 
 Degradation of the $\MET$ and MMC $m(\tau\tau)$ under the high-luminosity conditions is shown in \cref{fig:prospects-hllhc-degradation} for simulated VBF $\Htautau$. Both observables are degraded by jet and $\MET$ smearing and by the presence of forward pile-up jets biasing the $\MET$ calculation.
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_01a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_01b}
@@ -348,7 +348,7 @@ Degradation of the $\MET$ and MMC $m(\tau\tau)$ under the high-luminosity condit
 
 A multi-variate analysis approach is used by training BDTs to discriminate signal from background. It is trained using all backgrounds scaled to their respective cross-sections against the total (ggF + VBF) signal shapes. The same training parameters and input variables as the Run-I analysis are used, and the input variables are listed in \cref{tab:prospects-hllhc-inputs}.
 
-\begin{table}[!htpb]
+\begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{Discriminating variables used for the BDT training.}
@@ -358,7 +358,7 @@ A multi-variate analysis approach is used by training BDTs to discriminate signa
 
 BDTs are trained for a variety of forward tracker coverages ($|\eta| < 3$, $|\eta| < 3.5$ and $|\eta| < 4$) and pile-up rejection values (50\%, 75\% and 90\%). \cref{fig:prospects-hllhc-rocs} shows the efficiency for rejecting the background versus the efficiency for selecting the signal for the scenario of 90\% forward pile-up rejection. For a given signal efficiency, the background rejection improves with larger coverage.
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_02a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_02b}
@@ -370,7 +370,7 @@ BDTs are trained for a variety of forward tracker coverages ($|\eta| < 3$, $|\et
 
 Predicted signal and background BDT input distributions as well as basic object kinematics are shown in Figures \cref{fig:prospects-hllhc-jets}, \cref{fig:prospects-hllhc-taus} and \cref{fig:prospects-hllhc-other}. Signal and background are predicted with the same methods as the Run-I analysis~\cite{HIGG-2013-32}, including the data-driven prediction of the dominant $\Ztautau$ and fake backgrounds. The resulting BDT score is presented in Figure \cref{fig:prospects-hllhc-bdts}.
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_03a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_03b}
@@ -384,7 +384,7 @@ Predicted signal and background BDT input distributions as well as basic object 
   \label{fig:prospects-hllhc-jets}
 \end{figure}
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_04a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_04b}
@@ -398,7 +398,7 @@ Predicted signal and background BDT input distributions as well as basic object 
   \label{fig:prospects-hllhc-taus}
 \end{figure}
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.32\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_05a}
   \includegraphics[width=0.32\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_05b}
@@ -407,7 +407,7 @@ Predicted signal and background BDT input distributions as well as basic object 
   \label{fig:prospects-hllhc-other}
 \end{figure}
 
-\begin{figure}[!htpb]
+\begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_06a}
   \includegraphics[width=0.48\textwidth]{figures/ATL-PHYS-PUB-2014-018/fig_06b}
@@ -419,7 +419,7 @@ Predicted signal and background BDT input distributions as well as basic object 
 
 Yields for signal and background in the high BDT score bins are shown in \cref{tab:prospects-hllhc-yields}. As in the Run-I analyses, $\Ztautau$ and fakes are the dominant backgrounds in the most signal-like regime. The binning of the BDT is optimized to maximize the expected sensitivity.
 
-\begin{table}[!htpb]
+\begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{Yields for signal and background in the VBF category and in the most sensitive BDT bins, as shown in \cref{fig:prospects-hllhc-bdts}.}
@@ -433,7 +433,7 @@ When calculating the sensitivity of the analysis, three scenarios of background 
 
 The projected sensitivity is shown in \cref{tab:prospects-hllhc-signif}. The two scenarios of background uncertainties and two scenarios of theory uncertainties are shown. The sensitivity of the projection is driven by the uncertainty on the background prediction. For $\s_{B}^{\text{syst.}} = 10\%$, the projected uncertainty on $\mu$ with no signal theory uncertainties is 0.24. For $\s_{B}^{\text{syst.}} = 5\%$, this projected uncertainty is 0.13.
 
-\begin{table}[!htpb]
+\begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{Uncertainty on the signal strength ($\Delta\mu$) for different scenarios of background uncertainties and signal theory uncertainties.}
@@ -443,7 +443,7 @@ The projected sensitivity is shown in \cref{tab:prospects-hllhc-signif}. The two
 
 The impact of pile-up jet rejection in the forward region is also evaluated as an example of the impact of a forward tracker, and results are given in \cref{tab:prospects-hllhc-signif2}. Multiple scenarios of $|\eta|$ coverage and pile-up jet rejection are considered. For these scenarios, negligible loss of HS jets to forward pile-up jet rejection is assumed, a 10\% systematic uncertainty is assumed for backgrounds, a 5\% experimental systematic uncertainty is assumed for signals, and theoretical uncertainties on signals are ignored.
 
-\begin{table}[!htpb]
+\begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
   \caption{Uncertainty on the signal strength ($\Delta\mu$) for different scenarios of forward tracking.}

@@ -86,11 +86,23 @@ The lowest unprescaled single lepton triggers are used for the $\Htautaulh$ data
 \subsection{Electrons, muons, and $\tauh$}
 \label{sec:strategy-leptons}
 
+Electrons, muons, and $\tauh$ are selected according to the reconstruction, identification, and calibration algorithms described in \cref{sec:particles,sec:taus-hadrons}.
+
+Electrons are required to have $\pt >$ 26 GeV and pass the \texttt{tightPP} identification algorithm and be isolated both in the tracker and the calorimeter. Less than 6\% of the magnitude of the electron energy is required to exist in an isolation cone of 0.4 in the tracker and 0.2 in the calorimeter. The recent likelihood identification algorithm~\cite{ATLAS-CONF-2014-032} is explored, and though improved is observed, time constraints prevent its use in this analysis.
+
+Muons are required to have $\pt >$ 26 GeV and to satisfy the \texttt{isCombined} reconstruction algorithm and be isolated both in the tracker and the calorimeter. Less than 6\% of the magnitude of the muon energy is required to exist in an isolation cone of 0.4 in the tracker and 0.2 in the calorimeter.
+
+$\tauh$ are required to have $\pt >$ 20 GeV and to pass the \texttt{JetBDTSigMedium} jet discriminator. As discussed in \cref{sec:taus-hadrons}, this identification algorithm includes isolation criteria. $\tauh$ are also required to not overlap with any reconstructed muon candidates or \texttt{loosePP} electron candidates, as discussed in \cref{sec:taus-leptonfakes}. In the $\tautaueh$ final state, $\tauh$ are additionally required to pass the \texttt{EleBDTMedium} electron discriminator.
+
+For the purpose of vetoing additional light leptons in the event, $\pt$ and identification criteria for electrons (muons) are relaxed to 15 GeV (10 GeV) and \texttt{loosePP} (\texttt{loose}), respectively.
+
 \subsection{Jets and $\MET$}
 \label{sec:strategy-hadronic}
 
 \section{Categorization}
 \label{sec:strategy-categorization}
+
+(Pre-selection does not have topological selections, just picking objects)
 
 \subsection{Pre-selection}
 \label{sec:strategy-preselection}
