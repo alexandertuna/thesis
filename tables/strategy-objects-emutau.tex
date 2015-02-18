@@ -1,0 +1,13 @@
+\begin{tabular}{c|c}
+  object   & criteria \\
+  \hline\hline
+  \multirow{2}{*}{Electrons} & $\pt >$ 26 GeV, $|\eta| < 2.47$ (excl. crack) \\
+                             & \texttt{tightPP}, $f_\text{isol.}^\text{track} < 0.06$, $f_\text{isol.}^\text{calo.} < 0.06$ \\
+  \hline
+  \multirow{2}{*}{Muons}     & $\pt >$ 26 GeV, $|\eta| < 2.5$ \\
+                             & \texttt{isCombined}, $f_\text{isol.}^\text{track} < 0.06$, $f_\text{isol.}^\text{calo.} < 0.06$ \\
+  \hline
+  \multirow{3}{*}{$\tauh$}   & $\pt >$ 20 GeV, $|\eta| < 2.47$, $|\eta^\text{lead track}| < 2.47$ \\
+                             & \texttt{JetBDTSigMedium}, no overlap with reco. muon or \texttt{loosePP} electron \\
+                             & \texttt{EleBDTMedium} in $\tautaueh$ channel \\
+\end{tabular}
