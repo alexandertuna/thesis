@@ -8,11 +8,53 @@
 \section{Introduction}
 \label{sec:strategy-introduction}
 
+The search for the Higgs boson has been the major focus of accelerator physics for decades. Though explored in great detail at experiments at LEP~\cite{2003.lep-higgs} and the Tevatron~\cite{2013.tevatron-higgs}, its existence is only recently confirmed by the ATLAS and CMS experiments at the LHC.
+
 \subsection{ATLAS Higgs program}
 \label{sec:strategy-higgs}
 
+The ATLAS Higgs program is focused on five decay modes expected to have sensitivity to Standard Model Higgs production in the first years of LHC data-taking: $\Hyy$, $\HZZ$, $\HWW$, $\Htautau$, and $\Hbb$. The $\Hyy$ and $\HZZ$ analyses are appealing for their distinctive signatures, and the $\HWW$, $\Htautau$, and $\Hbb$ analyses are appealing for their relatively high rates. The predicted Higgs branching fractions for selected decay modes are given in \cref{tab:strategy-higgs-BR}.
+
+\begin{table}[htp]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Predicted branching fractions for the Higgs boson of mass 125 GeV~\cite{higgs-branchingfractions}.}
+  \input{tables/strategy-higgs-BR}
+  \label{tab:strategy-higgs-BR}
+\end{table}
+
+\subsubsection{$\Hbosons$}
+
+The Higgs discovery in 2012-2013 is driven by the bosonic decays. The $\Hyy$ and $\HZZ$ analyses enjoy excellent mass resolution for reconstructing $m_H$ and resonant backgrounds. They measure the Higgs mass to less than one percent uncertainty. The $\HWW$ analysis utilizes a distinctive final state (two leptons with low $\Delta\phi$) and a relatively high branching fraction. Higgs discovery plots for these analyses can be seen in \cref{fig:strategy-higgs-yyzzww}.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-08/fig_13}
+  \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-21/fig_13a}
+  \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-13/fig_35}
+  \caption{Discovery plots for the $\Hyy$ (left)~\cite{HIGG-2013-08}, $\HZZ$ (center)~\cite{HIGG-2013-21}, and $\HWW$ (right)~\cite{HIGG-2013-13} analyses.}
+  \label{fig:strategy-higgs-yyzzww}
+\end{figure}
+
+All three bosonic analyses best measure the ggF Higgs production mechanism because the production of non-resonant pairs of gauge bosons like $\gamma, W, Z$ are rare in the Standard Model. Their best discriminating variable is typically the reconstructed Higgs mass because there are no significant resonant backgrounds. This can be fully reconstructed in the $\Hyy$ and $\HZZ$ analyses because there are no neutrinos in the decays. In the $\HWW$, the Higgs mass can be semi-reconstructed by incorporating the $\MET$ in a transverse mass $m_T$.
+
+\subsubsection{$\Hfermions$}
+
+With the full Run-I dataset and evolving analysis techniques, the searches for fermionic decays of the Higgs boson become competitive in sensitivity with analyses of the bosonic decays. The $\Hbb$ analysis employs MVA analysis techniques to search for the $VH$ production mechanism, where $V$ is a vector boson that can decay like $\Wlv$, $\Zll$, or $\Zvv$. This production mode is chosen because $b$-quarks are rapidly produced at hadron colliders, and tagging events with a vector boson is the optimal search strategy. 
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-23/fig_11a}
+  \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-23/fig_12c}
+  \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-23/fig_13b}
+  \caption{Data and predicted signal and backgrounds in the $V\!\Hbb$ BDT analysis in the 0-lepton (left), 1-lepton (center), and 2-lepton (right) analyses~\cite{HIGG-2013-23}.}
+  \label{fig:strategy-higgs-yyzzww}
+\end{figure}
+
 \subsection{$\Htautau$}
 \label{sec:strategy-htautau}
+
+The $\Htautau$ analysis is naturally broken into three final states (or ``channels'') given the combinatorics of tau lepton decays: $\tautaulh$, $\tautauhh$, and $\tautaull$. Their branching fractions are shown in \cref{fig:strategy-decaypie}. The experimental methods of each final state are conceptually similar but not identical. For brevity, the $\tautaulh$ final state is emphasized.
 
 \begin{figure}[tp]
   \centering
@@ -20,6 +62,10 @@
   \caption{Pie chart of di-tau lepton decay branching fractions.}
   \label{fig:strategy-decaypie}
 \end{figure}
+
+Unlike the $\Hbosons$ analyses, the $\Htautau$ suffers from a large background of $\Ztautau$. This background cannot be easily disentangled from $\Htautau$ because multiple neutrinos exist in the decays of the tau leptons and $\mtautau$ cannot be fully reconstructed. The cross-section for QCD production for $\Ztautau$ is also $10^6$ times larger than ggF $\Htautau$ production, which is the largest production mode.
+
+The cross-section for EW production of $\Ztautau$, however, is only $10^3$ times larger than VBF $\Htautau$ production, which is the second largest production mode and can be tagged via the associated VBF jets. This makes the $\Htautau$ analysis a natural candidate for categorization, much like the $V\!\Hbb$ analysis.
 
 \section{Physics objects}
 \label{sec:strategy-objects}
