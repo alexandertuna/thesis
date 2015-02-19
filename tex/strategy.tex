@@ -242,8 +242,8 @@ Because there are three neutrinos in the final state of a $\tautaulh$ decay, the
 \subsection{$\mMMC$ algorithm}
 \label{sec:strategy-mtautau-mMMC}
 
-% MMC cartoon
-% ---------------------------------------------------------------------------------
+The Missing Mass Calculator $\mMMC$ is used to reconstruct $\mtautau$~\cite{2011.mmc}. This requires solving an underconstrained system of equations for seven unknowns in the $\tautaulh$ final state: $x$-, $y$-, and $z$-components of the momentum carried by the neutrinos for each of the tau leptons in the event, and the invariant mass of the $\nu\nu$ system from the leptonic tau decay. The calculation uses the constraints from the measured $x$- and $y$-components of the $\MET$, and the visible masses of both tau lepton decays. A scan is performed over the two components of the $\MET$ vector and the yet undetermined variables. Each scan point is weighted by its probability according to the $\MET$ resolution and the tau decay topologies. The estimator for the $\mtautau$ is defined as the most probable value of the scan points. A cartoon visualization of the technique is shown in \cref{fig:strategy-mtautau-cartoon}.
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.90\textwidth]{figures/mtautau/mmc-cartoon}
@@ -251,8 +251,8 @@ Because there are three neutrinos in the final state of a $\tautaulh$ decay, the
   \label{fig:strategy-mtautau-cartoon}
 \end{figure}
 
-% MMC input assumptions
-% ---------------------------------------------------------------------------------
+The multi-dimensional scan requires probability density functions (PDFs) for each dimension, and the final probability is a product of each PDF evaluated at a given scan point. Scans of the $x$- and $y$-components of the $\MET$ use Gaussian PDFs where the mean is the measured $\MEx$ and $\MEy$, respectively, and the standard deviation is the resolution inferred from the measured $\Sigma \text{E}_\text{T}$ of the event. The PDFs of the tau decay topologies are derived from simulated $\Ztautau$ events and shown in \cref{fig:strategy-mtautau-inputs} for a given $\pt$ range.
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.32\textwidth]{figures/ATLAS-CONF-2011-132/fig_01a}
@@ -262,11 +262,23 @@ Because there are three neutrinos in the final state of a $\tautaulh$ decay, the
   \label{fig:strategy-mtautau-inputs}
 \end{figure}
 
+A similar technique, named \textsc{SVFit}, is used in the CMS $\Htautau$ analysis~\cite{2014.cms-htautau}.
+
 \subsection{Performance}
 \label{sec:strategy-mtautau-performance}
 
-% mass ROCs
-% ---------------------------------------------------------------------------------
+The reconstructed $\mMMC$ is shown in the $\tautaulh$ boosted and VBF categories in \cref{fig:strategy-mtautau-raw}. Good separation is observed for $\Ztautau$ and $\Htautau$. For both processes, the efficiency for the MMC algorithm to converge is 99\%.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_01b}
+  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_01a}
+  \caption{Predicted distributions of $\mtautau$ for $\Ztautau$ and $\Htautau$ for the MMC reconstruction algorithm in the boosted category (left) and VBF category (right).}
+  \label{fig:strategy-mtautau-raw}
+\end{figure}
+
+To compare the performance of the various $\mtautau$ reconstruction techniques, the efficiency for a requirement $\mtautau > X$ is calculated across the mass range for $\Htautau$ (signal) and $\Ztautau$ (background). An ideal $\mtautau$ algorithm would have $\epsilon(\Htautau)$ near 1 and $\epsilon(\Htautau)$ near 0 for $\mtautau > 100, 110, 120$ GeV. The efficiencies are shown in \cref{fig:strategy-mtautau-ROC} in the boosted and VBF categories. The distributions of the various $\mtautau$ algorithms are shown in \cref{apx:mtautau}.
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/mtautau/mtautau-boost}
@@ -274,7 +286,8 @@ Because there are three neutrinos in the final state of a $\tautaulh$ decay, the
   \caption{Efficiency for $\Htautaulh$ versus the efficiency for $\Ztautaulh$ for various $\mtautau$ reconstruction algorithms in the boosted category (left) and VBF category (right).}
   \label{fig:strategy-mtautau-ROC}
 \end{figure}
-% ---------------------------------------------------------------------------------
+
+Of the $\mtautau$ algorithms considered, the MMC has the best performance in this metric. The $\MET$ reconstruction performance is among the limiting factors of the MMC algorithm.
 
 \section{MVA discrimination}
 \label{sec:strategy-mva}
