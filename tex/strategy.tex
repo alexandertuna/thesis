@@ -138,7 +138,7 @@ Event selection is done in two stages: pre-selection and categorization. The fir
 \subsection{Pre-selection}
 \label{sec:strategy-preselection}
 
-Pre-selection of the $\tautaulh$ analysis requires exactly one light lepton, exactly one $\tauh$, exactly zero $b$-tagged jets, and that the lepton and $\tauh$ have opposite charges. A requirement of $\mT < 70$ GeV is often applied, as well, which is $\approx\!95$\% efficient for $\Htautau$. 
+Pre-selection of the $\tautaulh$ analysis requires exactly one light lepton, exactly one $\tauh$, exactly zero $b$-tagged jets, and that the lepton and $\tauh$ have opposite charges. A requirement of $\mT < 70$ GeV is often applied, as well, which is $\approx\!95$\% efficient for $\Htautau$. The pre-selection is summarized in \cref{tab:strategy-selection}.
 
 This simple selection is shared among all future signal regions. Individual pieces of the selection can be reversed to define control regions in data rich in $\fakes$. For example, the $\mT$ requirement is reversed to defined a $\Wjets$ control region.
 
@@ -186,18 +186,58 @@ Event kinematics for data and prediction at the pre-selection stage are shown in
 \subsection{VBF category}
 \label{sec:strategy-VBF}
 
+Due to the large background from QCD $\Ztautau$ and $\Wjets$ production, the most sensitive search for $\Htautau$ is via the VBF production mechanism~\cite{1998.vbfhtautau}. The signature of this production mechanism is the existence of two jets with large separation in rapidity, and this signature guides the selection criteria of the VBF category.
 
+In addition to the pre-selection criteria, two additional jets are required for the VBF category which satisfy $\Delta\eta(jj) > 3$. The leading and sub-leading jets are assumed to be the VBF jets, and they are required to satisfy the criteria described in \cref{tab:strategy-objects-jetmet}. The threshold on the lead jet is raised to 50 GeV. The visible mass $\mvis$ is also required to be above 40 GeV because discrepancies are observed between data and prediction. The VBF category selection is summarized in \cref{tab:strategy-selection}.
 
 \subsection{Boosted category}
 \label{sec:strategy-boost}
+
+The second category considered is the boosted category. This category selects events by the transverse boost of the Higgs candidate, where the Higgs candidate is defined as the vector sum of the lepton, $\tauh$, and $\MET$. It is required to have a boost greater than 100 GeV.
+
+This selection emphasizes the ggF Higgs production mechanism with a high $\pt$ ISR jet. The sensitivity of the ggF analysis improves with higher $\pt(H)$ because the $\mtautau$ mass reconstruction techniques have better resolution at smaller $\Delta\phi(\tautau)$. These techniques are discussed in detail in \cref{sec:strategy-mtautau}.
+
+Detailed descriptions of analysis techniques in the boosted category are often omitted, both for brevity and because it is less sensitive to $\Htautau$ than the VBF category.
+
+\begin{table}[bp]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Pre-selection and categorization criteria in the $\Htautaulh$ analysis.}
+  \input{tables/strategy-selection}
+  \label{tab:strategy-selection}
+\end{table}
 
 \clearpage
 
 \section{$\tautau$ mass reconstruction}
 \label{sec:strategy-mtautau}
 
+The reconstruction of the Higgs mass $\mtautau$ is an area of active study.
+
 \subsection{$\tau\tau$ systems}
 \label{sec:strategy-mtautau-intro}
+
+Because there are three neutrinos in the final state of a $\tautaulh$ decay, the Higgs four-momentum cannot be fully reconstructed like in the $\Hyy$ or $\HZZ$ analyses. Many options exist for reconstructing $\mtautau$ from this under-constrained set of equations, as shown in \cref{tab:strategy-mtautau}.
+%
+\begin{description}
+    \item[Visible mass, $\mvis$:] \hfill \\
+      Mass of the visible decay products (lepton and $\tauh$). This is the simplest mass reconstruction and is robust against potentailly poor $\MET$ resolution. However, it ignores all information about the $\MET$.
+    \item[Total transverse mass, $\mttot$:] \hfill \\
+      Transverse mass of the lepton, $\tauh$, and $\MET$. This is another simple mass reconstruction, and it incorporates the $\MET$. However, no prior knowledge of tau lepton decays is utilized.
+    \item[Collinear mass, $\mcol$:] \hfill \\
+      Mass of the $\tautau$ system assuming the neutrinos are exactly collinear with the visible decay products. This is the first attempt at fully reconstructing a $\tautau$ resonance. However, the collinear assumption is not perfect.
+    \item[Missing mass calculator, $\mMMC$:] \hfill \\
+      Mass of the $\tautau$ system assuming the neutrinos are approximately collinear with the visible decay products. This is discussed in more detail in \cref{sec:strategy-mtautau-mMMC}.
+\end{description}
+%
+
+\begin{table}[bp]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{$\mtautau$ reconstruction techniques used in ATLAS publications.}
+  \input{tables/strategy-mtautau}
+  \label{tab:strategy-mtautau}
+\end{table}
 
 \subsection{$\mMMC$ algorithm}
 \label{sec:strategy-mtautau-mMMC}
