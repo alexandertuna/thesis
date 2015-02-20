@@ -296,7 +296,7 @@ The Higgs discovery program is driven by final states where the reconstructed Hi
 
 The landscape is not as easy for $\Htautau$. The resonant and irreducible $\Ztautau$ process is nearby in mass, and the resolution of the $\mtautau$ is similar to the difference between the masses due to the presence of neutrinos in the tau lepton decays. Additionally, the distinctive VBF signature provides potentially greater discriminating power than $\mtautau$.
 
-For these reasons, a multi-variate (MVA) analysis is chosen where event-level observables like $\mMMC$ and $\mjj$ are input to a boosted decision tree (BDT) discriminator~\cite{}. The BDT attempts to classify a given event as signal-like or background-like with a continuous output score judged on the multi-dimensional evaluation of input variables. A score of 1 is most signal-like, and a score of -1 is most background-like.
+For these reasons, a multi-variate (MVA) analysis is chosen where event-level observables like $\mMMC$ and $\mjj$ are input to a boosted decision tree (BDT) discriminator~\cite{1984.decision-trees,2004.bdts-miniboone}. The BDT attempts to classify a given event as signal-like or background-like with a continuous output score judged on the multi-dimensional evaluation of input variables. A score of 1 is most signal-like, and a score of -1 is most background-like.
 
 \subsection{Inputs}
 \label{sec:strategy-mva-inputs}
@@ -307,8 +307,6 @@ An interesting sub-set of inputs are centrality variables. These are transformat
 
 The second centrality varible, lepton $\eta$-centrality, quantifies the lepton between-ness with regard to the VBF jets in $\eta$. VBF systems expect the decay products to point between the VBF jets, whereas non-VBF systems have no such constraint. Visualization of the allowed values of the centralities are shown in \cref{fig:strategy-centrality-cartoons}.
 
-The choice of variables is optimized to give good separation while keeping the number of inputs small and manageable. The set of inputs used in the $\Htautaulh$ categories is shown in \cref{tab:strategy-inputs}.
-
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/backgrounds/cartoon_lepton_eta_centrality}
@@ -316,6 +314,8 @@ The choice of variables is optimized to give good separation while keeping the n
   \caption{Cartoons of lepton $\eta$-centrality (left) and $\MET$ $\phi$-centrality (right), courtesy of Tae Min Hong.}
   \label{fig:strategy-centrality-cartoons}
 \end{figure}
+
+The choice of variables is optimized to give good separation while keeping the number of inputs small and manageable. The set of inputs used in the $\Htautaulh$ categories is shown in \cref{tab:strategy-inputs}. Distributions of input variables and other kinematics are shown in \cref{fig:strategy-overlaid-boost-1,fig:strategy-overlaid-boost-2} for the boosted category and \cref{fig:strategy-overlaid-vbf-1,fig:strategy-overlaid-vbf-2,fig:strategy-overlaid-vbf-3} for the VBF category. Signal and background predictions are discussed in greater detail in \cref{chap:backgrounds}.
 
 \begin{table}[bp]
   \centering
@@ -340,7 +340,7 @@ The choice of variables is optimized to give good separation while keeping the n
   \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/met-phi-centrality}
   \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/mT} \\
   \caption{Predicted signal and background distributions in the boosted category normalized to unit area and overlaid.}
-  \label{fig:strategy-overlaid-boost-taus}
+  \label{fig:strategy-overlaid-boost-1}
 \end{figure}
 \begin{figure}[tp]
   \centering
@@ -351,7 +351,7 @@ The choice of variables is optimized to give good separation while keeping the n
   \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/H-pt-hi}
   \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/BDTEve-boost}
   \caption{Predicted signal and background distributions in the boosted category normalized to unit area and overlaid.}
-  \label{fig:strategy-overlaid-boost-other}
+  \label{fig:strategy-overlaid-boost-2}
 \end{figure}
 % ---------------------------------------------------------------------------------
 
@@ -370,7 +370,7 @@ The choice of variables is optimized to give good separation while keeping the n
   \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/met-phi-centrality}
   \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/mT} \\
   \caption{Predicted signal and background distributions in the VBF category normalized to unit area and overlaid.}
-  \label{fig:strategy-overlaid-vbf-taus}
+  \label{fig:strategy-overlaid-vbf-1}
 \end{figure}
 \begin{figure}[tp]
   \centering
@@ -384,7 +384,7 @@ The choice of variables is optimized to give good separation while keeping the n
   \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/jets-etaprod}
   \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/lep-eta-centrality} \\
   \caption{Predicted signal and background distributions in the VBF category normalized to unit area and overlaid.}
-  \label{fig:strategy-overlaid-vbf-jets}
+  \label{fig:strategy-overlaid-vbf-2}
 \end{figure}
 \begin{figure}[tp]
   \centering
@@ -393,54 +393,63 @@ The choice of variables is optimized to give good separation while keeping the n
   \includegraphics[width=0.35\textwidth]{figures/overlaid/vbf/system-pt}
   \includegraphics[width=0.35\textwidth]{figures/overlaid/vbf/BDTEve-VBF}
   \caption{Predicted signal and background distributions in the VBF category normalized to unit area and overlaid.}
-  \label{fig:strategy-overlaid-vbf-other}
+  \label{fig:strategy-overlaid-vbf-3}
 \end{figure}
-% ---------------------------------------------------------------------------------
-
-% VBF correlations
-% ---------------------------------------------------------------------------------
-
-\subsection{Correlations}
-\label{sec:strategy-mva-correlations}
-
 \clearpage
 
+\subsection{Discrimination}
+\label{sec:strategy-mva-correlations}
+
+One of the strengths of the BDT analysis is that it can exploit correlations between input variables for better background discrimination. This is especially true in the VBF category where there is interplay between the VBF-oriented variables and the $\Htautau$-oriented variables. Another strength is the BDT can make cuts as hyper-surfaces around weakly discriminating variables instead of rectangular cuts.
+
+Two-dimensional contours of variables of interest are shown in \cref{fig:strategy-kinematic-correlations-1,fig:strategy-kinematic-correlations-2} for VBF $\Htautau$, $\Ztautau$, and $\fakes$. The behavior helps demonstrate the utility of the BDT analysis.
+% 
+\begin{description}
+    \item[$\dR$ and $\mMMC$:] \hfill \\
+      $\mMMC$ is not strongly correlated with $\dR$ for $\ZHtautau$ because they are resonant decays. For $\fakes$, there is a strong correlation. 
+    \item[$\pt(H)$ and $\dR$:] \hfill \\
+      $\dR$ is strongly correlated with $\pt(H)$ for $\ZHtautau$ because their decay products stem from a resonant decay. For $\fakes$, the correlation is weaker.
+    \item[$\metphicent$ and $\dR$:] \hfill \\
+      $\metphicent$ is correlated with $\dR$ for $\ZHtautau$ because as $\dR$ shrinks, the $\MET$ is more spatially constrained. For $\fakes$, the $\MET$ is more randomly distributed relative to the $\LTT$ system.
+    \item[$\mjj$ and $\deta$:] \hfill \\
+      For all processes, $\mjj$ and $\deta$ are strongly but not perfectly correlated, hence additional discrimination power is available.
+    \item[$\mjj$ and $\dR$:] \hfill \\
+      For $\ZHtautau$, there is correlation between $\mjj$ and $\dR$ because the $\tautau$ system is recoiling off of the dijet system. This is an example of interplay between VBF and $\tautau$ kinematics.
+    \item[$\mjj$ and $\mMMC$:] \hfill \\
+      For all processes, $\mjj$ and $\mMMC$ are not strongly correlated, and their individual discrimination power is comparable. Extracting signal from a fit of the ditau mass is therefore not obviously the best candidate.
+\end{description}
+%
+
+\clearpage
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/mT-vs-mMMC}
-  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/taulep_dR-vs-mMMC}
+  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/taulep_dR-vs-mMMC} \\
+  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/H_pt-vs-taulep_dR} \\
+  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/met_phi_cent-vs-taulep_dR} \\
   \caption{Contours of kinematic correlations in the VBF category for VBF $\Htautau$ (left), $\Ztautau$ (center), and fakes (right).}
   \label{fig:strategy-kinematic-correlations-1}
 \end{figure}
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/H_pt-vs-taulep_dR}
-  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/met_phi_cent-vs-taulep_dR}
+  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/jj_mass-vs-jj_deta} \\
+  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/jj_mass-vs-taulep_dR} \\
+  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/jj_mass-vs-mMMC} \\
   \caption{Contours of kinematic correlations in the VBF category for VBF $\Htautau$ (left), $\Ztautau$ (center), and fakes (right).}
   \label{fig:strategy-kinematic-correlations-2}
 \end{figure}
-
 \clearpage
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/jj_mass-vs-jj_deta}
-  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/jj_mass-vs-jj_etaprod}
-  \caption{Contours of kinematic correlations in the VBF category for VBF $\Htautau$ (left), $\Ztautau$ (center), and fakes (right).}
-  \label{fig:strategy-kinematic-correlations-3}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/jj_mass-vs-mMMC}
-  \includegraphics[width=0.98\textwidth]{figures/kinematiccorrelations/jj_mass-vs-taulep_dR}
-  \caption{Contours of kinematic correlations in the VBF category for VBF $\Htautau$ (left), $\Ztautau$ (center), and fakes (right).}
-  \label{fig:strategy-kinematic-correlations-4}
-\end{figure}
 
 \subsection{MVAs in other VBF analyses}
 \label{sec:strategy-mva-elsewhere}
+
+The $\Htautau$ analysis is one of many recent VBF Higgs analyses on ATLAS to adopt a MVA approach.
+
+In the $\Hyy$ and $\HZZ$ analyses, a VBF BDT is derived which is meant to be uncorrelated with $m_H$. Thes BDT discriminators uses similar input variables as the $\Htautau$ VBF BDT, such as $\mjj$ and $\deta$. For $\Hyy$, a requirement on the output of the BDT discriminator is made ($O_\text{BDT} \ge 0.83$) to enrich the VBF $\Hyy$ process, and the signal is then extracted from a fit of $\myy$. For $\HZZ$, the signal is extracted via a two-dimensional fit of the VBF BDT discriminator and $\mllll$.
+
+The $\HWW$ MVA analysis takes the same approach as the $\Htautau$ analysis. Variables correlated with the reconstructed Higgs mass, including $m_T$ and $\mll$, are included in the BDT discriminator, and the signal yield is extracted from a fit of the BDT output. 
+
+Predicted BDT discriminator outputs are shown in \cref{fig:strategy-elsewhere} for the $\Hyy$, $\HZZ$, and $\HWW$ analyses. Good discrimination is found between signal and background processes. The measured signal strength for these analyses is shown in \cref{tab:strategy-elsewhere}.
 
 \begin{figure}[tp]
   \centering
@@ -451,4 +460,11 @@ The choice of variables is optimized to give good separation while keeping the n
   \label{fig:strategy-elsewhere}
 \end{figure}
 
+\begin{table}[bp]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Measured VBF signal strength in the other major ATLAS analyses: $\Hyy$~\cite{HIGG-2013-08}, $\HZZ$~\cite{HIGG-2013-21}, and $\HWW$~\cite{HIGG-2013-13}.}
+  \input{tables/strategy-elsewhere}
+  \label{tab:strategy-elsewhere}
+\end{table}
 
