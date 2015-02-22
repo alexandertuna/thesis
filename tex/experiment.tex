@@ -79,12 +79,24 @@ These datasets allow the ATLAS and CMS experiments to probe physics of the Stand
 \section{The ATLAS detector}
 \label{sec:atlas}
 
+The ATLAS\footnote{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{s}} detector is a general purpose cylindrical detector centered on one of the LHC collision points. It is 46 meters in length, 25 meters in diameter, and weighs 7000 tons. Assembly began at CERN in 2003 and construction was completed in 2008. A schematic rending is shown in \cref{fig:atlas-cartoon}.
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.90\textwidth]{figures/lhc-atlas/atlas-0803012_01.jpg}
   \caption{Scale rendering of the ATLAS detector with the various sub-detectors highlighted~\cite{atlas-cgi-detector}.}
   \label{fig:atlas-cartoon}
 \end{figure}
+
+ATLAS is built to measure and classify particles arising from proton-proton collisions. These particles can be as low energy as a few hundred MeV to as high energy as multiple TeV. To detector such a broad range of phenomena, multiple sub-detectors are employed. These are concentric about the proton-proton interaction point (IP) and are designed to observe different classes of particles. 
+
+The \textit{inner detector} is closest to the beams and is designed to detect charged particles. The \textit{calorimeters} are outside the inner detector and are designed to stop all particles except muons and neutrinos. The \textit{muon system} is furthest from the beams and is designed to detect muons as they exit ATLAS. 
+
+The inner detector is enclosed by a solenoidal magnet with a field of approximately 2 Tesla. A large toroidal magnet exists within the muon system which has a field of approximately 4 Tesla. The purpose of these magnets is to bend the trajectory of charged particles as they travel through ATLAS. The momenta of these particles can then be precisely inferred from the measured trajectory according to the classical Lorentz force law.
+
+ATLAS uses a right-handed coordinate system with its origin at the IP in the center of the detector, and the $z$-axis along the beam line. The $x$-axis points from the IP to the center of the LHC ring, and the $y$-axis points upwards. Cylindrical coordinates ($r$, $\phi$) are used in the transverse plane, $\phi$ being the azimuthal angle around the beam line. The pseudorapidity $\eta$ is typically used in place of the polar angle $\theta$ and is defined as $\eta = -\text{ln}(\text{tan}\frac{\theta}{2})$~\cite{HIGG-2012-27}.
+
+The ATLAS collaboration was formed in 1992, and as of 2011, it includes over 3000 scientists from 174 institutions and 38 countries. It is one of the largest scientific collaborations in the world.
 
 \begin{figure}[tp]
   \centering
@@ -101,8 +113,13 @@ These datasets allow the ATLAS and CMS experiments to probe physics of the Stand
 \end{figure}
 
 \subsection{Tracking}
+
+The inner detector, also called the \textit{tracker}, is designed to precisely measure the trajectory and momentum of charged particles.
+
 \subsection{Calorimetry}
 \subsection{Muon spectrometry}
+
+The muon system, also called the \textit{muon spectrometer}, is designed to measure the trajectory and momentum of muons, especially at high $\pt$. 
 
 \section{Particle identification}
 \label{sec:particles}
