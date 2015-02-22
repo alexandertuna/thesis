@@ -8,6 +8,12 @@
 \section{The LHC}
 \label{sec:lhc}
 
+The Large Hadron Collider (LHC)~\cite{cern-jinst-lhc} is the most powerful particle accelerator ever built. It was first conceived in the 1980s with the purpose of finding the Higgs boson and discovering physics beyond our current understanding. It became operation in the early 2010s.
+
+The LHC is a circular hadron collider 27 kilometers in circumference and 100 meters underground, near Geneva, Switzerland. It straddles the border of Switzerland and France. It is operated by the European Organization for Nuclear Research (CERN\footnote{Conseil Europ\'een pour la Recherche Nucl\'eaire}) and occupies the underground tunnel originally constructed for the Large Electron Positron collider (LEP) for use in the 1990s. The construction costs of the LHC are approximately five billion USD.
+
+The LHC collides hadrons at high energies to probe the boundaries of our understanding of particle physics. These collisions are observed by four major experiments situated along the LHC ring: ATLAS~\cite{cern-jinst-atlas}, CMS~\cite{cern-jinst-cms}, ALICE~\cite{cern-jinst-alice}, and LHCb~\cite{cern-jinst-lhcb}. ATLAS and CMS are general purpose particle detector experiments built for discovering physics beyond the Standard Model. ALICE is designed to observe heavy ion (lead nuclei) collisions and study the physics of quark-gluon plasma. LHCb specializes in the study of $b$-hadrons. An aerial view of the experiments is shown in \cref{fig:lhc-switzerland}.
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.90\textwidth]{figures/lhc-atlas/lhc-switzerland}
@@ -15,12 +21,53 @@
   \label{fig:lhc-switzerland}
 \end{figure}
 
+\subsection{Specifications}
+
+The LHC is last step of a multi-stage chain of accelerators called the LHC accelerator complex~\cite{cern-accelerators}, shown in \cref{fig:lhc-complex}. Protons are first retrieved from hydrogen atoms and accelerated by the Linac 2 linear accelerator to 50 MeV per proton. The protons are then passed successively to the Proton Synchotron Booster (PSB), Proton Synchotron (PS), and Super Proton Synchrotron (SPS) where they are accelerated to 1.4 GeV, 25 GeV, and 450 GeV, respectively. The protons are finally fed into the LHC where they are maximally accelerated to 4 TeV in 2012 operations, yielding a center-of-mass collision energy of 8 TeV. This chain is summarized in \cref{tab:experiment-lhc-speeds}. At full energy, the protons will typically circulate the LHC for many hours at a time.
+
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.90\textwidth]{figures/lhc-atlas/lhc-accelerator-complex}
   \caption{The LHC accelerator complex. Before reaching the LHC, protons are accelerated at Linac 2, the Proton Synchrotron Booster (PSB), the Proton Synchrotron (PS), and the Super Proton Synchrotron (SPS)~\cite{cern-faq}.}
   \label{fig:lhc-complex}
 \end{figure}
+
+\begin{table}[bp]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{The accelerators of the LHC accelerator chain and the speed at which they accelerate protons in 2012.~\cite{cern-faq}.}
+  \input{tables/experiment-lhc-speeds}
+  \label{tab:experiment-lhc-speeds}
+\end{table}
+
+Protons travel around the LHC in two oppositely circulated beams. The proton beams are bent and focused by powerful superconducting electromagnets, which operate cryogenically at an ultracold temperature of 2 K (-456 F). The proton beams are segmented into groups of protons called \textit{bunches}. Each beam contains 2808 bunches, and each bunch contains approximately $10^{11}$ protons. Many protons are included per bunch to maximize the probability of a proton-proton collision for a given bunch crossing. A bunch crossing happens every 50 nanoseconds during operations in 2012.
+
+\subsection{Operations}
+
+The LHC is designed to collide protons with a center-of-mass energy $\sqrt s$ of 14 TeV and an instantaneous luminosity of $10^{34}\lumi$. However, while commissioning in 2008, the machine broke due to a faulty electrical connection between two superconducting magnets~\cite{cern-incident}. The LHC was repaired in 2009 and, to ensure safer operation, began colliding protons below design energy and instantaneous luminosity in late 2009.
+
+The LHC collided protons for physics studies in 2010-2012 at a reduced energy of 7 TeV (2010-2011) and 8 TeV (2012). These years of data-taking are referred to as \textit{Run-I} and include the discovery of the Higgs boson. The peak instantaneous luminosity achieved was $7.7 \times 10^{33}\lumi$ in 2012~\cite{cern-run1}, which more than doubled the peak luminosity of 2011 data-taking. 
+
+To increase the number of collisions recorded, many proton collisions are allowed to occur within a single bunch crossing. This average number of proton collisions per bunch crossing $\pileup$ is referred to as \textit{pileup}. The average $\pileup$ in 2012 is around 20 collisions per crossing and reaches as large as 35-40. Profiles of the pileup are shown in \cref{fig:atlas-lumi-1,fig:atlas-lumi-2}.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figures/lhc-atlas/lumivstime}
+  \caption{The peak luminosity as measured in different data-taking periods~\cite{atlas-lumi}. The peak Run-I luminosity is $0.8\times 10^{34} \text{cm}^{-2} \text{s}^{-1}$.}
+  \label{fig:atlas-lumi-1}
+\end{figure}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/lhc-atlas/mu_2011_2012-dec}
+  \includegraphics[width=0.48\textwidth]{figures/lhc-atlas/intlumivstime2011-2012DQ}
+  \caption{Distributions of the recorded luminosity in bins of $\pileup$ (left) and the total integrated luminosity as a function of time (right)~\cite{atlas-lumi}. In 2011 (2012), the average $\pileup$ is 9.1 (20.7) and the total integrated luminosity for physics analysis is 4.6 $\ifb$. (20.3 $\ifb$).}
+  \label{fig:atlas-lumi-2}
+\end{figure}
+
+The LHC, ATLAS, and CMS are undergoing maintenance and upgrades from early 2013 until early 2015. Data-taking is intended to resume in mid-2015 with an increased $\sqrt{s}=13$ TeV and a instantaneous luminosity of $10^{34}\lumi$. The \textit{Run-II} data-taking campaign is intended to last for the next three to four years, until 2017-2018, when another round of upgrades are planned to be installed.
+
+These datasets allow the ATLAS and CMS experiments to probe physics of the Standard Model and beyond unlike any previous experiment in particle physics. Despite operating below design energy and luminosity, the Run-I dataset accesses electroweak processes at unprecedented rates, as shown in \cref{fig:lhc-stirling}. This rate will increase again in the Run-II data-taking campaign, thereby offering a new opportunity for discovery.
 
 \begin{figure}[tp]
   \centering
@@ -44,21 +91,6 @@
   \includegraphics[width=0.5\textwidth]{figures/lhc-atlas/atlas-wedge-cartoon}
   \caption{Transverse schematic view of a wedge of the ATLAS detector. Charged particles leave tracks in the tracker, electrons and photons typically stop in the electromagnetic calorimeter, hadrons like charged pions typically stop in the hadronic calorimeter, and muons are tagged by the muon system as they exit. Neutrinos escape undetected.}
   \label{fig:atlas-wedge}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.90\textwidth]{figures/lhc-atlas/lumivstime}
-  \caption{The peak ATLAS online luminosity as measured in different data-taking periods~\cite{atlas-lumi}. The peak Run-I luminosity is $0.8\times 10^{34} \text{cm}^{-2} \text{s}^{-1}$.}
-  \label{fig:atlas-lumi-1}
-\end{figure}
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/lhc-atlas/mu_2011_2012-dec}
-  \includegraphics[width=0.48\textwidth]{figures/lhc-atlas/intlumivstime2011-2012DQ}
-  \caption{Distributions of the recorded luminosity in bins of $\pileup$ (left) and the total integrated luminosity as a function of time (right)~\cite{atlas-lumi}. In 2011 (2012), the average $\pileup$ is 9.1 (20.7) and the total integrated luminosity for physics analysis is 4.6 $\ifb$. (20.3 $\ifb$).}
-  \label{fig:atlas-lumi-2}
 \end{figure}
 
 \begin{figure}[tp]
