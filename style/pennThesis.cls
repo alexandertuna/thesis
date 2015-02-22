@@ -9,7 +9,7 @@
 \RequirePackage{ifthen}
 
 \newboolean{boolVersionForPenn}
-\setboolean{boolVersionForPenn}{false}
+\setboolean{boolVersionForPenn}{true}
 
 %% -----------------------------------------------------------------------------
 
@@ -17,14 +17,17 @@
 \RequirePackage{graphicx}
 \RequirePackage{verbatim}
 \RequirePackage{color}
+\RequirePackage{epstopdf}
 
 % Symbols and such
 \RequirePackage{amsmath,amssymb,bm}
+\RequirePackage{mathrsfs}
 \RequirePackage{atlasphysics}
 \RequirePackage{calc}
+\RequirePackage{nicefrac}
 
 % Note: not subfigure
-% \RequirePackage{subfig}
+%\RequirePackage{subfig}
 
 % some tikz stuff
 % \RequirePackage{tikz}
@@ -40,7 +43,8 @@
 \ifthenelse{\boolean{boolVersionForPenn}}{
   % For what goes to ProQuest and for what I print out, who knows what they 
   % want.  So just include URL, which is pretty harmless.
-  \RequirePackage{url}
+  %\RequirePackage{url}
+  \RequirePackage[colorlinks=true,breaklinks=true,linktocpage=true,backref,citecolor=red,filecolor=black,linkcolor=red,urlcolor=blue]{hyperref}
 }{
   % This is the format I use for an electronic document, e.g. what's submitted to CDS
   \RequirePackage[colorlinks=true,breaklinks=true,linktocpage=true,backref,citecolor=red,filecolor=black,linkcolor=red,urlcolor=blue]{hyperref}
@@ -57,6 +61,9 @@
 % Prevent footnotes from being reset after chapter breaks
 \RequirePackage{dcounter}
 \countstyle[footnote]{}
+
+% Prevent citations in list of figures from messing up order in bibliography
+\RequirePackage{notoccite}
 
 %% Load this last...  it's picky (but still useful).
 \RequirePackage[capitalize]{cleveref}
@@ -95,6 +102,7 @@
 \renewcommand*{\chaptitlefont}{\normalfont\Huge\begin{Spacing}{1}}
 \renewcommand*{\afterchaptertitle}{\vskip\onelineskip \hrule\vskip \afterchapskip\end{Spacing} \vskip\onelineskip}
 
+%\aliaspagestyle{chapter}{simple}
 
 % Page headings, slightly different from the default.
 \makepagestyle{pennHeadings}
@@ -118,8 +126,12 @@
 
 % We're making a document with single-sided pages, so only need to define 
 % the headings for odd page numbers
-\makeoddhead{pennHeadings}{\rightmark}{}{\thepage}
-
+\ifthenelse{\boolean{boolVersionForPenn}}{
+  \makeoddhead{pennHeadings}{\rightmark}{}{}
+  \makeoddfoot{pennHeadings}{}{\thepage}{}
+}{
+  \makeoddhead{pennHeadings}{\rightmark}{}{\thepage}
+}
 
 % Add a line below the page headings.
 \makeheadrule{pennHeadings}{\textwidth}{0.3pt}
@@ -131,9 +143,9 @@
 \settrimmedsize{11in}{8.5in}{*}
 \settrims{0in}{0in}
 \ifthenelse{\boolean{boolVersionForPenn}}{
-  \settypeblocksize{8in}{5.625in}{*}
-  \setlrmargins{1.625in}{*}{*}
-  \setulmargins{1.5in}{*}{*}
+  \settypeblocksize{8.2in}{6.1in}{*}
+  \setlrmargins{1.2in}{*}{*}
+  \setulmargins{1.4in}{*}{*}
 }{
   \settypeblocksize{8.2in}{6.1in}{*}
   \setlrmargins{1.2in}{*}{*}
@@ -145,7 +157,7 @@
 
 %% Line spacing should be 2 for Penn document.  I've made it 1.5 for ``my'' version.
 \ifthenelse{\boolean{boolVersionForPenn}}{
-  \newcommand{\mylinespacing}{2}
+  \newcommand{\mylinespacing}{1.5}
 }{
   \newcommand{\mylinespacing}{1.5}
 }
@@ -359,7 +371,7 @@
 
     \vspace*{2cm}
     
-    All rights reserved.
+    %All rights reserved.
   \end{center}
 }
 
@@ -414,11 +426,11 @@
 
 
 % If this is a draft, then add the line numbers to the document.
-\AtBeginDocument{
-  \ifx\@draftversion\@empty%
-  \else \linenumbers % \draftheading
-  \fi
-}
+%\AtBeginDocument{
+ % \ifx\@draftversion\@empty%
+%  \else \linenumbers % \draftheading
+%  \fi
+%}
 
 
 % Control the depth of the table of contents, and how deep you can number sub-sub-sub sections.

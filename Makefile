@@ -7,6 +7,7 @@ all:
 	pdflatex ${THESIS}
 	bibtex   ${THESIS}
 	pdflatex ${THESIS}
+	pdflatex ${THESIS}
 	clear
 	du -hs
 	ls -ltrh

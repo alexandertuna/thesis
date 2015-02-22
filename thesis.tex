@@ -19,6 +19,8 @@
 \usepackage{etoolbox}
 \makeatletter
 \let\oldcite\cite
+\pretocmd{\listoftables}{\def\cite{\ignorespaces\@gobble}}{}{}
+\apptocmd{\listoftables}{\let\cite\oldcite}{}{}
 \pretocmd{\listoffigures}{\def\cite{\ignorespaces\@gobble}}{}{}
 \apptocmd{\listoffigures}{\let\cite\oldcite}{}{}
 \makeatother
