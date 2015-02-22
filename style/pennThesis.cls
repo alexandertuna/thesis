@@ -44,10 +44,10 @@
   % For what goes to ProQuest and for what I print out, who knows what they 
   % want.  So just include URL, which is pretty harmless.
   %\RequirePackage{url}
-  \RequirePackage[colorlinks=true,breaklinks=true,linktocpage=true,backref,citecolor=red,filecolor=black,linkcolor=red,urlcolor=blue]{hyperref}
+  \RequirePackage[colorlinks=true,breaklinks=true,linktocpage=true,backref,citecolor=blue,filecolor=black,linkcolor=blue,urlcolor=blue]{hyperref}
 }{
   % This is the format I use for an electronic document, e.g. what's submitted to CDS
-  \RequirePackage[colorlinks=true,breaklinks=true,linktocpage=true,backref,citecolor=red,filecolor=black,linkcolor=red,urlcolor=blue]{hyperref}
+  \RequirePackage[colorlinks=true,breaklinks=true,linktocpage=true,backref,citecolor=blue,filecolor=black,linkcolor=blue,urlcolor=blue]{hyperref}
 }
 
 % Handling single/double spacing properly
