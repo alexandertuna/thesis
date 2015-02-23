@@ -84,11 +84,11 @@ The ATLAS\footnote{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\t
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.90\textwidth]{figures/lhc-atlas/atlas-0803012_01.jpg}
-  \caption{Scale rendering of the ATLAS detector with the various sub-detectors highlighted~\cite{atlas-cgi-detector}.}
+  \caption{Scale rendering of the ATLAS detector with the various subdetectors highlighted~\cite{atlas-cgi-detector}.}
   \label{fig:atlas-cartoon}
 \end{figure}
 
-ATLAS is built to measure and classify particles arising from proton-proton collisions. These particles can be as low energy as a few hundred MeV to as high energy as multiple TeV. To detector such a broad range of phenomena, multiple sub-detectors are employed. These are concentric about the proton-proton interaction point (IP) and are designed to observe different classes of particles. 
+ATLAS is built to measure and classify particles arising from proton-proton collisions. These particles can be as low energy as a few hundred MeV to as high energy as multiple TeV. To detector such a broad range of phenomena, multiple subdetectors are employed. These are concentric about the proton-proton interaction point (IP) and are designed to observe different classes of particles. 
 
 The \textit{inner detector} is closest to the beams and is designed to detect charged particles. The \textit{calorimeters} are outside the inner detector and are designed to stop all particles except muons and neutrinos. The \textit{muon system} is furthest from the beams and is designed to detect muons as they exit ATLAS. 
 
@@ -105,9 +105,9 @@ The ATLAS collaboration was formed in 1992, and as of 2011, it includes over 300
   \label{fig:atlas-wedge}
 \end{figure}
 
-\subsection{Tracking}
+\subsection{Inner detector and tracking}
 
-The inner detector (ID), also called the \textit{tracker}, is designed to precisely measure the trajectory and momentum of charged particles as they pass through the 2 T magnetic field provided by the solenoid, such as electrons, muons, and charged pions. The ID is composed of three independent sub-detectors: the Pixel detector, the Semiconductor Tracker (\textit{SCT}), and the Transition Radiation Tracker (\textit{TRT}). These are shown in \cref{fig:atlas-detector-id}. The sub-detectors are split into barrel and endcap components, have full $2\pi$ coverage in $\phi$, and have at least coverage in $|\eta|$ up to 2.0.
+The inner detector (ID), also called the \textit{tracker}, is designed to precisely measure the trajectory and momentum of charged particles as they pass through the 2 T magnetic field provided by the solenoid, such as electrons, muons, and charged pions~\cite{cern-jinst-atlas}. The ID is composed of three independent but complementary subdetectors: the Pixel detector, the Semiconductor Tracker (\textit{SCT}), and the Transition Radiation Tracker (\textit{TRT}). These are shown in \cref{fig:atlas-detector-id}. The subdetectors are split into barrel and endcap components, have full $2\pi$ coverage in $\phi$, and have at least coverage in $|\eta|$ up to 2.0. Information from all subdetectors is used to reconstruct tracks and vertices.
 
 \begin{figure}[tp]
   \centering
@@ -116,11 +116,13 @@ The inner detector (ID), also called the \textit{tracker}, is designed to precis
   \label{fig:atlas-detector-id}
 \end{figure}
 
-The Pixel detector exists closest to the interaction point and employs three layers silicon pixels. The pixels have fine granularity and are designed to deliver precise measurement of tracking parameters close to the IP, which are useful for secondary vertexing. The intrinsic resolution of the pixels in the barrel are $10\ \micron$ in $r\phi$ and $115\ \micron$ in $z$. The Pixel detector has 80 $\times 10^{6}$ channels, by far the most of any ATLAS subdetector, and usually provides three measurements per charged particle. The track resolution is $10\ \micron$ The Pixel detector has coverage up to $|\eta|=2.5$.
+\subsubsection{Subdetectors}
 
-The SCT surrounds the Pixel detector and also employs silicon detector elements, using micro-strips instead of pixels. The strips are arranged in four double layers, with the the pairs arranged at small angles relative to each other, to make a three-dimensional measurement. The intrinsic resolution of the strips in the barrel are $17\ \micron$ in $r\phi$ and $580\ \micron$ in $z$. The SCT has 6.3 $\times 10^{6}$ channels and usually provides eight measurements per charged particle. It has coverage up to $|\eta|=2.5$.
+The Pixel detector exists closest to the interaction point and employs three layers silicon pixels~\cite{cern-jinst-atlas}. The pixels have fine granularity and are designed to deliver precise measurement of tracking parameters close to the IP, which are useful for secondary vertexing. The intrinsic resolution of the pixels in the barrel are $10\ \micron$ in $r\phi$ and $115\ \micron$ in $z$. The Pixel detector has 80 $\times 10^{6}$ channels, by far the most of any ATLAS subdetector, and usually provides three measurements per charged particle. The track resolution is $10\ \micron$ The Pixel detector has coverage up to $|\eta|=2.5$.
 
-The TRT surrounds the SCT and is the largest of the ID subdetectors. It employs 300,000 straw drift tubes for recording the passage of charged particles. The intrinsic resolution of the TRT in the barrel is $130\ \micron$ in $r\phi$; the drift tubes cannot make a measurement in $z$. The TRT has 350,000 channels and usually provides 30 or more measurements per charged particle. It has coverage up to $|\eta|=2.0$. A comparison of subdetector features is shown in \cref{tab:experiment-atlas-id}.
+The SCT surrounds the Pixel detector and also employs silicon detector elements, using micro-strips instead of pixels~\cite{cern-jinst-atlas}. The strips are arranged in four double layers, with the the pairs arranged at small angles relative to each other, to make a three-dimensional measurement. The intrinsic resolution of the strips in the barrel are $17\ \micron$ in $r\phi$ and $580\ \micron$ in $z$. The SCT has 6.3 $\times 10^{6}$ channels and usually provides eight measurements per charged particle. It has coverage up to $|\eta|=2.5$.
+
+The TRT surrounds the SCT and is the largest of the ID subdetectors~\cite{cern-jinst-atlas}. It employs 300,000 straw drift tubes for recording the passage of charged particles. The intrinsic resolution of the TRT in the barrel is $130\ \micron$ in $r\phi$; the drift tubes cannot make a measurement in $z$. The TRT has 350,000 channels and usually provides 30 or more measurements per charged particle. It has coverage up to $|\eta|=2.0$. A comparison of subdetector features is shown in \cref{tab:experiment-atlas-id}.
 
 \begin{table}[bp]
   \centering
@@ -130,11 +132,13 @@ The TRT surrounds the SCT and is the largest of the ID subdetectors. It employs 
   \label{tab:experiment-atlas-id}
 \end{table}
 
-The TRT additionally provides information for classifying charged particles as electrons or pions via the detection of transition radiation in the xenon gas mixture in the drift tubes. This radiation is produced when a charged particle crosses the boundary between two media of different dielectric constants (polypropylene) and is proportional to the Lorentz $\gamma$ of a particle. For an electron and charged pion of equal momentum, the electron is therefore much more likely to produce TR than the pion since its mass is 200 times smaller.
+The TRT additionally provides information for classifying charged particles as electrons or pions via the detection of transition radiation in the xenon gas mixture in the drift tubes~\cite{ATLAS-CONF-2011-128}. This radiation is produced when a charged particle crosses the boundary between two media of different dielectric constants (polypropylene) and is proportional to the Lorentz $\gamma$ of a particle. For an electron and charged pion of equal momentum, the electron is therefore much more likely to produce TR than the pion since its mass is 200 times smaller.
 
-Information from these three sub-detectors are combined to make \textit{tracks}, which have a unique correspondence to charged particles and are meant to describe their trajectory and momentum. As a charged particle travels through the ID, it leaves \textit{hits} in each subdetector along its trajectory. These are built into tracks with a three-dimensional fit using Kalman filtering tools which can account for scattering as the charged particle traverses the media of the ID. The ATLAS tracking algorithms builds tracks for charged particles as low momentum as a few hundred MeV.
+\subsubsection{Tracking}
 
-A vertex reconstruction algorithm is used to determine if multiple tracks originate from a single $pp$ collision. The output of the algorithm is a complete set of vertices per event and the association of each track to a vertex. Starting with the set of all tracks passing simple goodness criteria (e.g., requiring a minimum number of hits in the silicon detectors), a vertex seed is derived from the global maximum of $z$ coordinates, and tracks are associated to that seed using a $\chi^2$ fitting algorithm. Tracks incompatible with the vertex are then used as seeds for the next iteration of the vertexing algorithm until all tracks are exhausted. 
+Information from these three subdetectors are combined to make \textit{tracks}, which have a unique correspondence to charged particles and are meant to describe their trajectory and momentum. As a charged particle travels through the ID, it leaves \textit{hits} in each subdetector along its trajectory. These are built into tracks with a three-dimensional fit using Kalman filtering tools which can account for scattering as the charged particle traverses the media of the ID~\cite{ATLAS-CONF-2014-047,ATLAS-CONF-2012-042}. The ATLAS tracking algorithms builds tracks for charged particles as low momentum as a few hundred MeV.
+
+A vertex reconstruction algorithm~\cite{ATLAS-CONF-2010-069,ATLAS-CONF-2012-042} is used to determine if multiple tracks originate from a single $pp$ collision. The output of the algorithm is a complete set of vertices per event and the association of each track to a vertex. Starting with the set of all tracks passing simple goodness criteria (e.g., requiring a minimum number of hits in the silicon detectors), a vertex seed is derived from the global maximum of $z$ coordinates, and tracks are associated to that seed using a $\chi^2$ fitting algorithm. Tracks incompatible with the vertex are then used as seeds for the next iteration of the vertexing algorithm until all tracks are exhausted. 
 
 Vertexing is essential for deciding which tracks (and thus physics objects) originate from the $pp$ collision of interest and which tracks do not. The vertex associated to the collision of interest is called the \textit{primary vertex} and is conventionally the vertex with the highest $\sumtrackpt$ associated to it. If a track is not consistent with having been produced in the primary vertex, it is typically ignored as originating from a pileup interaction which is uninteresting. This is the best and most intuitive method of ignoring pileup contributions since the calorimeter cannot extrapolate particle trajectories back to the beamline with nearly as good precision. A visualization of the power of tracking for pileup rejection is shown in \cref{fig:atlas-detector-pileup}.
 
@@ -147,10 +151,34 @@ Vertexing is essential for deciding which tracks (and thus physics objects) orig
 
 A track can then be described by five parameters: the transverse impact parameter relative to the primary vertex $d_0$, the longitudinal impact parameter $z_0$, the azimuthal angle $\phi_0$, the polar angle $\theta$, and the ratio of charge to momentum $q/p$. 
 
-\subsection{Calorimetry}
+\subsection{Calorimeters and clustering}
+
+The ATLAS calorimeters sit outside the inner detector and the solenoid magnet. They are designed to stop particles like electrons, photons, and pions and to measure their energy. The calorimeters are grouped into electromagnetic (EM) and hadronic calorimeters, where the name describes the class of particle they are designed to stop. Both classes of calorimeters are \textit{sampling} calorimeters, meaning only a fraction of a particle shower energy is observed, and the full shower energy must be inferred. Dense absorber material is used to initiate showers, and interleaved active material is used for detecting the showers.
+
+The calorimeter subdetectors are shown in \cref{fig:atlas-detector-calorimeters}. They are split into barrel and endcap components, have full $2\pi$ coverage in $\phi$, and have coverage in $|\eta|$ up to 4.9. Information from all subdetectors is used to reconstruct calorimeter clusters.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/lhc-atlas/detector-calorimeters}
+  \caption{A diagram of the ATLAS calorimeters~\cite{cern-jinst-atlas}.}
+  \label{fig:atlas-detector-calorimeters}
+\end{figure}
+
+\subsubsection{Subdetectors}
+
+The EM calorimeters are subdivided into barrel and endcap components, which cover $|\eta| < 1.5$ and $1.4 < |\eta| < 3.2$. An additional presampler exists for $|\eta| < 1.8$ to account for showers starting before the calorimeter. Lead plates are used as the absorber material with liquid argon (LAr) as the active material. An accordion-style geometry is employed for uniform $\phi$ coverage without azimuthal cracks. The EM calorimeter is radially subdivided into first, second, and third layers away from the beamline. The first and second layers are finely segmented in $\eta$ for providing detailed descriptions of shower shapes, which are important for particle identification algorithms. The second layer is also the largest layer and usually contains most of the energy of an electromagnetic shower. The third layer measures the leftover energy which is not deposited in the first or second layers. 
+
+The hadronic calorimeter are also subdivided into barrel and endcap components. The barrel tile calorimeter uses steel as the absorber material and scintillating tiles as the active material, and it covers the range $|\eta| < 1.7$. The endcap calorimeter uses copper plates as the absorber material and LAr as the active material, and it covers the range $1.5 < |\eta| < 3.2$. The hadronic calorimeters are significantly coarser than the EM calorimeter because electrons and photons typically do not reach the hadronic calorimeters, hence particle identification techniques are less valuable.
+
+Finally, the forward calorimeter (FCal) cover the very forward region $3.1 < |\eta| < 4.9$ and uses LAr as active material. It is typically grouped with the hadronic calorimeters since the identification of electromagnetic objects stops at the boundary of the inner detector ($|\eta| < 2.5$), hence the FCal is most often used in measuring the energy of hadrons.
+
+\subsubsection{Clustering}
+
 \subsection{Muon spectrometry}
 
 The muon system, also called the \textit{muon spectrometer}, is designed to measure the trajectory and momentum of muons, especially at high $\pt$. 
+
+The muon system and inner detector then provide independent measurements of muon momenta. 
 
 \section{Particle identification}
 \label{sec:particles}
@@ -208,6 +236,9 @@ The muon system, also called the \textit{muon spectrometer}, is designed to meas
 \end{figure}
 
 \section{Triggering}
+
+One of the most challenging aspects of physics at hadron colliders is that the vast majority of $pp$ collisions produce low $\pt$ QCD dijets which are mostly uninteresting in searches for new physics.
+
 \subsection{L1}
 \subsection{HLT}
 
