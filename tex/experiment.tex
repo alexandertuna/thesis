@@ -205,9 +205,26 @@ Another clustering algorithm, called the \textit{sliding window} algorithm, is u
 
 \subsection{Muon spectrometry}
 
-The muon system, also called the \textit{muon spectrometer}, is designed to measure the trajectory and momentum of muons, especially at high $\pt$. 
+The muon system (MS), also called the \textit{muon spectrometer}, is designed to measure the trajectory and momentum of muons~\cite{2010.muonspectrometer}, especially at high $\pt$. It is furthest from the interaction point, and muons with less than a few GeV of momentum are unable to reach the MS before looping back into the detector due to barrel and endcap toroid magnets, which provide a magnetic field between 2 and 8 Tesla. It detects muons in the same style as the Inner Detector wherein the trajectory of charged particles can be traced through the MS and the momentum can be inferred from the track curvature.
 
-The muon system and inner detector then provide independent measurements of muon momenta. 
+The MS is comprised of four subdetectors: the Monitored Drift Tubes (MDTs), the Cathode Strip Chambers (CSCs), the Resistive Plate Chambers (RPCs), and the Thin Gap Chambers (TGCs), as shown in \cref{fig:atlas-detector-muons}. The MDTs are used for precision measurements of the muon trajectory and momentum, and are used for the full range of the MS, $|\eta| < 2.7$. The CSCs are additionally deployed in the forward region $|\eta| > 2.0$. In the hardware trigger, where fast processing is required, the RPCs are used in the barrel and the TGCs are used in the endcap.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/TRIG-2012-03/fig_01_more}
+  \caption{A diagram of the ATLAS muon system (left)~\cite{TRIG-2012-03} and a display of a muon candidate passing through three layers of the RPCs and MDTs (right)~\cite{atlas-eventdisplays}.}
+  \label{fig:atlas-detector-muons}
+\end{figure}
+
+The MS and ID provide independent measurements of muon momenta. These measurements are combined for an overall measurement of muon momentum to exploit the advantages of each subdetector. The MS measurement dominates the combination at muon $\pt$ in the hundreds of GeV and above, as shown in \cref{fig:atlas-detector-muons-resolution}.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/performance/muon-resolution-IDvsCB}
+  \caption{Muon momentum resolution for $|\eta| < 1.1$ (left) and $|\eta| > 1.7$ (right) for the stand-alone MS and the combination of the MS and inner detector~\cite{cern-jinst-atlas}.}
+  \label{fig:atlas-detector-muons-resolution}
+\end{figure}
+
 
 \section{Particle identification}
 \label{sec:particles}
