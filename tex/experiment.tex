@@ -136,7 +136,14 @@ The TRT additionally provides information for classifying charged particles as e
 
 \subsubsection{Tracking}
 
-Information from these three subdetectors are combined to make \textit{tracks}, which have a unique correspondence to charged particles and are meant to describe their trajectory and momentum. As a charged particle travels through the ID, it leaves \textit{hits} in each subdetector along its trajectory. These are built into tracks with a three-dimensional fit using Kalman filtering tools which can account for scattering as the charged particle traverses the media of the ID~\cite{ATLAS-CONF-2014-047,ATLAS-CONF-2012-042}. The ATLAS tracking algorithms builds tracks for charged particles as low momentum as a few hundred MeV.
+Information from these three subdetectors are combined to make \textit{tracks}, which have a unique correspondence to charged particles and are meant to describe their trajectory and momentum. As a charged particle travels through the ID, it leaves \textit{hits} in each subdetector along its trajectory, as shown in \cref{fig:atlas-detector-display-ID}. These are built into tracks with a three-dimensional fit using Kalman filtering tools which can account for scattering as the charged particle traverses the media of the ID~\cite{ATLAS-CONF-2014-047,ATLAS-CONF-2012-042}. The ATLAS tracking algorithms builds tracks for charged particles as low momentum as a few hundred MeV.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/lhc-atlas/detector-display-ID}
+  \caption{Event display of a charged particle traveling, from left to right, through three layers of the Pixels detector, four layers of the SCT, and many layers of the TRT~\cite{SUSY-2011-14}. The particle undergoes a material interaction in the TRT and produces multiple additional particles.}
+  \label{fig:atlas-detector-display-ID}
+\end{figure}
 
 A vertex reconstruction algorithm~\cite{ATLAS-CONF-2010-069,ATLAS-CONF-2012-042} is used to determine if multiple tracks originate from a single $pp$ collision. The output of the algorithm is a complete set of vertices per event and the association of each track to a vertex. Starting with the set of all tracks passing simple goodness criteria (e.g., requiring a minimum number of hits in the silicon detectors), a vertex seed is derived from the global maximum of $z$ coordinates, and tracks are associated to that seed using a $\chi^2$ fitting algorithm. Tracks incompatible with the vertex are then used as seeds for the next iteration of the vertexing algorithm until all tracks are exhausted. 
 
@@ -170,9 +177,31 @@ The EM calorimeters are subdivided into barrel and endcap components, which cove
 
 The hadronic calorimeter are also subdivided into barrel and endcap components. The barrel tile calorimeter uses steel as the absorber material and scintillating tiles as the active material, and it covers the range $|\eta| < 1.7$. The endcap calorimeter uses copper plates as the absorber material and LAr as the active material, and it covers the range $1.5 < |\eta| < 3.2$. The hadronic calorimeters are significantly coarser than the EM calorimeter because electrons and photons typically do not reach the hadronic calorimeters, hence particle identification techniques are less valuable.
 
-Finally, the forward calorimeter (FCal) cover the very forward region $3.1 < |\eta| < 4.9$ and uses LAr as active material. It is typically grouped with the hadronic calorimeters since the identification of electromagnetic objects stops at the boundary of the inner detector ($|\eta| < 2.5$), hence the FCal is most often used in measuring the energy of hadrons.
+Finally, the forward calorimeter (FCal) covers the very forward region $3.1 < |\eta| < 4.9$ and uses LAr as active material. It is typically grouped with the hadronic calorimeters since the identification of electromagnetic objects stops at the boundary of the inner detector ($|\eta| < 2.5$), hence the FCal is most often used in measuring the energy of hadrons.
 
 \subsubsection{Clustering}
+
+EM objects, such as photons and electrons, tend to produce narrow calorimeter showers which are dominantly contained in the EM calorimeters. Hadrons, such as charged pions, tend to produce broader showers and travel through the EM calorimeters and deep into the hadronic calorimeters before stopping. Hadronic showers can also include significant EM deposits from neutral pions which decay to two photons before reaching the calorimeters. A comparison of electron and pion showers is shown in \cref{fig:atlas-detector-showers}. All particles leave a signature of large deposits in adjacent calorimeter cells.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/lhc-atlas/svenmenke_showers}
+  \caption{Display of electron (top) and charged pion (bottom) showers, where both particles are simulated to be 50 GeV and passing through iron~\cite{svenmenke-showers}.}
+  \label{fig:atlas-detector-showers}
+\end{figure}
+
+Calorimeter cells from all subdetectors are combined into higher level objects by a three-dimensional topological clustering algorithm~\cite{ATL-LARG-PUB-2008-002}. The algorithm uses the iterative \textsc{4-2-0} scheme: first, cluster seeds are built from any cell with more than $4\times$ larger deposit than expected from noise. Second, any cell neighboring a seed cell with more than $2\times$ larger deposit than noise is added to the cluster. Last, any cell neighboring the existing cluster with more than $0\times$ larger deposit than noise is added.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.32\textwidth]{figures/lhc-atlas/FCal1C_JF50_28_4sigma}
+  \includegraphics[width=0.32\textwidth]{figures/lhc-atlas/FCal1C_JF50_28_2sigma}
+  \includegraphics[width=0.32\textwidth]{figures/lhc-atlas/FCal1C_JF50_28}
+  \caption{Event display of a jet in the forward calorimeter with cell energies greater than $4\sigma_\text{noise}$ (left), $2\sigma_\text{noise}$ (center), and with the \textsc{4-2-0} topological clustering algorithm~\cite{ATL-SLIDE-2007-027}.}
+  \label{fig:atlas-detector-clustering}
+\end{figure}
+
+Another clustering algorithm, called the \textit{sliding window} algorithm, is used specially for EM objects. The sliding window algorithm uses a small, rectangular tower window to seed clusters in the EM calorimeter since EM objects tend to produce predictably narrow showers. The topological clustering is preferred for hadronic objects because it is adaptive, and the shapes of hadronic deposits does not typically follow simple shapes.
 
 \subsection{Muon spectrometry}
 
@@ -217,6 +246,13 @@ The muon system and inner detector then provide independent measurements of muon
   \includegraphics[width=0.48\textwidth]{figures/performance/btag-signalefficiency}
   \caption{Efficiency of $b$-jet identification algorithms measured in simulation as a function of light jet rejection (left)~\cite{ATLAS-CONF-2012-043} and $b$-jet $\pt$ (right)~\cite{ATLAS-CONF-2014-004}.}
   \label{fig:objects-btag}
+\end{figure}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.98\textwidth]{figures/ATLAS-CONF-2010-004/fig_7_mod}
+  \caption{Event display of a displaced vertex consistent with the decay of a $B$-hadron~\cite{ATLAS-CONF-2010-004}.}
+  \label{fig:objects-btag-display}
 \end{figure}
 
 \subsection{Neutrinos}
