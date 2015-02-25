@@ -229,15 +229,27 @@ The MS and ID provide independent measurements of muon momenta. These measuremen
 \section{Particle identification}
 \label{sec:particles}
 
+One of the major tasks in particle physics is the transformation of low-level detector outputs to high-level physics objects. At ATLAS, this is typically done in two steps referred to as \textit{reconstruction}. First, detector outputs like inner detector hits and calorimeter cells are converted to tracks and clusters, respectively, as discussed previously. Second, combinations of tracks and clusters are converted into physics objects. 
+
+In addition to reconstruction, physics objects often require identification and calibration. Identification refers to the determination of which particle is responsible for a given detector signal, e.g., is a deposit in the calorimeter more likely to be from an electron or a charged pion. Calibration refers to the porting of a measured energy in the detector to the energy of a physics object. Calibration accounts for effects like pileup and dead material in the subdetectors.
+
+These physics objects are sometimes meant to exactly represent an individual particle, such as for muons and electrons. Otherwise, the physics objects represent a collection of particles which are naturally grouped together. For example, a \textit{jet} represents the group of hadrons produced when a quark or gluon propagates through ATLAS.
+
 \subsection{Muons}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/performance/muon-efficiency}
-  \includegraphics[width=0.48\textwidth]{figures/performance/muon-efficiency-etaphi}
-  \caption{Measurement of the efficiency of the muon reconstructions algorithms in data and in simulation~\cite{PERF-2014-05}.}
-  \label{fig:objects-muon-efficiency}
-\end{figure}
+Muons are among the simplest physics objects to reconstruct since a large fraction of ATLAS is built specifically for this purpose. They are minimum ionizing particles and do not deposit significant energy in the calorimeters, hence they are the only particles expected to regularly reach and interact with the MS. 
+
+Muons are reconstructed by matching tracks in the MS to tracks in the ID~\cite{PERF-2014-05}, where track quality criteria are required in both subdetectors. This is $\approx\! 99$\% efficient for an inclusive collection of muons from $\Zmumu$, and it is limited by lack of coverage of the MS at $|\eta| < 0.1$ and $1.1 < \eta < 1.3$. The performance of the muon calibration is shown in \cref{fig:objects-muon-energyscale}
+
+Muons are most often used in ATLAS as the decay products of electroweak bosons like the $W$ and $Z$. They are also produced in the decays of some hadrons, but muons from these processes can be rejected by requiring that the muon be isolated in the detector, both in the inner detector and in the calorimeters. Since the purity of muon reconstruction is already high, additional muon identification techniques are not explored.
+
+% \begin{figure}[tp]
+%   \centering
+%   \includegraphics[width=0.48\textwidth]{figures/performance/muon-efficiency}
+%   \includegraphics[width=0.48\textwidth]{figures/performance/muon-efficiency-etaphi}
+%   \caption{Measurement of the efficiency of the muon reconstructions algorithms in data and in simulation~\cite{PERF-2014-05}.}
+%   \label{fig:objects-muon-efficiency}
+% \end{figure}
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.90\textwidth]{figures/performance/muon-energyscale}
@@ -247,32 +259,48 @@ The MS and ID provide independent measurements of muon momenta. These measuremen
 
 \subsection{Electrons and photons}
 
+Electrons are reconstructed by matching sliding window calorimeter clusters to ID tracks~\cite{ATLAS-CONF-2014-032}. This offers no rejection against other charged particles, however, so identification algorithms are built which exploit discriminating features of electrons. Relative to backgrounds, electrons are more likely to leave longitudinally narrow calorimeter deposits in the EM calorimeter, deposit very little energy in the hadronic calorimeter, and be isolated in the ID and the EM calorimeter. Electrons are also more likely to have transition radiation in the TRT. These properties are shown in \cref{fig:objects-electron-display} and allow for huge rejection of backgrounds, as shown in \cref{fig:objects-electron-id}.
+
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.90\textwidth]{figures/performance/electron-ZeeTP}
-  \includegraphics[width=0.90\textwidth]{figures/performance/electron-recoIDefficiecy}
-  \caption{Data and predictions of $m_{ee}$ before the electron identification algorithm is applied (top, left) and after (top, right), and the measured efficiency of the algorithm as a function of $\text{E}_\text{T}$ (bottom, left) and $\eta$ (bottom, right)~\cite{ATLAS-CONF-2014-032}.}
-  \label{fig:objects-electron}
+  \includegraphics[width=0.95\textwidth]{figures/performance/electron-display}
+  \caption{Display of an electron traversing the ID, leaving hits in the TRT consistent with transition radiation, and depositing a narrow cluster entirely contained in the EM calorimeter~\cite{atlas-eventdisplays}.}
+  \label{fig:objects-electron-display}
 \end{figure}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{figures/performance/electron-ZeeTP}
+  \caption{Data and predictions of $m_{ee}$ before the electron identification algorithm is applied (left) and after (right)~\cite{ATLAS-CONF-2014-032}.}
+  \label{fig:objects-electron-id}
+\end{figure}
+
+Photons have similar detector signatures as electrons since their calorimeter deposits are also longitudinally narrow and expected to be contained within the EM calorimeter~\cite{ATLAS-CONF-2012-123}. Identification algorithm are split into two categories: isolated photons which leave no hits in the ID, and photons which convert into pairs of electrons before reaching the calorimeter.
 
 \subsection{Hadrons}
 
+Instead of attempting to reconstruct individual hadrons, ATLAS reconstructs collimated sprays of hadrons referred to as jets~\cite{PERF-2012-01}. The scope of jets is extremely broad: their momenta range from $\approx\!10$ GeV to multiple TeV, and they are the large spatial physics objects, though they can be as small as a single pion. Jets are produced copiously at hadron colliders, which can be problematic with significant pileup.
+
+Jets are reconstructed from calorimeter topological clusters using the anti-$k_t$ algorithm~\cite{2008.antikt} with a distance parameter of $R=0.4$. This is an iterative clustering algorithm which groups topological clusters into jets based on their spatial proximity and momentum. Tracks can be associated to a jet based on simple spatial matching or the more robust ghost association~\cite{ATLAS-CONF-2013-083}. A slew of corrections are applied to calibrate the energy and position of jets~\cite{PERF-2012-01,ATLAS-CONF-2013-083}. These correct for effects like pileup, dead material, and the non-compensating nature of the calorimeters. Jets can additionally be classifed as hard-scatter or pileup jets based on the fraction of their track momenta consistent with originating from the primary vertex~\cite{ATLAS-CONF-2014-018}.
+
+Jets which arise from the fragmentation of $b$-quarks, referred to as $b$-jets, are given special treatment because the significant lifetime of $B$ mesons means these jets can be distinguished from jets arising from lighter sources like gluons or $u$-quarks~\cite{ATLAS-CONF-2014-046}. Multivariate algorithms are used to look for the signature of a second vertex with some spatial displacement from the primary vertex. An example of a displaced vertex, and the performance of these algorithms, are shown in \cref{fig:objects-btag}.
+
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.48\textwidth]{figures/performance/btag-ROC}
-  \includegraphics[width=0.48\textwidth]{figures/performance/btag-signalefficiency}
-  \caption{Efficiency of $b$-jet identification algorithms measured in simulation as a function of light jet rejection (left)~\cite{ATLAS-CONF-2012-043} and $b$-jet $\pt$ (right)~\cite{ATLAS-CONF-2014-004}.}
+  \includegraphics[width=0.95\textwidth]{figures/performance/btag-ROC-display}
+  \caption{Event display of a displaced vertex consistent with the decay of a $B$-hadron (left)~\cite{ATLAS-CONF-2010-004} and efficiency of $b$-jet identification algorithms measured in simulation as a function of light jet rejection (right)~\cite{ATLAS-CONF-2012-043}.}
   \label{fig:objects-btag}
 \end{figure}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.98\textwidth]{figures/ATLAS-CONF-2010-004/fig_7_mod}
-  \caption{Event display of a displaced vertex consistent with the decay of a $B$-hadron~\cite{ATLAS-CONF-2010-004}.}
-  \label{fig:objects-btag-display}
-\end{figure}
+Jets which arise from the hadronic decay of tau leptons are also treated specially because their signature in the detector can be distinguished from generic QCD jets. They are characteristically produced with 1 or 3 tracks and are relatively narrow objects in the ID and calorimeters~\cite{PERF-2013-06}. They are discussed in greater detail in \cref{sec:taus-hadrons}.
 
 \subsection{Neutrinos}
+
+Neutrinos do not interact with the ATLAS detector and escape undetected. But their presence can be inferred from momentum imbalance since each $pp$ collision should conserve momentum. To measure the momentum imbalance, the negative total vector sum of momenta per collision is calculated, and the transverse projection the sum is interpreted to be the total transverse momentum of the neutrinos in the event. This is referred to as the missing transverse energy, $\MET$.
+
+The calculation of the total momenta in the event is done in two steps. First, the calibrated physics objects in the event, like jets and electrons, are collected and their vector sum is calculated. This is referred to as the \textit{hard term} of the $\MET$ calculation. Second, tracks and calorimeter information unassociated to hard objects are combined and form the \textit{soft term} of the $\MET$ calculation. The vector sum of the hard and soft terms is the total momentum imbalance of the event~\cite{PERF-2011-07}.
+
+The soft term calculation is challenging because associating calorimeter information to a specific vertex is difficult in the presence of pileup. Hence multiple methods exist for calculating the soft term. A comparison of the $\MET$ resolution is shown in \cref{fig:objects-met-resolution} as a function of the pileup of the event. Of the options available in 2014, the \textit{STVF} method~\cite{ATLAS-CONF-2014-019} has the best resolution. The STVF soft term is first calculated with calorimeter topoclusters, and the magnitude of the sum is then weighted down by the fraction of unassociated track momenta arising from the PV to the total unassociated track momenta of the event. This heavily suppresses the calorimeter-based soft term, which has a strong dependence on pileup.
 
 \begin{figure}[tp]
   \centering
@@ -280,13 +308,13 @@ The MS and ID provide independent measurements of muon momenta. These measuremen
   \caption{Resolution of various $\MET$ reconstruction algorithms as a function of the number of reconstructed primary vertices in $\Zmm$ events in data (left) and $\Wen$ events in simulation (right)~\cite{ATLAS-CONF-2014-019}.}
   \label{fig:objects-met-resolution}
 \end{figure}
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/performance/met-bias-inclusive}
-  \includegraphics[width=0.48\textwidth]{figures/performance/met-bias-0jet}
-  \caption{Bias of various $\MET$ reconstruction algorithms as a function of $\pt^Z$ measured in data events inclusively (left) and with no additional jets (right)~\cite{ATLAS-CONF-2014-019}.}
-  \label{fig:objects-met-bias}
-\end{figure}
+% \begin{figure}[tp]
+%   \centering
+%   \includegraphics[width=0.48\textwidth]{figures/performance/met-bias-inclusive}
+%   \includegraphics[width=0.48\textwidth]{figures/performance/met-bias-0jet}
+%   \caption{Bias of various $\MET$ reconstruction algorithms as a function of $\pt^Z$ measured in data events inclusively (left) and with no additional jets (right)~\cite{ATLAS-CONF-2014-019}.}
+%   \label{fig:objects-met-bias}
+% \end{figure}
 
 \section{Triggering}
 
