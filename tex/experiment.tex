@@ -318,11 +318,23 @@ The soft term calculation is challenging because associating calorimeter informa
 
 \section{Triggering}
 
-One of the most challenging aspects of physics at hadron colliders is that the vast majority of $pp$ collisions produce low $\pt$ QCD dijets which are mostly uninteresting in searches for new physics.
+One of the most challenging aspects of physics at hadron colliders is that the vast majority of $pp$ collisions produce low $\pt$ QCD dijets, and these events are mostly uninteresting in searches for new physics. Additionally, ATLAS does not have the computing resources to reconstruct and save 20 MHz of $pp$ collisions. A huge reduction of data is necessary immediately after the collisions occur. This reduction must be careful not to remove events with interesting signatures.
+
+The scheme of fast reduction is called \textit{triggering}. Reconstruction and decision-making in the trigger is referred to as occuring \textit{online}, whereas the nominal ATLAS reconstruction occurs \textit{offline}. The trigger is split into two stages. First, all $pp$ collisions are sent to a hardware trigger with a much coarser granularity than offline. Events passing the hardware trigger are then sent to software triggers with granularity comparable to offline. The hardware trigger is called \textit{Level 1} (L1), and the software triggers are called the \textit{High Level Trigger} (HLT). The HLT step is additional split into two stages, \textit{Level 2} (L2) and \textit{Event Filter} (EF). The reduction and latency targets are shown in \cref{tab:experiment-trigger}.
+
+\begin{table}[bp]
+  \centering
+  \renewcommand{\arraystretch}{1.4}
+  \caption{Approximate average trigger rates and latencies during 2012 data-taking~\cite{cern-jinst-atlas,TRIG-2012-03,TriggerOperationPublicResults}.}
+  \input{tables/experiment-trigger}
+  \label{tab:experiment-trigger}
+\end{table}
 
 \subsection{L1}
-\subsection{HLT}
 
+The L1 trigger is the fastest and most reductive step of the trigger system. Only information from the calorimeter and muon subdetectors are available because the inner detector is not equipped to process events at tens of MHz, and because tracking algorithms are not fast yet fast enough. Performance is sacrificed for speed in the EM calorimeter and muon system. The granularity of the EM calorimeter is reduced for faster processing, as shown in \cref{fig:prospects-trigger-cartoonL1}, and only information from the RPCs and TGCs is read out from the muon system.
+
+A consequence of the reduced granularity of the EM calorimeter is that the sophisticated offline identification algorithms cannot be used. For example, the only identification technique available for $\tauh$ at L1 is calorimeter isolation. Furthermore, the isolation can only be evaluated in a square annulus with the reduced granularity and cannot be $\pt^\text{L1}$-dependent.
 
 \begin{figure}[tp]
   \centering
@@ -330,6 +342,26 @@ One of the most challenging aspects of physics at hadron colliders is that the v
   \caption{Schematic view of the calorimeter granularity available at the L1 trigger~\cite{1998.ATLAS-TDR-L1}.}
   \label{fig:prospects-trigger-cartoonL1}
 \end{figure}
+
+In Run-I, much of the L1 bandwidth is allocated to the inclusive single muon and single electron triggers. These are among the most used triggers in ATLAS physics and performance analyses because of their inclusiveness and because light leptons are characteristic of electroweak physics.
+
+\subsection{HLT}
+
+The HLT latency is much less restrictive than at L1. By the end of the HLT, tracking and topological clustering algorithms are run over a full scan and with the nominal granularity of the detector. Reconstruction, identification, and calibration algorithms closely resemble their offline counterparts, with adaptations to online made as necessary. 
+
+Like L1, much of the HLT bandwidth is allocated to the inclusive single muon and single electron triggers. The rate and predicted composition of these HLT triggers are shown in \cref{fig:prospects-trigger-HLT}. Electrons and muons from $W/Z$ decays are irreducible contributions to the HLT rate and are one of the limiting factors.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figures/TRIG-2012-03/fig_04b}
+  \includegraphics[width=0.48\textwidth]{figures/trigger/Plots2014ICHEP_Fig2a}
+  \caption{Trigger rate and predicted composition of the lowest unprescaled single muon trigger (left)~\cite{TRIG-2012-03} and single electron trigger (right)~\cite{EgammaTriggerPublicResults} in 2012 data-taking.}
+  \label{fig:prospects-trigger-HLT}
+\end{figure}
+
+\section{Summary}
+
+The ATLAS physics program in Run-I of the LHC is a great success of detector operation, performance, and large-scale data analysis. ATLAS has measured cross-sections of processes ranging more than ten orders of magnitude, as shown in \cref{fig:atlas-measurements}, including two production modes of the recently discovered Higgs boson. As of early 2015, the ATLAS collaboration has authored more than 350 peer-reviewed publications~\cite{ATLASPublications}.
 
 \begin{figure}[tp]
   \centering
