@@ -2,7 +2,7 @@
 \label{chap:backgrounds}
 
 \begin{quote}
-  The modeling of physics processes relevant to the $\Htautau$ analysis are described. This draws from internal documentation of the recent ATLAS $\Htautau$ publication~\cite{ATL-COM-PHYS-2014-170}.
+  The modeling of physics processes relevant to the $\Htautau$ analysis are described, with emphasis on the VBF $\Htautaulh$ channel. This draws from internal documentation of the recent ATLAS $\Htautau$ publication~\cite{ATL-COM-PHYS-2014-170}.
 \end{quote}
 
 \section{$\Ztautau$}
@@ -10,7 +10,7 @@
 
 The $\Ztautau$ process constitutes a major and irreducible background to all three final states of the $\Htautau$ analysis. Its modeling is therefore critical. It is also challenging to validate because the poor mass resolution of $\mtautau$ implies finding a region of data orthogonal to the $\Htautau$ signal regions but rich in $\Ztautau$ events is not possible.
 
-\subsection{Mis-modeling of $\Zjets$ in simulation}
+\subsection{$\Zjets$ in simulation}
 \label{sec:backgrounds-zjets}
 
 The simplest approach is to use simulation to model $\Ztautau$. Unfortunately, ATLAS has observed in the $\Zee$ and $\Zmumu$ processes that mis-modeling is present in various aspects of $\Zjets$ kinematics. These aspects include the underlying event, the $Z$ $\pt$, and dijet kinematics as shown in \cref{fig:backgrounds-zue}, \cref{fig:backgrounds-zpt}, and \cref{fig:backgrounds-zjj}, respectively.
@@ -89,9 +89,9 @@ The pre-fit impact of these uncertainties on the $\Ztautau$ prediction is shown 
 \section{$\fakes$ mis-identification}
 \label{sec:backgrounds-misid}
 
-The largest background in the VBF $\Htautaulh$ analysis is from events where a jet is mis-identified as a $\tauh$, $\fakes$. The use of data-driven approaches to the prediction is therefore crucial. Unlike the $\Ztautau$ background, many regions of data exist which are rich in $\fakes$, and these regions can be exploited. The largest sources of $\fakes$ are $\Wjets$, QCD, top, and $\Zjets$ events.
+The largest background in the VBF $\Htautaulh$ analysis is from events where a jet is mis-identified as a $\tauh$ ($\fakes$), also called \textit{fakes}. The use of data-driven approaches to the prediction is therefore crucial. Unlike the $\Ztautau$ background, many regions of data exist which are rich in $\fakes$, and these regions can be exploited for prediction and validation. The largest sources of $\fakes$ are $\Wjets$, QCD, top, and $\Zjets$ events.
 
-\subsection{Mis-modeling of $\fakes$ processes in simulation}
+\subsection{$\fakes$ in simulation}
 
 Like the $\Ztautau$ background, simulation is a simple but deficient means of predicting the $\fakes$ background. ATLAS observes mis-modeling in descriptions of jet shapes like the track width and track multiplicity~\cite{PERF-2013-02}, as shown in \cref{fig:backgrounds-trackwidth}, which $\tauh$ jet discriminators rely heavily on. This is especially problematic for $\tauh$ because the identification algorithms emphasize tails of distributions like track width, not the bulk, hence detailed corrections to the simulation can be statistically limited.
 
@@ -328,95 +328,35 @@ The signal region fakefactors are shown in \cref{fig:backgrounds-fakefactorsVBFm
   \label{fig:backgrounds-fakefactorsVBFmix}
 \end{figure}
 
-\clearpage
-
 \subsection{Validation}
 
 The fakefactor method is validated by checking predictions of event-level kinematics, especially the BDT discriminant, in the control and validation regions. It is additionally validated by following the same fakefactor procedure in $\Wjets$, top, and $\Zjets$ simulated events in the signal region, where dedicated $\FF_\text{SR}^\text{MC}$ are derived.
 
-Data and prediction in the same-sign validation region are shown in \cref{fig:backgrounds-SSXCR-taus,fig:backgrounds-SSXCR-jets}. Data and prediction in the various control regions are further shown in \cref{apx:control-regions}. Predictions with simulation are shown in \cref{fig:backgrounds-MCXSR-taus,fig:backgrounds-MCXSR-jets}. In all plots, good agreement is observed and no systematic biases are uncovered.
-
-\clearpage
+Data and prediction in the same-sign validation region are shown in \cref{fig:backgrounds-SSXCR}. Data and prediction in the various control regions are further shown in \cref{apx:control-regions}. Predictions with simulation are shown in \cref{fig:backgrounds-MCXSR}. In all plots, good agreement is observed and no systematic biases are uncovered.
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/tau-pt}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/tau-eta}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/tau-numTrack} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/lep-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/lep-eta}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/taulep-dR} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/met-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/mMMC}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/mT} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/met-phi-centrality}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/H-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/mvis} \\
-  \caption{Comparison of data and $\fakes$ prediction in the same-sign validation region for various event kinematics. The purity of $\fakes$ is $\approx\! 97\%$. Only statistical uncertainties are shown, and no sign of systematic bias is observed.}
-  \label{fig:backgrounds-SSXCR-taus}
-\end{figure}
-
-\clearpage
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/jet-1-pt}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/jet-1-eta}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/jets-dphi} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/jet-2-pt}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/jet-2-eta}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/jets-deta} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/jets-etaprod} 
+  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/taulep-dR}
+  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/mT}
+  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/mMMC} \\
   \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/lep-eta-centrality}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/system-pt} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/n-jets30}
   \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/dijet-m-veryhigh}
   \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-SSXCR/BDTEve-VBF} \\
-  \caption{Comparison of data and $\fakes$ prediction in the same-sign validation region for various event kinematics. The purity of $\fakes$ is $\approx\! 97\%$. Only statistical uncertainties are shown, and no sign of systematic bias is observed.}
-  \label{fig:backgrounds-SSXCR-jets}
+  \caption{Comparison of data and $\fakes$ prediction in the same-sign validation region for various event kinematics. The purity of $\fakes$ is $\approx\! 97\%$. Only statistical uncertainties are shown, and no sign of systematic bias is observed. Additional validation is shown in \cref{apx:control-regions}.}
+  \label{fig:backgrounds-SSXCR}
 \end{figure}
-
-\clearpage
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/tau-pt}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/tau-eta}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/tau-numTrack} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/lep-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/lep-eta}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/taulep-dR} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/met-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/mMMC}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/mT} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/met-phi-centrality}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/H-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/mvis} \\
-  \caption{Comparison of the prediction of identified taus and the $\fakes$ prediction, both in simulation, in the signal region for various event kinematics. Only statistical uncertainties are shown, and no sign of systematic bias is observed.}
-  \label{fig:backgrounds-MCXSR-taus}
-\end{figure}
-
-\clearpage
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/jet-1-pt}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/jet-1-eta}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/jets-dphi} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/jet-2-pt}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/jet-2-eta}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/jets-deta} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/jets-etaprod} 
+  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/taulep-dR}
+  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/mT}
+  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/mMMC} \\
   \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/lep-eta-centrality}
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/system-pt} \\
-  \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/n-jets30}
   \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/dijet-m-high}
   \includegraphics[width=0.32\textwidth]{figures/analysis/vbf-MCXSR/BDTEve-VBF} \\
-  \caption{Comparison of the prediction of identified taus and the $\fakes$ prediction, both in simulation, in the signal region for various event kinematics. Only statistical uncertainties are shown, and no sign of systematic bias is observed.}
-  \label{fig:backgrounds-MCXSR-jets}
+  \caption{Comparison of the prediction of identified taus and the $\fakes$ prediction, both in simulation, in the signal region for various event kinematics. Only statistical uncertainties are shown, and no sign of systematic bias is observed. Additional validation is shown in \cref{apx:control-regions}.}
+  \label{fig:backgrounds-MCXSR}
 \end{figure}
-
-\clearpage
 
 \subsection{Uncertainties}
 

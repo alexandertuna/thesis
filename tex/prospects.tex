@@ -50,7 +50,6 @@ In Run-I, only the $\Htautauhh$ analysis rely on $\tauh$ triggers for physics. T
   \label{tab:prospects-triggersHLT}
 \end{table}
 
-\clearpage
 \subsection{Run-II triggers}
 
 Trigger options for Run-II are most critical for the $\Htautauhh$ since it relies entirely on $\tauh$ triggers. The $\Htautaull$ analysis will continue to use single and di-lepton triggers, which enjoy low thresholds and are among the most high profile triggers, and thus less likely to be cut in case of unexpectedly high rates. The $\Htautaulh$ analysis will continue to use the single lepton trigger, but the potential benefit of recovering events with leptons below the single lepton trigger thresholds could be helpful. Accordingly, only the $\Htautauhh$ and $\Htautaulh$ analyses are considered for trigger optimizations, with emphasis on $\Htautauhh$.
@@ -121,8 +120,6 @@ Of these options, angular discrimination is appealing because the angular resolu
   \label{fig:prospects-trigger-resolution}
 \end{figure}
 
-\clearpage
-
 The impact of requiring an additional jet and $\Delta R(\tautau) < 2.8$ on the predicted 2015 L1 trigger rate is shown in \cref{tab:prospects-L1rate-evolution}. A ten-fold reduction of the rate is achieved without signicant loss of sensitivity.
 
 \begin{table}[bp] 
@@ -192,13 +189,13 @@ A simple, analytic formula for the discovery significance $Z_A$~\cite{2012.cowan
 \end{figure}
 \clearpage
 
-\subsection{Updates to the L1 $\tauh$ object}
+\subsection{L1 $\tauh$}
 
-Updates to the L1 $\tauh$ object are also considered. 
+Updates to the L1 $\tauh$ object are also considered. These are explored in hopes of improving the trigger efficiency for $\tauh$ generally, without significant rate increases, which could assist all analyses which rely on $\tauh$ triggers.
 
 \subsubsection{Size}
 
-The size of the L1 $\tauh$ is made larger to check if a sharper efficiency turn-on curve can be gained without significant background contamination. This is especially important for 3-track $\tauh$, which are expected to be wider than 1-track $\tauh$ and are observed to have a slower efficiency turn-on curve. The default L1 $\tauh$ used in 2012 data-taking is $2 \times 1$ in the electromagnetic calorimeter and $2 \times 2$ in the hadronic calorimeter.
+The size of the L1 $\tauh$ is made larger to check if a sharper efficiency turn-on curve can be gained without significant background contamination. This is especially important for 3-track $\tauh$, which are expected to be wider than 1-track $\tauh$ and are observed to have a slower efficiency turn-on curve. The default L1 $\tauh$ used in 2012 data-taking is $2 \!\times\! 1$ in the electromagnetic calorimeter and $2 \!\times\! 2$ in the hadronic calorimeter.
 
 Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{fig:prospects-trigger-towersize} for simulated $\tauh$ with and without isolation requirements. A sharper efficiency turn-on is achieved relative to the default definition, as shown in \cref{tab:prospects-tausize}. Since background rates increase non-trivially with larger L1 $\tauh$ objects, the default definition will be retained in 2015 data-taking.
 
@@ -206,7 +203,7 @@ Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{
   \centering
   \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20_1p3p}
   \includegraphics[width=0.48\textwidth]{figures/trigger/turnon_L1TAU20I_1p3p}
-  \caption{Efficiency for firing the 20 GeV L1 $\tauh$ trigger as a function of offline $\pt(\tauh)$ for no isolation requirement (left) and the 2012 isolation requirement (right) for various definitions of the L1 $\tauh$ item. The current definition ($2 \times 1$ EM, $2 \times 2$ had.) has the slowest efficiency turn-on. Fits are performed with a Fermi-Dirac distribution.}
+  \caption{Efficiency for firing the 20 GeV L1 $\tauh$ trigger as a function of offline $\pt(\tauh)$ for no isolation requirement (left) and the 2012 isolation requirement (right) for various definitions of the L1 $\tauh$ item. The current definition ($2 \!\times\! 1$ EM, $2 \!\times\! 2$ had.) has the slowest efficiency turn-on. Fits are performed with a Fermi-Dirac distribution.}
   \label{fig:prospects-trigger-towersize}
 \end{figure}
 
@@ -217,8 +214,6 @@ Efficiency turn-on curves for various L1 $\tauh$ definitions are shown in \cref{
   \input{tables/prospects-tausize}
   \label{tab:prospects-tausize}
 \end{table}
-
-\clearpage
 
 \subsubsection{Isolation}
 
@@ -234,6 +229,8 @@ The definition of L1 isolation is also reconsidered for 2015 data-taking. In 201
 With the definition, the 2012 isolation requirement is $m=0$ and $b=4$.
 
 Removing the isolation requirement is considered above $\pt^\text{L1} = 60$ GeV. This is equivalent to a logical \texttt{OR} with the lowest unprescaled single $\tauh$ trigger, \texttt{TAU60}, and thus will not cost any additional unique rate to the total L1 trigger menu.
+
+The predicted relative rate is shown in \cref{fig:prospects-trigger-isolation-rate}, with and without isolation at high $\pt$. An inverse relationship in the rate is observed between offset and slope, as expected. The L1 $\tauh$ efficiency is shown in \cref{fig:prospects-trigger-isolation-turnon} for the isolation requirements which give equal rate. Significant signal efficiency is recovered at high $\pt$.
 
 \begin{figure}[tp]
   \centering
@@ -288,9 +285,9 @@ The analysis also considers possible extensions of the tracking volume to invest
 
 The selection of a VBF-like sample for the $\taul\tauh$ final state discussed in this note relies on the identification of one lepton (electron or muon), one hadronic tau and at least two jets. Muons are selected if they have transverse momentum higher than $26 \GeV$ and are in the region $|\eta|<2.4$. Quality criteria on the inner detector track associated to the muon are also applied. Electron candidates are formed from a cluster in the electromagnetic calorimeters (transition regions, $1.37<|\eta|<1.52$, are excluded) that is matched with a track reconstructed within the inner detector, $|\eta|<2.47$. Electrons with a transverse momentum higher than $26~\GeV$ are selected and a \texttt{tightPP} working point is used. For both muons and electrons, calorimeter and track-based isolation criteria with similar combined selection efficiency as the LHC Run-I analysis are assumed.
 
-Jets are reconstructed using the anti-$k_t$ algorithm~\cite{Antikt1} with a radius parameter $R=0.4$, taking topological clusters in the calorimeters as inputs. Only jets with $|\eta|<4.5$ are selected in this analysis. The general $\pt$ threshold for jets is 30 GeV, and specific selection of the VBF analysis is mentioned later. Track-based pile-up suppression with jet-vertex fraction (JVF)~\cite{ATLAS-CONF-2014-018} is applied in the range of the tracking volume (jet $|\eta| < 2.4$). In the range $\left|\eta\right|<2.5$, $b$-tagged jets are identified using the MV1 tagging algorithm based on the impact parameter information and on the reconstruction of the displaced vertices of the hadron decays inside the jets~\cite{ATLAS-CONF-2014-046}. 
+Jets are reconstructed using the anti-$k_t$ algorithm~\cite{2008.antikt} with a radius parameter $R=0.4$, taking topological clusters in the calorimeters as inputs. Only jets with $|\eta|<4.5$ are selected in this analysis. The general $\pt$ threshold for jets is 30 GeV, and specific selection of the VBF analysis is mentioned later. Track-based pile-up suppression with jet-vertex fraction (JVF)~\cite{ATLAS-CONF-2014-018} is applied in the range of the tracking volume ($|\eta^\text{jet}| < 2.4$). In the range $\left|\eta\right| < 2.5$, $b$-tagged jets are identified using the MV1 tagging algorithm based on the impact parameter information and on the reconstruction of the displaced vertices of the hadron decays inside the jets~\cite{ATLAS-CONF-2014-046}. 
 
-Tau candidates are seeded by anti-$k_t$~\cite{Antikt1}, $R=0.4$ jets with $\pt > 20$ GeV whose calorimeter cluster and leading track must satisfy $|\eta| < 2.47$. The Boosted Decision Tree (BDT) tau identification method~\cite{PERF-2013-06} is used, requiring that the tau candidate passes the \texttt{medium} tightness, corresponding to to approximately 55-60\% efficiency A dedicated selection to reject fake tau candidates from electrons and muons is applied.
+Tau candidates are seeded by anti-$k_t$~\cite{2008.antikt}, $R=0.4$ jets with $\pt > 20$ GeV whose calorimeter cluster and leading track must satisfy $|\eta| < 2.47$. The Boosted Decision Tree (BDT) tau identification method~\cite{PERF-2013-06} is used, requiring that the tau candidate passes the \texttt{medium} tightness, corresponding to to approximately 55-60\% efficiency A dedicated selection to reject fake tau candidates from electrons and muons is applied.
 
 When different objects selected according to the above criteria overlap with each other geometrically (within $\Delta R < 0.2$), only one of them is considered for further analysis. The overlap is resolved by selecting muon, electron, $\tauh$ and jet candidates in this order of priority.
 
@@ -431,12 +428,12 @@ Yields for signal and background in the high BDT score bins are shown in \cref{t
 
 When calculating the sensitivity of the analysis, three scenarios of background uncertainties and two scenarios of theory uncertainties are considered. The theory uncertainties are varied from no theory uncertainties to Run-I theory uncertainties, which are as large as 6\% (30\%) for the VBF (ggF) Higgs production modes~\cite{HIGG-2013-32}. The experimental signal uncertainty is fixed at 5\% accounting for experimental sources such as jet energy scale uncertainties. The experimental background uncertainties are varied to 10\% and 5\% of the prediction, and they are treated as uncorrelated between backgrounds and between bins of the BDT score.
 
-The projected sensitivity is shown in \cref{tab:prospects-hllhc-signif}. The two scenarios of background uncertainties and two scenarios of theory uncertainties are shown. The sensitivity of the projection is driven by the uncertainty on the background prediction. For $\s_{B}^{\text{syst.}} = 10\%$, the projected uncertainty on $\mu$ with no signal theory uncertainties is 0.24. For $\s_{B}^{\text{syst.}} = 5\%$, this projected uncertainty is 0.13.
+The projected sensitivity is shown in \cref{tab:prospects-hllhc-signif}. The two scenarios of background uncertainties and two scenarios of theory uncertainties are shown. The sensitivity of the projection is driven by the uncertainty on the background prediction. For $\s_{B}^{\text{syst.}} = 10\%$, the projected uncertainty on $\upmu$ with no signal theory uncertainties is 0.24. For $\s_{B}^{\text{syst.}} = 5\%$, this projected uncertainty is 0.13.
 
 \begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
-  \caption{Uncertainty on the signal strength ($\Delta\mu$) for different scenarios of background uncertainties and signal theory uncertainties.}
+  \caption{Uncertainty on the signal strength ($\Delta\upmu$) for different scenarios of background uncertainties and signal theory uncertainties.}
   \input{tables/prospects-hllhc-signif}
   \label{tab:prospects-hllhc-signif}
 \end{table}
@@ -446,12 +443,12 @@ The impact of pile-up jet rejection in the forward region is also evaluated as a
 \begin{table}[bp]
   \centering
   \renewcommand{\arraystretch}{1.4}
-  \caption{Uncertainty on the signal strength ($\Delta\mu$) for different scenarios of forward tracking.}
+  \caption{Uncertainty on the signal strength ($\Delta\upmu$) for different scenarios of forward tracking.}
   \input{tables/prospects-hllhc-signif2}
   \label{tab:prospects-hllhc-signif2}
 \end{table}
 
 \subsection{Conclusions}
 
-The projection of the Standard Model $\Htautau$ analysis to the High Luminosity LHC (HL-LHC) running conditions with 14 TeV $pp$ collisions, 3000 $\ifb$ delivered integrated luminosity, and an average number of overlapping $pp$ collisions $\pileup = 140$ is performed. The VBF $\taul\tauh$ ($\ell = e,\mu$) analysis category is considered, and the uncertainty on the signal strength ($\mu$) is projected to be $24\%$ when theory uncertainties are ignored and $10\%$ ($5\%$) background (signal) uncertainties are assumed. The projected uncertainty could be reduced significantly if pile-up jets outside the current tracking volume could be rejected similar to pile-up jet rejection within the tracking volume in 2012. The uncertainty on $\mu$ is projected to be $8-18\%$ depending on the scenario of forward tracker coverage and pile-up jet rejection.
+The projection of the Standard Model $\Htautau$ analysis to the High Luminosity LHC (HL-LHC) running conditions with 14 TeV $pp$ collisions, 3000 $\ifb$ delivered integrated luminosity, and an average number of overlapping $pp$ collisions $\pileup = 140$ is performed. The VBF $\taul\tauh$ ($\ell = e,\mu$) analysis category is considered, and the uncertainty on the signal strength ($\upmu$) is projected to be $24\%$ when theory uncertainties are ignored and $10\%$ ($5\%$) background (signal) uncertainties are assumed. The projected uncertainty could be reduced significantly if pile-up jets outside the current tracking volume could be rejected similar to pile-up jet rejection within the tracking volume in 2012. The uncertainty on $\upmu$ is projected to be $8-18\%$ depending on the scenario of forward tracker coverage and pile-up jet rejection.
 

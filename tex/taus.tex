@@ -2,7 +2,7 @@
 \label{chap:taus}
 
 \begin{quote}
-  Tau leptons and their signature in the ATLAS detector are described. This draws from extensive ATLAS documentation on the topic~\cite{ATLAS-CONF-2012-142,ATLAS-CONF-2013-064,ATLAS-CONF-2013-044}, especially the recent publication summarizing the Run-I performance~\cite{PERF-2013-06}.
+  Tau leptons and their signature in the ATLAS detector are described. This draws from extensive ATLAS documentation on the topic~\cite{ATLAS-CONF-2012-142,ATLAS-CONF-2013-064,ATLAS-CONF-2013-044}, especially the recent publication summarizing the Run-I performance~\cite{PERF-2013-06}. These are the featured particles of this thesis.
 \end{quote}
 
 % ----------------------------------------------------------------------------------
@@ -12,7 +12,7 @@
 
 Tau leptons were discovered in the 1970s by Martin Perl and the SLAC-LBL group at the SPEAR electron-positron collider~\cite{1975.Perl.discovery_of_tau_1,1976.Perl.discovery_of_tau_2,1977.Perl.discovery_of_tau_3}. They have since been studied in great detail at experiments like Belle~\cite{2014.belle.tau-lifetime} and BaBar~\cite{2009.babar.tau-mass}. The associated tau neutrino was first observed directly at the DONUT experiment in 2000~\cite{2001.Kodama.discovery_of_tau_neutrino}, though its existence was inferred by measurements of the width of the $Z$ boson by experiments at the LEP collider in 1990~\cite{1990.ALEPH.3-neutrino-families}.
 
-Tau leptons are the heaviest of the charged leptons. Their mass of 1.78 GeV is approximately twenty times larger than the muon mass~\cite{2012.PDG}, and their short lifetime $c\tau = \text{87 } \mu m$ implies tau leptons produced in $pp$ collisions at the LHC typically decay within the ATLAS beam pipe. The ATLAS detector therefore observes only the decay products of the tau lepton, not the particle itself.
+Tau leptons are the heaviest of the charged leptons. Their mass of 1.78 GeV is approximately twenty times larger than the muon mass~\cite{2012.PDG}, and their short lifetime $c\tau = \text{87 } \micron$ implies tau leptons produced in $pp$ collisions at the LHC typically decay within the ATLAS beam pipe. The ATLAS detector therefore observes only the decay products of the tau lepton, not the particle itself.
 
 Tau leptons decay leptonically ($\tauldecay$) in 35\% of decays and hadronically ($\tauhdecay$) in 65\%. Among hadronic decays, 72\% involve exactly one charged pion and 22\% exactly three charged pions. The remaining percentage of hadronic decays dominantly involves kaons or five (or more) charged pions. All tau lepton decays involve at least one neutrino. A pie chart of tau lepton branching fraction is given in \cref{fig:taus-decaypie}.
 
@@ -28,7 +28,7 @@ Tau leptons decay leptonically ($\tauldecay$) in 35\% of decays and hadronically
 \section{Leptonic tau decays, $\taul$}
 \label{sec:taus-leptons}
 
-At ATLAS, light leptons from tau lepton decays ($\tauldecay$) are largely indistinguishable from prompt leptons from $W$ and $Z$ decays. They are typically less energetic due to the presence of two additional neutrinos in the tau lepton decay (e.g., $\Wlv$ versus $\Wtauvlvvv$), but for identification purposes, the only distinguishing features arise from the displaced tau vertex. This displacement is often quantified by the transverse distance of closest approach $d_0$ of the light lepton to the production (``primary'') vertex. But given the short lifetime of tau leptons, the discrimination power is weak. These properties are shown in \cref{fig:taus-leptonpt}.
+At ATLAS, light leptons from tau lepton decays ($\tauldecay$) are largely indistinguishable from prompt leptons from $W$ and $Z$ decays. They are typically less energetic due to the presence of two additional neutrinos in the tau lepton decay (e.g., $\Wlv$ versus $\Wtauvlvvv$), but for identification purposes, the only distinguishing features arise from the displaced tau vertex. This displacement is often quantified by the transverse distance of closest approach of the light lepton to the primary vertex ($d_0$). But given the short lifetime of tau leptons, the discrimination power is weak. These properties are shown in \cref{fig:taus-leptonpt}.
 
 \begin{figure}[tp]
   \centering
@@ -47,11 +47,11 @@ This sections follows a recent ATLAS publication describing $\tauh$ performance 
 
 \subsection{Reconstruction}
 
-\subsubsection{Calorimeter seeding}
+% \subsubsection{Calorimeter seeding}
 
 $\tauh$ candidates are seeded by the collection of jets formed by the anti-$k_t$ algorithm with distance parameter $R=0.4$, which groups the set of reconstructed three-dimensional calorimeter TopoClusters into jet objects. These TopoClusters are calibrated using a local hadronic calibration (LC). Jets are required to have $\pt > 10 \GeV$ and $|\eta| < 2.5$ to qualify as a seed for a $\tauh$ candidate. The initial $\tauh$ four-momentum is calculated by summing the TopoClusters within $\Delta R < 0.2$ of the barycenter of the jet seed, where the $\tauh$ mass is assume to be zero.
 
-\subsubsection{Track and vertex association}
+% \subsubsection{Track and vertex association}
 
 Tracking and vertexing for $\tauh$ occurs in three steps. First, all tracks are collected within $\Delta R < 0.2$ of the jet seed which pass quality criteria described later, but for which no impact parameter requirements are made. Second, the tau vertex (TV) is defined as the reconstructed vertex which maximizes the fraction of track momenta originating from that vertex versus total track momenta, referred to as the tau vertex fraction:
 %
@@ -84,7 +84,7 @@ Last, the set of tracks is reduced by making additional impact parameters requir
 %
 This set of tracks is used when classifying the $\tauh$ candidate track multiplicity. For identification purposes, tracks in the \textit{isolation region} $0.2 < \Delta R < 0.4$ are also required to pass these criteria.
 
-\subsubsection{Calibration}
+% \subsubsection{Calibration}
 
 A correction to the $\tauh$ energy is applied to account for biases, such as effects from pileup, the underlying event, and clusters falling out of the $\Delta R = 0.2$ cone. This correction is derived in simulated $\Ztautau$, $\Wtaunu$, and $\Zptautau$ events where the true visible $\tauh$ energy $\Etruevis$ is known. It is derived as a function of the pre-calibrated $\tauh$ energy $\ErecoLC$ and $\eta$ and shown in \cref{fig:taus-calibration}. Small additional corrections are applied to account for biases from pileup and poorly instrumented regions of the detector. The resulting $\tauh$ energy resolution is shown in \cref{fig:taus-resolution}.
 
@@ -110,16 +110,16 @@ The in-situ method relies on the sensitivity of the visible $\mtautau$ in $\Ztau
 %
 \begin{equation}
   \begin{split}
-    \alpha_\text{1-track} &= 0.8\% \pm 1.3\% \text{ (stat.) } \pm 0.6\% \text{ (syst.) } \\
-    \alpha_\text{3-track} &= 1.1\% \pm 1.4\% \text{ (stat.) } \pm 0.7\% \text{ (syst.) } \\
+    \alpha_\text{1-track} &= 0.8\% \pm 1.3\% \text{ (stat.)} \pm 0.6\% \text{ (syst.) } \\
+    \alpha_\text{3-track} &= 1.1\% \pm 1.4\% \text{ (stat.)} \pm 0.7\% \text{ (syst.) } \\
   \end{split}
   \label{eqn:taus-tesshift}
 \end{equation}
 %
 
-\section{Identification}
+\subsection{Identification}
 
-As a high energy hadron collider, the overwhelming majority of particles observed by ATLAS are hadrons. Distinguishing these QCD jets from $\tauh$ is then of huge consequence. The properties with discriminating power can be broadly grouped into three categories:
+As a high energy hadron collider, the overwhelming majority of particles observed by ATLAS are hadrons. Distinguishing these QCD jets from $\tauh$ is hugely important for physics with tau leptons. The properties with discriminating power can be broadly grouped into three categories:
 %
 \begin{description}
     \item[Track multiplicity:] \hfill \\
@@ -148,7 +148,7 @@ For track multiplicity, reconstructed $\tauh$ are required to have exactly 1 or 
   \label{fig:taus-trackmultiplicity}
 \end{figure}
 
-For narrowness and vertex displacement, discriminating variables are formed using tracking and calorimeter information and combined in multi-variate identification algorithms. These algorithms are typically referred to as $\tauh$ identification or jet discriminators. A complete description of the variables used is given in \cref{tab:taus-idvars} and \cref{tab:taus-idvars}.
+For narrowness and vertex displacement, discriminating variables are formed using tracking and calorimeter information and combined in multi-variate identification algorithms. These algorithms are typically referred to as $\tauh$ identification or jet discriminators. A complete description of the variables used is given in \cref{tab:taus-idvars} and \cref{apx:tauid}.
 
 An additional identification algorithm is used to decompose the tau lepton decay into charged and neutral pions. The algorithm is sequential: first, it uses global $\tauh$ features measured in the tracker and calorimeter to reconstruct the number of neutral pions associated to the $\tauh$. Second, it creates neutral pion candidates from the most $\pi^0$-like clusters associated to the $\tauh$. These candidates, along with the charged pions measured as associated tracks, make up the decomposed $\tauh$ and feed into the jet discriminant. This reconstruction is substantially more difficult than for charged pions which enjoy precision measurements in the tracker with marginal contamination from pileup, the underlying event, and other processes.
 
@@ -181,7 +181,7 @@ An additional identification algorithm is used to decompose the tau lepton decay
     \item[Track-plus-$\pi^0$-system mass (\trackPizeroMass{}):] \hfill \\ 
       Invariant mass of the system composed of the tracks and $\pi^0$ mesons in the core region.
       
-    \item[Number of $\pi^0$ mesons reconstructed in the core region ($N_{\mathrm{\pi^0} } $).] \hfill \\
+    \item[Number of $\pi^0$ mesons reconstructed in the core region ($N_{\mathrm{\pi^0} } $).] \hfill 
       
     \item[Ratio of track-plus-$\pi^0$-system \pt{} to total $\tauh$ \pt{} (\Etratio{}): ] \hfill \\ 
       Ratio of estimated \pt{} using track + $\pi^0$ information to the calorimeter-only measurement.
@@ -232,10 +232,10 @@ To measure the efficiency, templates are built for signal $\tauh$ and background
   \label{fig:taus-scalefactors}
 \end{figure}
 
-\section{Leptons mis-identified as $\tauh$}
+\subsection{Leptons mis-identified as $\tauh$}
 \label{sec:taus-leptonfakes}
 
-\subsection{Electrons}
+\subsubsection{Electrons}
 
 The characteristic 1-track signature of $\tauh$ can be mimicked by electrons, even those which fail dedicated electron identification algorithms. This is problematic for $\tautaueh$ analyses because $\Zee$ ($\efake$) peaks in $\mtautau$ near the $\Htautaueh$ mass peak and because high-mass $\ZDYee$ ($\efake$) can have long tails in $\mtautau$.
 
@@ -294,11 +294,11 @@ In the 2012 version of the electron discriminator, a mis-modeling in simulation 
   \label{fig:taus-electronfakes3}
 \end{figure}
 
-\subsection{Muons}
+\subsubsection{Muons}
 
 The characteristic 1-track signature of $\tauh$ can also be mimicked by muons. This is more rare than $\efake$ mis-identification since muons are minimum ionizing particles and do not often deposit sufficient energy in the calorimeters to seed a $\tauh$ candidate. But $\Zmumu$ ($\mfake$) can nonetheless be a problem for $\tautaumh$ final states for the same reasons as $\Zee$ is problematic for $\tautaueh$ final states.
 
-Studies of $\Zmumu$ simulation indicate most (60\%) $\mfake$ have a cluster in the calorimeter from photon ISR. The remaining are assumed to undergo sufficient ionization in the hadronic calorimeter to create a cluster. Only 2\% of $\mfake$ are not reconstructed as a muon candidate. Most of these $\mfake$ occur in a region of $\eta$ which is poorly covered by the muon system, and some occur because they are too low $\pt$ for the muon reconstruction algorithms.
+Studies of $\Zmumu$ simulation indicate most (60\%) $\mfake$ have a cluster in the calorimeter from photon FSR. The remaining are assumed to undergo sufficient ionization in the hadronic calorimeter to create a cluster. Only 2\% of $\mfake$ are not reconstructed as a muon candidate. Most of these $\mfake$ occur in a region of $\eta$ which is poorly covered by the muon system, and some occur because they are too low $\pt$ for the muon reconstruction algorithms.
 %
 \begin{table}[bp] 
   \centering
@@ -308,14 +308,14 @@ Studies of $\Zmumu$ simulation indicate most (60\%) $\mfake$ have a cluster in t
   \label{tab:taus-muonfakes}
 \end{table}
 %
-These properties are shown in \cref{fig:taus-muonfakes2} and \cref{fig:taus-muonfakes2}.
+These properties are shown in \cref{fig:taus-muonfakes-1} and \cref{fig:taus-muonfakes-2}.
 
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_mll}
   \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_eta}
   \caption{True $m_{\mu\mu}$ (left) and $\eta(\mu)$ (right) in $\Zmm$ events where a muon is mis-identified as a $\tauh$. The muons are split into \texttt{combined} muons (black), muons which pass tracking requirements but fail \texttt{combined} requirements (green), are reconstructed but fail tracking requirements (blue), and are not reconstructed (red). A large fraction of non-reconstructed muons have $|\eta| \approx 0$, which is a poorly covered region of the muon system.}
-  \label{fig:taus-muonfakes1}
+  \label{fig:taus-muonfakes-1}
 \end{figure}
 
 \begin{figure}[tp]
@@ -323,10 +323,10 @@ These properties are shown in \cref{fig:taus-muonfakes2} and \cref{fig:taus-muon
   \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_mlly}
   \includegraphics[width=0.48\textwidth]{figures/tauperformance/muonfakes_dR}
   \caption{True $m_{\mu\mu\gamma}$ (left) and $\Delta R(\mu,\ \gamma)$ (right) in $\Zmm$ events where a muon is mis-identified as a $\tauh$ and a true FSR photon is associated to the muon. The muons are split into \texttt{combined} muons (black), muons which pass tracking requirements but fail \texttt{combined} requirements (green), are reconstructed but fail tracking requirements (blue), and are not reconstructed (red).}
-  \label{fig:taus-muonfakes2}
+  \label{fig:taus-muonfakes-2}
 \end{figure}
 
-In physics analysis, $\mfake$ are typically rejected by requiring a $\tauh$ candidate not overlap with an identified muon and that it pass an additional, dedicated muon veto. These rejection criteria are re-optimized in 2014 for better $\mfake$ suppression and simultaneously better true $\tauh$ efficiency. The updated rejection removes the dedicated muon veto, which cost $\approx\!5\%$ efficiency for true $\tauh$, and tightens the overlap criteria such that $\tauh$ candidates are rejected if they overlap with any reconstructed muon above 2 GeV. The improved rejection of this criteria is shown in \cref{fig:taus-muonfakes3}.
+In physics analysis, $\mfake$ are typically rejected by requiring a $\tauh$ candidate not overlap with an identified muon and that it pass an additional, dedicated muon veto. These rejection criteria are re-optimized in 2014 for better $\mfake$ suppression and simultaneously better true $\tauh$ efficiency. The updated rejection removes the dedicated muon veto, which costs $\approx\!5\%$ efficiency for true $\tauh$, and tightens the overlap criteria such that $\tauh$ candidates are rejected if they overlap with any reconstructed muon above 2 GeV. The improved rejection of this criteria is shown in \cref{fig:taus-muonfakes3}.
 
 \begin{figure}[tp]
   \centering

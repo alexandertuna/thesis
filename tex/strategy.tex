@@ -36,11 +36,11 @@ The Higgs discovery in 2012-2013 is driven by the bosonic decays. The $\Hyy$ and
   \label{fig:strategy-higgs-yyzzww}
 \end{figure}
 
-All three bosonic analyses best measure the ggF Higgs production mechanism because the production of non-resonant pairs of gauge bosons like $\gamma, W, Z$ are rare in the Standard Model. Their best discriminating variable is typically the reconstructed Higgs mass because there are no significant resonant backgrounds. This can be fully reconstructed in the $\Hyy$ and $\HZZ$ analyses because there are no neutrinos in the decays. In the $\HWW$, the Higgs mass can be semi-reconstructed by incorporating the $\MET$ in a transverse mass $m_T$.
+All three bosonic analyses best measure the ggF Higgs production mechanism because the production of non-resonant pairs of gauge bosons like $\gamma, W, Z$ are rare in the Standard Model. Their best discriminating variable is typically the reconstructed Higgs mass because there are no significant resonant backgrounds. This can be fully reconstructed in the $\Hyy$ and $\HZZ$ analyses because there are no neutrinos in the decays. In the $\HWW$, the Higgs mass can be partially reconstructed by incorporating the $\MET$ in a transverse mass $m_T$.
 
 \subsubsection{$\Hfermions$}
 
-With the full Run-I dataset and evolving analysis techniques, the searches for fermionic decays of the Higgs boson become competitive in sensitivity with analyses of the bosonic decays. The $\Hbb$ analysis employs MVA analysis techniques to search for the $VH$ production mechanism, where $V$ is a vector boson that can decay like $\Wlv$, $\Zll$, or $\Zvv$. This production mode is chosen because $b$-quarks are rapidly produced at hadron colliders, and tagging events with a vector boson is the optimal search strategy. 
+With the full Run-I dataset and evolving analysis techniques, the searches for fermionic decays of the Higgs boson become competitive in sensitivity with analyses of the bosonic decays. The $\Hbb$ analysis employs MVA analysis techniques to search for the $VH$ production mechanism, where $V$ is a vector boson that can decay like $\Wlv$, $\Zll$, or $\Zvv$. This production mode is chosen because $b$-quarks are frequently produced at hadron colliders, and searching only for two $b$-jets is prohibitive. Events with two $b$-jets produced in association with a vector boson provide a more optimal tag.
 
 \begin{figure}[tp]
   \centering
@@ -54,7 +54,7 @@ With the full Run-I dataset and evolving analysis techniques, the searches for f
 \subsection{$\Htautau$}
 \label{sec:strategy-htautau}
 
-The $\Htautau$ analysis is naturally broken into three final states (or ``channels'') given the combinatorics of tau lepton decays: $\tautaulh$, $\tautauhh$, and $\tautaull$. Their branching fractions are shown in \cref{fig:strategy-decaypie}. The experimental methods of each final state are conceptually similar though not identical. For brevity, the $\tautaulh$ final state is emphasized.
+The $\Htautau$ analysis is naturally broken into three final states (or ``channels'') given the combinatorics of tau lepton decays: $\tautaulh$, $\tautauhh$, and $\tautaull$. Their branching fractions are shown in \cref{fig:strategy-decaypie}. The experimental methods of each final state are conceptually similar though not identical. For brevity, the $\Htautaulh$ analysis is described in detail, and the $\Htautauhh$ and $\Htautaull$ are only briefly summarized.
 
 \begin{figure}[tp]
   \centering
@@ -188,12 +188,12 @@ Event kinematics for data and prediction at the pre-selection stage are shown in
 
 Due to the large background from QCD $\Ztautau$ and $\Wjets$ production, the most sensitive search for $\Htautau$ is via the VBF production mechanism~\cite{1998.vbfhtautau}. The signature of this production mechanism is the existence of two jets with large separation in rapidity, and this signature guides the selection criteria of the VBF category.
 
-In addition to the pre-selection criteria, two additional jets are required for the VBF category which satisfy $\Delta\eta(jj) > 3$. The leading and sub-leading jets are assumed to be the VBF jets, and they are required to satisfy the criteria described in \cref{tab:strategy-objects-jetmet}. The threshold on the lead jet is raised to 50 GeV. The visible mass $\mvis$ is also required to be above 40 GeV because discrepancies are observed between data and prediction. The VBF category selection is summarized in \cref{tab:strategy-selection}.
+In addition to the pre-selection criteria, two additional jets are required for the VBF category which satisfy $\Delta\eta(jj) > 3$. The leading and sub-leading jets are assumed to be the VBF jets, and they are required to satisfy the criteria described in \cref{tab:strategy-objects-jetmet}. The threshold on the lead jet is raised to 50 GeV. The visible mass $\mvis$ is also required to be above 40 GeV because discrepancies are observed between data and prediction at very low mass. The VBF category selection is summarized in \cref{tab:strategy-selection}, and similar selection criteria are used to define the VBF $\Htautauhh$ and $\Htautaull$ categories.
 
 \subsection{Boosted category}
 \label{sec:strategy-boost}
 
-The second category considered is the boosted category. This category selects events by the transverse boost of the Higgs candidate, where the Higgs candidate is defined as the vector sum of the lepton, $\tauh$, and $\MET$. It is required to have a boost greater than 100 GeV.
+The second category considered is the boosted category. This category selects events by the transverse boost of the Higgs candidate, where the Higgs candidate is defined as the vector sum of the lepton, $\tauh$, and $\MET$. It is required to have a boost greater than 100 GeV, and similar selection criteria are used to define the boosted $\Htautauhh$ and $\Htautaull$ categories.
 
 This selection emphasizes the ggF Higgs production mechanism with a high $\pt$ ISR jet. The sensitivity of the ggF analysis improves with higher $\pt(H)$ because the $\mtautau$ mass reconstruction techniques have better resolution at smaller $\Delta\phi(\tautau)$. These techniques are discussed in detail in \cref{sec:strategy-mtautau}.
 
@@ -225,7 +225,7 @@ Because there are three neutrinos in the final state of a $\tautaulh$ decay, the
     \item[Total transverse mass, $\mttot$:] \hfill \\
       Transverse mass of the lepton, $\tauh$, and $\MET$. This is another simple mass reconstruction, and it incorporates the $\MET$. However, no prior knowledge of tau lepton decays is utilized.
     \item[Collinear mass, $\mcol$:] \hfill \\
-      Mass of the $\tautau$ system assuming the neutrinos are exactly collinear with the visible decay products. This is the first attempt at fully reconstructing a $\tautau$ resonance. However, the collinear assumption is not perfect.
+      Mass of the $\tautau$ system assuming the neutrinos are exactly collinear with the visible decay products. This is the first attempt at fully reconstructing a $\tautau$ resonance.
     \item[Missing mass calculator, $\mMMC$:] \hfill \\
       Mass of the $\tautau$ system assuming the neutrinos are approximately collinear with the visible decay products. This is discussed in more detail in \cref{sec:strategy-mtautau-mMMC}.
 \end{description}
@@ -242,7 +242,7 @@ Because there are three neutrinos in the final state of a $\tautaulh$ decay, the
 \subsection{$\mMMC$ algorithm}
 \label{sec:strategy-mtautau-mMMC}
 
-The Missing Mass Calculator $\mMMC$ is used to reconstruct $\mtautau$~\cite{2011.mmc}. This requires solving an underconstrained system of equations for seven unknowns in the $\tautaulh$ final state: $x$-, $y$-, and $z$-components of the momentum carried by the neutrinos for each of the tau leptons in the event, and the invariant mass of the $\nu\nu$ system from the leptonic tau decay. The calculation uses the constraints from the measured $x$- and $y$-components of the $\MET$, and the visible masses of both tau lepton decays. A scan is performed over the two components of the $\MET$ vector and the yet undetermined variables. Each scan point is weighted by its probability according to the $\MET$ resolution and the tau decay topologies. The estimator for the $\mtautau$ is defined as the most probable value of the scan points. A cartoon visualization of the technique is shown in \cref{fig:strategy-mtautau-cartoon}.
+The Missing Mass Calculator $\mMMC$ is used to fully reconstruct $\mtautau$~\cite{2011.mmc}. This requires solving an underconstrained system of equations for seven unknowns in the $\tautaulh$ final state: $x$-, $y$-, and $z$-components of the momentum carried by the neutrinos for each of the tau leptons in the event, and the invariant mass of the $\nu\nu$ system from the leptonic tau decay. The calculation uses the constraints from the measured $x$- and $y$-components of the $\MET$, and the visible masses of both tau lepton decays. A scan is performed over the two components of the $\MET$ vector and the yet undetermined variables. Each scan point is weighted by its probability according to the $\MET$ resolution and the tau decay topologies. The estimator for the $\mtautau$ is defined as the most probable value of the scan points. A cartoon visualization of the technique is shown in \cref{fig:strategy-mtautau-cartoon}.
 
 \begin{figure}[tp]
   \centering
@@ -315,7 +315,7 @@ The second centrality varible, lepton $\eta$-centrality, quantifies the lepton b
   \label{fig:strategy-centrality-cartoons}
 \end{figure}
 
-The choice of variables is optimized to give good separation while keeping the number of inputs small and manageable. The set of inputs used in the $\Htautaulh$ categories is shown in \cref{tab:strategy-inputs}. Distributions of input variables and other kinematics are shown in \cref{fig:strategy-overlaid-boost-1,fig:strategy-overlaid-boost-2} for the boosted category and \cref{fig:strategy-overlaid-vbf-1,fig:strategy-overlaid-vbf-2,fig:strategy-overlaid-vbf-3} for the VBF category. Signal and background predictions are discussed in greater detail in \cref{chap:backgrounds}.
+The choice of variables is optimized to give good separation while keeping the number of inputs small and manageable. The set of inputs used in the $\Htautaulh$ categories is shown in \cref{tab:strategy-inputs}. Distributions of input variables and other kinematics are shown in \cref{fig:strategy-overlaid-boost-1,fig:strategy-overlaid-boost-2} for the boosted category and \cref{fig:strategy-overlaid-vbf-1,fig:strategy-overlaid-vbf-2} for the VBF category. Signal and background predictions are discussed in greater detail in \cref{chap:backgrounds}.
 
 \begin{table}[bp]
   \centering
@@ -346,10 +346,10 @@ The choice of variables is optimized to give good separation while keeping the n
   \centering
   \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/jet-1-pt}
   \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/taulep-ptratio}
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/sumpt}
+  \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/sumpt} \\
   \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/mMMC}
   \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/H-pt-hi}
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/BDTEve-boost}
+  \includegraphics[width=0.32\textwidth]{figures/overlaid/boost/BDTEve-boost} \\
   \caption{Predicted signal and background distributions in the boosted category normalized to unit area and overlaid.}
   \label{fig:strategy-overlaid-boost-2}
 \end{figure}
@@ -374,26 +374,20 @@ The choice of variables is optimized to give good separation while keeping the n
 \end{figure}
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/jet-1-pt}
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/jet-1-eta}
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/jets-deta} \\
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/jet-2-pt} 
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/jet-2-eta}
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/jets-dphi} \\
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/dijet-m-veryhigh}
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/jets-etaprod}
-  \includegraphics[width=0.32\textwidth]{figures/overlaid/vbf/lep-eta-centrality} \\
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/jet-1-pt}
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/jet-1-eta}
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/jet-2-pt} 
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/jet-2-eta} \\
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/dijet-m-veryhigh}
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/jets-etaprod}
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/jets-deta} 
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/system-pt} \\
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/lep-eta-centrality}
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/mMMC}
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/H-pt-hi}
+  \includegraphics[width=0.24\textwidth]{figures/overlaid/vbf/BDTEve-VBF} \\
   \caption{Predicted signal and background distributions in the VBF category normalized to unit area and overlaid.}
   \label{fig:strategy-overlaid-vbf-2}
-\end{figure}
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.35\textwidth]{figures/overlaid/vbf/mMMC}
-  \includegraphics[width=0.35\textwidth]{figures/overlaid/vbf/H-pt-hi}
-  \includegraphics[width=0.35\textwidth]{figures/overlaid/vbf/system-pt}
-  \includegraphics[width=0.35\textwidth]{figures/overlaid/vbf/BDTEve-VBF}
-  \caption{Predicted signal and background distributions in the VBF category normalized to unit area and overlaid.}
-  \label{fig:strategy-overlaid-vbf-3}
 \end{figure}
 \clearpage
 

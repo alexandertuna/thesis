@@ -2,7 +2,7 @@
 \label{chap:lhcatlas}
 
 \begin{quote}
-  The LHC and ATLAS detector are described.
+  The Large Hadron Collider (LHC) and ATLAS detector are described. The LHC is among the largest scientific facilities in the history of humanity. It smashes more protons, at higher speeds, than any previous physics experiment. The ATLAS detector records these collisions and translates detector signals into physics phenomena. These are the experimental apparatuses which provide data for this thesis.
 \end{quote}
  
 \section{The LHC}
@@ -12,7 +12,7 @@ The Large Hadron Collider (LHC)~\cite{cern-jinst-lhc} is the most powerful parti
 
 The LHC is a circular hadron collider 27 kilometers in circumference and 100 meters underground, near Geneva, Switzerland. It straddles the border of Switzerland and France. It is operated by the European Organization for Nuclear Research (CERN\footnote{Conseil Europ\'een pour la Recherche Nucl\'eaire}) and occupies the underground tunnel originally constructed for the Large Electron Positron collider (LEP) for use in the 1990s. The construction costs of the LHC are approximately five billion USD.
 
-The LHC collides hadrons at high energies to probe the boundaries of our understanding of particle physics. These collisions are observed by four major experiments situated along the LHC ring: ATLAS~\cite{cern-jinst-atlas}, CMS~\cite{cern-jinst-cms}, ALICE~\cite{cern-jinst-alice}, and LHCb~\cite{cern-jinst-lhcb}. ATLAS and CMS are general purpose particle detector experiments built for discovering physics beyond the Standard Model. ALICE is designed to observe heavy ion (lead nuclei) collisions and study the physics of quark-gluon plasma. LHCb specializes in the study of $b$-hadrons. An aerial view of the experiments is shown in \cref{fig:lhc-switzerland}.
+The LHC collides hadrons at high energies to probe the boundaries of our understanding of particle physics. These collisions are observed by four major experiments situated along the LHC ring: ATLAS~\cite{cern-jinst-atlas}, CMS~\cite{cern-jinst-cms}, ALICE~\cite{cern-jinst-alice}, and LHCb~\cite{cern-jinst-lhcb}. ATLAS and CMS are general purpose particle detector experiments built for discovering physics of and beyond the Standard Model. ALICE is designed to observe heavy ion (lead nuclei) collisions and study the physics of quark-gluon plasma. LHCb specializes in the study of $b$-hadrons. An aerial view of the experiments is shown in \cref{fig:lhc-switzerland}.
 
 \begin{figure}[tp]
   \centering
@@ -79,7 +79,7 @@ These datasets allow the ATLAS and CMS experiments to probe physics of the Stand
 \section{The ATLAS detector}
 \label{sec:atlas}
 
-The ATLAS\footnote{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{s}} detector is a general purpose cylindrical detector centered on one of the LHC collision points. It is 46 meters in length, 25 meters in diameter, and weighs 7000 tons. Assembly began at CERN in 2003 and construction was completed in 2008. A schematic rending is shown in \cref{fig:atlas-cartoon}.
+The ATLAS\footnote{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{s}} detector is a general purpose cylindrical detector centered on one of the LHC collision points. It is 46 meters in length, 25 meters in diameter, and weighs 7000 tons. Assembly began at CERN in 2003 and was completed in 2008. A schematic rending is shown in \cref{fig:atlas-cartoon}.
 
 \begin{figure}[tp]
   \centering
@@ -88,11 +88,11 @@ The ATLAS\footnote{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\t
   \label{fig:atlas-cartoon}
 \end{figure}
 
-ATLAS is built to measure and classify particles arising from proton-proton collisions. These particles can be as low energy as a few hundred MeV to as high energy as multiple TeV. To detector such a broad range of phenomena, multiple subdetectors are employed. These are concentric about the proton-proton interaction point (IP) and are designed to observe different classes of particles. 
+ATLAS is built to measure and classify particles arising from proton-proton collisions. These particles can be as low energy as a few hundred MeV to as high energy as multiple TeV. To detect such a broad range of phenomena, multiple subdetectors are employed. These are concentric about the proton-proton interaction point (IP) and are designed to observe different classes of particles. 
 
 The \textit{inner detector} is closest to the beams and is designed to detect charged particles. The \textit{calorimeters} are outside the inner detector and are designed to stop all particles except muons and neutrinos. The \textit{muon system} is furthest from the beams and is designed to detect muons as they exit ATLAS. 
 
-The inner detector is enclosed by a solenoidal magnet with a field of approximately 2 Tesla. A large toroidal magnet exists within the muon system which has a field of approximately 4 Tesla. The purpose of these magnets is to bend the trajectory of charged particles as they travel through ATLAS. The momenta of these particles can then be precisely inferred from the measured trajectory according to the classical Lorentz force law.
+The inner detector is enclosed by a solenoidal magnet with a field of approximately 2 Tesla. A large toroidal magnet exists within the muon system which has a field of 2 to 8 Tesla. The purpose of these magnets is to bend the trajectory of charged particles as they travel through ATLAS. The momenta of these particles can then be precisely inferred from the measured trajectory according to the classical Lorentz force law.
 
 ATLAS uses a right-handed coordinate system with its origin at the IP in the center of the detector, and the $z$-axis along the beam line. The $x$-axis points from the IP to the center of the LHC ring, and the $y$-axis points upwards. Cylindrical coordinates ($r$, $\phi$) are used in the transverse plane, $\phi$ being the azimuthal angle around the beam line. The pseudorapidity $\eta$ is typically used in place of the polar angle $\theta$ and is defined as $\eta = -\text{ln}(\text{tan}\frac{\theta}{2})$~\cite{HIGG-2012-27}.
 
@@ -147,7 +147,7 @@ Information from these three subdetectors are combined to make \textit{tracks}, 
 
 A vertex reconstruction algorithm~\cite{ATLAS-CONF-2010-069,ATLAS-CONF-2012-042} is used to determine if multiple tracks originate from a single $pp$ collision. The output of the algorithm is a complete set of vertices per event and the association of each track to a vertex. Starting with the set of all tracks passing simple goodness criteria (e.g., requiring a minimum number of hits in the silicon detectors), a vertex seed is derived from the global maximum of $z$ coordinates, and tracks are associated to that seed using a $\chi^2$ fitting algorithm. Tracks incompatible with the vertex are then used as seeds for the next iteration of the vertexing algorithm until all tracks are exhausted. 
 
-Vertexing is essential for deciding which tracks (and thus physics objects) originate from the $pp$ collision of interest and which tracks do not. The vertex associated to the collision of interest is called the \textit{primary vertex} and is conventionally the vertex with the highest $\sumtrackpt$ associated to it. If a track is not consistent with having been produced in the primary vertex, it is typically ignored as originating from a pileup interaction which is uninteresting. This is the best and most intuitive method of ignoring pileup contributions since the calorimeter cannot extrapolate particle trajectories back to the beamline with nearly as good precision. A visualization of the power of tracking for pileup rejection is shown in \cref{fig:atlas-detector-pileup}.
+Vertexing is essential for deciding which tracks (and thus physics objects) originate from the $pp$ collision of interest and which tracks do not. The vertex associated to the collision of interest is called the \textit{primary vertex} and is conventionally the vertex with the highest track $\pt^2$ associated to it. If a track is not consistent with having been produced in the primary vertex, it is typically ignored as originating from a pileup interaction which is uninteresting. This is the best and most intuitive method of ignoring pileup contributions since the calorimeter cannot extrapolate particle trajectories back to the beamline with nearly as good precision. A visualization of the power of tracking for pileup rejection is shown in \cref{fig:atlas-detector-pileup}.
 
 \begin{figure}[tp]
   \centering
@@ -186,7 +186,7 @@ EM objects, such as photons and electrons, tend to produce narrow calorimeter sh
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.95\textwidth]{figures/lhc-atlas/svenmenke_showers}
-  \caption{Display of electron (top) and charged pion (bottom) showers, where both particles are simulated to be 50 GeV and passing through iron~\cite{svenmenke-showers}.}
+  \caption{Display of simulated electron (top) and charged pion (bottom) showers, where both particles are 50 GeV and passing through iron~\cite{svenmenke-showers}.}
   \label{fig:atlas-detector-showers}
 \end{figure}
 
@@ -201,7 +201,7 @@ Calorimeter cells from all subdetectors are combined into higher level objects b
   \label{fig:atlas-detector-clustering}
 \end{figure}
 
-Another clustering algorithm, called the \textit{sliding window} algorithm, is used specially for EM objects. The sliding window algorithm uses a small, rectangular tower window to seed clusters in the EM calorimeter since EM objects tend to produce predictably narrow showers. The topological clustering is preferred for hadronic objects because it is adaptive, and the shapes of hadronic deposits does not typically follow simple shapes.
+Another clustering algorithm, called the \textit{sliding window} algorithm, is used specially for EM objects. The sliding window algorithm uses a small, rectangular tower window to seed clusters in the EM calorimeter since EM objects tend to produce predictably narrow showers. The topological clustering is preferred for hadronic objects because it is adaptive, and hadronic calorimeter deposits do not typically have simple shapes.
 
 \subsection{Muon spectrometry}
 
@@ -279,11 +279,11 @@ Photons have similar detector signatures as electrons since their calorimeter de
 
 \subsection{Hadrons}
 
-Instead of attempting to reconstruct individual hadrons, ATLAS reconstructs collimated sprays of hadrons referred to as jets~\cite{PERF-2012-01}. The scope of jets is extremely broad: their momenta range from $\approx\!10$ GeV to multiple TeV, and they are the large spatial physics objects, though they can be as small as a single pion. Jets are produced copiously at hadron colliders, which can be problematic with significant pileup.
+Instead of attempting to reconstruct individual hadrons, ATLAS reconstructs collimated sprays of hadrons referred to as jets~\cite{PERF-2012-01}. The scope of jets is extremely broad: their momenta range from $\approx\!10$ GeV to multiple TeV, and spatially they are the largest physics objects, though they can be as small as a single pion. Jets are produced copiously at hadron colliders, which can be problematic with significant pileup.
 
 Jets are reconstructed from calorimeter topological clusters using the anti-$k_t$ algorithm~\cite{2008.antikt} with a distance parameter of $R=0.4$. This is an iterative clustering algorithm which groups topological clusters into jets based on their spatial proximity and momentum. Tracks can be associated to a jet based on simple spatial matching or the more robust ghost association~\cite{ATLAS-CONF-2013-083}. A slew of corrections are applied to calibrate the energy and position of jets~\cite{PERF-2012-01,ATLAS-CONF-2013-083}. These correct for effects like pileup, dead material, and the non-compensating nature of the calorimeters. Jets can additionally be classifed as hard-scatter or pileup jets based on the fraction of their track momenta consistent with originating from the primary vertex~\cite{ATLAS-CONF-2014-018}.
 
-Jets which arise from the fragmentation of $b$-quarks, referred to as $b$-jets, are given special treatment because the significant lifetime of $B$ mesons means these jets can be distinguished from jets arising from lighter sources like gluons or $u$-quarks~\cite{ATLAS-CONF-2014-046}. Multivariate algorithms are used to look for the signature of a second vertex with some spatial displacement from the primary vertex. An example of a displaced vertex, and the performance of these algorithms, are shown in \cref{fig:objects-btag}.
+Jets which arise from the fragmentation of $b$-quarks, referred to as $b$-jets, are given special treatment because the significant lifetime of $B$-hadrons means these jets can be distinguished from jets arising from lighter sources like gluons or $u$-quarks~\cite{ATLAS-CONF-2014-046}. Multivariate algorithms are used to look for the signature of a second vertex with some spatial displacement from the primary vertex. An example of a displaced vertex, and the performance of these algorithms, are shown in \cref{fig:objects-btag}.
 
 \begin{figure}[tp]
   \centering
@@ -332,7 +332,7 @@ The scheme of fast reduction is called \textit{triggering}. Reconstruction and d
 
 \subsection{L1}
 
-The L1 trigger is the fastest and most reductive step of the trigger system. Only information from the calorimeter and muon subdetectors are available because the inner detector is not equipped to process events at tens of MHz, and because tracking algorithms are not fast yet fast enough. Performance is sacrificed for speed in the EM calorimeter and muon system. The granularity of the EM calorimeter is reduced for faster processing, as shown in \cref{fig:prospects-trigger-cartoonL1}, and only information from the RPCs and TGCs is read out from the muon system.
+The L1 trigger is the fastest and most reductive step of the trigger system. Only information from the calorimeter and muon subdetectors are available because the inner detector is not equipped to process events at tens of MHz, and because tracking algorithms are currently too slow. Performance is sacrificed for speed in the EM calorimeter and muon system: the granularity of the EM calorimeter is reduced for faster processing, as shown in \cref{fig:prospects-trigger-cartoonL1}, and only information from the RPCs and TGCs is read out from the muon system.
 
 A consequence of the reduced granularity of the EM calorimeter is that the sophisticated offline identification algorithms cannot be used. For example, the only identification technique available for $\tauh$ at L1 is calorimeter isolation. Furthermore, the isolation can only be evaluated in a square annulus with the reduced granularity and cannot be $\pt^\text{L1}$-dependent.
 
