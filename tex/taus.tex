@@ -10,7 +10,7 @@
 \section{Tau leptons}
 \label{sec:taus-theory}
 
-Tau leptons were discovered in the 1970s by Martin Perl and the SLAC-LBL group at the SPEAR electron-positron collider~\cite{1975.Perl.discovery_of_tau_1,1976.Perl.discovery_of_tau_2,1977.Perl.discovery_of_tau_3}. They have since been studied in great detail at experiments like Belle~\cite{2014.belle.tau-lifetime} and BaBar~\cite{2009.babar.tau-mass}. The associated tau neutrino was first observed directly at the DONUT experiment in 2000~\cite{2001.Kodama.discovery_of_tau_neutrino}, though its existence was inferred by measurements of the width of the $Z$ boson by experiments at the LEP collider in 1990~\cite{1990.ALEPH.3-neutrino-families}.
+Tau leptons were discovered in 1975 by Martin Perl and the SLAC-LBL group at the SPEAR electron-positron collider~\cite{1975.Perl.discovery_of_tau_1,1976.Perl.discovery_of_tau_2,1977.Perl.discovery_of_tau_3}. They have since been studied in great detail at experiments like Belle~\cite{2014.belle.tau-lifetime} and BaBar~\cite{2009.babar.tau-mass}. The associated tau neutrino was first observed directly at the DONUT experiment in 2000~\cite{2001.Kodama.discovery_of_tau_neutrino}, though its existence was inferred by measurements of the width of the $Z$ boson by experiments at the LEP collider in 1990~\cite{1990.ALEPH.3-neutrino-families}.
 
 Tau leptons are the heaviest of the charged leptons. Their mass of 1.78 GeV is approximately twenty times larger than the muon mass~\cite{2012.PDG}, and their short lifetime $c\tau = \text{87 } \micron$ implies tau leptons produced in $pp$ collisions at the LHC typically decay within the ATLAS beam pipe. The ATLAS detector therefore observes only the decay products of the tau lepton, not the particle itself.
 
@@ -47,17 +47,13 @@ This sections follows a recent ATLAS publication describing $\tauh$ performance 
 
 \subsection{Reconstruction}
 
-% \subsubsection{Calorimeter seeding}
+$\tauh$ reconstruction begins with the collection of jets formed by the anti-$k_t$ algorithm with distance parameter $R=0.4$, as discussed in \cref{sec:hadrons}, which groups the set of reconstructed three-dimensional calorimeter topoclusters into jet objects. The topoclusters are calibrated using a local hadronic calibration (LC)~\cite{ATL-LARG-PUB-2009-001-2}. Jets are required to have $\pt > 10 \GeV$ and $|\eta| < 2.5$ to qualify as a seed for a $\tauh$ candidate. The initial $\tauh$ four-momentum is calculated by summing the TopoClusters within $\Delta R < 0.2$ of the barycenter of the jet seed, where the $\tauh$ mass is assume to be zero.
 
-$\tauh$ candidates are seeded by the collection of jets formed by the anti-$k_t$ algorithm with distance parameter $R=0.4$, which groups the set of reconstructed three-dimensional calorimeter TopoClusters into jet objects. These TopoClusters are calibrated using a local hadronic calibration (LC). Jets are required to have $\pt > 10 \GeV$ and $|\eta| < 2.5$ to qualify as a seed for a $\tauh$ candidate. The initial $\tauh$ four-momentum is calculated by summing the TopoClusters within $\Delta R < 0.2$ of the barycenter of the jet seed, where the $\tauh$ mass is assume to be zero.
-
-% \subsubsection{Track and vertex association}
-
-Tracking and vertexing for $\tauh$ occurs in three steps. First, all tracks are collected within $\Delta R < 0.2$ of the jet seed which pass quality criteria described later, but for which no impact parameter requirements are made. Second, the tau vertex (TV) is defined as the reconstructed vertex which maximizes the fraction of track momenta originating from that vertex versus total track momenta, referred to as the tau vertex fraction:
+Tracking and vertexing for $\tauh$ occurs in three steps. First, all tracks are collected within $\Delta R < 0.2$ of the jet seed which pass quality criteria described later, but for which no impact parameter requirements are made. Second, a reconstructed vertex is chosen to estimate from which $pp$ collision the $\tauh$ originates, called the tau vertex (TV). It is defined as the vertex which maximizes the fraction of track momenta originating from that vertex versus total track momenta, referred to as the tau vertex fraction:
 %
 \begin{equation}
   \begin{split}
-    \text{TVF}(\text{vertex}) &= \frac{\sum \pt^\text{tracks associated to vertex}}{\sum \pt^\text{tracks}} \\
+    \text{TVF}(\text{vertex}) &= \frac{\sum \pt^\text{$\tauh$ tracks associated to vertex}}{\sum \pt^\text{$\tauh$ tracks}} \\
   \end{split}
   \label{eqn:taus-tvf}
 \end{equation}
@@ -123,14 +119,14 @@ As a high energy hadron collider, the overwhelming majority of particles observe
 %
 \begin{description}
     \item[Track multiplicity:] \hfill \\
-      $\tauh$ tend to have 1 or 3 associated tracks, where no such specificity is expected for jets.
+      $\tauh$ tend to have 1 or 3 reconstructed tracks, where no such specificity is expected for jets.
     \item[Narrowness:]         \hfill \\
-      $\tauh$ tend to be more narrow in the tracker and calorimeter since tau leptons from electroweak decays are boosted.
+      $\tauh$ tend to be more narrow in the tracker and calorimeter since tau leptons from electroweak decays are boosted, and $\tauh$ do no undergo the same broadening fragmentation as quarks and gluons from QCD processes.
     \item[Displaced vertex:]   \hfill \\
       Tracks from $\tauh$ tend to be more displaced from the primary vertex than tracks in jets due to the finite tau lepton lifetime.
 \end{description}
 %
-The track multiplicity and narrowness features are shown in \cref{fig:taus-eventdisplay}.
+The track multiplicity and narrowness features are shown qualitatively in \cref{fig:taus-eventdisplay}.
 
 \begin{figure}[tp]
   \centering
@@ -139,7 +135,7 @@ The track multiplicity and narrowness features are shown in \cref{fig:taus-event
   \label{fig:taus-eventdisplay}
 \end{figure}
 
-For track multiplicity, reconstructed $\tauh$ are required to have exactly 1 or 3 associated tracks. This is effective at rejecting QCD jets which have a broader track multiplicity spectrum. This requirement has signficant efficiency loss (20-40\%) due to photon conversions from neutral pion decays and pileup, among other effects. The track multiplicity spectrum for $\tauh$ and jets is shown in \cref{fig:taus-trackmultiplicity} in a $\Ztaultauh$-rich selection of data.
+For track multiplicity, reconstructed $\tauh$ are required to have exactly 1 or 3 associated tracks. This is effective at rejecting QCD jets which have a broader track multiplicity spectrum. This requirement has signficant efficiency loss (20-40\%) due to photon conversions from neutral pion decays and pileup, among other effects. The track multiplicity spectrum for $\tauh$ and jets is shown in \cref{fig:taus-trackmultiplicity} in a $\Ztautaumh$-rich selection of data.
 
 \begin{figure}[tp]
   \centering
@@ -228,7 +224,7 @@ To measure the efficiency, templates are built for signal $\tauh$ and background
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_11a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_11b}
-  \caption{Correction factors for simulation for the $\tauh$ jet discriminant efficiency for 1-track (left) and 3-track (right) $\tauh$.}
+  \caption{Correction factors for simulation for the $\tauh$ jet discriminant efficiency for 1-track (left) and 3-track (right) $\tauh$~\cite{PERF-2013-06}.}
   \label{fig:taus-scalefactors}
 \end{figure}
 
@@ -239,7 +235,7 @@ To measure the efficiency, templates are built for signal $\tauh$ and background
 
 The characteristic 1-track signature of $\tauh$ can be mimicked by electrons, even those which fail dedicated electron identification algorithms. This is problematic for $\tautaueh$ analyses because $\Zee$ ($\efake$) peaks in $\mtautau$ near the $\Htautaueh$ mass peak and because high-mass $\ZDYee$ ($\efake$) can have long tails in $\mtautau$.
 
-Despite their similarities, many properties can be used to discriminate electrons from $\tauh$. Electrons tend to produce more transition radiation than $\tauh$, have narrower deposits in the calorimeter, and have shallower deposits in the calorimeter, with rarely any depositions in the hadronic calorimeter. These properties are combined in a multi-variate identification algorithm trained in five regions of $\eta(\tauh)$ to discriminate electrons from simulated $\ZDYee$ against $\tauh$ from simulated $\ZDYtautau$.
+Despite their similarities, many properties can be used to discriminate electrons from $\tauh$. Electrons tend to produce more transition radiation than $\tauh$, have narrower deposits in the calorimeter, and have shallower deposits in the calorimeter, with rarely any depositions in the hadronic calorimeter. These properties are combined in a multi-variate identification algorithm trained in five regions of $\eta(\tauh)$ to discriminate electrons from simulated $\ZDYee$ against $\tauh$ from simulated $\ZDYtautau$. The algorithms are collectively referred to as the electron discriminator or veto. 
 %
 \begin{description}
     \item[TRT high threshold fraction ($\trtHTFrac$):] \hfill \\
@@ -261,7 +257,7 @@ Despite their similarities, many properties can be used to discriminate electron
 \begin{table}[bp] 
   \centering
   \renewcommand{\arraystretch}{1.4}
-  \caption{Discriminating variables used in the $\tauh$ electron veto algorithms~\cite{PERF-2013-06,ATLAS-CONF-2013-064,ATLAS-CONF-2012-142}. Some variables are also used in the jet discrimination algorithms.}
+  \caption{Discriminating variables used in the $\tauh$ electron veto~\cite{PERF-2013-06,ATLAS-CONF-2013-064,ATLAS-CONF-2012-142}. Some variables are also used in the jet discrimination algorithms.}
   \input{tables/taus-evetovars}
   \label{tab:taus-evetovars}
 \end{table}
@@ -270,11 +266,11 @@ Despite their similarities, many properties can be used to discriminate electron
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_08a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_09}
-  \caption{Signal and background distribution for one of the variables in the $\tauh$ electron discrimination algorithm: the TRT high threshold fraction (left), and signal efficiency versus inverse background efficiency for the algorithm (right)~\cite{PERF-2013-06}.}
+  \caption{Simulated signal ($\tauh$) and background ($e$) distributions for the TRT high threshold fraction (left), which is an input to the electron discriminator, and signal efficiency versus inverse background efficiency for the discriminator (right)~\cite{PERF-2013-06}. $\tauh$ candidates in both are required to have one reconstructed track, pass the \texttt{loose} jet discriminator, and not overlap with any \texttt{tight} identified electron candidates. The \texttt{medium} operating point is defined to be 85\% efficient for signal $\tauh$.}
   \label{fig:taus-electronfakes1}
 \end{figure}
 
-The performance of the electron discriminators is evaluated in data and simulation using a $\Zee$ tag-and-probe technique, where one identified electron is tagged and a $\tauh$ candidate is probed where the mass of the electron-$\tauh$ pair is consistent with the $Z$ mass. This measurement can be challenging because few $\efake$ survive the electron discrimination algorithms. The characteristic peak in $\mvis$ is shown in \cref{fig:taus-electronfakes2} before and after application of the algorithms.
+The performance of the electron discriminators is evaluated in data and simulation using a $\Zee$ tag-and-probe technique, where one identified electron is tagged and a $\tauh$ candidate is probed where the mass of the electron-$\tauh$ pair is consistent with the $Z$ mass. This measurement can be challenging because few $\efake$ survive the electron discriminator. The characteristic peak in $\mvis$ is shown in \cref{fig:taus-electronfakes2} before and after application of the algorithms.
 
 In the 2012 version of the electron discriminator, a mis-modeling in simulation is found in the forward region regarding the energy deposited in the third layer of the EM calorimeter, which propagates to the discriminator via $\emFrac$. The mis-modeling is ameliorated in the 2013 version by redefining $\emFrac$ to depend less strongly on the third layer deposition, and the modeling is improved, as shown in \cref{fig:taus-electronfakes3}.
 
@@ -282,7 +278,7 @@ In the 2012 version of the electron discriminator, a mis-modeling in simulation 
   \centering
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_14a}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/eveto_mvis_mediumID_loosePPOLR_looseeveto}
-  \caption{The visible mass $m_{e\tauh}$ in a $\Zee$ selection in data after requiring the $\tauh$ candidate pass the medium jet discrimination algorithm and not overlap spatially with a tight identified electron (left)~\cite{PERF-2013-06} and after additionally requiring the $\tauh$ pass the loose $\tauh$ electron discrimination algorithm (right).}
+  \caption{The visible mass $m_{e\tauh}$ in a $\Zee$ selection in data after requiring the $\tauh$ candidate pass the medium jet discriminator and not overlap spatially with a tight identified electron (left)~\cite{PERF-2013-06} and after additionally requiring the $\tauh$ pass the loose $\tauh$ electron discriminator (right).}
   \label{fig:taus-electronfakes2}
 \end{figure}
 
@@ -290,7 +286,7 @@ In the 2012 version of the electron discriminator, a mis-modeling in simulation 
   \centering
   \includegraphics[width=0.48\textwidth]{figures/ATLAS-CONF-2013-064/fig_22b}
   \includegraphics[width=0.48\textwidth]{figures/PERF-2013-06/fig_14b}
-  \caption{The pseudorapidity $\eta(\tauh)$ in a $\Zee$ selection in data after requiring the $\tauh$ candidate pass the medium jet discrimination algorithm, not overlap spatially with a tight identified electron, and pass the loose $\tauh$ electron discrimination algorithm from 2012 (left)~\cite{ATLAS-CONF-2013-064} and 2013 (right)~\cite{PERF-2013-06}. Statistical uncertainty is not shown on the left. The modeling is improved in the forward region.}
+  \caption{The pseudorapidity $\eta(\tauh)$ in a $\Zee$ selection in data after requiring the $\tauh$ candidate pass the medium jet discriminator, not overlap spatially with a tight identified electron, and pass the loose $\tauh$ electron discriminator from 2012 (left)~\cite{ATLAS-CONF-2013-064} and 2013 (right)~\cite{PERF-2013-06}. Statistical uncertainty is not shown on the left. The modeling is improved in the forward region for the 2013 discriminator.}
   \label{fig:taus-electronfakes3}
 \end{figure}
 

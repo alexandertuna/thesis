@@ -8,12 +8,12 @@
 \section{Introduction}
 \label{sec:strategy-introduction}
 
-The search for the Higgs boson has been the major focus of accelerator physics for decades. Though explored in great detail at experiments at LEP~\cite{2003.lep-higgs} and the Tevatron~\cite{2013.tevatron-higgs}, its existence is only recently confirmed by the ATLAS and CMS experiments at the LHC.
+The search for the Higgs boson has been the major focus of accelerator physics for decades. Though explored in great detail at experiments at LEP~\cite{2003.lep-higgs} and the Tevatron~\cite{2013.tevatron-higgs}, its existence has only recently proven by the ATLAS and CMS experiments at the LHC.
 
 \subsection{ATLAS Higgs program}
 \label{sec:strategy-higgs}
 
-The ATLAS Higgs program is focused on five decay modes expected to have sensitivity to Standard Model Higgs production in the first years of LHC data-taking: $\Hyy$, $\HZZ$, $\HWW$, $\Htautau$, and $\Hbb$. The $\Hyy$ and $\HZZ$ analyses are appealing for their distinctive signatures, and the $\HWW$, $\Htautau$, and $\Hbb$ analyses are appealing for their relatively high rates. The predicted Higgs branching fractions for selected decay modes are given in \cref{tab:strategy-higgs-BR}.
+The ATLAS Higgs program initially focused on five decay modes expected to have sensitivity to Standard Model Higgs production in the first years of LHC data-taking: $\Hyy$, $\HZZ$, $\HWW$, $\Htautau$, and $\Hbb$. The $\Hyy$ and $\HZZ$ analyses are appealing for their distinctive signatures, and the $\HWW$, $\Htautau$, and $\Hbb$ analyses are appealing for their relatively high rates. The predicted Higgs branching fractions for selected decay modes are given in \cref{tab:strategy-higgs-BR}.
 
 \begin{table}[bp]
   \centering
@@ -36,25 +36,27 @@ The Higgs discovery in 2012-2013 is driven by the bosonic decays. The $\Hyy$ and
   \label{fig:strategy-higgs-yyzzww}
 \end{figure}
 
-All three bosonic analyses best measure the ggF Higgs production mechanism because the production of non-resonant pairs of gauge bosons like $\gamma, W, Z$ are rare in the Standard Model. Their best discriminating variable is typically the reconstructed Higgs mass because there are no significant resonant backgrounds. This can be fully reconstructed in the $\Hyy$ and $\HZZ$ analyses because there are no neutrinos in the decays. In the $\HWW$, the Higgs mass can be partially reconstructed by incorporating the $\MET$ in a transverse mass $m_T$.
+Pairs of gauge bosons like $\gamma, W, Z$ are produced infrequently at the LHC, hence all three bosonic analyses best measure the ggF Higgs production mechanism since it is has the highest cross section. Their best discriminating variable is typically the reconstructed Higgs mass because there are no significant resonant backgrounds. This can be fully reconstructed in the $\Hyy$ and $\HZZ$ analyses because there are no neutrinos in the decays. In the $\HWW$, the Higgs mass can be partially reconstructed by incorporating the $\MET$ in a transverse mass $m_T$.
 
 \subsubsection{$\Hfermions$}
 
-With the full Run-I dataset and evolving analysis techniques, the searches for fermionic decays of the Higgs boson become competitive in sensitivity with analyses of the bosonic decays. The $\Hbb$ analysis employs MVA analysis techniques to search for the $VH$ production mechanism, where $V$ is a vector boson that can decay like $\Wlv$, $\Zll$, or $\Zvv$. This production mode is chosen because $b$-quarks are frequently produced at hadron colliders, and searching only for two $b$-jets is prohibitive. Events with two $b$-jets produced in association with a vector boson provide a more optimal tag.
+With the full Run-I dataset and evolving analysis techniques, the searches for fermionic decays of the Higgs boson become competitive in sensitivity with analyses of the bosonic decays. Among these searches, the $\Htautau$ and $\Hbb$ analyses are the most powerful with the Run-I dataset. The $\Htautau$ analysis is described here, especially in the $\tautaulh$ final state. The $\Hbb$ analysis is described in detail elsewhere~\cite{HIGG-2013-23}.
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-23/fig_11a}
-  \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-23/fig_12c}
-  \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-23/fig_13b}
-  \caption{Data and predicted signal and backgrounds in the $V\!\Hbb$ BDT analysis in the 0-lepton (left), 1-lepton (center), and 2-lepton (right) analyses~\cite{HIGG-2013-23}.}
-  \label{fig:strategy-higgs-yyzzww}
-\end{figure}
+%% The $\Hbb$ analysis employs MVA analysis techniques to search for the $VH$ production mechanism, where $V$ is a vector boson that can decay like $\Wlv$, $\Zll$, or $\Zvv$. This production mode is chosen because $b$-quarks are frequently produced at hadron colliders, and searching only for two $b$-jets is prohibitive. Events with two $b$-jets produced in association with a vector boson provide a more optimal tag.
+
+%% \begin{figure}[tp]
+%%   \centering
+%%   \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-23/fig_11a}
+%%   \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-23/fig_12c}
+%%   \includegraphics[width=0.32\textwidth]{figures/HIGG-2013-23/fig_13b}
+%%   \caption{Data and predicted signal and backgrounds in the $V\!\Hbb$ BDT analysis in the 0-lepton (left), 1-lepton (center), and 2-lepton (right) analyses~\cite{HIGG-2013-23}.}
+%%   \label{fig:strategy-higgs-vhbb}
+%% \end{figure}
 
 \subsection{$\Htautau$}
 \label{sec:strategy-htautau}
 
-The $\Htautau$ analysis is naturally broken into three final states (or ``channels'') given the combinatorics of tau lepton decays: $\tautaulh$, $\tautauhh$, and $\tautaull$. Their branching fractions are shown in \cref{fig:strategy-decaypie}. The experimental methods of each final state are conceptually similar though not identical. For brevity, the $\Htautaulh$ analysis is described in detail, and the $\Htautauhh$ and $\Htautaull$ are only briefly summarized.
+The $\Htautau$ analysis is naturally broken into three final states (or ``channels'') given the combinatorics of tau lepton decays: $\tautaulh$, $\tautauhh$, and $\tautaull$. Their branching fractions are shown in \cref{fig:strategy-decaypie}. The experimental methods of each final state are conceptually similar though not identical. This thesis describes the $\Htautaulh$ in detail since it was the focus of the author, and the $\Htautauhh$ and $\Htautaull$ are only briefly summarized.
 
 \begin{figure}[tp]
   \centering
@@ -63,14 +65,14 @@ The $\Htautau$ analysis is naturally broken into three final states (or ``channe
   \label{fig:strategy-decaypie}
 \end{figure}
 
-Unlike the $\Hbosons$ analyses, the $\Htautau$ suffers from a large background of $\Ztautau$. This background cannot be easily disentangled from $\Htautau$ because multiple neutrinos exist in the decays of the tau leptons and $\mtautau$ cannot be fully reconstructed. The cross-section for QCD production for $\Ztautau$ is also $10^6$ times larger than ggF $\Htautau$ production, which is the largest production mode.
+Unlike the $\Hbosons$ analyses, the $\Htautau$ suffers from a large background of $\Ztautau$. This background cannot be easily disentangled from $\Htautau$ because multiple neutrinos exist in the decays of the tau leptons and $\mtautau$ cannot be fully reconstructed. The cross-section for QCD production for $\Ztautau$ is also $10^3$ times larger than ggF $\Htautau$ production~\cite{HIGG-2013-32}, which is the largest production mode.
 
-The cross-section for EW production of $\Ztautau$, however, is only $10^3$ times larger than VBF $\Htautau$ production, which is the second largest production mode and can be tagged via the associated VBF jets. This makes the $\Htautau$ analysis a natural candidate for categorization, much like the $V\!\Hbb$ analysis.
+The cross-section for EW production of $\Ztautau$, however, is only $4$ times larger than VBF $\Htautau$ production~\cite{HIGG-2013-32}, which is the second largest production mode and can be tagged via the associated VBF jets. This makes the $\Htautau$ analysis a natural candidate for \textit{categorization}, where Higgs production modes are targeted with much smaller cross sections than the inclusive production but with better experimental sensitivity.
 
 \section{Triggers}
 \label{sec:strategy-triggers}
 
-The lowest unprescaled single lepton triggers are used for the $\Htautaulh$ data sample. These correspond to offline lepton $\pt$ thresholds of 26 GeV in the 8 TeV dataset. $\LTT$ triggers are considered to recover data events with leptons below the single lepton trigger thresholds, but they are ultimately not used due to lack of sensitivity and additional complications. The triggers used are shown in \cref{tab:strategy-triggers}.
+The lowest unprescaled single lepton triggers, as described in \cref{sec:trigger}, are used for the $\Htautaulh$ data sample. These correspond to offline lepton $\pt$ thresholds of 26 GeV in the 8 TeV dataset. $\LTT$ triggers are considered to recover data events with leptons below the single lepton trigger thresholds, but they are ultimately not used due to lack of sensitivity and additional complications. The triggers used are shown in \cref{tab:strategy-triggers}.
 
 \begin{table}[bp]
   \centering
@@ -96,7 +98,7 @@ Electrons, muons, and $\tauh$ are selected according to the reconstruction, iden
   \label{tab:strategy-objects-emutau}
 \end{table}
 
-Electrons are required to have $\pt >$ 26 GeV and pass the \texttt{tightPP} identification algorithm and be isolated both in the tracker and the calorimeter. Less than 6\% of the magnitude of the electron energy is required to exist in an isolation cone of 0.4 in the tracker and 0.2 in the calorimeter. The recent likelihood identification algorithm~\cite{ATLAS-CONF-2014-032} is explored, and though improvement is observed, time constraints prevent its use in this analysis.
+Electrons are required to have $\pt >$ 26 GeV and pass the \texttt{tightPP} identification algorithm and be isolated both in the tracker and the calorimeter. Less than 6\% of the magnitude of the electron energy is required to exist in an isolation cone of 0.4 in the tracker and 0.2 in the calorimeter. The recent electron likelihood identification algorithm~\cite{ATLAS-CONF-2014-032} is explored, and though improvement is observed, time constraints prevent its use in this analysis.
 
 Muons are required to have $\pt >$ 26 GeV and to satisfy the \texttt{isCombined} reconstruction algorithm and be isolated both in the tracker and the calorimeter. Less than 6\% of the magnitude of the muon energy is required to exist in an isolation cone of 0.4 in the tracker and 0.2 in the calorimeter.
 
@@ -119,7 +121,7 @@ Jets, $b$-jets, and $\MET$ are selected according to the reconstruction, identif
 
 Jets are required to have $\pt >$ 30 GeV and pass a requirement of $\text{JVF} > 0.5$ if they are within the tracking volume $\eta(\text{jet}) < 2.4$. Jets are disambiguated from other physics objects by removing the jet if it overlaps with any electron, muon, or $\tauh$ passing identification requirements previously discussed. Jets are classified as $b$-jets if they are within the tracking volume and pass the 70\% working point of the \texttt{MV1} $b$-tagging algorithm.
 
-$\MET$ is built with hard objects as selected by the analysis thresholds and with a soft term from the STVF method. No explicit cuts on the $\MET$ are made at any stage of the $\tautaulh$ analysis because the $\MET$ spectra for $\Htautau$ does not strongly discriminate the dominant backgrounds, $\Ztautau$ and $\Wjets$, which have neutrinos in the final state. A track-based soft term is explored, and though improvement is observed, time constraints prevent its use in this analysis.
+$\MET$ is calculated with hard objects as selected by the analysis thresholds and with a soft term from the STVF method, as described in \cref{sec:neutrinos}. No explicit cuts on the $\MET$ are made at any stage of the $\tautaulh$ analysis because the $\MET$ spectra for $\Htautau$ does not strongly discriminate the dominant backgrounds, $\Ztautau$ and $\Wjets$, which have neutrinos in the final state. A track-based soft term is explored, and though improvement is observed, time constraints prevent its use in this analysis.
 
 \section{Categorization}
 \label{sec:strategy-categorization}
@@ -138,9 +140,9 @@ Event selection is done in two stages: pre-selection and categorization. The fir
 \subsection{Pre-selection}
 \label{sec:strategy-preselection}
 
-Pre-selection of the $\tautaulh$ analysis requires exactly one light lepton, exactly one $\tauh$, exactly zero $b$-tagged jets, and that the lepton and $\tauh$ have opposite charges. A requirement of $\mT < 70$ GeV is often applied, as well, which is $\approx\!95$\% efficient for $\Htautau$. The pre-selection is summarized in \cref{tab:strategy-selection}.
+Pre-selection of the $\tautaulh$ analysis requires exactly one light lepton, exactly one $\tauh$, exactly zero $b$-tagged jets, and that the lepton and $\tauh$ have opposite charges. A requirement of $\mT < 70$ GeV is applied, which reconstructs a transverse $W$ mass and is $\approx\!95$\% efficient for $\Htautau$. The pre-selection is summarized in \cref{tab:strategy-selection}.
 
-This simple selection is shared among all future signal regions. Individual pieces of the selection can be reversed to define control regions in data rich in $\fakes$. For example, the $\mT$ requirement is reversed to defined a $\Wjets$ control region.
+This simple selection is shared among all signal regions. Individual pieces of the selection can be reversed to define control regions in data rich in $\fakes$. For example, the $\mT$ requirement is reversed to defined a $\Wjets$ control region.
 
 Event kinematics for data and prediction at the pre-selection stage are shown in \cref{fig:stategy-presel-1,fig:stategy-presel-2}. These predictions are discussed in more detail in \cref{chap:backgrounds}. Since the selection is very inclusive, many hundreds of thousands of events pass the pre-selection, especially $\Ztautau$ and $\fakes$.
 
@@ -197,7 +199,7 @@ The second category considered is the boosted category. This category selects ev
 
 This selection emphasizes the ggF Higgs production mechanism with a high $\pt$ ISR jet. The sensitivity of the ggF analysis improves with higher $\pt(H)$ because the $\mtautau$ mass reconstruction techniques have better resolution at smaller $\Delta\phi(\tautau)$. These techniques are discussed in detail in \cref{sec:strategy-mtautau}.
 
-Detailed descriptions of analysis techniques in the boosted category are often omitted, both for brevity and because it is less sensitive to $\Htautau$ than the VBF category.
+Detailed descriptions of analysis techniques in the boosted category are omitted in this thesis. The focus of the author was on the VBF category, which is more sensitive in searching for $\Htautau$.
 
 \begin{table}[bp]
   \centering
@@ -212,16 +214,11 @@ Detailed descriptions of analysis techniques in the boosted category are often o
 \section{$\tautau$ mass reconstruction}
 \label{sec:strategy-mtautau}
 
-The reconstruction of the Higgs mass $\mtautau$ is an area of active study.
-
-\subsection{$\tau\tau$ systems}
-\label{sec:strategy-mtautau-intro}
-
-Because there are three neutrinos in the final state of a $\tautaulh$ decay, the Higgs four-momentum cannot be fully reconstructed like in the $\Hyy$ or $\HZZ$ analyses. Many options exist for reconstructing $\mtautau$ from this under-constrained set of equations, as shown in \cref{tab:strategy-mtautau}.
+Because there are three neutrinos in the final state of a $\tautaulh$ decay, the Higgs four-momentum cannot be fully reconstructed as in the $\Hyy$ or $\HZZ$ analyses. Many options exist for reconstructing $\mtautau$ from this under-constrained system, as shown in \cref{tab:strategy-mtautau}.
 %
 \begin{description}
     \item[Visible mass, $\mvis$:] \hfill \\
-      Mass of the visible decay products (lepton and $\tauh$). This is the simplest mass reconstruction and is robust against potentailly poor $\MET$ resolution. However, it ignores all information about the $\MET$.
+      Mass of the visible decay products (lepton and $\tauh$). This is the simplest mass reconstruction and is robust against poor $\MET$ resolution. However, it ignores all information about the $\MET$.
     \item[Total transverse mass, $\mttot$:] \hfill \\
       Transverse mass of the lepton, $\tauh$, and $\MET$. This is another simple mass reconstruction, and it incorporates the $\MET$. However, no prior knowledge of tau lepton decays is utilized.
     \item[Collinear mass, $\mcol$:] \hfill \\
@@ -277,7 +274,7 @@ The reconstructed $\mMMC$ is shown in the $\tautaulh$ boosted and VBF categories
   \label{fig:strategy-mtautau-raw}
 \end{figure}
 
-To compare the performance of the various $\mtautau$ reconstruction techniques, the efficiency for a requirement $\mtautau > X$ is calculated across the mass range for $\Htautau$ (signal) and $\Ztautau$ (background). An ideal $\mtautau$ algorithm would have $\epsilon(\Htautau)$ near 1 and $\epsilon(\Htautau)$ near 0 for $\mtautau > 100, 110, 120$ GeV. The efficiencies are shown in \cref{fig:strategy-mtautau-ROC} in the boosted and VBF categories. The distributions of the various $\mtautau$ algorithms are shown in \cref{apx:mtautau}.
+To compare the performance of the various $\mtautau$ reconstruction techniques, the efficiency for a requirement $\mtautau > X$ is calculated across the mass range for $\Htautau$ (signal) and $\Ztautau$ (background). An ideal $\mtautau$ algorithm would have $\epsilon(\Htautau)$ near 1 and $\epsilon(\Ztautau)$ near 0 for $\mtautau > 100, 110, 120$ GeV. The efficiencies are shown in \cref{fig:strategy-mtautau-ROC} in the boosted and VBF categories. The distributions of the various $\mtautau$ algorithms are shown in \cref{apx:mtautau}.
 
 \begin{figure}[tp]
   \centering

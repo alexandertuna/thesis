@@ -132,7 +132,7 @@ The TRT surrounds the SCT and is the largest of the ID subdetectors~\cite{cern-j
   \label{tab:experiment-atlas-id}
 \end{table}
 
-The TRT additionally provides information for classifying charged particles as electrons or pions via the detection of transition radiation in the xenon gas mixture in the drift tubes~\cite{ATLAS-CONF-2011-128}. This radiation is produced when a charged particle crosses the boundary between two media of different dielectric constants (polypropylene) and is proportional to the Lorentz $\gamma$ of a particle. For an electron and charged pion of equal momentum, the electron is therefore much more likely to produce TR than the pion since its mass is 200 times smaller.
+The TRT additionally provides information for classifying charged particles as electrons or pions via the detection of transition radiation in the xenon gas mixture in the drift tubes~\cite{ATLAS-CONF-2011-128}. This radiation is produced when a charged particle crosses the boundary between two media of different dielectric constants (polypropylene) and is proportional to the Lorentz $\gamma$ of a particle. For an electron and charged pion of equal momentum, the electron is therefore much more likely to produce TR than the pion since its mass is 200 times smaller. Transition radiation is observed in the TRT as hits well above the threshold for tracking, which are referred to as \textit{high threshold} hits, as opposed to \textit{low threshold}.
 
 \subsubsection{Tracking}
 
@@ -278,6 +278,7 @@ Electrons are reconstructed by matching sliding window calorimeter clusters to I
 Photons have similar detector signatures as electrons since their calorimeter deposits are also longitudinally narrow and expected to be contained within the EM calorimeter~\cite{ATLAS-CONF-2012-123}. Identification algorithm are split into two categories: isolated photons which leave no hits in the ID, and photons which convert into pairs of electrons before reaching the calorimeter.
 
 \subsection{Hadrons}
+\label{sec:hadrons}
 
 Instead of attempting to reconstruct individual hadrons, ATLAS reconstructs collimated sprays of hadrons referred to as jets~\cite{PERF-2012-01}. The scope of jets is extremely broad: their momenta range from $\approx\!10$ GeV to multiple TeV, and spatially they are the largest physics objects, though they can be as small as a single pion. Jets are produced copiously at hadron colliders, which can be problematic with significant pileup.
 
@@ -295,6 +296,7 @@ Jets which arise from the fragmentation of $b$-quarks, referred to as $b$-jets, 
 Jets which arise from the hadronic decay of tau leptons are also treated specially because their signature in the detector can be distinguished from generic QCD jets. They are characteristically produced with 1 or 3 tracks and are relatively narrow objects in the ID and calorimeters~\cite{PERF-2013-06}. They are discussed in greater detail in \cref{sec:taus-hadrons}.
 
 \subsection{Neutrinos}
+\label{sec:neutrinos}
 
 Neutrinos do not interact with the ATLAS detector and escape undetected. But their presence can be inferred from momentum imbalance since each $pp$ collision should conserve momentum. To measure the momentum imbalance, the negative total vector sum of momenta per collision is calculated, and the transverse projection the sum is interpreted to be the total transverse momentum of the neutrinos in the event. This is referred to as the missing transverse energy, $\MET$.
 
@@ -317,6 +319,7 @@ The soft term calculation is challenging because associating calorimeter informa
 % \end{figure}
 
 \section{Triggering}
+\label{sec:trigger}
 
 One of the most challenging aspects of physics at hadron colliders is that the vast majority of $pp$ collisions produce low $\pt$ QCD dijets, and these events are mostly uninteresting in searches for new physics. Additionally, ATLAS does not have the computing resources to reconstruct and save 20 MHz of $pp$ collisions. A huge reduction of data is necessary immediately after the collisions occur. This reduction must be careful not to remove events with interesting signatures.
 
