@@ -255,7 +255,7 @@ The multi-dimensional scan requires probability density functions (PDFs) for eac
   \includegraphics[width=0.32\textwidth]{figures/ATLAS-CONF-2011-132/fig_01a}
   \includegraphics[width=0.32\textwidth]{figures/ATLAS-CONF-2011-132/fig_01b}
   \includegraphics[width=0.32\textwidth]{figures/ATLAS-CONF-2011-132/fig_01c}
-  \caption{Input assumptions of the three-dimensional angle between the visible and invisible tau lepton decay products, for leptonic decays (left), 1-track hadronic decays (center), and 3-track hadronic decays (right)~\cite{ATLAS-CONF-2011-132}.}
+  \caption{Input assumptions of the angle between the visible and invisible tau lepton decay products, for leptonic decays (left), 1-track hadronic decays (center), and 3-track hadronic decays (right)~\cite{ATLAS-CONF-2011-132}.}
   \label{fig:strategy-mtautau-inputs}
 \end{figure}
 
@@ -298,11 +298,11 @@ For these reasons, a multi-variate (MVA) analysis is chosen where event-level ob
 \subsection{Inputs}
 \label{sec:strategy-mva-inputs}
 
-Inputs to the VBF BDT discriminator can be broadly grouped into two classes: $\Htautau$ kinematics and VBF kinematics. $\Htautau$ kinematics provide discrimination against non-$\Htautau$ decays: for example, the $\mMMC$ discriminates against all backgrounds, and the transverse $W$-mass $\mT$ discriminates against $\Wjets$ events. VBF kinematics provide discrimination against non-VBF produced processes: for example, dijets produced in VBF decays tend to have larger $\mjj$ than QCD $\Ztautau$ produced in association with two jets. One of the appealing features of the BDT, however, is that correlations between these groups of variables are exploited in the classification. This is discussed in more detail in \cref{sec:strategy-mva-correlations}.
+Inputs to the VBF BDT discriminator can be broadly grouped into two classes: $\Htautau$ kinematics and VBF kinematics. $\Htautau$ kinematics provide discrimination against non-$\Htautau$ decays: for example, the $\mMMC$ discriminates against all backgrounds, and the transverse $W$-mass $\mT$ discriminates against $\Wjets$ events. VBF kinematics provide discrimination against non-VBF produced processes: for example, dijets produced in VBF tend to have larger $\mjj$ than QCD $\Ztautau$ produced in association with two jets. One of the appealing features of the BDT, however, is that correlations between these groups of variables are exploited in the classification. This is discussed in more detail in \cref{sec:strategy-mva-correlations}.
 
-An interesting sub-set of inputs are centrality variables. These are transformations of discrete properties to continuous observables. The first, $\MET$ $\phi$-centrality, quantifies the $\MET$ between-ness with regard to lepton and $\tauh$ in the transverse plane. $\tautau$ systems expect the $\MET$ to point between the lepton and $\tauh$, whereas non-$\tautau$ systems have no such constraint. The $\MET$ $\phi$-centrality is accordingly maximized when the $\MET$ points directly between the lepton and $\tauh$ and miminized when it points opposite.
+An interesting sub-set of inputs are centrality variables. These are transformations of discrete properties to continuous observables. The first, $\MET$ $\phi$-centrality, quantifies whether the $\MET$ is between the lepton and $\tauh$ in the transverse plane. In $\tautau$ systems, the $\MET$ typically points between the lepton and $\tauh$, whereas non-$\tautau$ systems have no such constraint. The $\MET$ $\phi$-centrality is accordingly maximized when the $\MET$ points directly between the lepton and $\tauh$ and miminized when it points opposite.
 
-The second centrality varible, lepton $\eta$-centrality, quantifies the lepton between-ness with regard to the VBF jets in $\eta$. VBF systems expect the decay products to point between the VBF jets, whereas non-VBF systems have no such constraint. Visualization of the allowed values of the centralities are shown in \cref{fig:strategy-centrality-cartoons}.
+The second centrality varible, lepton $\eta$-centrality, quantifies whether the lepton is between the VBF jets in $\eta$. In VBF systems, the Higgs decay products typically point between the VBF jets in $\eta$, whereas non-VBF systems have no such constraint. Visualization of the allowed values of the centralities are shown in \cref{fig:strategy-centrality-cartoons}.
 
 \begin{figure}[tp]
   \centering
@@ -436,7 +436,7 @@ Two-dimensional contours of variables of interest are shown in \cref{fig:strateg
 
 The $\Htautau$ analysis is one of many recent VBF Higgs analyses on ATLAS to adopt a MVA approach.
 
-In the $\Hyy$ and $\HZZ$ analyses, a VBF BDT is derived which is meant to be uncorrelated with $m_H$. Thes BDT discriminators uses similar input variables as the $\Htautau$ VBF BDT, such as $\mjj$ and $\deta$. For $\Hyy$, a requirement on the output of the BDT discriminator is made ($O_\text{BDT} \ge 0.83$) to enrich the VBF $\Hyy$ process, and the signal is then extracted from a fit of $\myy$. For $\HZZ$, the signal is extracted via a two-dimensional fit of the VBF BDT discriminator and $\mllll$.
+In the $\Hyy$ and $\HZZ$ analyses, a VBF BDT is derived which is meant to be uncorrelated with $m_H$. These BDT discriminators use similar input variables as the $\Htautau$ VBF BDT, such as $\mjj$ and $\deta$. For $\Hyy$, a requirement on the output of the BDT discriminator is made ($O_\text{BDT} \ge 0.83$) to enrich the VBF $\Hyy$ process, and the signal is then extracted from a fit of $\myy$. For $\HZZ$, the signal is extracted via a two-dimensional fit of the VBF BDT discriminator and $\mllll$.
 
 The $\HWW$ MVA analysis takes the same approach as the $\Htautau$ analysis. Variables correlated with the reconstructed Higgs mass, including $m_T$ and $\mll$, are included in the BDT discriminator, and the signal yield is extracted from a fit of the BDT output. 
 

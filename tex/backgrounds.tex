@@ -13,15 +13,15 @@ The $\Ztautau$ process constitutes a major and irreducible background to all thr
 \subsection{$\Zjets$ in simulation}
 \label{sec:backgrounds-zjets}
 
-The simplest approach is to use simulation to model $\Ztautau$. Unfortunately, ATLAS has observed in the $\Zee$ and $\Zmumu$ processes that mis-modeling is present in various aspects of $\Zjets$ kinematics. These aspects include the underlying event, the $Z$ $\pt$, and dijet kinematics as shown in \cref{fig:backgrounds-zue}, \cref{fig:backgrounds-zpt}, and \cref{fig:backgrounds-zjj}, respectively.
+The simplest approach is to use simulation to model $\Ztautau$. Unfortunately, ATLAS has observed in the $\Zee$ and $\Zmumu$ processes that mis-modeling is present in various aspects of $\Zjets$ kinematics. These aspects include the $Z$ $\pt$ and dijet kinematics, as shown in \cref{fig:backgrounds-zpt} and \cref{fig:backgrounds-zjj}, respectively.
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/STDM-2011-42/fig_14b}
-  \includegraphics[width=0.48\textwidth]{figures/STDM-2011-42/fig_17b}
-  \caption{Comparison of data and various predictions in $\Zll$ events of the charged particle scalar momentum density (left) and multiplicity density (right) as a function of $\pt^Z$ in 2011 data-taking~\cite{STDM-2011-42}. Mis-modeling is observed for all predictions.}
-  \label{fig:backgrounds-zue}
-\end{figure}
+% \begin{figure}[tp]
+%   \centering
+%   \includegraphics[width=0.48\textwidth]{figures/STDM-2011-42/fig_14b}
+%   \includegraphics[width=0.48\textwidth]{figures/STDM-2011-42/fig_17b}
+%   \caption{Comparison of data and various predictions in $\Zll$ events of the charged particle scalar momentum density (left) and multiplicity density (right) as a function of $\pt^Z$ in 2011 data-taking~\cite{STDM-2011-42}. Mis-modeling is observed for all predictions.}
+%   \label{fig:backgrounds-zue}
+% \end{figure}
 
 \begin{figure}[tp]
   \centering
@@ -68,7 +68,7 @@ Various steps of the embedding procedure are validated with creative choices of 
   \centering
   \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_03b}
   \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_03a}
-  \caption{Validation of the embedding technique for simulated tau lepton decays in simulated $\Zmm$ events (left) and simulated muons in data $\Zmm$ events (right)~\cite{HIGG-2013-32}. Good agreement is observed in both.}
+  \caption{Validation of the embedding technique for simulated tau lepton decays in simulated $\Zmm$ events (left) and simulated muons in data $\Zmm$ events (right)~\cite{HIGG-2013-32}. Good agreement is observed in both, for the $\mMMC$ (left) and isolation energy (right).}
   \label{fig:backgrounds-embedding-validation}
 \end{figure}
 
@@ -78,7 +78,7 @@ Since all $Z$ kinematics are taken directly from data, no uncertainties regardin
 
 Two uncertainties regarding the embedding procedure are considered. First, the isolation criteria on the data muons are either relaxed or tightened to test the dependence of the prediction on the $\Zmumu$ selection criteria. Second, the amount of cell energy subtracted when removing the data muons is varied by 20\%, which is commensurate with the observed differences in the isolation energy between simulated $\Zmumu$ events merged with simulated $\Ztautau$ decays and simulated $\Ztautau$ events.
 
-The pre-fit impact of these uncertainties on the $\Ztautau$ prediction is shown in each bin of the VBF discriminator in \cref{fig:backgrounds-uncertainties-Ztautau}. The largest uncertainty at high VBF BDT score is the nearly 30\% statistical uncertainty on the prediction, which is an inevitable limitation of the embedding procedure since it relies on the finite number of $\Zmumu$ events in data. The largest systematic uncertainties are component of the $\tauh$ energy scale uncertainty, which are each 10-15\%. These propagate directly to shifts of the $\mMMC$.
+The pre-fit impact of these uncertainties on the $\Ztautau$ prediction is shown in each bin of the VBF discriminator in \cref{fig:backgrounds-uncertainties-Ztautau}. The largest uncertainty at high VBF BDT score is the nearly 30\% statistical uncertainty on the prediction, which is an inevitable limitation of the embedding procedure since it relies on the finite number of $\Zmumu$ events in data. The largest systematic uncertainties are components of the $\tauh$ energy scale uncertainty, which are each 10-15\%. These propagate directly to shifts of the $\mMMC$.
 
 \begin{figure}[tp]
   \includegraphics[width=0.90\textwidth]{figures/uncertainties/uncertainties_lephad_paper14_8TeV_Ztautau_VBF}
@@ -115,15 +115,15 @@ Additionally, the event kinematics of $\Wjets$ and $\Zjets$ events have known mi
 \end{figure}
 \clearpage
 
-Some versions of the ATLAS $\Htautau$ analysis use simulated $\Wjets$, $\Zjets$, and top events with corrections derived from data, in conjunction to same-sign data events, to model $\fakes$~\cite{HIGG-2012-07,ATLAS-CONF-2012-160}. While helpful, these corrections are one-dimensional and cannot account for potential correlations in the mis-modeling, and the same-sign data sample has large statistical uncertainties. For these reasons, this approach is not used in the recent publication.
+Previous ATLAS $\Htautau$ analyses have used simulated $\Wjets$, $\Zjets$, and top events with corrections derived from data, in conjunction to same-sign data events, to model $\fakes$~\cite{HIGG-2012-07,ATLAS-CONF-2012-160}. While helpful, these corrections are one-dimensional and cannot account for potential correlations in the mis-modeling, and the same-sign data sample has large statistical uncertainties. For these reasons, this approach is not used in the recent publication.
 
 \subsection{Fakefactor method}
 
 \subsubsection{Principle}
 
-An alternative data-driven approach is taken wherein events in data which pass all the signal region requirements, but fail the $\tauh$ identification algorithm, are used to model $\fakes$. The principle of this extrapolation is that the $\tauh$ identification variables are uncorrelated with event-level kinematics like $\mjj$, and thus events where the $\tauh$ fails identification requirements provide an unbiased prediction of the $\fakes$ shapes in events where the $\tauh$ passes identification requirements.
+An alternative data-driven approach is taken wherein events in data which pass all the signal region requirements, but fail the $\tauh$ identification algorithm, are used to predict $\fakes$. The principle of this extrapolation is that $\tauh$ identification is uncorrelated with event kinematics like $\mjj$. The kinematics of events where the $\tauh$ fails identification criteria then provide an unbiased prediction of $\fakes$ kinematics in events where the $\tauh$ passes identification.
 
-The anti-identified region of data has a high purity of $\fakes$, as shown in \cref{fig:backgrounds-antitaus-taus,fig:backgrounds-antitaus-jets}. The residual contamination of $\Ztautaulh$ and other processes without $\fakes$ is nonetheless subtracted from the data to form the $\fakes$ estimate. The high purity is helpful because uncertainties on the predicted contamination (e.g., the tau energy scale uncertainty for $\Ztautaulh$) are evaluated to have a negligible impact on the $\fakes$ estimate and can be ignored.
+The anti-identified data sample has a high purity of $\fakes$, as shown in \cref{fig:backgrounds-antitaus-taus,fig:backgrounds-antitaus-jets}. The residual contamination of $\Ztautaulh$ and other processes without $\fakes$ is nonetheless subtracted from the data to form the $\fakes$ estimate. The high purity is helpful because uncertainties on the predicted contamination (e.g., the tau energy scale uncertainty for $\Ztautaulh$) are evaluated to have a negligible impact on the $\fakes$ estimate and can be ignored.
 
 The correlation between the $\tauh$ identifier and event-level kinematics is checked in data in the VBF same-sign region, as shown in \cref{fig:backgrounds-tauid-correlations}. No strong correlations are observed for any event-level kinematic variable, including the final BDT discriminator.
 
@@ -227,7 +227,7 @@ where the regions considered here are rich in $\fakes$ from $\Wjets$, QCD, $\Zje
   \label{fig:backgrounds-regions}
 \end{figure}
 
-To mitigate potential extrapolation costs, $\tauh$ candidates failing identification criteria are required to pass a looser-than-\texttt{loose} requirement. This requirement is optimized to minimize the extrapolation without sacrificing the statistics of the estimate, and a requirement of $\veryloose$ is chosen. For example, if the \texttt{loose} identification criteria requires the $\tauh$ BDT score greater than 0.5, the $\veryloose$ identification criteria requires greater than 0.35. The $\pt(\tauh)$ dependence of this requirement is shown in \cref{fig:backgrounds-workingpoints}.
+To protect against potential extrapolation biases, $\tauh$ candidates failing identification criteria are required to pass a looser-than-\texttt{loose} requirement. This requirement is optimized to minimize the extrapolation without sacrificing the statistics of the estimate, and a requirement of $\veryloose$ is chosen. For example, if the \texttt{loose} identification criteria requires the $\tauh$ BDT score greater than 0.5, the $\veryloose$ identification criteria requires greater than 0.35. The $\pt(\tauh)$ dependence of this requirement is shown in \cref{fig:backgrounds-workingpoints}.
 
 \begin{figure}[tp]
   \centering

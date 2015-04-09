@@ -54,9 +54,9 @@ ax.yaxis.set_label_coords(-0.10, 0.9)
 plt.xlabel("Days since start (Nov. 18, 2014)")
 plt.ylabel("Pages")
 plt.title("")
-plt.text(0.8*maxdayssince, 1.22*max(pages), r"%s pages"   % (lastpages))
-plt.text(0,                1.22*max(pages), r"Updated %s" % (lasttime))
-plt.axis([-1, maxdayssince+1, 0, 1.2*max(pages)])
+plt.text(0.8*maxdayssince, 1.32*max(pages), r"%s pages"   % (lastpages))
+plt.text(0,                1.32*max(pages), r"Updated %s" % (lasttime))
+plt.axis([-1, maxdayssince+1, 0, 1.3*max(pages)])
 plt.grid(False)
 plt.plot(dayssince, pages, "-")
 plt.plot(dayssince, pages, "rd")
@@ -97,27 +97,37 @@ plt.plot([days, days], [90, 125], "k-")
 
 # first draft
 days = (datetime.datetime.strptime("2015-03-02-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
-plt.text(days-25, 200, r"first draft")
+plt.text(days-27, 200, r"first draft")
 plt.plot([days,   days], [195, 204], "k-")
 plt.plot([days-5, days], [204, 204], "k-")
 
-# chapters
-rcParams["text.color"] = "w"
-plt.text((datetime.datetime.strptime("2014-12-25-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 0,  25, r"gathering plots")
-plt.text((datetime.datetime.strptime("2015-02-07-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1,  41, r"prospects")
-plt.text((datetime.datetime.strptime("2015-02-14-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1,  71, r"taus, analysis")
-plt.text((datetime.datetime.strptime("2015-02-21-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1, 101, r"LHC, ATLAS")
-plt.text((datetime.datetime.strptime("2015-02-28-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1, 131, r"theory")
-rcParams["text.color"] = "k"
+# first comments
+days = (datetime.datetime.strptime("2015-03-16-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
+plt.text(days-17, 221, r"comments")
+plt.plot([days,   days], [189, 214], "k-")
 
-# guiding lines
-xsep = 4
-ysep = 25
-plt.plot([ 40,       25], [ 40,  50],      "w-") # gathering plots
-plt.plot([ 80+xsep,  80], [ 55,  55+ysep], "w-") # prospects
-plt.plot([ 87+xsep,  87], [ 85,  85+ysep], "w-") # taus, analysis
-plt.plot([ 93+xsep,  93], [115, 115+ysep], "w-") # LHC, ATLAS
-plt.plot([101+xsep, 101], [145, 145+ysep], "w-") # theory
+# first comments
+days = (datetime.datetime.strptime("2015-04-06-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
+plt.text(days-17, 209, r"defense")
+plt.plot([days,   days], [189, 204], "k-")
+
+# # chapters
+# rcParams["text.color"] = "w"
+# plt.text((datetime.datetime.strptime("2014-12-25-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 0,  25, r"gathering plots")
+# plt.text((datetime.datetime.strptime("2015-02-07-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1,  41, r"prospects")
+# plt.text((datetime.datetime.strptime("2015-02-14-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1,  71, r"taus, analysis")
+# plt.text((datetime.datetime.strptime("2015-02-21-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1, 101, r"LHC, ATLAS")
+# plt.text((datetime.datetime.strptime("2015-02-28-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1, 131, r"theory")
+# rcParams["text.color"] = "k"
+
+# # guiding lines
+# xsep = 4
+# ysep = 25
+# plt.plot([ 40,       25], [ 40,  50],      "w-") # gathering plots
+# plt.plot([ 80+xsep,  80], [ 55,  55+ysep], "w-") # prospects
+# plt.plot([ 87+xsep,  87], [ 85,  85+ysep], "w-") # taus, analysis
+# plt.plot([ 93+xsep,  93], [115, 115+ysep], "w-") # LHC, ATLAS
+# plt.plot([101+xsep, 101], [145, 145+ysep], "w-") # theory
 
 # save
 rcParams["font.size"] = "20"
