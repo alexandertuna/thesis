@@ -79,7 +79,7 @@ These datasets allow the ATLAS and CMS experiments to probe physics of the Stand
 \section{The ATLAS detector}
 \label{sec:atlas}
 
-The ATLAS\footnote{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{s}} detector is a general purpose cylindrical detector centered on one of the LHC collision points. It is 46 meters in length, 25 meters in diameter, and weighs 7000 tons. Assembly began at CERN in 2003 and was completed in 2008. A schematic rending is shown in \cref{fig:atlas-cartoon}.
+The ATLAS\footnote{\textbf{A} \textbf{T}oroidal \textbf{L}HC \textbf{A}pparatu\textbf{s}} detector is a general purpose cylindrical detector centered on one of the LHC collision points. It is 46 meters in length, 25 meters in diameter, and weighs 7000 tons. Assembly began at CERN in 2003 and was completed in 2008. A schematic rendering is shown in \cref{fig:atlas-cartoon}.
 
 \begin{figure}[tp]
   \centering
@@ -107,7 +107,7 @@ The ATLAS collaboration was formed in 1992, and as of 2011, it includes over 300
 
 \subsection{Inner detector and tracking}
 
-The inner detector (ID), also called the \textit{tracker}, is designed to precisely measure the trajectory and momentum of charged particles as they pass through the 2 T magnetic field provided by the solenoid, such as electrons, muons, and charged pions~\cite{cern-jinst-atlas}. The ID is composed of three independent but complementary subdetectors: the Pixel detector, the Semiconductor Tracker (\textit{SCT}), and the Transition Radiation Tracker (\textit{TRT}). These are shown in \cref{fig:atlas-detector-id}. The subdetectors are split into barrel and endcap components, have full $2\pi$ coverage in $\phi$, and have at least coverage in $|\eta|$ up to 2.0. Information from all subdetectors is used to reconstruct tracks and vertices.
+The inner detector (ID), also called the \textit{tracker}, is designed to precisely measure the trajectory and momentum of charged particles as they pass through the 2 T magnetic field provided by the solenoid, such as electrons, muons, and charged pions~\cite{cern-jinst-atlas}. The ID is composed of three independent but complementary subdetectors: the Pixel detector, the Semiconductor Tracker (SCT), and the Transition Radiation Tracker (TRT). These are shown in \cref{fig:atlas-detector-id}. The subdetectors are split into barrel and endcap components, have full $2\pi$ coverage in $\phi$, and have at least coverage in $|\eta|$ up to 2.0. Information from all three subdetectors is used to reconstruct tracks and vertices.
 
 \begin{figure}[tp]
   \centering
@@ -132,11 +132,11 @@ The TRT surrounds the SCT and is the largest of the ID subdetectors~\cite{cern-j
   \label{tab:experiment-atlas-id}
 \end{table}
 
-The TRT additionally provides information for classifying charged particles as electrons or pions via the detection of transition radiation in the xenon gas mixture in the drift tubes~\cite{ATLAS-CONF-2011-128}. This radiation is produced when a charged particle crosses the boundary between two media of different dielectric constants (polypropylene) and is proportional to the Lorentz $\gamma$ of a particle. For an electron and charged pion of equal momentum, the electron is therefore much more likely to produce TR than the pion since its mass is 200 times smaller. Transition radiation is observed in the TRT as hits well above the threshold for tracking, which are referred to as \textit{high threshold} hits, as opposed to \textit{low threshold}.
+The TRT additionally provides information for classifying charged particles as electrons or pions via the detection of transition radiation in the xenon gas mixture in the drift tubes~\cite{ATLAS-CONF-2011-128}. This radiation is produced when a charged particle crosses the boundary between two media of different dielectric constants and is proportional to the Lorentz $\gamma$ of a particle. For an electron and charged pion of equal momentum, the electron is therefore much more likely to produce TR than the pion since its mass is 200 times smaller. Transition radiation is observed in the TRT as hits well above the threshold for tracking, which are referred to as \textit{high threshold} hits, as opposed to \textit{low threshold}.
 
 \subsubsection{Tracking}
 
-Information from these three subdetectors are combined to make \textit{tracks}, which have a unique correspondence to charged particles and are meant to describe their trajectory and momentum. As a charged particle travels through the ID, it leaves \textit{hits} in each subdetector along its trajectory, as shown in \cref{fig:atlas-detector-display-ID}. These are built into tracks with a three-dimensional fit using Kalman filtering tools which can account for scattering as the charged particle traverses the media of the ID~\cite{ATLAS-CONF-2014-047,ATLAS-CONF-2012-042}. The ATLAS tracking algorithms builds tracks for charged particles as low momentum as a few hundred MeV.
+Information from these three subdetectors are combined to make \textit{tracks}, which have a unique correspondence to charged particles and are meant to describe their trajectory and momentum. As a charged particle travels through the ID, it leaves \textit{hits} in each subdetector along its trajectory, as shown in \cref{fig:atlas-detector-display-ID}. These are built into tracks with a three-dimensional fit using Kalman filtering tools which can account for multiple scattering as the charged particle traverses the media of the ID~\cite{ATLAS-CONF-2014-047,ATLAS-CONF-2012-042}. The ATLAS tracking algorithms builds tracks for charged particles as low momentum as a few hundred MeV.
 
 \begin{figure}[tp]
   \centering
@@ -147,7 +147,7 @@ Information from these three subdetectors are combined to make \textit{tracks}, 
 
 A vertex reconstruction algorithm~\cite{ATLAS-CONF-2010-069,ATLAS-CONF-2012-042} is used to determine if multiple tracks originate from a single $pp$ collision. The output of the algorithm is a complete set of vertices per event and the association of each track to a vertex. Starting with the set of all tracks passing simple goodness criteria (e.g., requiring a minimum number of hits in the silicon detectors), a vertex seed is derived from the global maximum of $z$ coordinates, and tracks are associated to that seed using a $\chi^2$ fitting algorithm. Tracks incompatible with the vertex are then used as seeds for the next iteration of the vertexing algorithm until all tracks are exhausted. 
 
-Vertexing is essential for deciding which tracks (and thus physics objects) originate from the $pp$ collision of interest and which tracks do not. The vertex associated to the collision of interest is called the \textit{primary vertex} and is conventionally the vertex with the highest track $\pt^2$ associated to it. If a track is not consistent with having been produced in the primary vertex, it is typically ignored as originating from a pileup interaction which is uninteresting. This is the best and most intuitive method of ignoring pileup contributions since the calorimeter cannot extrapolate particle trajectories back to the beamline with nearly as good precision. A visualization of the power of tracking for pileup rejection is shown in \cref{fig:atlas-detector-pileup}.
+Vertexing is essential for deciding which tracks (and thus physics objects) originate from the $pp$ collision of interest and which tracks do not. The vertex associated to the collision of interest is called the \textit{primary vertex} and is conventionally the vertex with the highest track $\pt^2$ associated to it. If a track is not consistent with having been produced in the primary vertex, it is typically ignored as originating from a pileup interaction. This is the best and most intuitive method of ignoring pileup contributions since the calorimeter cannot extrapolate particle trajectories back to the beamline with nearly as good precision. A visualization of the power of tracking for pileup rejection is shown in \cref{fig:atlas-detector-pileup}.
 
 \begin{figure}[tp]
   \centering
@@ -186,7 +186,7 @@ EM objects, such as photons and electrons, tend to produce narrow calorimeter sh
 \begin{figure}[tp]
   \centering
   \includegraphics[width=0.95\textwidth]{figures/lhc-atlas/svenmenke_showers}
-  \caption{Display of simulated electron (top) and charged pion (bottom) showers, where both particles are 50 GeV and passing through iron~\cite{svenmenke-showers}.}
+  \caption{Display of simulated electron (top) and charged pion (bottom) showers, where both particles are 50 GeV and pass through iron~\cite{svenmenke-showers}.}
   \label{fig:atlas-detector-showers}
 \end{figure}
 
@@ -201,7 +201,7 @@ Calorimeter cells from all subdetectors are combined into higher level objects b
   \label{fig:atlas-detector-clustering}
 \end{figure}
 
-Another clustering algorithm, called the \textit{sliding window} algorithm, is used specially for EM objects. The sliding window algorithm uses a small, rectangular tower window to seed clusters in the EM calorimeter since EM objects tend to produce predictably narrow showers. The topological clustering is preferred for hadronic objects because it is adaptive, and hadronic calorimeter deposits do not typically have simple shapes.
+Another clustering algorithm, called the \textit{sliding window} algorithm, is used specially for EM objects. The sliding window algorithm uses a small, rectangular tower window to seed clusters in the EM calorimeter since EM objects tend to produce predictably narrow showers. % The topological clustering is preferred for hadronic objects because it is adaptive, and hadronic calorimeter deposits do not typically have simple shapes.
 
 \subsection{Muon spectrometry}
 
@@ -233,7 +233,7 @@ One of the major tasks in particle physics is the transformation of low-level de
 
 In addition to reconstruction, physics objects often require identification and calibration. Identification refers to the determination of which particle is responsible for a given detector signal, e.g., is a deposit in the calorimeter more likely to be from an electron or a charged pion. Calibration refers to the porting of a measured energy in the detector to the energy of a physics object. Calibration accounts for effects like pileup and dead material in the subdetectors.
 
-These physics objects are sometimes meant to exactly represent an individual particle, such as a muon. Otherwise, the physics objects represent a collection of particles which are naturally grouped together. For example, a \textit{jet} represents the group of hadrons produced when a quark or gluon propagates through ATLAS.
+These physics objects are often meant to exactly represent an individual particle, such as a muon. Otherwise, the physics objects represent a collection of particles which are naturally grouped together. For example, a \textit{jet} represents the group of hadrons produced when a quark or gluon propagates through ATLAS.
 
 \subsection{Muons}
 
@@ -280,7 +280,7 @@ Photons have similar detector signatures as electrons since their calorimeter de
 \subsection{Hadrons}
 \label{sec:hadrons}
 
-Instead of attempting to reconstruct individual hadrons, ATLAS reconstructs collimated sprays of hadrons referred to as jets~\cite{PERF-2012-01}. The scope of jets is extremely broad: their momenta range from $\approx\!10$ GeV to multiple TeV, and spatially they are the largest physics objects, though they can be as small as a single pion. Jets are produced copiously at hadron colliders, which can be problematic with significant pileup.
+Instead of attempting to reconstruct individual hadrons, ATLAS reconstructs collimated sprays of hadrons referred to as jets~\cite{PERF-2012-01}. Jet momenta range from $\approx\!10$ GeV to multiple TeV, and spatially they are the largest physics objects, though they can be as small as a single pion. Jets are produced copiously at hadron colliders, which can be problematic with significant pileup.
 
 Jets are reconstructed from calorimeter topological clusters using the anti-$k_t$ algorithm~\cite{2008.antikt} with a distance parameter of $R=0.4$. This is an iterative clustering algorithm which groups topological clusters into jets based on their spatial proximity and momentum. Tracks can be associated to a jet based on simple spatial matching or the more robust ghost association~\cite{ATLAS-CONF-2013-083}. A slew of corrections are applied to calibrate the energy and position of jets~\cite{PERF-2012-01,ATLAS-CONF-2013-083}. These correct for effects like pileup, dead material, and the non-compensating nature of the calorimeters. Jets can additionally be classifed as hard-scatter or pileup jets based on the fraction of their track momenta consistent with originating from the primary vertex~\cite{ATLAS-CONF-2014-018}.
 
@@ -323,7 +323,7 @@ The soft term calculation is challenging because associating calorimeter informa
 
 One of the most challenging aspects of physics at hadron colliders is that the vast majority of $pp$ collisions produce low $\pt$ QCD dijets, and these events are mostly uninteresting in searches for new physics. Additionally, ATLAS does not have the computing resources to reconstruct and save 20 MHz of $pp$ collisions. A huge reduction of data is necessary immediately after the collisions occur. This reduction must be careful not to remove events with interesting signatures.
 
-The scheme of fast reduction is called \textit{triggering}. Reconstruction and decision-making in the trigger is referred to as occuring \textit{online}, whereas the nominal ATLAS reconstruction occurs \textit{offline}. The trigger is split into two stages. First, all $pp$ collisions are sent to a hardware trigger with a much coarser granularity than offline. Events passing the hardware trigger are then sent to software triggers with granularity comparable to offline. The hardware trigger is called \textit{Level 1} (L1), and the software triggers are called the \textit{High Level Trigger} (HLT). The HLT step is additional split into two stages, \textit{Level 2} (L2) and \textit{Event Filter} (EF). The reduction and latency targets are shown in \cref{tab:experiment-trigger}.
+The scheme of fast reduction is called \textit{triggering}. Reconstruction and decision-making in the trigger is referred to as occuring \textit{online}, whereas the nominal ATLAS reconstruction occurs \textit{offline}. The trigger is split into two stages. First, all $pp$ collisions are sent to a hardware trigger with much coarser granularity than offline. Events passing the hardware trigger are then sent to software triggers with granularity comparable to offline. The hardware trigger is called \textit{Level 1} (L1), and the software triggers are called the \textit{High Level Trigger} (HLT). The HLT step is additional split into two stages, \textit{Level 2} (L2) and \textit{Event Filter} (EF). The reduction and latency targets are shown in \cref{tab:experiment-trigger}.
 
 \begin{table}[bp]
   \centering
@@ -352,7 +352,7 @@ In Run-I, much of the L1 bandwidth is allocated to the inclusive single muon and
 
 The HLT latency is much less restrictive than at L1. By the end of the HLT, tracking and topological clustering algorithms are run over a full scan and with the nominal granularity of the detector. Reconstruction, identification, and calibration algorithms closely resemble their offline counterparts, with adaptations to online made as necessary. 
 
-Like L1, much of the HLT bandwidth is allocated to the inclusive single muon and single electron triggers. The rate and predicted composition of these HLT triggers are shown in \cref{fig:prospects-trigger-HLT}. Electrons and muons from $W/Z$ decays are irreducible contributions to the HLT rate and are one of the limiting factors.
+Like L1, much of the HLT bandwidth is allocated to the inclusive single muon and single electron triggers. The rate and predicted composition of these HLT triggers are shown in \cref{fig:prospects-trigger-HLT}. Electrons and muons from $W/Z$ decays are irreducible contributions to the HLT rate and are among the limiting factors.
 
 \begin{figure}[tp]
   \centering

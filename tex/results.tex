@@ -41,17 +41,17 @@ The likelihood function is shown in \cref{fig:results-likelihood-eqn}. It is the
   \label{fig:results-likelihood-eqn}
 \end{figure}
 
-The first term of the likelihood is a Poisson function, in each bin of each category, describing the probability of observing $N$ events given the predicted number of signal events $S$ and background events $B$. The number of signal events is scaled by the signal strength $\upmu$ which is shared among bins and categories. The number of background events is scaled by a parameter $\beta_k$ which can be category-dependent. The signal and background predictions are modified by response functions $\nu(\theta)$ for each nuisance parameter $\theta$. 
+The first term of the likelihood is a Poisson function, in each bin \textit{b} of each category \textit{i}, describing the probability of observing $N$ events given the predicted number of signal events $S$ and background events $B$. The number of signal events is scaled by the signal strength $\upmu$ which is shared among bins and categories. The number of background events is scaled by a parameter $\beta_k$ which can be category-dependent. The signal and background predictions are modified by response functions $\nu(\theta)$ for each nuisance parameter $\theta$. 
 
 The response function for bin-wise systematic uncertainties is given by $\nu(\theta) = 1 + \theta\cdot\frac{\Delta_\theta}{N}$, where $\Delta_\theta$ is the given uncertainty on $\theta$ in units of $N$, i.e., $N\cdot\nu(\theta = \pm 1) = N \pm \Delta_\theta$ for $N=S,B$. The response function for statistical uncertainties on the predictions is $\nu(\theta) = \theta$.
 
-The second term is a Poisson function, in each control region, describing the probability of observing $N$ events given the predicted number of background events $B$. The number of background events is scaled by a parameter $\beta_k$ which is shared with the first term. The statistical power of the control region data is then used to constrain the background normalization in the signal region.
+The second term is a Poisson function, in each control region \textit{l}, describing the probability of observing $N$ events given the predicted number of background events $B$. The number of background events is scaled by a parameter $\beta_k$ which is shared with the first term. The statistical power of the control region data is then used to constrain the background normalization in the signal region.
 
 The third term is a Gaussian function, for each systematic uncertainty, describing the probability of a given nuisance parameter being pulled away from its nominal value. This is a penalty term for choosing a less likely value of the nuisance parameter than the nominal value. The choice of Gaussian function to describe the uncertainty is convention.
 
 The fourth term is a Poisson function, in each bin of each category, describing the uncertainty due to finite sample size of the signal and background predictions. This is especially relevant for predictions which have natural statistical limitations, e.g., predicting the $\Ztautau$ background with $\Zmumu$ events from data.
 
-To extract the observed $\upmu$ and other quantities, the likelihood is maximized with respect to $\upmu$ and the associated nuisance parameters $\theta$. This maximization yields the most probable $\upmu$. The likelihood is evaluated at $\vartheta = 0$ and $\xi = \zeta$ which imposes that the most probable value of each systematic nuisance parameter is zero and the statistical nuisance parameters is one.
+To extract the observed $\upmu$ and other quantities, the likelihood is maximized with respect to $\upmu$ and the associated nuisance parameters $\theta$. This maximization yields the most probable $\upmu$. The likelihood is evaluated at $\vartheta = 0$ and $\xi = \zeta$ which imposes that the most probable value of each systematic nuisance parameter is zero and statistical nuisance parameter is one.
 
 \subsection{Features}
 
@@ -113,12 +113,12 @@ To emphasize the most signal-like regime, two distributions are built from the s
 \clearpage
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_08b}
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_08a}
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_08d}
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_08c}
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_08f}
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_08e}
+  \includegraphics[width=0.45\textwidth]{figures/HIGG-2013-32/fig_08b}
+  \includegraphics[width=0.45\textwidth]{figures/HIGG-2013-32/fig_08a}
+  \includegraphics[width=0.45\textwidth]{figures/HIGG-2013-32/fig_08d}
+  \includegraphics[width=0.45\textwidth]{figures/HIGG-2013-32/fig_08c}
+  \includegraphics[width=0.45\textwidth]{figures/HIGG-2013-32/fig_08f}
+  \includegraphics[width=0.45\textwidth]{figures/HIGG-2013-32/fig_08e}
   \caption{Distributions of the 8 TeV BDT discriminants in all six analysis categories after the global fit~\cite{HIGG-2013-32}.}
   \label{fig:results-bdts}
 \end{figure}
@@ -133,13 +133,13 @@ To emphasize the most signal-like regime, two distributions are built from the s
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_10}
-  \includegraphics[width=0.48\textwidth]{figures/HIGG-2013-32/fig_11b}
+  \includegraphics[width=0.45\textwidth]{figures/HIGG-2013-32/fig_10}
+  \includegraphics[width=0.45\textwidth]{figures/HIGG-2013-32/fig_11b}
   \caption{Plots of data and prediction which emphasize the most sensitive regions~\cite{HIGG-2013-32}. The individual BDT bins from all six categories are ordered by S/B and plotted on a shared axis (left) and entries in the $\mMMC$ distribution are weighted by $\text{log}(1+S/B)$ (right).}
   \label{fig:results-money-plots}
 \end{figure}
 
-The dominant uncertainties on the measurement of the signal strength parameters include statistical uncertainties on the data from the signal regions, uncertainties on the jet and tau energy scales, uncertainties on the normalization of the $\Ztautau$ and top backgrounds, and theoretical uncertainties. The contributions of each of these significant sources to the uncertainty of the measured signal strength are summarized in \cref{fig:results-uncertainties-1,fig:results-uncertainties-2}.
+The dominant uncertainties on the measurement of the signal strength parameters include statistical uncertainties on the data from the signal regions, uncertainties on the jet and tau energy scales, uncertainties on the normalization of the $\Ztautau$ and top backgrounds, and theoretical uncertainties. The contributions of each of these significant sources to the uncertainty of the measured signal strength are summarized in \cref{fig:results-uncertainties-1}.
 
 \begin{figure}[tp]
   \centering
@@ -148,12 +148,12 @@ The dominant uncertainties on the measurement of the signal strength parameters 
   \label{fig:results-uncertainties-1}
 \end{figure}
 
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=0.90\textwidth]{figures/HIGG-2013-32/fig_07}
-  \caption{Comparison of the impact and pull of the dominant individual systematic uncertainties on the absolute uncertainty on $\upmu$~\cite{HIGG-2013-32}.}
-  \label{fig:results-uncertainties-2}
-\end{figure}
+%% \begin{figure}[tp]
+%%   \centering
+%%   \includegraphics[width=0.90\textwidth]{figures/HIGG-2013-32/fig_07}
+%%   \caption{Comparison of the impact and pull of the dominant individual systematic uncertainties on the absolute uncertainty on $\upmu$~\cite{HIGG-2013-32}.}
+%%   \label{fig:results-uncertainties-2}
+%% \end{figure}
 
 \section{High score events in data}
 
