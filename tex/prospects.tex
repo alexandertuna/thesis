@@ -32,7 +32,7 @@ This is especially true of triggers which rely on $\tauh$ since hadronic objects
 
 \subsection{Run-I triggers for $\Htautau$}
 
-In Run-I, only the $\Htautauhh$ analysis rely on $\tauh$ triggers for physics. The $\Htautaulh$ use single lepton triggers with an offline threshold of 26 GeV. $\LTT$ triggers are considered but ultimately dropped because they bring additional complication to the analysis without significant improvement in sensitivity. The $\Htautaull$ analysis relies on single and di-lepton triggers. The list of triggers used in 2012 data-taking, and their expected 2015 versions, is shown in \cref{tab:prospects-triggersL1} and \cref{tab:prospects-triggersHLT}.
+In Run-I, only the $\Htautauhh$ analysis relies on $\tauh$ triggers for physics. The $\Htautaulh$ use single lepton triggers with an offline threshold of 26 GeV. $\LTT$ triggers are considered but ultimately dropped because they bring additional complication to the analysis without significant improvement in sensitivity. The $\Htautaull$ analysis relies on single and di-lepton triggers. The list of triggers used in 2012 data-taking, and their expected 2015 versions, is shown in \cref{tab:prospects-triggersL1} and \cref{tab:prospects-triggersHLT}.
 
 \begin{table}[bp] 
   \centering
@@ -56,7 +56,7 @@ Trigger options for Run-II are most critical for the $\Htautauhh$ since it relie
 
 \subsubsection{Object thresholds}
 
-The first and simplest option is to raise object thresholds in the trigger. Since the Run-I analysis signal regions only include event topologies with additional jets, triggering on one or two additional jets in the event is considered. To assess the impact of this, the Run-I analysis is re-run but with progressively higher thresholds on the final state objects, and the resulting sensitivity is derived. This is shown in \cref{fig:prospects-trigger-evolution}.
+The first and simplest option is to raise object thresholds in the trigger. Since the Run-I signal regions only include event topologies with additional jets, triggering on one or two additional jets in the event is considered. To assess the impact of this, the Run-I analysis is re-run but with progressively higher thresholds on the final state objects, and the resulting sensitivity is derived. This is shown in \cref{fig:prospects-trigger-evolution}.
 
 \begin{figure}[tp]
   \centering
@@ -74,11 +74,11 @@ For $\Htautauhh$, raising the threshold on the lead $\tauh$ is more promising th
 
 A new feature of the L1 trigger in 2015 is the ability to make topological selections, whereas in Run-I, only object multiplicity selections could be made. This topological selection are implemented via the new \texttt{L1topo} processor~\cite{ATL-DAQ-PROC-2013-039,ATL-COM-DAQ-2014-005}.
 
-At L1, the dominant background for $\tauh$ triggers is QCD di-jet production. Topological selections can be used in various ways to suppress this process, especially in the $\Htautau$ analysis signal regions where the $\tau\tau$ system tends to be boosted.
+At L1, the dominant background for $\tauh$ triggers is QCD di-jet production. Topological selections can be used in various ways to suppress this process, especially in the $\Htautau$ signal regions where the $\tau\tau$ system tends to be boosted.
 %
 \begin{description}
     \item[$\Delta\phi(\tau\tau) < X$:] \hfill \\
-      QCD di-jets tend to be produced back-to-back in the transverse plane, and the $\tau\tau$ system is usually not due to transverse boost.
+      QCD di-jets tend to be produced back-to-back in the transverse plane, and the $\tau\tau$ system tends to have smaller $\Delta\phi$ due to transverse boost of the $Z/H$.
     \item[$\Delta\eta(\tau\tau) < X$:] \hfill \\
       QCD di-jets tend to be produced broadly in $\eta$, and the $\tautau$ system tends to have smaller $\Delta\eta$ due to longitudal boost of the $Z/H$.
     \item[$\Delta R(\tau\tau) < X$:] \hfill \\
@@ -226,7 +226,7 @@ The definition of L1 isolation is also reconsidered for 2015 data-taking. In 201
   \label{eqn:prospects-L1iso}
 \end{equation}
 %
-With the definition, the 2012 isolation requirement is $m=0$ and $b=4$.
+With this definition, the 2012 isolation requirement is $m=0$ and $b=4$.
 
 Removing the isolation requirement is considered above $\pt^\text{L1} = 60$ GeV. This is equivalent to a logical \texttt{OR} with the lowest unprescaled single $\tauh$ trigger, \texttt{TAU60}, and thus will not cost any additional unique rate to the total L1 trigger menu.
 
@@ -260,7 +260,7 @@ Despite significantly harsher data-taking conditions in 2015, triggers for the $
   \label{tab:prospects-taumenu}
 \end{table}
 
-Contingency plans are considered due to the uncertainty of the rate prediction and the uncertainty of the LHC data-taking conditions.
+Contingency plans are considered due to the uncertainty of the rate prediction and the uncertainty of the LHC data-taking conditions. If the $\Htautau$ section of the $\tauh$ L1 menu is asked to reduce its rate, options like raising the $\tauh$ threshold of the $\LTT$ triggers or raising the jet threshold of all triggers are available with minor physics losses. If additional rate is available, the jet threshold or $\Delta R(\tau\tau)$ requirement can be relaxed. The contingencies are shown in \cref{tab:prospects-contingencies}.
 
 \begin{table}[bp]
   \centering
@@ -270,7 +270,7 @@ Contingency plans are considered due to the uncertainty of the rate prediction a
   \label{tab:prospects-contingencies}
 \end{table}
 
-\clearpage
+% \clearpage
 
 \section{HL-LHC}
 \label{sec:prospects-hllhc}
