@@ -143,9 +143,12 @@
 \settrimmedsize{11in}{8.5in}{*}
 \settrims{0in}{0in}
 \ifthenelse{\boolean{boolVersionForPenn}}{
-  \settypeblocksize{8in}{5.625in}{*}
-  \setlrmargins{1.625in}{*}{*}
-  \setulmargins{1.5in}{*}{*}
+  %% \settypeblocksize{8in}{5.625in}{*} %% Penn
+  %% \setlrmargins{1.625in}{*}{*}       %% Penn
+  %% \setulmargins{1.5in}{*}{*}         %% Penn
+  \settypeblocksize{8.2in}{6.1in}{*}    %% CDS
+  \setlrmargins{1.2in}{*}{*}            %% CDS
+  \setulmargins{1.4in}{*}{*}            %% CDS
 }{
   \settypeblocksize{8.2in}{6.1in}{*}
   \setlrmargins{1.2in}{*}{*}
