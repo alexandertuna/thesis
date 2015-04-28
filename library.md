@@ -1,25 +1,22 @@
 # Library
 
-#### Htautau paper 2014: [ATLAS-HIGG-2013-32]() ([glance](https://atglance.web.cern.ch/atglance/analysis/detailAnalysis.php?readonly=true&id=4782))
+#### Papers
 
-#### Htautau CONF 2014: [ATLAS-CONF-2014-061](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2014-061/) ([glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=6928))
+| note                  | links |
+| --------------------- | ----- |
+| ATLAS Run-I Htautau   | [journal](http://dx.doi.org/10.1007/JHEP04(2015)117),        [arxiv](http://arxiv.org/abs/1501.04943), [figures](http://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/HIGG-2013-32/), [glance](https://atglance.web.cern.ch/atglance/analysis/detailAnalysis.php?readonly=true&id=4782) |
+| ATLAS tau performance | [journal](), [arxiv](http://arxiv.org/abs/1412.7086), [figures](http://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/PERF-2013-06/), [glance](https://atglance.web.cern.ch/atglance/analysis/detailAnalysis.php?readonly=true&id=4632) |
+| ATLAS Z'tautau, 2011  | [journal](http://dx.doi.org/10.1016/j.physletb.2013.01.040), [arxiv](http://arxiv.org/abs/1210.6604),  [figures](http://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PAPERS/EXOT-2012-03/), [glance](https://atglance.web.cern.ch/atglance/analysis/detailAnalysis.php?readonly=true&id=1923) |
 
-#### Tau performance paper 2014: [ATLAS-PERF-2013-06]() ([glance](https://atglance.web.cern.ch/atglance/analysis/detailAnalysis.php?readonly=true&id=4632))
+#### CONF and PUB preliminary notes
 
-#### TauID CONF 2013: [ATLAS-CONF-2013-064](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-064/) ([glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=4946))
+| note                 | links |
+| -------------------- | ----- |
+| ATLAS Htautau, 2014  | [ATL-PHYS-PUB-2014-018](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2014-018/)
+| ATLAS Htautau, 2014  | [ATLAS-CONF-2014-061](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2014-061/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=6928) | 
+| ATLAS Htautau, 2013  | [ATLAS-CONF-2013-108](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-108/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=5285) | 
+| ATLAS Htautau, 2012  | [ATLAS-CONF-2012-160](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2012-160/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=3585) | 
+| ATLAS tau ID, 2013   | [ATLAS-CONF-2013-064](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-064/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=4946) | 
+| ATLAS Z'tautau, 2011 | [ATLAS-CONF-2012-067](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2012-067/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=3565) | 
 
-#### TES CONF 2013: [ATLAS-CONF-2013-044](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-044/) ([glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=4945))
 
-#### Htautau projection 2014: [ATL-PHYS-PUB-2014-018](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2014-018/)
-
-#### Tau trigger 2011: [ATLAS-CONF-2013-006](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-006/)
-
-#### Tau trigger 2010: [ATLAS-CONF-2010-090](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2010-090/)
-
-#### CERN FAQ: [CERN-Brochure-2009-003-Eng](https://cds.cern.ch/record/1165534/files/CERN-Brochure-2009-003-Eng.pdf)
-
-#### ATLAS SM: [CombinedSummaryPlots-SM](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CombinedSummaryPlots/SM/)
-
-#### Stirling XS: [WJS](http://www.hep.ph.ic.ac.uk/~wstirlin/plots/plots.html)
-
-#### Publicity plots: [USLHC](http://www.uslhc.us/Images) and [ATLAS](http://www.atlas.ch/photos/)
