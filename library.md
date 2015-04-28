@@ -13,10 +13,10 @@
 | note                 | links |
 | -------------------- | ----- |
 | ATLAS Htautau, 2014  | [ATL-PHYS-PUB-2014-018](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/PUBNOTES/ATL-PHYS-PUB-2014-018/)
-| ATLAS Htautau, 2014  | [ATLAS-CONF-2014-061](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2014-061/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=6928) | 
-| ATLAS Htautau, 2013  | [ATLAS-CONF-2013-108](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-108/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=5285) | 
-| ATLAS Htautau, 2012  | [ATLAS-CONF-2012-160](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2012-160/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=3585) | 
-| ATLAS tau ID, 2013   | [ATLAS-CONF-2013-064](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-064/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=4946) | 
-| ATLAS Z'tautau, 2011 | [ATLAS-CONF-2012-067](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2012-067/) [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=3565) | 
+| ATLAS Htautau, 2014  | [ATLAS-CONF-2014-061](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2014-061/), [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=6928) | 
+| ATLAS Htautau, 2013  | [ATLAS-CONF-2013-108](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-108/), [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=5285) | 
+| ATLAS Htautau, 2012  | [ATLAS-CONF-2012-160](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2012-160/), [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=3585) | 
+| ATLAS tau ID, 2013   | [ATLAS-CONF-2013-064](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2013-064/), [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=4946) | 
+| ATLAS Z'tautau, 2011 | [ATLAS-CONF-2012-067](https://atlas.web.cern.ch/Atlas/GROUPS/PHYSICS/CONFNOTES/ATLAS-CONF-2012-067/), [glance](https://atglance.web.cern.ch/atglance/confnote/detailAnalysis.php?readonly=true&id=3565) | 
 
 
