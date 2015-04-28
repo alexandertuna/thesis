@@ -10,6 +10,8 @@ last = ""
 dayssince = []
 pages = []
 
+annotate = True
+
 # the template already has 8 pages. thx reecer.
 dayssince.append(0)
 pages.append(8)
@@ -54,80 +56,53 @@ ax.yaxis.set_label_coords(-0.10, 0.9)
 plt.xlabel("Days since start (Nov. 18, 2014)")
 plt.ylabel("Pages")
 plt.title("")
-plt.text(0.8*maxdayssince, 1.32*max(pages), r"%s pages"   % (lastpages))
-plt.text(0,                1.32*max(pages), r"Updated %s" % (lasttime))
-plt.axis([-1, maxdayssince+1, 0, 1.3*max(pages)])
+ymax = 1.3*max(pages) if annotate else 1.1*max(pages)
+plt.text(0.81*maxdayssince, 1.02*ymax, r"%s pages"   % (lastpages))
+plt.text(-6,                1.02*ymax, r"Updated %s" % (lasttime))
+plt.axis([-7, maxdayssince+7, 0, ymax])
 plt.grid(False)
 plt.plot(dayssince, pages, "-")
 plt.plot(dayssince, pages, "rd")
-plt.fill_between(dayssince, 0, pages, facecolor='blue', interpolate=True)
+plt.fill_between(dayssince, 0, pages, facecolor="blue", interpolate=True)
+plt.text(10, 0.85*ymax, r"Alex's thesis")
+# plt.text(maxdayssince-90, 0.10*ymax, r"defense: April 6, 2015", color="white")
 
-# annotate
-rcParams["font.size"] = "16"
-ysep = 7
+if annotate:
 
-# thanksgiving
-days = (datetime.datetime.strptime("2014-11-27-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
-plt.text(days-6, 123+ysep, r"Thanks-")
-plt.text(days-4, 110+ysep, r"giving")
-plt.plot([days, days], [30, 110], "k-")
-
-# winter break
-days = (datetime.datetime.strptime("2014-12-13-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
-plt.text(days-12, 178+ysep, r"leave CERN")
-plt.text(days-9,  165+ysep, r"for winter")
-plt.plot([days, days], [80, 165], "k-")
-
-# holidays
-days = (datetime.datetime.strptime("2014-12-25-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
-plt.text(days-9, 133+ysep, r"Christmas")
-plt.text(days+4, 115+ysep, r"NYE")
-plt.plot([days,   days],   [90, 133], "k-")
-plt.plot([days+6, days+6], [90, 115], "k-")
-
-# job interviews
-days = (datetime.datetime.strptime("2015-01-15-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
-plt.text(days-10, 175+ysep, r"interviews")
-plt.plot([days, days], [90, 175], "k-")
-
-# job offers
-days = (datetime.datetime.strptime("2015-01-27-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
-plt.text(days-4, 125+ysep, r"offer")
-plt.plot([days, days], [90, 125], "k-")
-
-# first draft
-days = (datetime.datetime.strptime("2015-03-02-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
-plt.text(days-27, 200, r"first draft")
-plt.plot([days,   days], [195, 204], "k-")
-plt.plot([days-5, days], [204, 204], "k-")
-
-# first comments
-days = (datetime.datetime.strptime("2015-03-16-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
-plt.text(days-17, 221, r"comments")
-plt.plot([days,   days], [189, 214], "k-")
-
-# first comments
-days = (datetime.datetime.strptime("2015-04-06-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
-plt.text(days-17, 209, r"defense")
-plt.plot([days,   days], [189, 204], "k-")
-
-# # chapters
-# rcParams["text.color"] = "w"
-# plt.text((datetime.datetime.strptime("2014-12-25-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 0,  25, r"gathering plots")
-# plt.text((datetime.datetime.strptime("2015-02-07-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1,  41, r"prospects")
-# plt.text((datetime.datetime.strptime("2015-02-14-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1,  71, r"taus, analysis")
-# plt.text((datetime.datetime.strptime("2015-02-21-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1, 101, r"LHC, ATLAS")
-# plt.text((datetime.datetime.strptime("2015-02-28-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days - 1, 131, r"theory")
-# rcParams["text.color"] = "k"
-
-# # guiding lines
-# xsep = 4
-# ysep = 25
-# plt.plot([ 40,       25], [ 40,  50],      "w-") # gathering plots
-# plt.plot([ 80+xsep,  80], [ 55,  55+ysep], "w-") # prospects
-# plt.plot([ 87+xsep,  87], [ 85,  85+ysep], "w-") # taus, analysis
-# plt.plot([ 93+xsep,  93], [115, 115+ysep], "w-") # LHC, ATLAS
-# plt.plot([101+xsep, 101], [145, 145+ysep], "w-") # theory
+    # annotate
+    rcParams["font.size"] = "14"
+    ysep = 7
+    
+    # thanksgiving
+    days = (datetime.datetime.strptime("2014-11-27-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
+    plt.text(days-10, 123+ysep, r"Thanks-")
+    plt.text(days-8,  110+ysep, r"giving")
+    plt.plot([days, days], [30, 110], "k-")
+    
+    # holidays
+    days = (datetime.datetime.strptime("2014-12-25-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
+    plt.text(days-12, 145+ysep, r"Christmas")
+    plt.plot([days,   days],   [90, 145], "k-")
+    
+    # job offer
+    days = (datetime.datetime.strptime("2015-01-27-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
+    plt.text(days-10, 125+ysep, r"job offer")
+    plt.plot([days, days], [90, 125], "k-")
+    
+    # first draft
+    days = (datetime.datetime.strptime("2015-03-02-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
+    plt.text(days-11, 221, r"first draft")
+    plt.plot([days,   days], [195, 214], "k-")
+    
+    # defense
+    days = (datetime.datetime.strptime("2015-04-06-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
+    plt.text(days-12, 209, r"defense")
+    plt.plot([days,   days], [192, 204], "k-")
+    
+    # submit
+    days = (datetime.datetime.strptime("2015-04-28-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days
+    plt.text(days-12, 221, r"submit")
+    plt.plot([days,   days], [192, 214], "k-")
 
 # save
 rcParams["font.size"] = "20"
