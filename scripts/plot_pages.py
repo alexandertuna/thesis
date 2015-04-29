@@ -72,12 +72,12 @@ if calendar:
 
     plt.xlabel("")
     plt.tick_params(axis='x', which='major', labelsize=0)
-    plt.text((datetime.datetime.strptime("2014-11-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Nov")
-    plt.text((datetime.datetime.strptime("2014-12-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Dec")
-    plt.text((datetime.datetime.strptime("2015-01-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Jan")
-    plt.text((datetime.datetime.strptime("2015-02-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Feb")
-    plt.text((datetime.datetime.strptime("2015-03-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Mar")
-    plt.text((datetime.datetime.strptime("2015-04-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Apr")
+    plt.text((datetime.datetime.strptime("2014-11-10-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Nov")
+    plt.text((datetime.datetime.strptime("2014-12-10-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Dec")
+    plt.text((datetime.datetime.strptime("2015-01-10-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Jan")
+    plt.text((datetime.datetime.strptime("2015-02-10-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Feb")
+    plt.text((datetime.datetime.strptime("2015-03-10-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Mar")
+    plt.text((datetime.datetime.strptime("2015-04-10-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Apr")
 
 if annotate:
 
