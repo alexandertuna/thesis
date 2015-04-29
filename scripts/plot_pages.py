@@ -11,6 +11,7 @@ dayssince = []
 pages = []
 
 annotate = True
+calendar = True
 
 # the template already has 8 pages. thx reecer.
 dayssince.append(0)
@@ -65,7 +66,18 @@ plt.plot(dayssince, pages, "-")
 plt.plot(dayssince, pages, "rd")
 plt.fill_between(dayssince, 0, pages, facecolor="blue", interpolate=True)
 plt.text(10, 0.85*ymax, r"Alex's thesis")
-# plt.text(maxdayssince-90, 0.10*ymax, r"defense: April 6, 2015", color="white")
+
+# turn days into calendar months
+if calendar:
+
+    plt.xlabel("")
+    plt.tick_params(axis='x', which='major', labelsize=0)
+    plt.text((datetime.datetime.strptime("2014-11-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Nov")
+    plt.text((datetime.datetime.strptime("2014-12-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Dec")
+    plt.text((datetime.datetime.strptime("2015-01-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Jan")
+    plt.text((datetime.datetime.strptime("2015-02-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Feb")
+    plt.text((datetime.datetime.strptime("2015-03-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Mar")
+    plt.text((datetime.datetime.strptime("2015-04-12-00h00m00s", "%Y-%m-%d-%Hh%Mm%Ss") - start).days, -15, r"Apr")
 
 if annotate:
 
