@@ -1,0 +1,20 @@
+Evidence for decays of the Higgs boson to tau leptons at ATLAS 
+
+Tuna, Alexander : University of Pennsylvania
+Williams, Hugh : University of Pennsylvania
+
+This thesis presents evidence for Higgs decays to tau leptons with the ATLAS experiment at the Large Hadron Collider. Special emphasis is given to the VBF $H\rightarrow\tau_\ell\tau_\text{had}$ category of the analysis. The data correspond to 25 $\text{fb$^{-1}$}$ of proton collisions with $\sqrt{s} = $ 7 or 8 TeV. The $H\rightarrow\tau\tau$ search strategy, predictions, and results are described. Prospects for the $H\rightarrow\tau\tau$ analysis, both in the near- and long-term, are also discussed.
+
+Particle Physics -- Experiment
+
+English
+
+PH
+
+ATLAS -- CERN LHC
+
+PhD, University of Pennsylvania, Philadelphia
+
+Submit 27/04/2015
+Defend 06/04/2015
+
