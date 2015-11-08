@@ -14,7 +14,7 @@ This is my thesis. Shoutout to Ryan for the template.
 | [26-Apr-2015](http://arxiv.org/abs/1501.04943)      | ATLAS Htautau paper published (JHEP)        |
 | [27-Apr-2015](fuck.png)                             | submit thesis to Penn                       |
 | [18-May-2015](fuck.png)                             | PhD awarded                                 |
-| [01-XXX-2015](http://arxiv.org/abs/1412.7086)       | tau performance paper published (EPJC)      |
+| [06-Jul-2015](http://arxiv.org/abs/1412.7086)       | tau performance paper published (EPJC)      |
 
 ![progress](pages.png)
 
